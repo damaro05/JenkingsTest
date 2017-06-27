@@ -1,9 +1,10 @@
+Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker 'python:2.7.13' }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                bat 'python --version'
+                bat 'set'
             }
         }
     }
