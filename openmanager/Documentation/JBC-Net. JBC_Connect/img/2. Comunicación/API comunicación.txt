@@ -1,0 +1,11 @@
+[ ]-(1) public_method(ID) >[JBC_API]
+
+[JBC_API{bg:bisque}]-(2) station_method() >[CStationWrapper]
+
+[CStationWrapper{bg:lavender}]->[CStation]
+
+[CStation{bg:lavender}]-(4) write_method() >[CStationFrames{bg:lavender}]
+
+[CStation{bg:lavender}]-(3) read_method() >[CStationData{bg:lavender}]
+
+[CStationFrames]-(5) write_method(data) >[CCommunicationChannel{bg:honeydew}]

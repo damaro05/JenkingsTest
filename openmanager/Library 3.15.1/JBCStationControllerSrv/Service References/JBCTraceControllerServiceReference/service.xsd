@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/JBCTraceController" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="EnableStationsController">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnableStationsControllerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnableStationsControllerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisableStationsController">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisableStationsControllerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisableStationsControllerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StationConnected">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TimeStamp" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StationConnectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StationConnectedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StationDisconnected">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TimeStamp" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StationDisconnectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StationDisconnectedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Data" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TimeStamp" type="xs:long" />
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+        <xs:element minOccurs="0" name="IdDevice" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewDataEntryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionsPort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+        <xs:element minOccurs="0" name="TimeStamp" type="xs:long" />
+        <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionsPortResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JBCTraceController" minOccurs="0" name="GetOptionsPortResult" nillable="true" type="q1:ArrayOfStructures.OptionsPort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceNotificationStation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JBCTraceController" minOccurs="0" name="TyPeMessage" type="q2:Structures.TypeNotification" />
+        <xs:element minOccurs="0" name="TimeStamp" type="xs:long" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceNotificationStationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TraceNotificationStationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHelpResource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdResource" type="xs:long" />
+        <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHelpResourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JBCTraceController" minOccurs="0" name="GetHelpResourceResult" type="q3:Structures.HelpResource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccesoryStationConnected">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JBCTraceController" minOccurs="0" name="TypeAccesory" type="q4:Structures.TypeAccesory" />
+        <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccesoryStationConnectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccesoryStationConnectedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccesoryStationDisconnected">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JBCTraceController" minOccurs="0" name="TypeAccesory" type="q5:Structures.TypeAccesory" />
+        <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccesoryStationDisconnectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccesoryStationDisconnectedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDate">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDateResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizingController">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodeServer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizingControllerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SynchronizingControllerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizingControllers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizingControllersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SynchronizingControllersResult" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSyncControllers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSyncControllersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckSyncControllersResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordedDataStationControllers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordedDataStationControllersResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetControllers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetControllersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JBCTraceController" minOccurs="0" name="GetControllersResult" nillable="true" type="q7:ArrayOfStructures.StControllers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+        <xs:element minOccurs="0" name="TimeStamp" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockStation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="timeout" type="xs:int" />
+        <xs:element minOccurs="0" name="dataentry" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockStationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LockStationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewUserSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+        <xs:element minOccurs="0" name="CodeUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NameUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iddevice" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewUserSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewUserSessionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseUserSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseUserSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CloseUserSessionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStationControllerDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="port" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStationControllerDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStationControllerDateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

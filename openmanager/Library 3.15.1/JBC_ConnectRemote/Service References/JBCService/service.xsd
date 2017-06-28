@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataJBC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataJBC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="OnOff">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="_OFF" />
+      <xs:enumeration value="_ON" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OnOff" nillable="true" type="tns:OnOff" />
+  <xs:simpleType name="SpeedContinuousMode">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OFF" />
+      <xs:enumeration value="T_10mS" />
+      <xs:enumeration value="T_20mS" />
+      <xs:enumeration value="T_50mS" />
+      <xs:enumeration value="T_100mS" />
+      <xs:enumeration value="T_200mS" />
+      <xs:enumeration value="T_500mS" />
+      <xs:enumeration value="T_1000mS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SpeedContinuousMode" nillable="true" type="tns:SpeedContinuousMode" />
+</xs:schema>

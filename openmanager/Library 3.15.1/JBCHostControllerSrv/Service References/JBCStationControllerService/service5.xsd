@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBC_Connect" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBC_Connect" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="faultError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="tns:dc_EnumConstJBC.dc_FaultError" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="faultError" nillable="true" type="tns:faultError" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_FaultError">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoError" />
+      <xs:enumeration value="NotControlledError" />
+      <xs:enumeration value="StationNotFound" />
+      <xs:enumeration value="StationError" />
+      <xs:enumeration value="ToolError" />
+      <xs:enumeration value="NotValidTool" />
+      <xs:enumeration value="FunctionNotSupported" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_FaultError" nillable="true" type="tns:dc_EnumConstJBC.dc_FaultError" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_StationControllerAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="StartSearch" />
+      <xs:enumeration value="StopSearch" />
+      <xs:enumeration value="InitialSearchOn" />
+      <xs:enumeration value="InitialSearchOff" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_StationControllerAction" nillable="true" type="tns:dc_EnumConstJBC.dc_StationControllerAction" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_StationControllerConnType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="USB" />
+      <xs:enumeration value="ETH" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_StationControllerConnType" nillable="true" type="tns:dc_EnumConstJBC.dc_StationControllerConnType" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_StationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNKNOWN" />
+      <xs:enumeration value="SOLD" />
+      <xs:enumeration value="HA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_StationType" nillable="true" type="tns:dc_EnumConstJBC.dc_StationType" />
+  <xs:complexType name="ArrayOfdc_EnumConstJBC.dc_GenericStationTools">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_EnumConstJBC.dc_GenericStationTools" type="tns:dc_EnumConstJBC.dc_GenericStationTools" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_EnumConstJBC.dc_GenericStationTools" nillable="true" type="tns:ArrayOfdc_EnumConstJBC.dc_GenericStationTools" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_GenericStationTools">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOTOOL" />
+      <xs:enumeration value="T210" />
+      <xs:enumeration value="T245" />
+      <xs:enumeration value="PA" />
+      <xs:enumeration value="HT" />
+      <xs:enumeration value="DS" />
+      <xs:enumeration value="DR" />
+      <xs:enumeration value="NT105" />
+      <xs:enumeration value="NP105" />
+      <xs:enumeration value="JT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PHS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PHB">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_GenericStationTools" nillable="true" type="tns:dc_EnumConstJBC.dc_GenericStationTools" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_SpeedContinuousMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OFF" />
+      <xs:enumeration value="T_10mS" />
+      <xs:enumeration value="T_20mS" />
+      <xs:enumeration value="T_50mS" />
+      <xs:enumeration value="T_100mS" />
+      <xs:enumeration value="T_200mS" />
+      <xs:enumeration value="T_500mS" />
+      <xs:enumeration value="T_1000mS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_SpeedContinuousMode" nillable="true" type="tns:dc_EnumConstJBC.dc_SpeedContinuousMode" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_ControlModeConnection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MONITOR" />
+      <xs:enumeration value="CONTROL" />
+      <xs:enumeration value="BLOCK_CONTROL" />
+      <xs:enumeration value="ROBOT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_ControlModeConnection" nillable="true" type="tns:dc_EnumConstJBC.dc_ControlModeConnection" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_OnOff">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="_OFF" />
+      <xs:enumeration value="_ON" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_OnOff" nillable="true" type="tns:dc_EnumConstJBC.dc_OnOff" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_StationError">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="STOPOVERLOAD_TRAFO" />
+      <xs:enumeration value="WRONGSENSOR_TRAFO" />
+      <xs:enumeration value="MEMORY" />
+      <xs:enumeration value="MAINSFREQUENCY" />
+      <xs:enumeration value="STATION_MODEL" />
+      <xs:enumeration value="NOT_MCU_TOOLS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_StationError" nillable="true" type="tns:dc_EnumConstJBC.dc_StationError" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_Port">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NUM_1" />
+      <xs:enumeration value="NUM_2" />
+      <xs:enumeration value="NUM_3" />
+      <xs:enumeration value="NUM_4" />
+      <xs:enumeration value="NO_PORT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_Port" nillable="true" type="tns:dc_EnumConstJBC.dc_Port" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_PeripheralActivation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRESSED" />
+      <xs:enumeration value="PULLED" />
+      <xs:enumeration value="NO_FUNCTION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_PeripheralActivation" nillable="true" type="tns:dc_EnumConstJBC.dc_PeripheralActivation" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_PeripheralStatusPD">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SHORT_CIRCUIT" />
+      <xs:enumeration value="OPEN_CIRCUIT" />
+      <xs:enumeration value="OK" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_PeripheralStatusPD" nillable="true" type="tns:dc_EnumConstJBC.dc_PeripheralStatusPD" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_PeripheralType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PD" />
+      <xs:enumeration value="MS" />
+      <xs:enumeration value="MN" />
+      <xs:enumeration value="FS" />
+      <xs:enumeration value="MV" />
+      <xs:enumeration value="NO_TYPE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_PeripheralType" nillable="true" type="tns:dc_EnumConstJBC.dc_PeripheralType" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_PeripheralFunction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SLEEP" />
+      <xs:enumeration value="EXTRACTOR" />
+      <xs:enumeration value="MODUL" />
+      <xs:enumeration value="NO_FUNCTION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_PeripheralFunction" nillable="true" type="tns:dc_EnumConstJBC.dc_PeripheralFunction" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_TimeHibernation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MINUTE_0" />
+      <xs:enumeration value="MINUTE_5">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_10">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_15">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_20">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_25">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_30">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_35">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_40">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_45">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">45</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_50">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">50</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_55">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">55</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MINUTE_60">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">60</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NO_HIBERNATION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65535</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_TimeHibernation" nillable="true" type="tns:dc_EnumConstJBC.dc_TimeHibernation" />
+  <xs:complexType name="ArrayOfdc_EnumConstJBC.dc_OnOff">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_EnumConstJBC.dc_OnOff" type="tns:dc_EnumConstJBC.dc_OnOff" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_EnumConstJBC.dc_OnOff" nillable="true" type="tns:ArrayOfdc_EnumConstJBC.dc_OnOff" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_TimeSleep">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MINUTE_0" />
+      <xs:enumeration value="MINUTE_1" />
+      <xs:enumeration value="MINUTE_2" />
+      <xs:enumeration value="MINUTE_3" />
+      <xs:enumeration value="MINUTE_4" />
+      <xs:enumeration value="MINUTE_5" />
+      <xs:enumeration value="MINUTE_6" />
+      <xs:enumeration value="MINUTE_7" />
+      <xs:enumeration value="MINUTE_8" />
+      <xs:enumeration value="MINUTE_9" />
+      <xs:enumeration value="NO_SLEEP">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65535</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_TimeSleep" nillable="true" type="tns:dc_EnumConstJBC.dc_TimeSleep" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_ToolError">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="SHORTCIRCUIT" />
+      <xs:enumeration value="SHORTCIRCUIT_NR" />
+      <xs:enumeration value="OPENCIRCUIT" />
+      <xs:enumeration value="NOTOOL" />
+      <xs:enumeration value="WRONGTOOL" />
+      <xs:enumeration value="DETECTIONTOOL" />
+      <xs:enumeration value="MAXPOWER" />
+      <xs:enumeration value="STOPOVERLOAD_MOS" />
+      <xs:enumeration value="AIR_PUMP_ERROR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PROTECION_TC_HIGH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REGULATION_TC_HIGH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EXTERNAL_TC_MISSING">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SELECTED_TEMP_NOT_REACHED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HIGH_HEATER_INTENSITY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LOW_HEATER_RESISTANCE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WRONG_HEATER">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NOTOOL_HA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DETECTIONTOOL_HA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_ToolError" nillable="true" type="tns:dc_EnumConstJBC.dc_ToolError" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_ExternalTCMode_HA">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="REGULATION" />
+      <xs:enumeration value="PROTECTION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_ExternalTCMode_HA" nillable="true" type="tns:dc_EnumConstJBC.dc_ExternalTCMode_HA" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_PedalAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="PULSE" />
+      <xs:enumeration value="HOLD_DOWN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_PedalAction" nillable="true" type="tns:dc_EnumConstJBC.dc_PedalAction" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_Idioma">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="I_Ingles" />
+      <xs:enumeration value="I_Espanol" />
+      <xs:enumeration value="I_Frances" />
+      <xs:enumeration value="I_Aleman" />
+      <xs:enumeration value="I_Italiano" />
+      <xs:enumeration value="I_Portugues" />
+      <xs:enumeration value="I_Chino" />
+      <xs:enumeration value="I_Japones" />
+      <xs:enumeration value="I_Coreano" />
+      <xs:enumeration value="I_Ruso" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_Idioma" nillable="true" type="tns:dc_EnumConstJBC.dc_Idioma" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_ToolTemperatureLevels">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NO_LEVELS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">255</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FIRST_LEVEL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SECOND_LEVEL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="THIRD_LEVEL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_ToolTemperatureLevels" nillable="true" type="tns:dc_EnumConstJBC.dc_ToolTemperatureLevels" />
+  <xs:simpleType name="OnOff">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="_OFF" />
+      <xs:enumeration value="_ON" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OnOff" nillable="true" type="tns:OnOff" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_ToolStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DESOLDER">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HIBERNATION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EXTRACTOR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SLEEP">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="STAND">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NONE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_ToolStatus" nillable="true" type="tns:dc_EnumConstJBC.dc_ToolStatus" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_ToolStatus_HA">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="STAND">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">128</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PEDAL_PRESSED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">64</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PEDAL_CONNECTED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SUCTION_REQUESTED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SUCTION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="COOLING">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HEATER_REQUESTED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HEATER">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NONE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_ToolStatus_HA" nillable="true" type="tns:dc_EnumConstJBC.dc_ToolStatus_HA" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_RobotParity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE" />
+      <xs:enumeration value="EVEN" />
+      <xs:enumeration value="ODD" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_RobotParity" nillable="true" type="tns:dc_EnumConstJBC.dc_RobotParity" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_RobotProtocol">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RS232" />
+      <xs:enumeration value="RS485" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_RobotProtocol" nillable="true" type="tns:dc_EnumConstJBC.dc_RobotProtocol" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_RobotSpeed">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BPS_1200" />
+      <xs:enumeration value="BPS_2400" />
+      <xs:enumeration value="BPS_4800" />
+      <xs:enumeration value="BPS_9600" />
+      <xs:enumeration value="BPS_19200" />
+      <xs:enumeration value="BPS_38400" />
+      <xs:enumeration value="BPS_57600" />
+      <xs:enumeration value="BPS_115200" />
+      <xs:enumeration value="BPS_230400" />
+      <xs:enumeration value="BPS_250000" />
+      <xs:enumeration value="BPS_460800" />
+      <xs:enumeration value="BPS_500000" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_RobotSpeed" nillable="true" type="tns:dc_EnumConstJBC.dc_RobotSpeed" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_RobotStop">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BITS_1">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BITS_2">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_RobotStop" nillable="true" type="tns:dc_EnumConstJBC.dc_RobotStop" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_MessageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INFORMATION_MESSAGE" />
+      <xs:enumeration value="WARNING_MESSAGE" />
+      <xs:enumeration value="ERROR_MESSAGE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_MessageType" nillable="true" type="tns:dc_EnumConstJBC.dc_MessageType" />
+  <xs:simpleType name="SpeedContinuousMode">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OFF" />
+      <xs:enumeration value="T_10mS" />
+      <xs:enumeration value="T_20mS" />
+      <xs:enumeration value="T_50mS" />
+      <xs:enumeration value="T_100mS" />
+      <xs:enumeration value="T_200mS" />
+      <xs:enumeration value="T_500mS" />
+      <xs:enumeration value="T_1000mS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SpeedContinuousMode" nillable="true" type="tns:SpeedContinuousMode" />
+</xs:schema>

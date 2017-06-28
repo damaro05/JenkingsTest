@@ -1,0 +1,2 @@
+[Number]*..1[Group]
+[Number]*..*[Family]

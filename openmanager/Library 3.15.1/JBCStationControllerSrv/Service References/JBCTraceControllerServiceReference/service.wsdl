@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HostTrace" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/JBCTraceController" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHostTrace_EnableStationsController_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnableStationsController" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_EnableStationsController_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnableStationsControllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_EnableStationsController_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q1:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_DisableStationsController_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisableStationsController" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_DisableStationsController_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableStationsControllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_DisableStationsController_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q2:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_StationConnected_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationConnected" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_StationConnected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_StationConnected_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q3:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_StationDisconnected_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationDisconnected" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_StationDisconnected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationDisconnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_StationDisconnected_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q4:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_NewDataEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewDataEntry" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_NewDataEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewDataEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_NewDataEntry_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q5:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetOptionsPort_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionsPort" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetOptionsPort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionsPortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetOptionsPort_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q6:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_TraceNotificationStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:TraceNotificationStation" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_TraceNotificationStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TraceNotificationStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_TraceNotificationStation_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q7:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetHelpResource_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHelpResource" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetHelpResource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHelpResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetHelpResource_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q8:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_AccesoryStationConnected_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccesoryStationConnected" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_AccesoryStationConnected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccesoryStationConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_AccesoryStationConnected_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q9:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_AccesoryStationDisconnected_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccesoryStationDisconnected" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_AccesoryStationDisconnected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccesoryStationDisconnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_AccesoryStationDisconnected_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q10:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDate" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetDate_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q11:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SynchronizingController_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizingController" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SynchronizingController_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizingControllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SynchronizingController_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q12:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SynchronizingControllers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizingControllers" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SynchronizingControllers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizingControllersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SynchronizingControllers_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q13:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_CheckSyncControllers_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckSyncControllers" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_CheckSyncControllers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckSyncControllersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_CheckSyncControllers_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q14:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetRecordedDataStationControllers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordedDataStationControllers" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetRecordedDataStationControllers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordedDataStationControllersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetRecordedDataStationControllers_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q15:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetControllers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetControllers" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetControllers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetControllersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetControllers_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q16:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SetDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDate" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SetDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_SetDate_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q17:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_LockStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LockStation" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_LockStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_LockStation_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q18:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_NewUserSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewUserSession" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_NewUserSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewUserSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_NewUserSession_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q19:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_CloseUserSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseUserSession" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_CloseUserSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseUserSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_CloseUserSession_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q20:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetStationControllerDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationControllerDate" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetStationControllerDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationControllerDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHostTrace_GetStationControllerDate_ErrorTraceFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/JBCTraceController" name="detail" element="q21:ErrorTrace" />
+  </wsdl:message>
+  <wsdl:portType name="IHostTrace">
+    <wsdl:operation name="EnableStationsController">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/EnableStationsController" message="tns:IHostTrace_EnableStationsController_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/EnableStationsControllerResponse" message="tns:IHostTrace_EnableStationsController_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/EnableStationsControllerErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_EnableStationsController_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableStationsController">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/DisableStationsController" message="tns:IHostTrace_DisableStationsController_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/DisableStationsControllerResponse" message="tns:IHostTrace_DisableStationsController_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/DisableStationsControllerErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_DisableStationsController_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationConnected">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/StationConnected" message="tns:IHostTrace_StationConnected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/StationConnectedResponse" message="tns:IHostTrace_StationConnected_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/StationConnectedErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_StationConnected_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationDisconnected">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/StationDisconnected" message="tns:IHostTrace_StationDisconnected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/StationDisconnectedResponse" message="tns:IHostTrace_StationDisconnected_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/StationDisconnectedErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_StationDisconnected_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewDataEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/NewDataEntry" message="tns:IHostTrace_NewDataEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/NewDataEntryResponse" message="tns:IHostTrace_NewDataEntry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/NewDataEntryErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_NewDataEntry_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionsPort">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/GetOptionsPort" message="tns:IHostTrace_GetOptionsPort_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/GetOptionsPortResponse" message="tns:IHostTrace_GetOptionsPort_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/GetOptionsPortErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_GetOptionsPort_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TraceNotificationStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/TraceNotificationStation" message="tns:IHostTrace_TraceNotificationStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/TraceNotificationStationResponse" message="tns:IHostTrace_TraceNotificationStation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/TraceNotificationStationErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_TraceNotificationStation_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHelpResource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/GetHelpResource" message="tns:IHostTrace_GetHelpResource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/GetHelpResourceResponse" message="tns:IHostTrace_GetHelpResource_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/GetHelpResourceErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_GetHelpResource_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccesoryStationConnected">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/AccesoryStationConnected" message="tns:IHostTrace_AccesoryStationConnected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/AccesoryStationConnectedResponse" message="tns:IHostTrace_AccesoryStationConnected_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/AccesoryStationConnectedErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_AccesoryStationConnected_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccesoryStationDisconnected">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/AccesoryStationDisconnected" message="tns:IHostTrace_AccesoryStationDisconnected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/AccesoryStationDisconnectedResponse" message="tns:IHostTrace_AccesoryStationDisconnected_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/AccesoryStationDisconnectedErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_AccesoryStationDisconnected_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/GetDate" message="tns:IHostTrace_GetDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/GetDateResponse" message="tns:IHostTrace_GetDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/GetDateErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_GetDate_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizingController">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/SynchronizingController" message="tns:IHostTrace_SynchronizingController_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/SynchronizingControllerResponse" message="tns:IHostTrace_SynchronizingController_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/SynchronizingControllerErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_SynchronizingController_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizingControllers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/SynchronizingControllers" message="tns:IHostTrace_SynchronizingControllers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/SynchronizingControllersResponse" message="tns:IHostTrace_SynchronizingControllers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/SynchronizingControllersErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_SynchronizingControllers_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSyncControllers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/CheckSyncControllers" message="tns:IHostTrace_CheckSyncControllers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/CheckSyncControllersResponse" message="tns:IHostTrace_CheckSyncControllers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/CheckSyncControllersErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_CheckSyncControllers_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordedDataStationControllers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/GetRecordedDataStationControllers" message="tns:IHostTrace_GetRecordedDataStationControllers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/GetRecordedDataStationControllersResponse" message="tns:IHostTrace_GetRecordedDataStationControllers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/GetRecordedDataStationControllersErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_GetRecordedDataStationControllers_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetControllers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/GetControllers" message="tns:IHostTrace_GetControllers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/GetControllersResponse" message="tns:IHostTrace_GetControllers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/GetControllersErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_GetControllers_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/SetDate" message="tns:IHostTrace_SetDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/SetDateResponse" message="tns:IHostTrace_SetDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/SetDateErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_SetDate_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LockStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/LockStation" message="tns:IHostTrace_LockStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/LockStationResponse" message="tns:IHostTrace_LockStation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/LockStationErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_LockStation_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewUserSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/NewUserSession" message="tns:IHostTrace_NewUserSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/NewUserSessionResponse" message="tns:IHostTrace_NewUserSession_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/NewUserSessionErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_NewUserSession_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseUserSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/CloseUserSession" message="tns:IHostTrace_CloseUserSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/CloseUserSessionResponse" message="tns:IHostTrace_CloseUserSession_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/CloseUserSessionErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_CloseUserSession_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationControllerDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHostTrace/GetStationControllerDate" message="tns:IHostTrace_GetStationControllerDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHostTrace/GetStationControllerDateResponse" message="tns:IHostTrace_GetStationControllerDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IHostTrace/GetStationControllerDateErrorTraceFault" name="ErrorTraceFault" message="tns:IHostTrace_GetStationControllerDate_ErrorTraceFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHostTrace" type="tns:IHostTrace">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnableStationsController">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/EnableStationsController" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DisableStationsController">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/DisableStationsController" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StationConnected">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/StationConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StationDisconnected">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/StationDisconnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NewDataEntry">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/NewDataEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionsPort">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/GetOptionsPort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TraceNotificationStation">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/TraceNotificationStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHelpResource">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/GetHelpResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoryStationConnected">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/AccesoryStationConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AccesoryStationDisconnected">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/AccesoryStationDisconnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/GetDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizingController">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/SynchronizingController" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizingControllers">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/SynchronizingControllers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSyncControllers">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/CheckSyncControllers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordedDataStationControllers">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/GetRecordedDataStationControllers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetControllers">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/GetControllers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDate">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/SetDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LockStation">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/LockStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NewUserSession">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/NewUserSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseUserSession">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/CloseUserSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationControllerDate">
+      <soap:operation soapAction="http://tempuri.org/IHostTrace/GetStationControllerDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorTraceFault">
+        <soap:fault use="literal" name="ErrorTraceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HostTrace">
+    <wsdl:port name="BasicHttpBinding_IHostTrace" binding="tns:BasicHttpBinding_IHostTrace">
+      <soap:address location="http://servidor-syntec:8833/JBCTraceController/HostTrace/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBCHostSrv" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBCHostSrv" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="cls_Station_Sold">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ControlMode" type="tns:cls_EnumConstJBC.OnOff" />
+      <xs:element minOccurs="0" name="ID" type="xs:unsignedLong" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Protocol" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cls_Station_Sold" nillable="true" type="tns:cls_Station_Sold" />
+  <xs:simpleType name="cls_EnumConstJBC.OnOff">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="_OFF" />
+      <xs:enumeration value="_ON" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="cls_EnumConstJBC.OnOff" nillable="true" type="tns:cls_EnumConstJBC.OnOff" />
+  <xs:complexType name="cls_StatusTool">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualTempCelsius" type="xs:int" />
+      <xs:element minOccurs="0" name="ActualTempFahrenheit" type="xs:int" />
+      <xs:element minOccurs="0" name="ActualTempUTI" type="xs:int" />
+      <xs:element minOccurs="0" name="ConnectedTool" type="tns:cls_EnumConstJBC.Tools_GenericStation" />
+      <xs:element minOccurs="0" name="Desold_OnOff" type="tns:cls_EnumConstJBC.OnOff" />
+      <xs:element minOccurs="0" name="Extractor_OnOff" type="tns:cls_EnumConstJBC.OnOff" />
+      <xs:element minOccurs="0" name="FutureMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hiber_OnOff" type="tns:cls_EnumConstJBC.OnOff" />
+      <xs:element minOccurs="0" name="Power_x_Mil" type="xs:int" />
+      <xs:element minOccurs="0" name="Sleep_OnOff" type="tns:cls_EnumConstJBC.OnOff" />
+      <xs:element minOccurs="0" name="Stand_OnOff" type="tns:cls_EnumConstJBC.OnOff" />
+      <xs:element minOccurs="0" name="TimeToSleepHibern" type="xs:int" />
+      <xs:element minOccurs="0" name="ToolError" type="tns:cls_EnumConstJBC.ToolError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cls_StatusTool" nillable="true" type="tns:cls_StatusTool" />
+  <xs:simpleType name="cls_EnumConstJBC.Tools_GenericStation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOTOOL" />
+      <xs:enumeration value="T210" />
+      <xs:enumeration value="T245" />
+      <xs:enumeration value="PA" />
+      <xs:enumeration value="HT" />
+      <xs:enumeration value="DS" />
+      <xs:enumeration value="DR" />
+      <xs:enumeration value="NT205" />
+      <xs:enumeration value="NP105" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="cls_EnumConstJBC.Tools_GenericStation" nillable="true" type="tns:cls_EnumConstJBC.Tools_GenericStation" />
+  <xs:simpleType name="cls_EnumConstJBC.ToolError">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="SHORTCIRCUIT" />
+      <xs:enumeration value="SHORTCIRCUIT_NR" />
+      <xs:enumeration value="OPENCIRCUIT" />
+      <xs:enumeration value="NOTOOL" />
+      <xs:enumeration value="WRONGTOOL" />
+      <xs:enumeration value="DETECTIONTOOL" />
+      <xs:enumeration value="MAXPOWER" />
+      <xs:enumeration value="STOPOVERLOAD_MOS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="cls_EnumConstJBC.ToolError" nillable="true" type="tns:cls_EnumConstJBC.ToolError" />
+</xs:schema>

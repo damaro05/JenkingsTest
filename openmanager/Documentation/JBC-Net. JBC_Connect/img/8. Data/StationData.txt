@@ -1,0 +1,25 @@
+[CPeripheralData|m_ID:Integer;m_version:Short;m_Hash_MCU_UID:String;m_dateTime:String;m_type:PeripheralType;m_portAttached:Port;m_workFunction:PeripheralFunction;m_activationMode:PeripheralActivation;m_delayTime:Short;m_statusActive:OnOff;m_statusPD:PeripheralStatusPD]
+
+[CFirmwareStation|m_stationID:Long;m_Model:String;m_ModelVersion:String;m_ProtocolVersion:String;m_HardwareVersion:String;m_SoftwareVersion:String;m_FileName:String;m_TimeMarkToDisconnectMicro:Date]
+
+[CFeaturesData|Alarms:Boolean;AllToolsSamePortSettings:Boolean;Cartridges:Boolean;DelayWithStatus:Boolean;DisplaySettings:Boolean;Ethernet:Boolean;FirmwareUpdate:Boolean;MaxTemp:CTemperature;MinTemp:CTemperature;MaxPowerLimit:Integer;PartialCounters:Boolean;Peripherals:Boolean;Robot:Boolean;SubStations:Boolean;TempLevelsWithStatus:Boolean;TempLevels:Boolean]
+
+[CStationInfoData|ID:Long;InternalID:String;ParentID:Long;Protocol:String;COM:String;ConnectionType:String(U=USB E=Ethernet);StationType:eStationType;Features:CFeaturesData;StationMicros():CFirmwareStation;Model:String;ModelType:String;ModelVersion:Integer;Version_Hardware:String;Version_Software:String;PortCount:Integer;SupportedTools():GenericStationTools;TempLevelsCount:Integer]
+[CStationInfoData]->[CFirmwareStation]
+[CStationInfoData]->[CFeaturesData]
+
+[CStationStatusData|ControlMode:ControlModeConnection;ControlModeUserName:String;RemoteMode:OnOff;ErrorStation:StationError;TempErrorMOS:CTemperature;TempErrorTRAFO:CTemperature;TempTRAFO:CTemperature]
+
+[CEthernetData|m_DHCP:OnOff;m_IP:IPAddress;m_Mask:IPAddress;m_Gateway:IPAddress;m_DNS1:IPAddress;m_DNS2:IPAddress;m_Port:UShort]
+
+[CRobotData|m_Status:OnOff;m_Protocol:RobotProtocol;m_Address:UShort;m_Speed:RobotSpeed;m_DataBits:UShort;m_StopBits:RobotStop;m_Parity:RobotParity]
+
+[CStationSettingsData|Name:String;Beep:OnOff;HelpText:OnOff;Language:Idioma;N2Mode:OnOff;PIN:String;Unit:TemperatureUnits;MaxTemp:CTemperature;MinTemp:CTemperature;PowerLimit:Integer;Ethernet:CEthernetData;Robot:CRobotData]
+[CStationSettingsData]->[CEthernetData]
+[CStationSettingsData]->[CRobotData]
+
+[CStationData|ParametersLocked:OnOff;ContinuousModePorts:Byte;ContinuousModeSpeed:SpeedContinuousMode;ContinuousModeStatus:CContinuousModeStatus;Info:CStationInfoData;Settings:CStationSettingsData;Status:CStationStatusData;Peripherals():CPeripheralData]
+[CStationData]->[CStationInfoData]
+[CStationData]->[CStationSettingsData]
+[CStationData]->[CStationStatusData]
+[CStationData]->[CPeripheralData]

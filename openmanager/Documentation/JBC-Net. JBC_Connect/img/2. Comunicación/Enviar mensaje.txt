@@ -1,0 +1,4 @@
+[CStationFrames{bg:lavender}]-(1)Send(data)>[CCommunicationChannel{bg:honeydew}]
+
+[CCommunicationChannel]-(2)Queue(message)>[CStackMessages{bg:honeydew}]
+[CCommunicationChannel]-(3)Send(message)>[Stack_dll{bg:honeydew}]

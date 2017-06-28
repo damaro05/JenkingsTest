@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="FTPUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OpenJBC</Value>
+    </Setting>
+    <Setting Name="FTPPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JBCopen2015+</Value>
+    </Setting>
+    <Setting Name="FTPUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://openmanager.jbctools.com</Value>
+    </Setting>
+    <Setting Name="VersionFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">version.txt</Value>
+    </Setting>
+    <Setting Name="SQLCeDB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DataBaseHostController.sdf</Value>
+    </Setting>
+    <Setting Name="WebManagerUpdateUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Update/Update.aspx</Value>
+    </Setting>
+    <Setting Name="VersionFirmwareFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">versionFirmware.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

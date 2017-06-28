@@ -1,0 +1,30 @@
+//Discovery
+[JBCHostControllerService]->[CDiscoveryUPDHost{bg:honeydew}]
+
+//Service_API
+[JBCHostControllerService]->[CImplIJBCHostControllerService{bg:bisque}]
+
+//Updates module
+[CImplIJBCHostControllerService]->[CUpdatesManager]
+[CUpdatesManager{bg:lightcyan}]->[CComUpdaterService{bg:lightcyan}]
+[CUpdatesManager]->[CComWebManager{bg:lightcyan}]
+[CUpdatesManager]->[CComRemoteManager{bg:lightcyan}]
+[CUpdatesManager]->[CSystemFilesManager]
+[CUpdatesManager]->[CVersionFileParser{bg:lightcyan}]
+[CUpdatesManager]->[CScheduleUpdates{bg:lightcyan}]
+[CUpdatesManager]-.->[CLocalData]
+[CScheduleUpdates]-.->[CLocalData]
+
+//Update firmware
+[CImplIJBCHostControllerService]->[CUpdatesFirmwareManager]
+[CUpdatesFirmwareManager{bg:lightcyan}]->[CSystemFilesManager]
+
+//System files manager
+[CSystemFilesManager{bg:whitesmoke}]->[CComRemoteServer]
+[CSystemFilesManager]-.->[CLocalData]
+[CComRemoteServer{bg:whitesmoke}]->[CFtp{bg:whitesmoke}]
+
+//Data module
+[CImplIJBCHostControllerService]->[CLocalData]
+[CLocalData{bg:lavender}]->[CSQlCompactConnection{bg:lavender}]
+[CLocalData]->[CDBScripts{bg:lavender}]

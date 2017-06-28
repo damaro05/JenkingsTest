@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutLineHostController" xml:space="preserve">
+    <value>ホストコントローラVer.</value>
+  </data>
+  <data name="aboutLineRemoteManager" xml:space="preserve">
+    <value>リモートマネジャVer.</value>
+  </data>
+  <data name="aboutLineRights" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="aboutLineStationController" xml:space="preserve">
+    <value>機器Ver.</value>
+  </data>
+  <data name="browPageSetup" xml:space="preserve">
+    <value>ページ設定</value>
+    <comment>see IE</comment>
+  </data>
+  <data name="browPreview" xml:space="preserve">
+    <value>プレビュー</value>
+    <comment>see IE</comment>
+  </data>
+  <data name="browPrint" xml:space="preserve">
+    <value>印刷</value>
+    <comment>see IE</comment>
+  </data>
+  <data name="cartNotFound" xml:space="preserve">
+    <value>カートリッジ{0}無し</value>
+    <comment>{0} will be a number</comment>
+  </data>
+  <data name="ceBCC" xml:space="preserve">
+    <value>BCC</value>
+  </data>
+  <data name="ceCOMMAND_REJECTED" xml:space="preserve">
+    <value>コマンド拒否</value>
+  </data>
+  <data name="ceCONTROL_MODE_ALREADY_ACTIVATED" xml:space="preserve">
+    <value>管理者モード実行済</value>
+  </data>
+  <data name="ceCONTROL_MODE_REQUIRED" xml:space="preserve">
+    <value>管理者モード必須</value>
+  </data>
+  <data name="ceError" xml:space="preserve">
+    <value>通信エラー</value>
+  </data>
+  <data name="ceFLASH_WRITE_ERROR" xml:space="preserve">
+    <value>フラッシュ書込エラー</value>
+  </data>
+  <data name="ceFRAME_FORMAT" xml:space="preserve">
+    <value>フレームフォーマット</value>
+  </data>
+  <data name="ceINCORRECT_SEQUENCY" xml:space="preserve">
+    <value>不正なシーケンス</value>
+  </data>
+  <data name="ceNOT_VALID_HARDWARE" xml:space="preserve">
+    <value>無効なハードウェア</value>
+  </data>
+  <data name="ceNO_COMM_ERROR" xml:space="preserve">
+    <value>通信エラー</value>
+  </data>
+  <data name="ceOUT_OF_RANGE" xml:space="preserve">
+    <value>範囲外</value>
+  </data>
+  <data name="confApply" xml:space="preserve">
+    <value>適用</value>
+  </data>
+  <data name="confComment" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="confFilters" xml:space="preserve">
+    <value>フィルタ</value>
+  </data>
+  <data name="confFiltersModel" xml:space="preserve">
+    <value>モデル</value>
+  </data>
+  <data name="confFiltersName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="confHintPort2AllPorts" xml:space="preserve">
+    <value>ポート{0}からツールと設定を全てのポートに貼付け</value>
+  </data>
+  <data name="confHintPort2Port" xml:space="preserve">
+    <value>ポート{0}からツールと設定をポート{1}に貼付け</value>
+  </data>
+  <data name="confHintPort2Tool" xml:space="preserve">
+    <value>ポート{1}のツール{0}をポート{3}のツール{2}に貼付け</value>
+  </data>
+  <data name="confHintTool2AllPorts" xml:space="preserve">
+    <value>ポート{1}のツール{0}を全てのポートのツール{2}に貼付け</value>
+  </data>
+  <data name="confHintTool2Port" xml:space="preserve">
+    <value>ポート{1}のツール{0}をポート{3}のツール{2}に貼付け</value>
+  </data>
+  <data name="confHintTool2Tool" xml:space="preserve">
+    <value>ポート{1}のツール{0}をポート{3}のツール{2}に貼付け</value>
+  </data>
+  <data name="confHintToolNotChecked" xml:space="preserve">
+    <value>ポート{1}の元ツール{0}が選択されていません。</value>
+  </data>
+  <data name="confInfo" xml:space="preserve">
+    <value>設定ファイルのを読込か保存を選択して下さい。</value>
+  </data>
+  <data name="confLoad" xml:space="preserve">
+    <value>ファイル読込</value>
+  </data>
+  <data name="confMnuCopy" xml:space="preserve">
+    <value>ノード設定をコピー</value>
+  </data>
+  <data name="confMnuPaste" xml:space="preserve">
+    <value>設定を貼り付け</value>
+  </data>
+  <data name="confMnuPasteAndCheck" xml:space="preserve">
+    <value>選択マークと設定を貼り付け</value>
+  </data>
+  <data name="confMnuPasteAndCheckChecked" xml:space="preserve">
+    <value>選択マークと設定を貼り付け (選択済のみ)</value>
+  </data>
+  <data name="confMnuPasteChecked" xml:space="preserve">
+    <value>設定をペースト (選択済のみ)</value>
+  </data>
+  <data name="confMnuView" xml:space="preserve">
+    <value>ツリー</value>
+  </data>
+  <data name="confMnuViewCollapseAll" xml:space="preserve">
+    <value>全て閉じる</value>
+  </data>
+  <data name="confMnuViewCollapseNode" xml:space="preserve">
+    <value>選択部を閉じる</value>
+  </data>
+  <data name="confMnuViewExpandAll" xml:space="preserve">
+    <value>全て開く</value>
+  </data>
+  <data name="confMnuViewExpandNode" xml:space="preserve">
+    <value>選択部を開く</value>
+  </data>
+  <data name="confMsgApplied" xml:space="preserve">
+    <value>適応済</value>
+  </data>
+  <data name="confMsgAppliedTimeout" xml:space="preserve">
+    <value>タイムアウト</value>
+  </data>
+  <data name="confMsgApplying" xml:space="preserve">
+    <value>適用中．．</value>
+  </data>
+  <data name="confMustControlMode" xml:space="preserve">
+    <value>この作業を実行するには管理者モードに変更して下さい。</value>
+  </data>
+  <data name="confNo" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="confRefreshStations" xml:space="preserve">
+    <value>機器リスト更新</value>
+  </data>
+  <data name="confSave" xml:space="preserve">
+    <value>ファイル保存</value>
+  </data>
+  <data name="confSourceSettings" xml:space="preserve">
+    <value>設定元</value>
+  </data>
+  <data name="confStation" xml:space="preserve">
+    <value>機器</value>
+  </data>
+  <data name="confTabHint" xml:space="preserve">
+    <value>設定の読込/保存</value>
+  </data>
+  <data name="confTargetPort" xml:space="preserve">
+    <value>対象ポート {0}</value>
+    <comment>{0} = port number, ex: Target Port 1</comment>
+  </data>
+  <data name="confTargetStationsList" xml:space="preserve">
+    <value>対象機器リスト</value>
+  </data>
+  <data name="confVersion" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="confViewReport" xml:space="preserve">
+    <value>レポート表示</value>
+  </data>
+  <data name="confViewStations" xml:space="preserve">
+    <value>機器を表示</value>
+  </data>
+  <data name="confWarnNoConfTree" xml:space="preserve">
+    <value>設定が読み込まれていません。</value>
+  </data>
+  <data name="confWarnNoStationSelected" xml:space="preserve">
+    <value>対象機器が選択されていません。</value>
+  </data>
+  <data name="confWarnStationNotConnected" xml:space="preserve">
+    <value>機器 {0}が接続されていません。継続</value>
+  </data>
+  <data name="confWarnStationsInMonitorMode" xml:space="preserve">
+    <value>選択した機器がモニターモードになっているため、更新されません。実行しますか？</value>
+  </data>
+  <data name="confWarnStationsNotUpdated" xml:space="preserve">
+    <value>機器が更新されていない可能性がありますので、レポートをご確認ください。</value>
+  </data>
+  <data name="counterDesolderCycles" xml:space="preserve">
+    <value>吸取り回数</value>
+  </data>
+  <data name="counterGlobal" xml:space="preserve">
+    <value>総累積カウンタ</value>
+  </data>
+  <data name="counterHiberMinutes" xml:space="preserve">
+    <value>休止時間(分)</value>
+  </data>
+  <data name="counterNoToolMinutes" xml:space="preserve">
+    <value>ツール無(分)</value>
+  </data>
+  <data name="counterPartial" xml:space="preserve">
+    <value>個別カウンタ</value>
+  </data>
+  <data name="counterPluggedMinutes" xml:space="preserve">
+    <value>接続時間(分)</value>
+  </data>
+  <data name="counterResetPartialCounters" xml:space="preserve">
+    <value>ポート別カウンタをリセットする</value>
+  </data>
+  <data name="counterSleepCycles" xml:space="preserve">
+    <value>スリープ回数</value>
+  </data>
+  <data name="counterSleepMinutes" xml:space="preserve">
+    <value>スリープ時間(分)</value>
+  </data>
+  <data name="counterTabHint" xml:space="preserve">
+    <value>カウンタ</value>
+  </data>
+  <data name="counterWorkMinutes" xml:space="preserve">
+    <value>作業時間(分)</value>
+  </data>
+  <data name="ctrlEnterPINCode" xml:space="preserve">
+    <value>パスワード入力</value>
+  </data>
+  <data name="ctrlPINCode" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="dockAutoHide" xml:space="preserve">
+    <value>自動で隠す On/Off</value>
+  </data>
+  <data name="dockBottom" xml:space="preserve">
+    <value>下に固定</value>
+  </data>
+  <data name="dockClose" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="dockFloating" xml:space="preserve">
+    <value>自由に移動</value>
+  </data>
+  <data name="dockLeft" xml:space="preserve">
+    <value>左に固定</value>
+  </data>
+  <data name="dockPanelPos" xml:space="preserve">
+    <value>パネル位置</value>
+  </data>
+  <data name="dockRight" xml:space="preserve">
+    <value>右に固定</value>
+  </data>
+  <data name="dockStationList" xml:space="preserve">
+    <value>機器リスト</value>
+  </data>
+  <data name="dockTop" xml:space="preserve">
+    <value>上に固定</value>
+  </data>
+  <data name="dockViewDetails" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="dockViewList" xml:space="preserve">
+    <value>リスト</value>
+  </data>
+  <data name="dockViewTile" xml:space="preserve">
+    <value>アイコン</value>
+  </data>
+  <data name="dockViewTreeList" xml:space="preserve">
+    <value>ツリー</value>
+  </data>
+  <data name="evConnections" xml:space="preserve">
+    <value>接続履歴</value>
+  </data>
+  <data name="evErrors" xml:space="preserve">
+    <value>エラー履歴</value>
+  </data>
+  <data name="evEvents" xml:space="preserve">
+    <value>イベント</value>
+  </data>
+  <data name="evStationConnected" xml:space="preserve">
+    <value>接続された機器</value>
+  </data>
+  <data name="evStationControllerConnected" xml:space="preserve">
+    <value>機器に接続されました</value>
+    <comment>changed</comment>
+  </data>
+  <data name="evStationControllerDisconnected" xml:space="preserve">
+    <value>機器から接続されました</value>
+    <comment>changed</comment>
+  </data>
+  <data name="evStationDisconnected" xml:space="preserve">
+    <value>機器が切断されました</value>
+  </data>
+  <data name="gralCancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="gralDaily" xml:space="preserve">
+    <value>毎日</value>
+  </data>
+  <data name="gralDone" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="gralEnabled" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="gralFriday" xml:space="preserve">
+    <value>金</value>
+  </data>
+  <data name="gralHour" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="gralHoursMinutes" xml:space="preserve">
+    <value>{0} 時 {1} 分</value>
+  </data>
+  <data name="gralMinute" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="gralMinutes" xml:space="preserve">
+    <value>{0} 分</value>
+  </data>
+  <data name="gralMonday" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="gralNewGroup" xml:space="preserve">
+    <value>新規グループ</value>
+  </data>
+  <data name="gralNoName" xml:space="preserve">
+    <value>名称がありません。</value>
+  </data>
+  <data name="gralOk" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="gralSaturday" xml:space="preserve">
+    <value>土</value>
+  </data>
+  <data name="gralSunday" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="gralThursday" xml:space="preserve">
+    <value>木</value>
+  </data>
+  <data name="gralTuesday" xml:space="preserve">
+    <value>火</value>
+  </data>
+  <data name="gralUnderConstruction" xml:space="preserve">
+    <value>Under Construction</value>
+  </data>
+  <data name="gralValueSeparator" xml:space="preserve">
+    <value>: </value>
+  </data>
+  <data name="gralWarning" xml:space="preserve">
+    <value>警告!</value>
+  </data>
+  <data name="gralWednesday" xml:space="preserve">
+    <value>水</value>
+  </data>
+  <data name="gralWeekly" xml:space="preserve">
+    <value>毎週</value>
+  </data>
+  <data name="graphAddToPlot" xml:space="preserve">
+    <value>グラフに波形を追加する</value>
+  </data>
+  <data name="graphInfo" xml:space="preserve">
+    <value>波形を追加するグラフを選択して下さい。</value>
+  </data>
+  <data name="graphNewPlot" xml:space="preserve">
+    <value>新しい波形</value>
+  </data>
+  <data name="graphSeriesAddSeries" xml:space="preserve">
+    <value>波形を追加</value>
+  </data>
+  <data name="graphTabHint" xml:space="preserve">
+    <value>グラフ</value>
+  </data>
+  <data name="infoTabHint" xml:space="preserve">
+    <value>機器データ</value>
+  </data>
+  <data name="logErrNotChanged" xml:space="preserve">
+    <value>{0}' 変更なし</value>
+  </data>
+  <data name="logErrNotTarget" xml:space="preserve">
+    <value>{0}' は対象に有りません</value>
+  </data>
+  <data name="logErrPortNotExist" xml:space="preserve">
+    <value>対象ポート '{0}' が有りません</value>
+  </data>
+  <data name="logErrPortToolNotChanged" xml:space="preserve">
+    <value>{0}' はポート{1}ツール{2}に変更ありません</value>
+  </data>
+  <data name="logErrPortToolNotExist" xml:space="preserve">
+    <value>{0}' はポート{1}のツール{2}に有りません</value>
+  </data>
+  <data name="logErrToolNotExist" xml:space="preserve">
+    <value>ツール'{0}'は対象に有りません</value>
+  </data>
+  <data name="logLogs" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="logPorts" xml:space="preserve">
+    <value>ポート</value>
+  </data>
+  <data name="logSource" xml:space="preserve">
+    <value>元パラメータ</value>
+  </data>
+  <data name="logTarget" xml:space="preserve">
+    <value>対象機器とポート</value>
+  </data>
+  <data name="logTargetPortFromSourcePort" xml:space="preserve">
+    <value>元ポート {1}から対象ポート {0} </value>
+  </data>
+  <data name="logWantToSeeReport" xml:space="preserve">
+    <value>レポートを表示しますか？</value>
+  </data>
+  <data name="mnuAbout" xml:space="preserve">
+    <value>リモートマネジャ</value>
+  </data>
+  <data name="mnuAddPlotSerie" xml:space="preserve">
+    <value>グラフ波形を追加</value>
+  </data>
+  <data name="mnuCascade" xml:space="preserve">
+    <value>カスケード表示</value>
+  </data>
+  <data name="mnuCascadeAll" xml:space="preserve">
+    <value>全ての機器をカスケード表示</value>
+  </data>
+  <data name="mnuChangePassword" xml:space="preserve">
+    <value>パスワード変更</value>
+  </data>
+  <data name="mnuChangeTreeItem" xml:space="preserve">
+    <value>名称変更</value>
+  </data>
+  <data name="mnuDeleteTreeItem" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="mnuEdit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="mnuEnvironment" xml:space="preserve">
+    <value>環境設定</value>
+  </data>
+  <data name="mnuFile" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="mnuFileOpenConfFile" xml:space="preserve">
+    <value>設定ファイル読込</value>
+  </data>
+  <data name="mnuHelp" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="mnuHelpFailed" xml:space="preserve">
+    <value>ヘルプが開けません。</value>
+  </data>
+  <data name="mnuInternationalSettings" xml:space="preserve">
+    <value>言語設定</value>
+  </data>
+  <data name="mnuLangDE" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="mnuLangEN" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="mnuLangES" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="mnuLanguages" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="mnuLoginSupervisor" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="mnuLogoutSupervisor" xml:space="preserve">
+    <value>ログアウト</value>
+  </data>
+  <data name="mnuNewStationGroup" xml:space="preserve">
+    <value>新規グループ作成</value>
+  </data>
+  <data name="mnuOptions" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="mnuPrintCurrentSettings" xml:space="preserve">
+    <value>現在の設定を印刷</value>
+  </data>
+  <data name="mnuReopenStation" xml:space="preserve">
+    <value>機器に再接続</value>
+  </data>
+  <data name="mnuShowErrorNotifications" xml:space="preserve">
+    <value>エラー表示</value>
+  </data>
+  <data name="mnuShowStationControllerNotifications" xml:space="preserve">
+    <value>機器を表示</value>
+  </data>
+  <data name="mnuShowStationNotifications" xml:space="preserve">
+    <value>機器を表示</value>
+  </data>
+  <data name="mnuSupervisor" xml:space="preserve">
+    <value>管理者</value>
+  </data>
+  <data name="mnuTempUnit" xml:space="preserve">
+    <value>温度単位</value>
+  </data>
+  <data name="mnuTools" xml:space="preserve">
+    <value>ツール</value>
+  </data>
+  <data name="mnuToolsRegisterManager" xml:space="preserve">
+    <value>記録管理</value>
+  </data>
+  <data name="mnuToolsSettingsManager" xml:space="preserve">
+    <value>設定管理</value>
+  </data>
+  <data name="mnuUnits" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="mnuUpdates" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="mnuUpdateSoftware" xml:space="preserve">
+    <value>ソフトウェア更新</value>
+  </data>
+  <data name="mnuView" xml:space="preserve">
+    <value>表示</value>
+  </data>
+  <data name="mnuViewEventsWindow" xml:space="preserve">
+    <value>履歴表示</value>
+  </data>
+  <data name="mnuViewParameters" xml:space="preserve">
+    <value>パラメータ表示</value>
+  </data>
+  <data name="mnuViewStationList" xml:space="preserve">
+    <value>機器リストパネル</value>
+  </data>
+  <data name="mnuViewWarning" xml:space="preserve">
+    <value>通知画面</value>
+  </data>
+  <data name="mnuWindows" xml:space="preserve">
+    <value>ウィンドウ</value>
+  </data>
+  <data name="modeControlMode" xml:space="preserve">
+    <value>管理
+モード</value>
+  </data>
+  <data name="modeControlWarning" xml:space="preserve">
+    <value>本機器のモード:</value>
+  </data>
+  <data name="modeMonitorMode" xml:space="preserve">
+    <value>モニタ
+モード</value>
+  </data>
+  <data name="modeRobotGetControlWarning" xml:space="preserve">
+    <value>ロボットモードを実行すると操作モードが無効になります。</value>
+  </data>
+  <data name="modeRobotLooseControlWarning" xml:space="preserve">
+    <value>本機器はロボットモード中です。接続が失われますがよろしいですか。</value>
+  </data>
+  <data name="notifNoNotif" xml:space="preserve">
+    <value>通知はありません</value>
+  </data>
+  <data name="OFF_STR" xml:space="preserve">
+    <value>Off</value>
+    <comment>Inactive</comment>
+  </data>
+  <data name="ON_STR" xml:space="preserve">
+    <value>On</value>
+    <comment>Active</comment>
+  </data>
+  <data name="paramsAllowedValues" xml:space="preserve">
+    <value>有効な数値: {0}</value>
+  </data>
+  <data name="paramsLimitsError" xml:space="preserve">
+    <value>{0} から {1}間の数値を入力して下さい</value>
+  </data>
+  <data name="paramsMaxLimitError" xml:space="preserve">
+    <value>{0}以下の数値を入力して下さい</value>
+  </data>
+  <data name="paramsMinLimitError" xml:space="preserve">
+    <value>{0}以上の数値を入力して下さい</value>
+  </data>
+  <data name="peripheralActivation" xml:space="preserve">
+    <value>実行</value>
+  </data>
+  <data name="peripheralElectricDes" xml:space="preserve">
+    <value>電動ポンプ</value>
+  </data>
+  <data name="peripheralErrorTime" xml:space="preserve">
+    <value>数値範囲 [0.0 .. 9.9]</value>
+  </data>
+  <data name="peripheralExtractor" xml:space="preserve">
+    <value>吸取り</value>
+  </data>
+  <data name="peripheralFumeExt" xml:space="preserve">
+    <value>吸煙器</value>
+  </data>
+  <data name="peripheralFunction" xml:space="preserve">
+    <value>機能</value>
+  </data>
+  <data name="peripheralModule" xml:space="preserve">
+    <value>モジュール</value>
+  </data>
+  <data name="peripheralNitrogen" xml:space="preserve">
+    <value>窒素発生器</value>
+  </data>
+  <data name="peripheralNoPeripheral" xml:space="preserve">
+    <value>周辺機器がありません</value>
+  </data>
+  <data name="peripheralNoSupported" xml:space="preserve">
+    <value>周辺機器がサポートされていません</value>
+  </data>
+  <data name="peripheralPedal" xml:space="preserve">
+    <value>フットスイッチ</value>
+  </data>
+  <data name="peripheralPneumaticDes" xml:space="preserve">
+    <value>エアーポンプ</value>
+  </data>
+  <data name="peripheralPressed" xml:space="preserve">
+    <value>フットスイッチON</value>
+  </data>
+  <data name="peripheralReleased" xml:space="preserve">
+    <value>フットスイッチOFF</value>
+  </data>
+  <data name="peripheralSleep" xml:space="preserve">
+    <value>スリープ</value>
+  </data>
+  <data name="peripheralTabHint" xml:space="preserve">
+    <value>周辺機器設定</value>
+  </data>
+  <data name="peripheralTime" xml:space="preserve">
+    <value>最小時間 (秒)</value>
+  </data>
+  <data name="PortsActualTemp" xml:space="preserve">
+    <value>実際温度: {0}</value>
+  </data>
+  <data name="portsDelay" xml:space="preserve">
+    <value>移行時間 {0}</value>
+  </data>
+  <data name="portsDelayToHiber" xml:space="preserve">
+    <value>休止移行時間 {0}</value>
+    <comment>Delay to enter in hibernation (minutes:seconds)</comment>
+  </data>
+  <data name="portsDelayToSleep" xml:space="preserve">
+    <value>スリープ移行時間 {0}</value>
+    <comment>Delay to enter in sleep (minutes:seconds)</comment>
+  </data>
+  <data name="portsDesolder" xml:space="preserve">
+    <value>吸取り</value>
+  </data>
+  <data name="portsExtractor" xml:space="preserve">
+    <value>ツール取外し中</value>
+  </data>
+  <data name="portsHiber" xml:space="preserve">
+    <value>休止</value>
+  </data>
+  <data name="portsNoPort" xml:space="preserve">
+    <value>ポート無</value>
+  </data>
+  <data name="portsNoSleep" xml:space="preserve">
+    <value>スリープ無効</value>
+  </data>
+  <data name="portsNoTool" xml:space="preserve">
+    <value>ツール無</value>
+  </data>
+  <data name="portsPortTitle" xml:space="preserve">
+    <value>ポート</value>
+  </data>
+  <data name="portsSleep" xml:space="preserve">
+    <value>スリープ</value>
+  </data>
+  <data name="portsStand" xml:space="preserve">
+    <value>スタンドに設置中</value>
+  </data>
+  <data name="portsWork" xml:space="preserve">
+    <value>作業</value>
+  </data>
+  <data name="resetInfo" xml:space="preserve">
+    <value>機器設定を初期化しますか？</value>
+  </data>
+  <data name="resetProceed" xml:space="preserve">
+    <value>実行</value>
+  </data>
+  <data name="resetSuccessMessage" xml:space="preserve">
+    <value>成功しました</value>
+  </data>
+  <data name="resetTabHint" xml:space="preserve">
+    <value>設定をリセット</value>
+  </data>
+  <data name="stnBeep" xml:space="preserve">
+    <value>アラーム</value>
+  </data>
+  <data name="stnEthConf" xml:space="preserve">
+    <value>有線LAN</value>
+  </data>
+  <data name="stnEthDHCP" xml:space="preserve">
+    <value>IP自動取得</value>
+  </data>
+  <data name="stnEthDNS" xml:space="preserve">
+    <value>DNS</value>
+  </data>
+  <data name="stnEthGateway" xml:space="preserve">
+    <value>ゲートウェイ</value>
+  </data>
+  <data name="stnEthIP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="stnEthMask" xml:space="preserve">
+    <value>サブネットマスク</value>
+  </data>
+  <data name="stnEthPort" xml:space="preserve">
+    <value>ポート</value>
+  </data>
+  <data name="stnGenSettings" xml:space="preserve">
+    <value>一般設定</value>
+  </data>
+  <data name="stnHelp" xml:space="preserve">
+    <value>ヘルプテキスト</value>
+  </data>
+  <data name="stnModel" xml:space="preserve">
+    <value>モデル</value>
+  </data>
+  <data name="stnMOSErr" xml:space="preserve">
+    <value>MOSFET温度エラー</value>
+  </data>
+  <data name="stnN2" xml:space="preserve">
+    <value>窒素モード</value>
+  </data>
+  <data name="stnName" xml:space="preserve">
+    <value>名称</value>
+    <comment>Station Name</comment>
+  </data>
+  <data name="stnPIN" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="stnProtocol" xml:space="preserve">
+    <value>プロトコルVer.</value>
+  </data>
+  <data name="stnPwrLimit" xml:space="preserve">
+    <value>パワー上限</value>
+  </data>
+  <data name="stnRbtAddress" xml:space="preserve">
+    <value>アドレス</value>
+  </data>
+  <data name="stnRbtConf" xml:space="preserve">
+    <value>ロボット</value>
+  </data>
+  <data name="stnRbtDataBits" xml:space="preserve">
+    <value>データ長</value>
+  </data>
+  <data name="stnRbtParity" xml:space="preserve">
+    <value>パリティ</value>
+  </data>
+  <data name="stnRbtParityEven" xml:space="preserve">
+    <value>偶数</value>
+  </data>
+  <data name="stnRbtParityNone" xml:space="preserve">
+    <value>無し</value>
+  </data>
+  <data name="stnRbtParityOdd" xml:space="preserve">
+    <value>奇数</value>
+  </data>
+  <data name="stnRbtProtocol" xml:space="preserve">
+    <value>プロトコル</value>
+  </data>
+  <data name="stnRbtSpeed" xml:space="preserve">
+    <value>ボーレート</value>
+  </data>
+  <data name="stnRbtStatus" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="stnRbtStopBits" xml:space="preserve">
+    <value>ストップビット</value>
+  </data>
+  <data name="stnStationSettings" xml:space="preserve">
+    <value>機器設定</value>
+  </data>
+  <data name="stnSW" xml:space="preserve">
+    <value>ソフトウェアVer.</value>
+  </data>
+  <data name="stnTabHint" xml:space="preserve">
+    <value>機器設定</value>
+  </data>
+  <data name="stnTmax" xml:space="preserve">
+    <value>上限温度</value>
+  </data>
+  <data name="stnTmin" xml:space="preserve">
+    <value>下限温度</value>
+  </data>
+  <data name="stnTrafoErr" xml:space="preserve">
+    <value>トランス温度異常</value>
+  </data>
+  <data name="stnTunits" xml:space="preserve">
+    <value>温度単位</value>
+  </data>
+  <data name="stnTunitsCelsius" xml:space="preserve">
+    <value>摂氏</value>
+  </data>
+  <data name="stnTunitsFahrenheit" xml:space="preserve">
+    <value>華氏</value>
+  </data>
+  <data name="supervEnterPassword" xml:space="preserve">
+    <value>管理者パスワードを入力してください。</value>
+  </data>
+  <data name="supervInvalidPassword" xml:space="preserve">
+    <value>不正なパスワード</value>
+  </data>
+  <data name="supervMustLogin" xml:space="preserve">
+    <value>この作業を実行するにはログインが必要です。</value>
+  </data>
+  <data name="supervPassword" xml:space="preserve">
+    <value>管理者パスワード</value>
+  </data>
+  <data name="toolAdjustTemp" xml:space="preserve">
+    <value>温度補正</value>
+  </data>
+  <data name="toolAllSameSettings" xml:space="preserve">
+    <value>全てのツールに同じ設定を適応する。</value>
+  </data>
+  <data name="toolCartridge" xml:space="preserve">
+    <value>カートリッジ</value>
+  </data>
+  <data name="toolFixTemp" xml:space="preserve">
+    <value>固定温度</value>
+    <comment>Fixed Temperature</comment>
+  </data>
+  <data name="toolHibernationDelay" xml:space="preserve">
+    <value>休止移行タイマ</value>
+  </data>
+  <data name="toolNoHibernationDelay" xml:space="preserve">
+    <value>休止無効</value>
+    <comment>No hibernation</comment>
+  </data>
+  <data name="toolNoSelectedTempLvl" xml:space="preserve">
+    <value>温度選択無</value>
+  </data>
+  <data name="toolNoSleepDelay" xml:space="preserve">
+    <value>スリープ無効</value>
+  </data>
+  <data name="toolPort" xml:space="preserve">
+    <value>ポート</value>
+  </data>
+  <data name="toolPortsAndTools" xml:space="preserve">
+    <value>ポートとツール</value>
+  </data>
+  <data name="toolSelectedTemp" xml:space="preserve">
+    <value>選択温度</value>
+  </data>
+  <data name="toolSelectedTempLvl" xml:space="preserve">
+    <value>選択温度設定</value>
+  </data>
+  <data name="toolSelectedTempLvlFirst" xml:space="preserve">
+    <value>第1</value>
+    <comment>First level</comment>
+  </data>
+  <data name="toolSelectedTempLvlSecond" xml:space="preserve">
+    <value>第2</value>
+    <comment>Second level</comment>
+  </data>
+  <data name="toolSelectedTempLvlThird" xml:space="preserve">
+    <value>第3</value>
+    <comment>Third level</comment>
+  </data>
+  <data name="toolSelectedTool" xml:space="preserve">
+    <value>選択中ツール</value>
+  </data>
+  <data name="toolSleepDelay" xml:space="preserve">
+    <value>スリープ移行時間</value>
+  </data>
+  <data name="toolSleepTemp" xml:space="preserve">
+    <value>スリープ温度</value>
+  </data>
+  <data name="toolTabHint" xml:space="preserve">
+    <value>ツール設定</value>
+  </data>
+  <data name="toolTempLvl1" xml:space="preserve">
+    <value>温度選択1</value>
+  </data>
+  <data name="toolTempLvl2" xml:space="preserve">
+    <value>温度選択2</value>
+  </data>
+  <data name="toolTempLvl3" xml:space="preserve">
+    <value>温度選択3</value>
+  </data>
+  <data name="toolTool" xml:space="preserve">
+    <value>ツール</value>
+  </data>
+  <data name="txtMinutes" xml:space="preserve">
+    <value>{0} 分</value>
+    <comment>{0} = number, ej: 10 min</comment>
+  </data>
+  <data name="ueCOMMUNICATION_ERROR" xml:space="preserve">
+    <value>通信エラー</value>
+  </data>
+  <data name="ueCONTINUOUS_MODE_ON_WITHOUT_PORTS" xml:space="preserve">
+    <value>ポートを使用しない連続モード</value>
+  </data>
+  <data name="ueError" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="ueFUNCTION_NOT_SUPPORTED" xml:space="preserve">
+    <value>サポートされていない機能</value>
+  </data>
+  <data name="ueINVALID_STATION_NAME" xml:space="preserve">
+    <value>無効な機器名称</value>
+  </data>
+  <data name="ueINVALID_STATION_PIN" xml:space="preserve">
+    <value>無効なパスワード</value>
+  </data>
+  <data name="uePORT_NOT_IN_RANGE" xml:space="preserve">
+    <value>ポート範囲外</value>
+  </data>
+  <data name="uePOWER_LIMIT_OUT_OF_RANGE" xml:space="preserve">
+    <value>パワー限度外</value>
+  </data>
+  <data name="ueSTATION_ID_NOT_FOUND" xml:space="preserve">
+    <value>機器が見つかりません</value>
+  </data>
+  <data name="ueSTATION_ID_OVERFLOW" xml:space="preserve">
+    <value>機器ID無効</value>
+  </data>
+  <data name="ueTEMPERATURE_OUT_OF_RANGE" xml:space="preserve">
+    <value>温度範囲外</value>
+  </data>
+  <data name="ueTOOL_NOT_SUPPORTED" xml:space="preserve">
+    <value>サポートされていないツール</value>
+  </data>
+  <data name="updateLastUpdate" xml:space="preserve">
+    <value>最後の更新:</value>
+  </data>
+  <data name="updatesMessageError" xml:space="preserve">
+    <value>インストール中にエラーが発生しました</value>
+  </data>
+  <data name="updatesNotificationState_InitUpdateProcessExplanation" xml:space="preserve">
+    <value>アップデートの実行数分間要します。継続して使用できますが、幾つかの機能が停止します。</value>
+  </data>
+  <data name="updatesNotificationState_InitUpdateProcessTitle" xml:space="preserve">
+    <value>アップデート中</value>
+  </data>
+  <data name="updatesNotificationState_NoConnectionExplanation" xml:space="preserve">
+    <value>接続の検証</value>
+  </data>
+  <data name="updatesNotificationState_NoConnectionReconnect" xml:space="preserve">
+    <value>再接続</value>
+  </data>
+  <data name="updatesNotificationState_NoConnectionTitle" xml:space="preserve">
+    <value>ホストとの接続がありません</value>
+  </data>
+  <data name="updatesNotificationState_OkExplanation" xml:space="preserve">
+    <value>入手可能なアップデートがありません</value>
+  </data>
+  <data name="updatesNotificationState_OkTitle" xml:space="preserve">
+    <value>オープンマネジャは最新です</value>
+  </data>
+  <data name="updatesNotificationState_WarningHostControllerVersion" xml:space="preserve">
+    <value>ホストコントローラ Ver. Nº:</value>
+  </data>
+  <data name="updatesNotificationState_WarningInstallUpdates" xml:space="preserve">
+    <value>アップデートをインストール</value>
+  </data>
+  <data name="updatesNotificationState_WarningRemoteManagerVersion" xml:space="preserve">
+    <value>リモートマネジャ Ver. Nº:</value>
+  </data>
+  <data name="updatesNotificationState_WarningStationControllerVersion" xml:space="preserve">
+    <value>ステーションコントローラVer. Nº:</value>
+  </data>
+  <data name="updatesNotificationState_WarningTitle" xml:space="preserve">
+    <value>入手可能なアップデートがあります</value>
+  </data>
+  <data name="updatesNotificationState_WarningWebManagerVersion" xml:space="preserve">
+    <value>ウェブマネジャーVer. Nº:</value>
+  </data>
+  <data name="updatesPanelAt" xml:space="preserve">
+    <value>at</value>
+  </data>
+  <data name="updatesPanelAutomaticUpdates" xml:space="preserve">
+    <value>自動アップデート</value>
+  </data>
+  <data name="updatesPanelAutomaticUpdateSchedule" xml:space="preserve">
+    <value>スケジュールした自動アップﾃﾞｰﾄ</value>
+  </data>
+  <data name="updatesPanelConfigurationUpdates" xml:space="preserve">
+    <value>設定変更</value>
+  </data>
+  <data name="updatesPanelConfigurationUpdatesTitle" xml:space="preserve">
+    <value>オープンマネジャがアップデート可能な方法を選択</value>
+  </data>
+  <data name="updatesPanelEveryDay" xml:space="preserve">
+    <value>毎日</value>
+  </data>
+  <data name="updatesPanelEveryFriday" xml:space="preserve">
+    <value>毎金曜日</value>
+  </data>
+  <data name="updatesPanelEveryMonday" xml:space="preserve">
+    <value>毎月曜日</value>
+  </data>
+  <data name="updatesPanelEverySaturday" xml:space="preserve">
+    <value>毎土曜日</value>
+  </data>
+  <data name="updatesPanelEverySunday" xml:space="preserve">
+    <value>毎日曜日</value>
+  </data>
+  <data name="updatesPanelEveryThursday" xml:space="preserve">
+    <value>毎木曜日</value>
+  </data>
+  <data name="updatesPanelEveryTuesday" xml:space="preserve">
+    <value>毎火曜日</value>
+  </data>
+  <data name="updatesPanelEveryWednesday" xml:space="preserve">
+    <value>毎水曜日</value>
+  </data>
+  <data name="updatesPanelInstallNewUpdates" xml:space="preserve">
+    <value>最新アップデートをインストール:</value>
+  </data>
+  <data name="updatesPanelNever" xml:space="preserve">
+    <value>実行しない</value>
+  </data>
+  <data name="updatesPanelRButCheck" xml:space="preserve">
+    <value>インストールする前に通知する</value>
+  </data>
+  <data name="updatesPanelRButDisable" xml:space="preserve">
+    <value>アップデートをチェックしない (推奨しません)</value>
+  </data>
+  <data name="updatesPanelRButUpdate" xml:space="preserve">
+    <value>リモートマネジャのアップデートを許可する (推奨設定)</value>
+  </data>
+  <data name="updatesPanelScheduleUpdates" xml:space="preserve">
+    <value>アップデートをスケジュール</value>
+  </data>
+  <data name="updatesPanelSearchTitle" xml:space="preserve">
+    <value>オープンマネジャのアップデート</value>
+  </data>
+  <data name="updatesPanelSearchUpdates" xml:space="preserve">
+    <value>アップデートを検索</value>
+  </data>
+  <data name="updatesReInstallCancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="updatesReInstallInformation" xml:space="preserve">
+    <value>このバージョンのリモートマネジャはアップデートが必要です。インストールの実行には現在の作業を閉じる必要があります。アップデートを実行してもよろしいですか。</value>
+  </data>
+  <data name="updatesReInstallTitle" xml:space="preserve">
+    <value>ソフトウェアのアップデートが必要です。</value>
+  </data>
+  <data name="updatesReInstallTryAgain" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="updatesReInstallUpdate" xml:space="preserve">
+    <value>アップデート</value>
+  </data>
+  <data name="updatesReInstallUpdateStatus" xml:space="preserve">
+    <value>インストール中にエラーが発生しました</value>
+  </data>
+  <data name="updateUpdate" xml:space="preserve">
+    <value>アップデート</value>
+  </data>
+  <data name="workNoTool" xml:space="preserve">
+    <value>ツール無</value>
+  </data>
+  <data name="workPort" xml:space="preserve">
+    <value>ポート {0}</value>
+  </data>
+  <data name="workPower" xml:space="preserve">
+    <value>パワー</value>
+  </data>
+  <data name="workTabHint" xml:space="preserve">
+    <value>作業</value>
+  </data>
+  <data name="workTempFixed" xml:space="preserve">
+    <value>固定温度</value>
+  </data>
+  <data name="workTempLevels" xml:space="preserve">
+    <value>温度選択</value>
+  </data>
+  <data name="workTempSelection" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="workToolNeeded" xml:space="preserve">
+    <value>ツールとカートリッジが必要です</value>
+  </data>
+  <data name="xslLogTitle" xml:space="preserve">
+    <value>設定レポート</value>
+  </data>
+  <data name="xslParameter" xml:space="preserve">
+    <value>パラメータ</value>
+  </data>
+  <data name="xslStationConfiguration" xml:space="preserve">
+    <value>機器設定</value>
+  </data>
+  <data name="xslValue" xml:space="preserve">
+    <value>値</value>
+  </data>
+  <data name="mnuLangJA" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="updatesPanelStationInProgress" xml:space="preserve">
+    <value>Update in progress...</value>
+  </data>
+  <data name="updatesPanelStationModel" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="updatesPanelStationName" xml:space="preserve">
+    <value>Station name</value>
+  </data>
+  <data name="updatesPanelStationNewSoftware" xml:space="preserve">
+    <value>New software available</value>
+  </data>
+  <data name="updatesPanelStationNotUpdatable" xml:space="preserve">
+    <value>Not updatable</value>
+  </data>
+  <data name="updatesPanelStationSoftwareVersion" xml:space="preserve">
+    <value>Software version</value>
+  </data>
+  <data name="updatesPanelStationUpdateAvailable" xml:space="preserve">
+    <value>Update available</value>
+  </data>
+  <data name="updatesPanelStationUpToDate" xml:space="preserve">
+    <value>Up to date</value>
+  </data>
+  <data name="updatesPanelUpdatesStationTitle" xml:space="preserve">
+    <value>Update stations</value>
+  </data>
+  <data name="hostControllerConnected" xml:space="preserve">
+    <value>Host Controller connected</value>
+  </data>
+  <data name="hostControllerMultipleConnected" xml:space="preserve">
+    <value>Multiple Host Controller connected</value>
+  </data>
+  <data name="hostControllerNoConnected" xml:space="preserve">
+    <value>No Host Controller connected</value>
+  </data>
+  <data name="toolProfiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="toolTimeToStop" xml:space="preserve">
+    <value>Time to stop</value>
+  </data>
+  <data name="toolExtTCMode" xml:space="preserve">
+    <value>External TC mode</value>
+  </data>
+  <data name="toolExtTCModeProtection" xml:space="preserve">
+    <value>Protection</value>
+  </data>
+  <data name="toolExtTCModeRegulation" xml:space="preserve">
+    <value>Regulation</value>
+  </data>
+  <data name="toolStartModePedalAction" xml:space="preserve">
+    <value>Start mode - Pedal</value>
+  </data>
+  <data name="toolStartModeStandOut" xml:space="preserve">
+    <value>Start mode - Auto start</value>
+  </data>
+  <data name="toolStartModeToolButton" xml:space="preserve">
+    <value>Start mode - Tool button</value>
+  </data>
+  <data name="toolStartModePedalPressCont" xml:space="preserve">
+    <value>Press continuously</value>
+  </data>
+  <data name="toolStartModePedalPressOnce" xml:space="preserve">
+    <value>Press once</value>
+  </data>
+  <data name="toolExtTCTemp" xml:space="preserve">
+    <value>External TC temperature</value>
+  </data>
+  <data name="toolSelectedAirFlow" xml:space="preserve">
+    <value>Selected Air flow</value>
+  </data>
+</root>

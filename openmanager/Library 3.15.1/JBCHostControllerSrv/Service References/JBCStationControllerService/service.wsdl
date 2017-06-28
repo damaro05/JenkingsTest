@@ -1,0 +1,1598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://JBCStationControllerSrv" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://JBCStationControllerSrv" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://JBCStationControllerSrv/Imports">
+      <xsd:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd0" namespace="http://JBCStationControllerSrv" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JBC_Connect" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JBCStationControllerSrv" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Net.Sockets" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJBCStationControllerService_GetStationControllerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationControllerInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationControllerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationControllerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationControllerInfo_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q1:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StationControllerSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationControllerSearch" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StationControllerSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationControllerSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StationControllerSearch_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q2:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StationControllerIsSearching_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationControllerIsSearching" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StationControllerIsSearching_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationControllerIsSearchingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StationControllerIsSearching_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q3:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationCount" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationCount_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q4:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationList" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationList_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q5:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationInfo_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q6:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationStatus" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationStatus_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q7:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationStatus_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationStatus_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationStatus_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationStatus_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationStatus_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q8:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetControlMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetControlMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetControlMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetControlModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetControlMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q9:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetControlMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetControlMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetControlMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetControlModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetControlMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q10:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetRemoteMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRemoteMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetRemoteMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRemoteModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetRemoteMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q11:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_KeepControlMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeepControlMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_KeepControlMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeepControlModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_KeepControlMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q12:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortStatus" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortStatus_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q13:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortStatus_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortStatus_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortStatus_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortStatus_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortStatus_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q14:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortStatusTool_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortStatusTool" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortStatusTool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortStatusToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortStatusTool_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q15:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortStatusTool_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortStatusTool_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortStatusTool_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortStatusTool_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortStatusTool_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q16:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationSettings" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationSettings_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q17:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationSettings_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationSettings_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationSettings_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationSettings_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationSettings_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q18:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationPIN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationPIN" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationPIN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationPINResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationPIN_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q19:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationName" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationName_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q20:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPIN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationPIN" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPIN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationPINResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPIN_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q21:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationTempUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationTempUnit" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationTempUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationTempUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationTempUnit_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q22:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMinTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMinTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q23:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMaxTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMaxTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q24:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationN2Mode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationN2Mode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationN2Mode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationN2ModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationN2Mode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q25:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationHelpText_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationHelpText" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationHelpText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationHelpTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationHelpText_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q26:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationBeep_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationBeep" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationBeep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationBeepResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationBeep_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q27:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPowerLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationPowerLimit" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPowerLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationPowerLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPowerLimit_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q28:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinExtTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMinExtTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinExtTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMinExtTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinExtTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q29:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxExtTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMaxExtTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxExtTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMaxExtTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxExtTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q30:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinFlow_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMinFlow" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinFlow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMinFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMinFlow_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q31:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxFlow_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMaxFlow" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxFlow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationMaxFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationMaxFlow_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q32:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPINEnabled_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationPINEnabled" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPINEnabled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationPINEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationPINEnabled_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q33:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationLocked_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationLocked" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationLocked_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStationLockedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetStationLocked_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q34:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortToolSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortToolSettings" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortToolSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortToolSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortToolSettings_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q35:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortToolSettings_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortToolSettings_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortToolSettings_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortToolSettings_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortToolSettings_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q36:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q37:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedTempStep_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedTempStep" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedTempStep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedTempStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedTempStep_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q38:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedFlow_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedFlow" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedFlow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedFlow_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q39:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedExtTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedExtTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedExtTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedExtTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedExtTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q40:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedExtTempStep_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedExtTempStep" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedExtTempStep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedExtTempStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedExtTempStep_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q41:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolFixTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolFixTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolFixTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolFixTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolFixTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q42:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolLevels_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolLevels" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolLevels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolLevelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolLevels_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q43:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolLevels_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolLevels_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolLevels_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolLevels_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolLevels_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q44:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedLevelEnabled_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedLevelEnabled" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedLevelEnabled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedLevelEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedLevelEnabled_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q45:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedLevel" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSelectedLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSelectedLevel_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q46:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTempLevelEnabled_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolTempLevelEnabled" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTempLevelEnabled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolTempLevelEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTempLevelEnabled_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q47:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTempLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolTempLevel" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTempLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolTempLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTempLevel_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q48:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolExtTempLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolExtTempLevel" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolExtTempLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolExtTempLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolExtTempLevel_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q49:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolFlowLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolFlowLevel" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolFlowLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolFlowLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolFlowLevel_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q50:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolProfileMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolProfileMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolProfileMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolProfileModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolProfileMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q51:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepDelay_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSleepDelay" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepDelay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSleepDelayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepDelay_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q52:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepDelayEnabled_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSleepDelayEnabled" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepDelayEnabled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSleepDelayEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepDelayEnabled_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q53:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolHibernationDelay_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolHibernationDelay" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolHibernationDelay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolHibernationDelayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolHibernationDelay_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q54:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolHibernationDelayEnabled_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolHibernationDelayEnabled" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolHibernationDelayEnabled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolHibernationDelayEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolHibernationDelayEnabled_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q55:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSleepTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolSleepTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolSleepTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q56:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolAdjustTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolAdjustTemp" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolAdjustTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolAdjustTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolAdjustTemp_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q57:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolCartridge_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolCartridge" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolCartridge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolCartridgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolCartridge_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q58:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTimeToStop_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolTimeToStop" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTimeToStop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolTimeToStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolTimeToStop_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q59:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolExternalTCMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolExternalTCMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolExternalTCMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolExternalTCModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolExternalTCMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q60:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolStartMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolStartMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolStartMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPortToolStartModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPortToolStartMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q61:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortCounters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortCounters" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortCounters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortCountersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetPortCounters_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q62:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ResetPortPartialCounters_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPortPartialCounters" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ResetPortPartialCounters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPortPartialCountersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ResetPortPartialCounters_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q63:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q64:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeDataCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeDataCount" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeDataCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeDataCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeDataCount_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q65:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartContinuousMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartContinuousMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartContinuousMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartContinuousModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartContinuousMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q66:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopContinuousMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopContinuousMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopContinuousMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopContinuousModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopContinuousMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q67:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextData" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextData_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q68:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextData_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextData_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextData_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextData_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextData_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q69:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextDataChunk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextDataChunk" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextDataChunk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextDataChunkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextDataChunk_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q70:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextDataChunk_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextDataChunk_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextDataChunk_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContinuousModeNextDataChunk_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetContinuousModeNextDataChunk_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q71:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetContinuousMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetContinuousMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetContinuousMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetContinuousModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetContinuousMode_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q72:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetEthernetConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEthernetConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetEthernetConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEthernetConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetEthernetConfiguration_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q73:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetRobotConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRobotConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetRobotConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRobotConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetRobotConfiguration_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q74:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetEthernetConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEthernetConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetEthernetConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEthernetConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetEthernetConfiguration_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q75:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetRobotConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRobotConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetRobotConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRobotConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetRobotConfiguration_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q76:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAllPeripheralInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPeripheralInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAllPeripheralInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPeripheralInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAllPeripheralInfo_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q77:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPeripheralInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPeripheralInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPeripheralInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPeripheralInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetPeripheralInfo_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q78:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAllProfiles_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProfiles_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAllProfiles_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProfiles_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAllProfiles_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q79:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetSelectedProfile_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedProfile_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetSelectedProfile_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedProfile_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetSelectedProfile_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q80:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetProfile_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetProfile_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetProfile_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetProfile_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetProfile_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q81:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteProfile_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProfile_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteProfile_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProfile_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteProfile_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q82:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SyncProfiles_HA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncProfiles_HA" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SyncProfiles_HA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncProfiles_HAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SyncProfiles_HA_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q83:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetTransaction_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q84:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_QueryEndedTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryEndedTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_QueryEndedTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryEndedTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_QueryEndedTransaction_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q85:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetDefaultStationParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDefaultStationParams" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetDefaultStationParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDefaultStationParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetDefaultStationParams_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q86:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ResetStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetStation" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ResetStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ResetStation_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q87:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationListUpdating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationListUpdating" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationListUpdating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationListUpdatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetStationListUpdating_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q88:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_UpdateStations_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStations" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_UpdateStations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_UpdateStations_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q89:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_LockStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LockStation" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_LockStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_LockStation_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q90:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeactivatePortStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivatePortStation" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeactivatePortStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeactivatePortStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeactivatePortStation_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q91:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowMessage" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowMessage_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q92:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTraceability_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartTraceability" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTraceability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartTraceabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTraceability_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q93:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTraceability_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopTraceability" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTraceability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopTraceabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTraceability_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q94:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_NewUserSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewUserSession" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_NewUserSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewUserSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_NewUserSession_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q95="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q95:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_CloseUserSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseUserSession" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_CloseUserSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseUserSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_CloseUserSession_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q96:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAuthenticatedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthenticatedUser" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAuthenticatedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthenticatedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetAuthenticatedUser_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q97="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q97:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDate" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetDate_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q98:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDate" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetDate_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q99:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_AddWorkOptionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddWorkOptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_AddWorkOptionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddWorkOptionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_AddWorkOptionDetails_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q100:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteWorkOptionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkOptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteWorkOptionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkOptionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteWorkOptionDetails_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q101="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q101:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowWorkOptionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowWorkOptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowWorkOptionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowWorkOptionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowWorkOptionDetails_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q102:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowHelpResource_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowHelpResource" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowHelpResource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowHelpResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_ShowHelpResource_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q103="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q103:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_LoadConfigurationPortStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadConfigurationPortStation" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_LoadConfigurationPortStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadConfigurationPortStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_LoadConfigurationPortStation_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q104="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q104:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetTraceFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTraceFolder" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetTraceFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTraceFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetTraceFolder_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q105="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q105:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetTraceSpeed_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTraceSpeed" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetTraceSpeed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTraceSpeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_SetTraceSpeed_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q106="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q106:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTrace_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartTrace" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTrace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartTraceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTrace_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q107="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q107:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTracePort_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartTracePort" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTracePort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartTracePortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StartTracePort_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q108="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q108:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTrace_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopTrace" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTrace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopTraceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTrace_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q109="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q109:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTracePort_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopTracePort" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTracePort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopTracePortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_StopTracePort_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q110="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q110:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetListRecordedDataFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListRecordedDataFiles" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetListRecordedDataFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListRecordedDataFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetListRecordedDataFiles_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q111="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q111:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetRecordedData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordedData" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetRecordedData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_GetRecordedData_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q112="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q112:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteRecordedDataFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordedDataFile" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteRecordedDataFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecordedDataFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCStationControllerService_DeleteRecordedDataFile_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q113="http://schemas.datacontract.org/2004/07/JBC_Connect" name="detail" element="q113:faultError" />
+  </wsdl:message>
+  <wsdl:portType name="IJBCStationControllerService">
+    <wsdl:operation name="GetStationControllerInfo">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationControllerInfo" message="tns:IJBCStationControllerService_GetStationControllerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationControllerInfoResponse" message="tns:IJBCStationControllerService_GetStationControllerInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationControllerInfofaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationControllerInfo_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationControllerSearch">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerSearch" message="tns:IJBCStationControllerService_StationControllerSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerSearchResponse" message="tns:IJBCStationControllerService_StationControllerSearch_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerSearchfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StationControllerSearch_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationControllerIsSearching">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerIsSearching" message="tns:IJBCStationControllerService_StationControllerIsSearching_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerIsSearchingResponse" message="tns:IJBCStationControllerService_StationControllerIsSearching_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerIsSearchingfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StationControllerIsSearching_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationCount">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationCount" message="tns:IJBCStationControllerService_GetStationCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationCountResponse" message="tns:IJBCStationControllerService_GetStationCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationCountfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationCount_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationList">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationList" message="tns:IJBCStationControllerService_GetStationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationListResponse" message="tns:IJBCStationControllerService_GetStationList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationListfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationList_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationInfo">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationInfo" message="tns:IJBCStationControllerService_GetStationInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationInfoResponse" message="tns:IJBCStationControllerService_GetStationInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationInfofaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationInfo_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationStatus">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatus" message="tns:IJBCStationControllerService_GetStationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatusResponse" message="tns:IJBCStationControllerService_GetStationStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatusfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationStatus_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationStatus_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatus_HA" message="tns:IJBCStationControllerService_GetStationStatus_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatus_HAResponse" message="tns:IJBCStationControllerService_GetStationStatus_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatus_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationStatus_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetControlMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetControlMode" message="tns:IJBCStationControllerService_GetControlMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetControlModeResponse" message="tns:IJBCStationControllerService_GetControlMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetControlModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetControlMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetControlMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetControlMode" message="tns:IJBCStationControllerService_SetControlMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetControlModeResponse" message="tns:IJBCStationControllerService_SetControlMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetControlModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetControlMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRemoteMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetRemoteMode" message="tns:IJBCStationControllerService_SetRemoteMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetRemoteModeResponse" message="tns:IJBCStationControllerService_SetRemoteMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetRemoteModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetRemoteMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeepControlMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/KeepControlMode" message="tns:IJBCStationControllerService_KeepControlMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/KeepControlModeResponse" message="tns:IJBCStationControllerService_KeepControlMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/KeepControlModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_KeepControlMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortStatus">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatus" message="tns:IJBCStationControllerService_GetPortStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatusResponse" message="tns:IJBCStationControllerService_GetPortStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatusfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetPortStatus_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortStatus_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatus_HA" message="tns:IJBCStationControllerService_GetPortStatus_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatus_HAResponse" message="tns:IJBCStationControllerService_GetPortStatus_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatus_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetPortStatus_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortStatusTool">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusTool" message="tns:IJBCStationControllerService_SetPortStatusTool_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusToolResponse" message="tns:IJBCStationControllerService_SetPortStatusTool_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusToolfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortStatusTool_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortStatusTool_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusTool_HA" message="tns:IJBCStationControllerService_SetPortStatusTool_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusTool_HAResponse" message="tns:IJBCStationControllerService_SetPortStatusTool_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusTool_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortStatusTool_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationSettings">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettings" message="tns:IJBCStationControllerService_GetStationSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettingsResponse" message="tns:IJBCStationControllerService_GetStationSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettingsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationSettings_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationSettings_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettings_HA" message="tns:IJBCStationControllerService_GetStationSettings_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettings_HAResponse" message="tns:IJBCStationControllerService_GetStationSettings_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettings_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationSettings_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationPIN">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationPIN" message="tns:IJBCStationControllerService_GetStationPIN_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationPINResponse" message="tns:IJBCStationControllerService_GetStationPIN_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationPINfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationPIN_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationName">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationName" message="tns:IJBCStationControllerService_SetStationName_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationNameResponse" message="tns:IJBCStationControllerService_SetStationName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationNamefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationName_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationPIN">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPIN" message="tns:IJBCStationControllerService_SetStationPIN_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPINResponse" message="tns:IJBCStationControllerService_SetStationPIN_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPINfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationPIN_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationTempUnit">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationTempUnit" message="tns:IJBCStationControllerService_SetStationTempUnit_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationTempUnitResponse" message="tns:IJBCStationControllerService_SetStationTempUnit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationTempUnitfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationTempUnit_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMinTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinTemp" message="tns:IJBCStationControllerService_SetStationMinTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinTempResponse" message="tns:IJBCStationControllerService_SetStationMinTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationMinTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMaxTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxTemp" message="tns:IJBCStationControllerService_SetStationMaxTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxTempResponse" message="tns:IJBCStationControllerService_SetStationMaxTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationMaxTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationN2Mode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationN2Mode" message="tns:IJBCStationControllerService_SetStationN2Mode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationN2ModeResponse" message="tns:IJBCStationControllerService_SetStationN2Mode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationN2ModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationN2Mode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationHelpText">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationHelpText" message="tns:IJBCStationControllerService_SetStationHelpText_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationHelpTextResponse" message="tns:IJBCStationControllerService_SetStationHelpText_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationHelpTextfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationHelpText_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationBeep">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationBeep" message="tns:IJBCStationControllerService_SetStationBeep_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationBeepResponse" message="tns:IJBCStationControllerService_SetStationBeep_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationBeepfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationBeep_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationPowerLimit">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPowerLimit" message="tns:IJBCStationControllerService_SetStationPowerLimit_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPowerLimitResponse" message="tns:IJBCStationControllerService_SetStationPowerLimit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPowerLimitfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationPowerLimit_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMinExtTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinExtTemp" message="tns:IJBCStationControllerService_SetStationMinExtTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinExtTempResponse" message="tns:IJBCStationControllerService_SetStationMinExtTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinExtTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationMinExtTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMaxExtTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxExtTemp" message="tns:IJBCStationControllerService_SetStationMaxExtTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxExtTempResponse" message="tns:IJBCStationControllerService_SetStationMaxExtTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxExtTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationMaxExtTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMinFlow">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinFlow" message="tns:IJBCStationControllerService_SetStationMinFlow_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinFlowResponse" message="tns:IJBCStationControllerService_SetStationMinFlow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinFlowfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationMinFlow_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMaxFlow">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxFlow" message="tns:IJBCStationControllerService_SetStationMaxFlow_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxFlowResponse" message="tns:IJBCStationControllerService_SetStationMaxFlow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxFlowfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationMaxFlow_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationPINEnabled">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPINEnabled" message="tns:IJBCStationControllerService_SetStationPINEnabled_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPINEnabledResponse" message="tns:IJBCStationControllerService_SetStationPINEnabled_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPINEnabledfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationPINEnabled_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStationLocked">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationLocked" message="tns:IJBCStationControllerService_SetStationLocked_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationLockedResponse" message="tns:IJBCStationControllerService_SetStationLocked_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationLockedfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetStationLocked_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortToolSettings">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettings" message="tns:IJBCStationControllerService_GetPortToolSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettingsResponse" message="tns:IJBCStationControllerService_GetPortToolSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettingsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetPortToolSettings_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortToolSettings_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettings_HA" message="tns:IJBCStationControllerService_GetPortToolSettings_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettings_HAResponse" message="tns:IJBCStationControllerService_GetPortToolSettings_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettings_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetPortToolSettings_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTemp" message="tns:IJBCStationControllerService_SetPortToolSelectedTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTempResponse" message="tns:IJBCStationControllerService_SetPortToolSelectedTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSelectedTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedTempStep">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTempStep" message="tns:IJBCStationControllerService_SetPortToolSelectedTempStep_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTempStepResponse" message="tns:IJBCStationControllerService_SetPortToolSelectedTempStep_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTempStepfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSelectedTempStep_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedFlow">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedFlow" message="tns:IJBCStationControllerService_SetPortToolSelectedFlow_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedFlowResponse" message="tns:IJBCStationControllerService_SetPortToolSelectedFlow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedFlowfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSelectedFlow_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedExtTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTemp" message="tns:IJBCStationControllerService_SetPortToolSelectedExtTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTempResponse" message="tns:IJBCStationControllerService_SetPortToolSelectedExtTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSelectedExtTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedExtTempStep">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTempStep" message="tns:IJBCStationControllerService_SetPortToolSelectedExtTempStep_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTempStepResponse" message="tns:IJBCStationControllerService_SetPortToolSelectedExtTempStep_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTempStepfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSelectedExtTempStep_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolFixTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFixTemp" message="tns:IJBCStationControllerService_SetPortToolFixTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFixTempResponse" message="tns:IJBCStationControllerService_SetPortToolFixTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFixTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolFixTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolLevels">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevels" message="tns:IJBCStationControllerService_SetPortToolLevels_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevelsResponse" message="tns:IJBCStationControllerService_SetPortToolLevels_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevelsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolLevels_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolLevels_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevels_HA" message="tns:IJBCStationControllerService_SetPortToolLevels_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevels_HAResponse" message="tns:IJBCStationControllerService_SetPortToolLevels_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevels_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolLevels_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedLevelEnabled">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevelEnabled" message="tns:IJBCStationControllerService_SetPortToolSelectedLevelEnabled_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevelEnabledResponse" message="tns:IJBCStationControllerService_SetPortToolSelectedLevelEnabled_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevelEnabledfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSelectedLevelEnabled_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedLevel">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevel" message="tns:IJBCStationControllerService_SetPortToolSelectedLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevelResponse" message="tns:IJBCStationControllerService_SetPortToolSelectedLevel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevelfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSelectedLevel_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolTempLevelEnabled">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevelEnabled" message="tns:IJBCStationControllerService_SetPortToolTempLevelEnabled_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevelEnabledResponse" message="tns:IJBCStationControllerService_SetPortToolTempLevelEnabled_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevelEnabledfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolTempLevelEnabled_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolTempLevel">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevel" message="tns:IJBCStationControllerService_SetPortToolTempLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevelResponse" message="tns:IJBCStationControllerService_SetPortToolTempLevel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevelfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolTempLevel_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolExtTempLevel">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExtTempLevel" message="tns:IJBCStationControllerService_SetPortToolExtTempLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExtTempLevelResponse" message="tns:IJBCStationControllerService_SetPortToolExtTempLevel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExtTempLevelfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolExtTempLevel_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolFlowLevel">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFlowLevel" message="tns:IJBCStationControllerService_SetPortToolFlowLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFlowLevelResponse" message="tns:IJBCStationControllerService_SetPortToolFlowLevel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFlowLevelfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolFlowLevel_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolProfileMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolProfileMode" message="tns:IJBCStationControllerService_SetPortToolProfileMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolProfileModeResponse" message="tns:IJBCStationControllerService_SetPortToolProfileMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolProfileModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolProfileMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSleepDelay">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelay" message="tns:IJBCStationControllerService_SetPortToolSleepDelay_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelayResponse" message="tns:IJBCStationControllerService_SetPortToolSleepDelay_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelayfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSleepDelay_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSleepDelayEnabled">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelayEnabled" message="tns:IJBCStationControllerService_SetPortToolSleepDelayEnabled_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelayEnabledResponse" message="tns:IJBCStationControllerService_SetPortToolSleepDelayEnabled_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelayEnabledfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSleepDelayEnabled_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolHibernationDelay">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelay" message="tns:IJBCStationControllerService_SetPortToolHibernationDelay_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelayResponse" message="tns:IJBCStationControllerService_SetPortToolHibernationDelay_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelayfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolHibernationDelay_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolHibernationDelayEnabled">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelayEnabled" message="tns:IJBCStationControllerService_SetPortToolHibernationDelayEnabled_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelayEnabledResponse" message="tns:IJBCStationControllerService_SetPortToolHibernationDelayEnabled_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelayEnabledfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolHibernationDelayEnabled_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSleepTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepTemp" message="tns:IJBCStationControllerService_SetPortToolSleepTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepTempResponse" message="tns:IJBCStationControllerService_SetPortToolSleepTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolSleepTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolAdjustTemp">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolAdjustTemp" message="tns:IJBCStationControllerService_SetPortToolAdjustTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolAdjustTempResponse" message="tns:IJBCStationControllerService_SetPortToolAdjustTemp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolAdjustTempfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolAdjustTemp_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolCartridge">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolCartridge" message="tns:IJBCStationControllerService_SetPortToolCartridge_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolCartridgeResponse" message="tns:IJBCStationControllerService_SetPortToolCartridge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolCartridgefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolCartridge_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolTimeToStop">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTimeToStop" message="tns:IJBCStationControllerService_SetPortToolTimeToStop_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTimeToStopResponse" message="tns:IJBCStationControllerService_SetPortToolTimeToStop_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTimeToStopfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolTimeToStop_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolExternalTCMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExternalTCMode" message="tns:IJBCStationControllerService_SetPortToolExternalTCMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExternalTCModeResponse" message="tns:IJBCStationControllerService_SetPortToolExternalTCMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExternalTCModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolExternalTCMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolStartMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolStartMode" message="tns:IJBCStationControllerService_SetPortToolStartMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolStartModeResponse" message="tns:IJBCStationControllerService_SetPortToolStartMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolStartModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPortToolStartMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortCounters">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortCounters" message="tns:IJBCStationControllerService_GetPortCounters_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortCountersResponse" message="tns:IJBCStationControllerService_GetPortCounters_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortCountersfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetPortCounters_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPortPartialCounters">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ResetPortPartialCounters" message="tns:IJBCStationControllerService_ResetPortPartialCounters_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ResetPortPartialCountersResponse" message="tns:IJBCStationControllerService_ResetPortPartialCounters_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ResetPortPartialCountersfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_ResetPortPartialCounters_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousMode" message="tns:IJBCStationControllerService_GetContinuousMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeResponse" message="tns:IJBCStationControllerService_GetContinuousMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetContinuousMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeDataCount">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeDataCount" message="tns:IJBCStationControllerService_GetContinuousModeDataCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeDataCountResponse" message="tns:IJBCStationControllerService_GetContinuousModeDataCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeDataCountfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetContinuousModeDataCount_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartContinuousMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartContinuousMode" message="tns:IJBCStationControllerService_StartContinuousMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartContinuousModeResponse" message="tns:IJBCStationControllerService_StartContinuousMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartContinuousModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StartContinuousMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopContinuousMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopContinuousMode" message="tns:IJBCStationControllerService_StopContinuousMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopContinuousModeResponse" message="tns:IJBCStationControllerService_StopContinuousMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopContinuousModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StopContinuousMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextData">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextData" message="tns:IJBCStationControllerService_GetContinuousModeNextData_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataResponse" message="tns:IJBCStationControllerService_GetContinuousModeNextData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDatafaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetContinuousModeNextData_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextData_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextData_HA" message="tns:IJBCStationControllerService_GetContinuousModeNextData_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextData_HAResponse" message="tns:IJBCStationControllerService_GetContinuousModeNextData_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextData_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetContinuousModeNextData_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextDataChunk">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunk" message="tns:IJBCStationControllerService_GetContinuousModeNextDataChunk_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunkResponse" message="tns:IJBCStationControllerService_GetContinuousModeNextDataChunk_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunkfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetContinuousModeNextDataChunk_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextDataChunk_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunk_HA" message="tns:IJBCStationControllerService_GetContinuousModeNextDataChunk_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunk_HAResponse" message="tns:IJBCStationControllerService_GetContinuousModeNextDataChunk_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunk_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetContinuousModeNextDataChunk_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetContinuousMode">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetContinuousMode" message="tns:IJBCStationControllerService_SetContinuousMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetContinuousModeResponse" message="tns:IJBCStationControllerService_SetContinuousMode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetContinuousModefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetContinuousMode_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEthernetConfiguration">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetEthernetConfiguration" message="tns:IJBCStationControllerService_GetEthernetConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetEthernetConfigurationResponse" message="tns:IJBCStationControllerService_GetEthernetConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetEthernetConfigurationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetEthernetConfiguration_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRobotConfiguration">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetRobotConfiguration" message="tns:IJBCStationControllerService_GetRobotConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetRobotConfigurationResponse" message="tns:IJBCStationControllerService_GetRobotConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetRobotConfigurationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetRobotConfiguration_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEthernetConfiguration">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetEthernetConfiguration" message="tns:IJBCStationControllerService_SetEthernetConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetEthernetConfigurationResponse" message="tns:IJBCStationControllerService_SetEthernetConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetEthernetConfigurationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetEthernetConfiguration_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRobotConfiguration">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetRobotConfiguration" message="tns:IJBCStationControllerService_SetRobotConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetRobotConfigurationResponse" message="tns:IJBCStationControllerService_SetRobotConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetRobotConfigurationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetRobotConfiguration_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPeripheralInfo">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllPeripheralInfo" message="tns:IJBCStationControllerService_GetAllPeripheralInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllPeripheralInfoResponse" message="tns:IJBCStationControllerService_GetAllPeripheralInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllPeripheralInfofaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetAllPeripheralInfo_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPeripheralInfo">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPeripheralInfo" message="tns:IJBCStationControllerService_SetPeripheralInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPeripheralInfoResponse" message="tns:IJBCStationControllerService_SetPeripheralInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetPeripheralInfofaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetPeripheralInfo_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProfiles_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllProfiles_HA" message="tns:IJBCStationControllerService_GetAllProfiles_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllProfiles_HAResponse" message="tns:IJBCStationControllerService_GetAllProfiles_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllProfiles_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetAllProfiles_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedProfile_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetSelectedProfile_HA" message="tns:IJBCStationControllerService_GetSelectedProfile_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetSelectedProfile_HAResponse" message="tns:IJBCStationControllerService_GetSelectedProfile_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetSelectedProfile_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetSelectedProfile_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProfile_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetProfile_HA" message="tns:IJBCStationControllerService_SetProfile_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetProfile_HAResponse" message="tns:IJBCStationControllerService_SetProfile_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetProfile_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetProfile_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteProfile_HA" message="tns:IJBCStationControllerService_DeleteProfile_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteProfile_HAResponse" message="tns:IJBCStationControllerService_DeleteProfile_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteProfile_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_DeleteProfile_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncProfiles_HA">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SyncProfiles_HA" message="tns:IJBCStationControllerService_SyncProfiles_HA_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SyncProfiles_HAResponse" message="tns:IJBCStationControllerService_SyncProfiles_HA_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SyncProfiles_HAfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SyncProfiles_HA_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTransaction">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetTransaction" message="tns:IJBCStationControllerService_SetTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetTransactionResponse" message="tns:IJBCStationControllerService_SetTransaction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetTransactionfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetTransaction_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryEndedTransaction">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/QueryEndedTransaction" message="tns:IJBCStationControllerService_QueryEndedTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/QueryEndedTransactionResponse" message="tns:IJBCStationControllerService_QueryEndedTransaction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/QueryEndedTransactionfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_QueryEndedTransaction_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDefaultStationParams">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetDefaultStationParams" message="tns:IJBCStationControllerService_SetDefaultStationParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetDefaultStationParamsResponse" message="tns:IJBCStationControllerService_SetDefaultStationParams_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetDefaultStationParamsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetDefaultStationParams_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetStation">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ResetStation" message="tns:IJBCStationControllerService_ResetStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ResetStationResponse" message="tns:IJBCStationControllerService_ResetStation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ResetStationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_ResetStation_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationListUpdating">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationListUpdating" message="tns:IJBCStationControllerService_GetStationListUpdating_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationListUpdatingResponse" message="tns:IJBCStationControllerService_GetStationListUpdating_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationListUpdatingfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetStationListUpdating_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStations">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/UpdateStations" message="tns:IJBCStationControllerService_UpdateStations_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/UpdateStationsResponse" message="tns:IJBCStationControllerService_UpdateStations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/UpdateStationsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_UpdateStations_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LockStation">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/LockStation" message="tns:IJBCStationControllerService_LockStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/LockStationResponse" message="tns:IJBCStationControllerService_LockStation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/LockStationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_LockStation_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivatePortStation">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeactivatePortStation" message="tns:IJBCStationControllerService_DeactivatePortStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeactivatePortStationResponse" message="tns:IJBCStationControllerService_DeactivatePortStation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeactivatePortStationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_DeactivatePortStation_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowMessage">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowMessage" message="tns:IJBCStationControllerService_ShowMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowMessageResponse" message="tns:IJBCStationControllerService_ShowMessage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowMessagefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_ShowMessage_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTraceability">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTraceability" message="tns:IJBCStationControllerService_StartTraceability_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTraceabilityResponse" message="tns:IJBCStationControllerService_StartTraceability_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTraceabilityfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StartTraceability_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopTraceability">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTraceability" message="tns:IJBCStationControllerService_StopTraceability_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTraceabilityResponse" message="tns:IJBCStationControllerService_StopTraceability_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTraceabilityfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StopTraceability_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewUserSession">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/NewUserSession" message="tns:IJBCStationControllerService_NewUserSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/NewUserSessionResponse" message="tns:IJBCStationControllerService_NewUserSession_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/NewUserSessionfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_NewUserSession_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseUserSession">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/CloseUserSession" message="tns:IJBCStationControllerService_CloseUserSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/CloseUserSessionResponse" message="tns:IJBCStationControllerService_CloseUserSession_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/CloseUserSessionfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_CloseUserSession_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticatedUser">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAuthenticatedUser" message="tns:IJBCStationControllerService_GetAuthenticatedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAuthenticatedUserResponse" message="tns:IJBCStationControllerService_GetAuthenticatedUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetAuthenticatedUserfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetAuthenticatedUser_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetDate" message="tns:IJBCStationControllerService_GetDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetDateResponse" message="tns:IJBCStationControllerService_GetDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetDatefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetDate_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDate">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetDate" message="tns:IJBCStationControllerService_SetDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetDateResponse" message="tns:IJBCStationControllerService_SetDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetDatefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetDate_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkOptionDetails">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/AddWorkOptionDetails" message="tns:IJBCStationControllerService_AddWorkOptionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/AddWorkOptionDetailsResponse" message="tns:IJBCStationControllerService_AddWorkOptionDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/AddWorkOptionDetailsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_AddWorkOptionDetails_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkOptionDetails">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteWorkOptionDetails" message="tns:IJBCStationControllerService_DeleteWorkOptionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteWorkOptionDetailsResponse" message="tns:IJBCStationControllerService_DeleteWorkOptionDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteWorkOptionDetailsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_DeleteWorkOptionDetails_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowWorkOptionDetails">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowWorkOptionDetails" message="tns:IJBCStationControllerService_ShowWorkOptionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowWorkOptionDetailsResponse" message="tns:IJBCStationControllerService_ShowWorkOptionDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowWorkOptionDetailsfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_ShowWorkOptionDetails_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowHelpResource">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowHelpResource" message="tns:IJBCStationControllerService_ShowHelpResource_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowHelpResourceResponse" message="tns:IJBCStationControllerService_ShowHelpResource_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/ShowHelpResourcefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_ShowHelpResource_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadConfigurationPortStation">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/LoadConfigurationPortStation" message="tns:IJBCStationControllerService_LoadConfigurationPortStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/LoadConfigurationPortStationResponse" message="tns:IJBCStationControllerService_LoadConfigurationPortStation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/LoadConfigurationPortStationfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_LoadConfigurationPortStation_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTraceFolder">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetTraceFolder" message="tns:IJBCStationControllerService_GetTraceFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetTraceFolderResponse" message="tns:IJBCStationControllerService_GetTraceFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetTraceFolderfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetTraceFolder_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTraceSpeed">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetTraceSpeed" message="tns:IJBCStationControllerService_SetTraceSpeed_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetTraceSpeedResponse" message="tns:IJBCStationControllerService_SetTraceSpeed_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/SetTraceSpeedfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_SetTraceSpeed_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTrace">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTrace" message="tns:IJBCStationControllerService_StartTrace_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTraceResponse" message="tns:IJBCStationControllerService_StartTrace_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTracefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StartTrace_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTracePort">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTracePort" message="tns:IJBCStationControllerService_StartTracePort_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTracePortResponse" message="tns:IJBCStationControllerService_StartTracePort_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StartTracePortfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StartTracePort_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopTrace">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTrace" message="tns:IJBCStationControllerService_StopTrace_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTraceResponse" message="tns:IJBCStationControllerService_StopTrace_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTracefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StopTrace_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopTracePort">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTracePort" message="tns:IJBCStationControllerService_StopTracePort_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTracePortResponse" message="tns:IJBCStationControllerService_StopTracePort_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/StopTracePortfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_StopTracePort_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListRecordedDataFiles">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetListRecordedDataFiles" message="tns:IJBCStationControllerService_GetListRecordedDataFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetListRecordedDataFilesResponse" message="tns:IJBCStationControllerService_GetListRecordedDataFiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetListRecordedDataFilesfaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetListRecordedDataFiles_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordedData">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetRecordedData" message="tns:IJBCStationControllerService_GetRecordedData_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetRecordedDataResponse" message="tns:IJBCStationControllerService_GetRecordedData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/GetRecordedDatafaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_GetRecordedData_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordedDataFile">
+      <wsdl:input wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteRecordedDataFile" message="tns:IJBCStationControllerService_DeleteRecordedDataFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteRecordedDataFileResponse" message="tns:IJBCStationControllerService_DeleteRecordedDataFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteRecordedDataFilefaultErrorFault" name="faultErrorFault" message="tns:IJBCStationControllerService_DeleteRecordedDataFile_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

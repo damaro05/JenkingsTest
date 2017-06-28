@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="faultError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="tns:dc_EnumConstJBC.dc_FaultError" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="faultError" nillable="true" type="tns:faultError" />
+  <xs:simpleType name="dc_EnumConstJBC.dc_FaultError">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoError" />
+      <xs:enumeration value="NotControlledError" />
+      <xs:enumeration value="StationNotFound" />
+      <xs:enumeration value="StationError" />
+      <xs:enumeration value="ToolError" />
+      <xs:enumeration value="NotValidTool" />
+      <xs:enumeration value="FunctionNotSupported" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="dc_EnumConstJBC.dc_FaultError" nillable="true" type="tns:dc_EnumConstJBC.dc_FaultError" />
+  <xs:complexType name="dc_InfoUpdateSoftware">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hostControllerSwAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hostControllerSwDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="hostControllerSwVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastUpdateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="remoteManagerSwAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="remoteManagerSwDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="remoteManagerSwVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="stationControllerSwAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="stationControllerSwDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="stationControllerSwVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="webManagerSwAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="webManagerSwDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="webManagerSwVersion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_InfoUpdateSoftware" nillable="true" type="tns:dc_InfoUpdateSoftware" />
+  <xs:complexType name="dc_InfoUpdateSpecificTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="available" type="xs:boolean" />
+      <xs:element minOccurs="0" name="time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_InfoUpdateSpecificTime" nillable="true" type="tns:dc_InfoUpdateSpecificTime" />
+  <xs:complexType name="dc_InfoUpdatePeriodicTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="available" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hour" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="minute" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="modeDaily" type="xs:boolean" />
+      <xs:element minOccurs="0" name="weekday" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_InfoUpdatePeriodicTime" nillable="true" type="tns:dc_InfoUpdatePeriodicTime" />
+  <xs:complexType name="dc_InfoCheckPeriodicTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="available" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_InfoCheckPeriodicTime" nillable="true" type="tns:dc_InfoCheckPeriodicTime" />
+  <xs:complexType name="dc_UpdateNotifications">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAvailable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_UpdateNotifications" nillable="true" type="tns:dc_UpdateNotifications" />
+  <xs:complexType name="dc_UpdateRemoteManager">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bytes" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="final" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sequence" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_UpdateRemoteManager" nillable="true" type="tns:dc_UpdateRemoteManager" />
+  <xs:complexType name="dc_UpdateWebManager">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bytes" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="final" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sequence" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_UpdateWebManager" nillable="true" type="tns:dc_UpdateWebManager" />
+  <xs:complexType name="dc_UpdateFirmware">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bytes" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="final" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sequence" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_UpdateFirmware" nillable="true" type="tns:dc_UpdateFirmware" />
+  <xs:complexType name="ArrayOfdc_EventLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_EventLog" nillable="true" type="tns:dc_EventLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_EventLog" nillable="true" type="tns:ArrayOfdc_EventLog" />
+  <xs:complexType name="dc_EventLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eventApplication" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="eventDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="eventLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="eventMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_EventLog" nillable="true" type="tns:dc_EventLog" />
+</xs:schema>

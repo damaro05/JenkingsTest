@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RemoteManRegister</name>
+    </assembly>
+    <members>
+        <member name="T:RemoteManRegister.My.Resources.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.filterCommaSeparated">
+            <summary>
+              Busca una cadena traducida similar a Comma-separated values  (*.csv)|*.csv.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.filterLabRegister">
+            <summary>
+              Busca una cadena traducida similar a LabRegister file (*.lbr)|*.lbr.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.gralDone">
+            <summary>
+              Busca una cadena traducida similar a Done.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.gralFlow">
+            <summary>
+              Busca una cadena traducida similar a Flow.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.gralPower">
+            <summary>
+              Busca una cadena traducida similar a Power.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.gralTemperature">
+            <summary>
+              Busca una cadena traducida similar a Temperature.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.gralWarning">
+            <summary>
+              Busca una cadena traducida similar a Warning!.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regAdd">
+            <summary>
+              Busca una cadena traducida similar a Add.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regAxisGridAxis">
+            <summary>
+              Busca una cadena traducida similar a Axis.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regAxisGridGrid">
+            <summary>
+              Busca una cadena traducida similar a Grid.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regAxisGridGridStep">
+            <summary>
+              Busca una cadena traducida similar a Grid Step.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regAxisGridSeconds">
+            <summary>
+              Busca una cadena traducida similar a (seconds).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regAxisGridTimeWindow">
+            <summary>
+              Busca una cadena traducida similar a Time Window.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regButCancel">
+            <summary>
+              Busca una cadena traducida similar a Cancel.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regButOk">
+            <summary>
+              Busca una cadena traducida similar a Ok.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regCannotCreateFile">
+            <summary>
+              Busca una cadena traducida similar a File {0} cannot be created (error: {1}).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regCannotOpenFile">
+            <summary>
+              Busca una cadena traducida similar a File {0} cannot be opened (error: {1}).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regCoordTime">
+            <summary>
+              Busca una cadena traducida similar a Time:.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regDataLost">
+            <summary>
+              Busca una cadena traducida similar a Data series will be lost. Are you sure to continue?.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regEnterPlotTitle">
+            <summary>
+              Busca una cadena traducida similar a Enter the desired title for the plot..
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regFinish">
+            <summary>
+              Busca una cadena traducida similar a Finish.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfig">
+            <summary>
+              Busca una cadena traducida similar a Configuration.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigAxis">
+            <summary>
+              Busca una cadena traducida similar a Axis and Grid.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigOptions">
+            <summary>
+              Busca una cadena traducida similar a Options.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigSeries">
+            <summary>
+              Busca una cadena traducida similar a Series.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigTemplates">
+            <summary>
+              Busca una cadena traducida similar a Templates.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigTemplatesLoad">
+            <summary>
+              Busca una cadena traducida similar a Load.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigTemplatesSave">
+            <summary>
+              Busca una cadena traducida similar a Save.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigTitle">
+            <summary>
+              Busca una cadena traducida similar a Title.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuConfigWizard">
+            <summary>
+              Busca una cadena traducida similar a Wizard.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuFile">
+            <summary>
+              Busca una cadena traducida similar a File.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuFileExportToCSV">
+            <summary>
+              Busca una cadena traducida similar a Export to CSV.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuFileNew">
+            <summary>
+              Busca una cadena traducida similar a New.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuFileOpen">
+            <summary>
+              Busca una cadena traducida similar a Open.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuFilePrint">
+            <summary>
+              Busca una cadena traducida similar a Print.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMnuFileSaveAs">
+            <summary>
+              Busca una cadena traducida similar a Save As.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regModify">
+            <summary>
+              Busca una cadena traducida similar a Modify.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMsgExtNotValid">
+            <summary>
+              Busca una cadena traducida similar a File extension must be .lbr or .csv.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMsgGeneratingExt">
+            <summary>
+              Busca una cadena traducida similar a Generating [0].
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMsgGeneratingFile">
+            <summary>
+              Busca una cadena traducida similar a Generating [0]. Please wait....
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMsgLoadingExt">
+            <summary>
+              Busca una cadena traducida similar a Loading [0].
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regMsgLoadingFile">
+            <summary>
+              Busca una cadena traducida similar a Loading [0]. Please wait....
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regNext">
+            <summary>
+              Busca una cadena traducida similar a Next.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regNotLBRFile">
+            <summary>
+              Busca una cadena traducida similar a It is not a LBR file or is corrupted..
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrBackground">
+            <summary>
+              Busca una cadena traducida similar a Background.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrDefaults">
+            <summary>
+              Busca una cadena traducida similar a Restore Defaults.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrGridDiv">
+            <summary>
+              Busca una cadena traducida similar a Grid Divisions.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrPowerAxis">
+            <summary>
+              Busca una cadena traducida similar a Power Axis.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrSeriesText">
+            <summary>
+              Busca una cadena traducida similar a Series Text.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrTempAxis">
+            <summary>
+              Busca una cadena traducida similar a Temperature Axis.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrTimeAxis">
+            <summary>
+              Busca una cadena traducida similar a Time Axis.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptClrTitle">
+            <summary>
+              Busca una cadena traducida similar a Title Text.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptColors">
+            <summary>
+              Busca una cadena traducida similar a Colors.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptLinesAndPoints">
+            <summary>
+              Busca una cadena traducida similar a Lines and Points.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptLineWidth">
+            <summary>
+              Busca una cadena traducida similar a Line Width (pix.).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptPointWidth">
+            <summary>
+              Busca una cadena traducida similar a Point Width (pix.).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptStartSide">
+            <summary>
+              Busca una cadena traducida similar a Plot Starting Side.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptStartSideLeft">
+            <summary>
+              Busca una cadena traducida similar a From left.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptStartSideRight">
+            <summary>
+              Busca una cadena traducida similar a From right.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptTriggerAutoInfo">
+            <summary>
+              Busca una cadena traducida similar a It starts when extract the tool out of the stand.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptTriggerManualInfo">
+            <summary>
+              Busca una cadena traducida similar a It starts and finishes by using the buttons in the plot.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regOptTriggerSingleInfo">
+            <summary>
+              Busca una cadena traducida similar a It starts when extract the tool out of the stand and finishes when time window is reached.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regPlottingInAnotherWindow">
+            <summary>
+              Busca una cadena traducida similar a There is a station defined for this plot, already plotting in another window..
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regPlotTitle">
+            <summary>
+              Busca una cadena traducida similar a Plot Title.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regPrevious">
+            <summary>
+              Busca una cadena traducida similar a Previous.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regRemove">
+            <summary>
+              Busca una cadena traducida similar a Remove.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSecondsPerTick">
+            <summary>
+              Busca una cadena traducida similar a {0} Sec/Tick.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesCannotSelectMagnitude">
+            <summary>
+              Busca una cadena traducida similar a This magnitude is not compatible with the selected station..
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesListOfSeries">
+            <summary>
+              Busca una cadena traducida similar a List of Series.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesMagnitudeFlow">
+            <summary>
+              Busca una cadena traducida similar a Flow ( % ).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesMagnitudePower">
+            <summary>
+              Busca una cadena traducida similar a Power ( % ).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesMagnitudeTemp">
+            <summary>
+              Busca una cadena traducida similar a Temperature ( {0} ).
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieColor">
+            <summary>
+              Busca una cadena traducida similar a Color.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieColorSelect">
+            <summary>
+              Busca una cadena traducida similar a Select....
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieData">
+            <summary>
+              Busca una cadena traducida similar a Serie Data.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieLine">
+            <summary>
+              Busca una cadena traducida similar a Line.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieMagnitude">
+            <summary>
+              Busca una cadena traducida similar a Magnitude.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieName">
+            <summary>
+              Busca una cadena traducida similar a Name.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSeriePoints">
+            <summary>
+              Busca una cadena traducida similar a Points.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSeriePort">
+            <summary>
+              Busca una cadena traducida similar a Port.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieShowLine">
+            <summary>
+              Busca una cadena traducida similar a Show Line.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieShowPoints">
+            <summary>
+              Busca una cadena traducida similar a Show Points.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieStation">
+            <summary>
+              Busca una cadena traducida similar a Station.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regSeriesSerieStationNoName">
+            <summary>
+              Busca una cadena traducida similar a No Name.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripCoordinates">
+            <summary>
+              Busca una cadena traducida similar a Coordinates.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripDefaultZoom">
+            <summary>
+              Busca una cadena traducida similar a Default Zoom.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripPause">
+            <summary>
+              Busca una cadena traducida similar a Pause.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripPlay">
+            <summary>
+              Busca una cadena traducida similar a Play.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripRecord">
+            <summary>
+              Busca una cadena traducida similar a Record.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripResetTrigger">
+            <summary>
+              Busca una cadena traducida similar a Reset Trigger Detection.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripStatusPause">
+            <summary>
+              Busca una cadena traducida similar a Paused.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripStatusPlay">
+            <summary>
+              Busca una cadena traducida similar a Playing.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripStatusRecord">
+            <summary>
+              Busca una cadena traducida similar a Recording.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripStatusStop">
+            <summary>
+              Busca una cadena traducida similar a Stopped.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripStop">
+            <summary>
+              Busca una cadena traducida similar a Stop.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripTrigger">
+            <summary>
+              Busca una cadena traducida similar a Trigger.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripTriggerAuto">
+            <summary>
+              Busca una cadena traducida similar a Auto.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripTriggerManual">
+            <summary>
+              Busca una cadena traducida similar a Manual.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripTriggerSingle">
+            <summary>
+              Busca una cadena traducida similar a Single.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regStripZoom">
+            <summary>
+              Busca una cadena traducida similar a Zoom.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTemplate">
+            <summary>
+              Busca una cadena traducida similar a Template.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTemplateDefaultName">
+            <summary>
+              Busca una cadena traducida similar a myTemplateName.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTemplateEnterName">
+            <summary>
+              Busca una cadena traducida similar a Please, type the name for the template..
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTemplateList">
+            <summary>
+              Busca una cadena traducida similar a Template List.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTemplateParams">
+            <summary>
+              Busca una cadena traducida similar a Template Parameters.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTemplateSeriesData">
+            <summary>
+              Busca una cadena traducida similar a Series.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTemplateTrigger">
+            <summary>
+              Busca una cadena traducida similar a Trigger.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regTime">
+            <summary>
+              Busca una cadena traducida similar a Time.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regWiz1Info">
+            <summary>
+              Busca una cadena traducida similar a Step 1 of 2. Please, connect the stations from where data is desired. Then add the desired series to be shown in the plot by setting the parameters and click on the &apos;Add&apos; button. Finally, type the desired title for your plot..
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regWiz2Info">
+            <summary>
+              Busca una cadena traducida similar a Step 2 of 2. Select the axis ranges and the grid steps. For the time axis the value represent a time window..
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regWizard2AxisRange">
+            <summary>
+              Busca una cadena traducida similar a Axis Range.
+            </summary>
+        </member>
+        <member name="P:RemoteManRegister.My.Resources.Resources.regWizardSeriesAndTitle">
+            <summary>
+              Busca una cadena traducida similar a Series and Title.
+            </summary>
+        </member>
+    </members>
+</doc>

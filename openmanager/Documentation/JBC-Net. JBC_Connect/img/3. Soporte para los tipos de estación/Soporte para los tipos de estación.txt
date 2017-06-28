@@ -1,0 +1,15 @@
+[ ]-(1) public_method(ID) >[JBC_API]
+
+[JBC_API{bg:bisque}]->[CStationWrapper]
+
+[JBC_API]-[note: (1) check_station_exists(ID){bg:cornsilk}]
+
+
+[CStationWrapper{bg:lavender}]->[CStation]
+
+[CStationWrapper]-[note: (2) check_station_type(); call_instance_station(){bg:cornsilk}]
+
+
+[CStation]-[note: (3) check_station_type();check_parameters();check_protocol(); (4) switch_protocol(){bg:cornsilk}]
+
+[CStation{bg:lavender}]->[CStationFrames{bg:lavender}]

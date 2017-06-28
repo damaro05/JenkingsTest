@@ -1,0 +1,7 @@
+[CStationFrames]<-(1) response_read(NumMessage | DataResponse) [CCommunicationChannel{bg:honeydew}]
+
+[CMessagesSentManager|List Messages (NumMessage ~ data)]
+
+[CMessagesSentManager{bg:lavender}] -(3) data >[CStationFrames{bg:lavender}]
+
+[CStationFrames{bg:lavender}]-(2) read_message(NumMessage) >[CMessagesSentManager]

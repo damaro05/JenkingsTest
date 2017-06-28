@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JBCTraceAnalysis</name>
+    </assembly>
+    <members>
+        <member name="F:DataJBC.Constants.CONTINUOUS_MODE_QUEUE_MAX_LENGTH">
+            <summary>
+            The maximum length for the continuous mode data queue
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.CTemperature">
+            <summary>
+            This class represents a temperature value. It stores the temperature in UTI units that
+            can easily be converted into CELSIUS and FAHRENHEIT degrees using the ToCelsius() and
+            ToFahrenheit() methods. The temperature value can also be set in CELSIUS or FAHRENHEIT by
+            using the InCelsius() or InFahrenheit() methods.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.#ctor(System.Int32)">
+            <summary>
+            Creates the object.
+            </summary>
+            <param name="UTItemp">The initial value in UTI units.</param>
+            <remarks></remarks>
+        </member>
+        <member name="P:DataJBC.CTemperature.UTI">
+            <summary>
+            The current temperature stored in UTI units.
+            </summary>
+            <value>The desired temperature</value>
+            <returns>The current temperature</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.isValid">
+            <summary>
+            Indicates if the temperature is a valid value, it is, in range.
+            </summary>
+            <returns>A boolean indicating if the temperature is a valid value</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InCelsius(System.Int32)">
+            <summary>
+            Sets the temperature in CELSIUS units
+            </summary>
+            <param name="value" >The desired temperature in CELSIUS</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToCelsius">
+            <summary>
+            Gets the temperature in CELSIUS units
+            </summary>
+            <returns>The temperature in CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToRoundCelsius">
+            <summary>
+            Gets the temperature in steps of five degrees CELSIUS.
+            </summary>
+            <returns>The temperature in steps of five degrees CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InCelsiusToAdjust(System.Int32)">
+            <summary>
+            Sets the temperature in CELSIUS units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <param name="value" >The desired temperature in CELSIUS</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToCelsiusToAdjust">
+            <summary>
+            Gets the temperature in CELSIUS units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <returns>The temperature in CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InFahrenheit(System.Int32)">
+            <summary>
+            Sets the temperature in FAHRENHEIT units
+            </summary>
+            <param name="value" >The desired temperature in FAHRENHEIT</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToFahrenheit">
+            <summary>
+            Gets the temperature in FAHRENHEIT units
+            </summary>
+            <returns>The temperature in FAHRENHEIT.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToRoundFahrenheit">
+            <summary>
+            Gets the temperature in steps of ten degrees FAHRENHEIT
+            </summary>
+            <returns>The temperature in steps of ten degrees FAHRENHEIT</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InFahrenheitToAdjust(System.Int32)">
+            <summary>
+            Sets the temperature in FAHRENHEIT units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <param name="value" >The desired temperature in FAHRENHEIT</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToFahrenheitToAdjust">
+            <summary>
+            Gets the temperature in FAHRENHEIT units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <returns>The temperature in FAHRENHEIT.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.Port">
+            <summary>
+            List of ports
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortWorkMode_HA">
+            <summary>
+            List of work mode in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortHeaterStatus_HA">
+            <summary>
+            List of heater status in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortSuctionStatus_HA">
+            <summary>
+            List of suction status in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStatus">
+            <summary>
+            List of posible tool status
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStatus_HA">
+            <summary>
+            List of posible tool status for desolder station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.SearchMode">
+            <summary>
+            Searching stations modes.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.SpeedContinuousMode">
+            <summary>
+            List of continuous mode data speed.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.GenericStationTools">
+            <summary>
+            List of the diferent tools available by a generic station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.eStationType">
+            <summary>
+            Station types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.TemperatureLimits">
+            <summary>
+            List of temperature limits. In UTI units
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:FormTraceAnalysis.FormTraceAnalysis.Default">
+            <summary>
+            Added by the VB.Net to C# Converter to support default instance behavour in C#
+            </summary>
+        </member>
+        <member name="T:FormTraceAnalysis.My.Resources.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:FormTraceAnalysis.My.Resources.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:FormTraceAnalysis.My.Resources.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+    </members>
+</doc>

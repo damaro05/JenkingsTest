@@ -1,0 +1,1 @@
+(start)->(write_operation)->(set_transaction)->(query_transaction)-><a>[transaction OK]->(read_operation)->(end),<a>[transaction KO]->(query_transaction)

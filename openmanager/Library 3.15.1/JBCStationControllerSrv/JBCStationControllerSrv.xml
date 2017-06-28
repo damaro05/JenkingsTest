@@ -1,0 +1,684 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JBCStationControllerSrv</name>
+    </assembly>
+    <members>
+        <member name="T:RoutinesJBC.Cerror">
+            <summary>
+            The general error object used in this library. It is used for storing and showing errors.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cErrorCodes">
+            <summary>
+            The list of all posible user error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cCommErrorCodes">
+            <summary>
+            The list of station/PC protocol error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String)">
+            <summary>
+            Creates an error object
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String,System.Byte[])">
+            <summary>
+            Creates an error object with communication error code
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetMsg">
+            <summary>
+            Gets the error message.
+            </summary>
+            <returns>The error message</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCommErrorCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(System.Exception,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de una Exception no controlada
+            </summary>
+            <param name="_ex">Exception capturada</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(JBC_Connect.dc_EnumConstJBC.dc_FaultError,System.String,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de un error controlado
+            </summary>
+            <param name="_code">CÃ³digo del error</param>
+            <param name="_message">Texto del error</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesLibrary.Data.DataType.IntegerUtils">
+             <summary>
+            
+             </summary>
+             <remarks>
+             More information for rounding procedures: https://support.microsoft.com/en-us/kb/196652
+             </remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataType.IntegerUtils.BytesToInt(System.Byte[],System.Boolean)">
+            <summary>
+            Convert a byte array to integer
+            </summary>
+            <param name="address">Byte array to convert</param>
+            <param name="dataInBigEndian">True if the byte array is in Big Endian</param>
+            <returns>Converted byte array</returns>
+        </member>
+        <member name="T:RoutinesLibrary.CInputKeyboardDevice">
+            <summary>
+            Handles raw input from keyboard devices
+            </summary>
+        </member>
+        <member name="F:RoutinesLibrary.CInputKeyboardDevice.m_deviceList">
+            <summary>
+            List of keyboard devices
+            </summary>
+            <remarks>
+            Key: the device handle
+            Value: the device info class
+            </remarks>
+        </member>
+        <member name="T:RoutinesLibrary.CInputKeyboardDevice.DeviceEventHandler">
+            <summary>
+            The delegate to handle KeyPressed events
+            </summary>
+            <param name="sender">The object sending the event</param>
+            <param name="e">A set of KeyControlEventArgs information about the key that was pressed and the device it was on</param>
+        </member>
+        <member name="F:RoutinesLibrary.CInputKeyboardDevice.KeyPressedEvent">
+            <summary>
+            The event raised when InputDevice detects that a key was pressed
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.#ctor(System.IntPtr)">
+            <summary>
+            Class constructor. Registers the raw input devices for the calling window
+            </summary>
+            <param name="hwnd">Handle of the window listening for key presses</param>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.EnumerateDevices">
+            <summary>
+            Iterates through the list provided by GetRawInputDeviceList, counting keyboard devices and adding them to deviceList
+            </summary>
+            <returns>The number of keyboard devices found</returns>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.GetDevices">
+            <summary>
+            Get a list of all keyboard devices founded
+            </summary>
+            <returns>List of all keyboard devices founded</returns>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.ProcessMessage(System.Windows.Forms.Message)">
+            <summary>
+            Filters Windows messages for WM_INPUT messages and calls ProcessInputCommand if necessary
+            </summary>
+            <param name="message">The Windows message</param>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.GetDeviceType(System.Int32)">
+            <summary>
+            Converts a RAWINPUTDEVICELIST dwType value to a string describing the device type
+            </summary>
+            <param name="device">A dwType value (RIM_TYPEMOUSE, RIM_TYPEKEYBOARD or RIM_TYPEHID)</param>
+            <returns>A string representation of the input value</returns>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.GetDevice(System.Int32)">
+            <summary>
+            Determines what type of device triggered a WM_INPUT message (Used in the ProcessInputCommand method)
+            </summary>
+            <param name="param">The LParam from a WM_INPUT message</param>
+            <returns>A DeviceType enum value</returns>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.ReadReg(System.String)">
+            <summary>
+            Reads the Registry to retrieve a friendly description of the device
+            </summary>
+            <param name="item">The device name to search for, as provided by GetRawInputDeviceInfo</param>
+            <returns>The device description stored in the Registry entry's DeviceDesc value</returns>
+        </member>
+        <member name="M:RoutinesLibrary.CInputKeyboardDevice.ProcessInputCommand(System.Windows.Forms.Message)">
+            <summary>
+            Processes WM_INPUT messages to retrieve information about any keyboard events that occur
+            </summary>
+            <param name="message">The WM_INPUT message to process</param>
+        </member>
+        <member name="T:RoutinesLibrary.CDeviceInfo">
+            <summary>
+            Class encapsulating the information about a keyboard event, including the device it originated with and what key was pressed
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.CKeyControlEventArgs">
+            <summary>
+            Arguments provided by the handler for the KeyPressed event
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.InputDeviceType">
+            <summary>
+            An enum representing the different types of input devices
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.CKeyboardMessage">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient">
+            <summary>
+            Provides a mechanism for searching by UDP. This class performs searches periodically
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.#ctor(System.String,System.String,System.UInt16,System.Int32)">
+            <summary>
+            Class constructor. Starts searches automatically
+            </summary>
+            <param name="messageRequest">Request message</param>
+            <param name="messageResponse">Response message</param>
+            <param name="port">Port to perform searches</param>
+            <param name="discoverInterval">Time interval to perform searches</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.StartSearch">
+            <summary>
+            Starts searches process
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.StopSearch">
+            <summary>
+            Stop searches process
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.GetDiscoveredServices">
+            <summary>
+            Get the list of discovered services
+            </summary>
+            <returns>Discovered services</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.Process_Discover">
+            <summary>
+            Process to perform searches periodically
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.SockUDP_DataReceived(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Listen response messages and save the EndPoint
+            </summary>
+            <param name="Data"></param>
+            <param name="IP"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost">
+            <summary>
+            Provides a mechanism for searching by UDP. This class waits to receive requests to respond to searches
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.#ctor(System.String,System.String,System.UInt16,System.String)">
+            <summary>
+            Class constructor. Wait to receive requests to respond to searches
+            </summary>
+            <param name="messageRequest">Request message</param>
+            <param name="messageResponse">Response message</param>
+            <param name="port">Port to wait searches</param>
+            <param name="localIPAdress">Local IP address to response</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.SockUDP_DataReceived(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Listen incomming messages and responses to it
+            </summary>
+            <param name="Data">Request message</param>
+            <param name="IP">Remote request IP address</param>
+        </member>
+        <member name="T:RoutinesLibrary.Net.InformationNetworkInterface">
+            <summary>
+            This class provides informartion for network interface
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.GetNetworkInterfaceAddress">
+            <summary>
+            Get all the network interface addresses
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.GetPortAvailable(System.UInt16,System.UInt16)">
+            <summary>
+            Get a port available
+            </summary>
+            <param name="minPort">Minimum port</param>
+            <param name="maxPort">Maximum port</param>
+            <returns>Port available</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.IsValidIPv4(System.Net.IPAddress)">
+            <summary>
+            Check if a IP address is v4
+            </summary>
+            <param name="addr">IP address</param>
+            <returns>True if the IP address is v4</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.ConvertIP2Bytes(System.Net.IPAddress)">
+            <summary>
+            Convert IP address to byte array
+            </summary>
+            <param name="AddressConver"></param>
+            <returns>Byte array IP address</returns>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.UDP.UDP">
+            <summary>
+            Provides UDP communication
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.UDP.UDP.DataReceivedEventHandler">
+            <summary>
+            Raises an event with the data received
+            </summary>
+            <param name="Data">Data received</param>
+            <param name="RemoteEndPoint">Ip address of the remote computer that sent the message</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.#ctor(System.UInt16,System.Net.IPEndPoint)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="_Port">UDP port</param>
+            <param name="_remoteEndPoint">Remote EndPoint to connect</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Dispose">
+            <summary>
+            Stop communications and release resources
+            </summary>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.UDP.UDP.Port">
+            <summary>
+            Get or set the UDP port
+            </summary>
+            <value>UDP port</value>
+            <returns>UDP port</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.UDP.UDP.RemoteEndPoint">
+            <summary>
+            Get or set the remote EndPoint to send messages
+            </summary>
+            <value>Remote EndPoint</value>
+            <returns>Remote EndPoint</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Activate">
+            <summary>
+            Activate communication
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Deactivate">
+            <summary>
+            Deactivated communications
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Send(System.Byte[])">
+            <summary>
+            Send message to remote computer
+            </summary>
+            <param name="data">Message to send</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.SendBroadcast(System.Byte[],System.UInt16)">
+            <summary>
+            Send message to broadcast
+            </summary>
+            <param name="data">Message to send</param>
+            <param name="portSend">Destination port</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Process_DataReceive">
+            <summary>
+            Listen incomming messages
+            </summary>
+        </member>
+        <member name="T:JBCStationControllerSrv.JBCStationControllerService">
+            <summary>
+            Creates a Station Controller windows service on the local machine
+            </summary>
+        </member>
+        <member name="M:JBCStationControllerSrv.JBCStationControllerService.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:JBCStationControllerSrv.JBCStationControllerService.Main">
+            <summary>
+            Install or initialize the service
+            </summary>
+            <returns>Return 0 is operation is succesfull, 1 otherwise</returns>
+        </member>
+        <member name="M:JBCStationControllerSrv.JBCStationControllerService.OnStart(System.String[])">
+            <summary>
+            Start the Windows service
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JBCStationControllerSrv.JBCStationControllerService.OnStop">
+            <summary>
+            Stop the Windows service
+            </summary>
+        </member>
+        <member name="M:JBCStationControllerSrv.DLLConnection.CDLLConnectionController.InitDLL">
+            <summary>
+            This method initialize the DLL connect and start searching devices
+            </summary>
+            <returns>True if the initialization was successful</returns>
+        </member>
+        <member name="M:JBCStationControllerSrv.DLLConnection.CDLLConnectionController.ReleaseDLL">
+            <summary>
+            This method close the DLL connect
+            </summary>
+            <returns>True if the close was successful</returns>
+        </member>
+        <member name="M:JBCStationControllerSrv.CComHostController.SendVersionFileToController">
+            <summary>
+            Send software version to HostController
+            </summary>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.GetContinuousMode(System.String)">
+            <summary>
+            Gets the current continuous data transmision mode status of the indicated station.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <returns>A tContinuousModeStatus object with the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.StartContinuousMode(System.String)">
+            <summary>
+            This method starts a new continuous data queue instance on the indicated station and returns a queue ID.
+            The desired transmision speed and ports will be the ones defined in SetContinuousMode Method.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <returns>A new queue id of the continuous mode to be used when retrieving the data</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.StopContinuousMode(System.String,System.UInt32)">
+            <summary>
+            Stops and clear the current continuous mode data transmisions of the indicated queue.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <param name="queueID">The queue ID returned by StartContinuousMode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.GetContinuousModeDataCount(System.String,System.UInt32)">
+            <summary>
+            Gets the current continuous mode data transmisions pending to be got from the internal FIFO queue of the indicated station.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <param name="queueID">The queue ID returned by StartContinuousMode</param>
+            <returns>An integer that is the queue length</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.GetContinuousModeNextData(System.String,System.UInt32)">
+            <summary>
+            Gets the next continuous mode data in the internal FIFO queue from the station. It is the oldest transmision.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <param name="queueID">The queue ID returned by StartContinuousMode</param>
+            <returns>A dc_ContinuousModeData object that is the oldest transmision in the queue</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.GetContinuousModeNextData_HA(System.String,System.UInt32)">
+            <summary>
+            Gets the next continuous mode data in the internal FIFO queue from the station. It is the oldest transmision.
+            Hot Air desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <param name="queueID">The queue ID returned by StartContinuousMode</param>
+            <returns>A dc_ContinuousModeData_HA object that is the oldest transmision in the queue</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.GetContinuousModeNextDataChunk(System.String,System.UInt32,System.Int32)">
+            <summary>
+            Gets the next continuous mode data chunck in the internal FIFO queue from the station. It is the oldest transmision.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <param name="queueID">The queue ID returned by StartContinuousMode</param>
+            <returns>A dc_ContinuousModeData array that contains the oldest transmisions in the queue</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.GetContinuousModeNextDataChunk_HA(System.String,System.UInt32,System.Int32)">
+            <summary>
+            Gets the next continuous mode data chunck in the internal FIFO queue from the station. It is the oldest transmision.
+            Hot Air Desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <param name="queueID">The queue ID returned by StartContinuousMode</param>
+            <returns>A dc_ContinuousModeData_HA array that contains the oldest transmisions in the queue</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.SetContinuousMode(System.String,JBC_Connect.dc_EnumConstJBC.dc_SpeedContinuousMode,JBC_Connect.dc_EnumConstJBC.dc_Port,JBC_Connect.dc_EnumConstJBC.dc_Port,JBC_Connect.dc_EnumConstJBC.dc_Port,JBC_Connect.dc_EnumConstJBC.dc_Port)">
+            <summary>
+            This method defines the speed and ports to be used in continuous data transmision mode of the indicated station.
+            The desired transmision speed ( period ) and at least one port must be indicated when defining.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="UUID">The identifier of the desired station</param>
+            <param name="speed">The desired speed ( period ) for the transmisions</param>
+            <param name="portA">First desired port to be monitorized</param>
+            <param name="portB">Second desired port to be monitorized</param>
+            <param name="portC">Third desired port to be monitorized</param>
+            <param name="portD">Fourth desired port to be monitorized</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.StartTraceability(System.String,System.String,System.UInt16)">
+            <summary>
+            Traceability module enabled
+            </summary>
+            <param name="ServerCode">Traceability server code</param>
+            <param name="Ip">Traceability server IP</param>
+            <param name="Port">Traceability server Port</param>
+            <remarks>Enables forwarding of all events</remarks>
+        </member>
+        <member name="M:JBCStationControllerSrv.CImplIJBCStationControllerService.StopTraceability">
+            <summary>
+            Traceability module disabled
+            </summary>
+        </member>
+        <member name="T:JBCStationControllerSrv.My.Resources.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.errFunctionNotSupported">
+            <summary>
+              Looks up a localized string similar to Function not supported.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.errNotControlled">
+            <summary>
+              Looks up a localized string similar to Not controlled error. See Detail data..
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.errNotValidTool">
+            <summary>
+              Looks up a localized string similar to Not valid tool..
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.errServiceError">
+            <summary>
+              Looks up a localized string similar to Error in service. See Detail data..
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.errStationNotFound">
+            <summary>
+              Looks up a localized string similar to Station not found..
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evErrorCreating">
+            <summary>
+              Looks up a localized string similar to Error creating service.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evErrorOnCustomCommand">
+            <summary>
+              Looks up a localized string similar to Custom Command Error.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evErrorStartingDLL">
+            <summary>
+              Looks up a localized string similar to Error starting JBC Connect DLL.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evNew">
+            <summary>
+              Looks up a localized string similar to New Event Service.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evOff">
+            <summary>
+              Looks up a localized string similar to Off.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evOn">
+            <summary>
+              Looks up a localized string similar to On.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evSearchingETHStations">
+            <summary>
+              Looks up a localized string similar to Searching Ethernet Stations.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evSearchingNone">
+            <summary>
+              Looks up a localized string similar to Not Searching Stations.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evSearchingUSBStations">
+            <summary>
+              Looks up a localized string similar to Searching USB Stations.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evSetSearchingETH">
+            <summary>
+              Looks up a localized string similar to Searching ETH Setting: {0}.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evSetSearchingUSB">
+            <summary>
+              Looks up a localized string similar to Searching USB Setting: {0}.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evStarted">
+            <summary>
+              Looks up a localized string similar to Service Started.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evStarting">
+            <summary>
+              Looks up a localized string similar to Starting....
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evStopped">
+            <summary>
+              Looks up a localized string similar to Service Stopped.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evStopping">
+            <summary>
+              Looks up a localized string similar to Stopping....
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evStopSearchingETHStations">
+            <summary>
+              Looks up a localized string similar to Stop Searching Ethernet Stations.
+            </summary>
+        </member>
+        <member name="P:JBCStationControllerSrv.My.Resources.Resources.evStopSearchingUSBStations">
+            <summary>
+              Looks up a localized string similar to Stop Searching USB Stations.
+            </summary>
+        </member>
+        <member name="M:JBCStationControllerSrv.CUserSession.NewUserSession(System.String,JBC_Connect.dc_EnumConstJBC.dc_Port,System.String,System.String,System.String)">
+            <summary>
+            Creates a new user session associated with a station
+            </summary>
+            <param name="stationUID">Station UID</param>
+            <param name="portNbr">Port number</param>
+            <param name="userCode">User ID</param>
+            <param name="userName">User name</param>
+            <param name="deviceName">Keyboard input ID</param>
+            <returns>True if the station is not associated yet and the operation was succesful</returns>
+        </member>
+        <member name="M:JBCStationControllerSrv.CUserSession.CloseUserSession(System.String,JBC_Connect.dc_EnumConstJBC.dc_Port)">
+            <summary>
+            Delete an user session associated with a station
+            </summary>
+            <param name="stationUID">Station UID</param>
+            <param name="portNbr">Port number</param>
+            <returns>True if the session exists and it was deleted</returns>
+        </member>
+        <member name="M:JBCStationControllerSrv.CUserSession.CloseKeyboardUserSession(System.String)">
+            <summary>
+            Delete the associated keyboard to an user
+            </summary>
+            <param name="deviceName">Keyboard input ID</param>
+            <returns>True if the keyboard exists and it was deleted</returns>
+        </member>
+        <member name="M:JBCStationControllerSrv.CUserSession.GetAuthenticatedUser(System.String,JBC_Connect.dc_EnumConstJBC.dc_Port)">
+            <summary>
+            Get the user ID associated to a station
+            </summary>
+            <param name="stationUID">Station UID</param>
+            <param name="portNbr">Port number</param>
+            <returns>User ID. If there is no user associated, return an empty string</returns>
+        </member>
+    </members>
+</doc>

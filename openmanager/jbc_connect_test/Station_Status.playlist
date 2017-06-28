@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="UnitTestSample.UnitTest1.SetControlMode" /><Add Test="UnitTestSample.UnitTest1.GetControlMode" /><Add Test="UnitTestSample.UnitTest1.GetRemoteMode" /><Add Test="UnitTestSample.UnitTest1.SetRemoteMode" /><Add Test="UnitTestSample.UnitTest1.GetStationError" /><Add Test="UnitTestSample.UnitTest1.GetStationTransformerTemp" /></Playlist>

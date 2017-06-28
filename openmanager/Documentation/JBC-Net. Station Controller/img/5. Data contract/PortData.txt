@@ -1,0 +1,15 @@
+[dc_Cartridge|CartridgeNbr:UShort;CartridgeOnOff:dc_OnOff]
+
+[dc_Counters|ContPlugMinutes:Integer;ContWorkMinutes:Integer;ContSleepMinutes:Integer;ContHiberMinutes:Integer;ContIdleMinutes:Integer;ContSleepCycles:Integer;ContDesoldCycles:Integer;ContWorkCycles:Integer;ContSuctionCycles:Integer]
+
+[dc_Levels|LevelsCount:Integer;LevelsOnOff:dc_OnOff;LevelsTempSelect:Byte;LevelsTemp():dc_getTemperature;LevelsTempOnOff:dc_OnOff()]
+
+[dc_Port_Counters|portNbr:dc_Port;GlobalCounters:dc_Counters;PartialCounters:dc_Counters]
+[dc_Port_Counters]->[dc_Counters]
+
+[dc_PortToolSettings|portNbr:dc_Port;PortSelectedTemp:dc_getTemperature;Tool:dc_GenericStationTools;FixedTemp_OnOff:dc_OnOff;FixedTemp:dc_getTemperature;Levels:dc_Levels;SleepTemp:dc_getTemperature;AdjustTemp:dc_getTemperature;SleepTime:dc_TimeSleep;SleepTimeOnOff:dc_OnOff;HiberTime:dc_TimeHibernation;HiberTimeOnOff:dc_OnOff;Cartridge:dc_Cartridge]
+[dc_PortToolSettings]->[dc_Cartridge]
+[dc_PortToolSettings]->[dc_Levels]
+
+[dc_StatusTool|ActualTemp:dc_getTemperature;ConnectedTool:dc_GenericStationTools;Desold_OnOff:dc_OnOff;Extractor_OnOff:dc_OnOff;FutureMode:String;Hiber_OnOff:dc_OnOff;Peripheral():dc_PeripheralInfo;PortSelectedTemp:dc_getTemperature;Power_x_Mil:Integer;Sleep_OnOff:dc_OnOff;Stand_OnOff:dc_OnOff;StatusRemoteMode_Sleep_OnOff:dc_OnOff;StatusRemoteMode_Extractor_OnOff:dc_OnOff;StatusRemoteMode_Desold_OnOff:dc_OnOff;portNbr:dc_Port;Temp_MOS:dc_getTemperature;This_PortToolSettings:dc_PortToolSettings;TimeToSleepHibern:Integer;ToolError:dc_ToolError]
+[dc_StatusTool]->[dc_PortToolSettings]

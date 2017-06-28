@@ -1,0 +1,3 @@
+[Host Controller{bg:bisque}]<-(2) info_update_firmware(firmware)List(firmware)[Station Controller{bg:honeydew}]
+
+[Station Controller]<-(1) update_stations(List(firmware))[Remote Manager{bg:lavender}]

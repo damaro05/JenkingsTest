@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4e4c9e4a-9104-4fb7-be54-99fdacec2b86" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/JBCStationControllerSrv/service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="69601677-d80e-4a49-bfc5-694e46d94a9c" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd4" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="342776f2-38c4-492c-a821-311d4c3a4bf4" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd6" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="2de41897-541d-495e-8dbc-a808efd46938" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd5" />
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="181f6403-00cd-4ed7-a720-c97a3b584570" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd1" />
+    <MetadataFile FileName="service4.xsd" MetadataType="Schema" ID="c827b60e-7903-4ada-9e52-54f6b705f84b" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd2" />
+    <MetadataFile FileName="service5.xsd" MetadataType="Schema" ID="4e7decea-993f-40b6-8fe8-322ebdc973c9" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd3" />
+    <MetadataFile FileName="CImplIJBCStationControllerService.wsdl" MetadataType="Wsdl" ID="24d3935e-2619-43a4-ae0b-e9e975cb2d98" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?wsdl" />
+    <MetadataFile FileName="service6.xsd" MetadataType="Schema" ID="98bc07f6-f80b-4340-b7ef-7ef816db5112" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd0" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d9801b17-cb11-47cb-a965-5994a792341e" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?wsdl=wsdl0" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="91f19bbf-71a2-47fb-9db0-7698c23b7441" SourceId="1" SourceUrl="http://cad-51:8000/JBCStationControllerSrv/service?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

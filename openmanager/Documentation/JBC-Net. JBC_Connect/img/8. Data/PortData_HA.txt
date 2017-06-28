@@ -1,0 +1,16 @@
+[CCountersData_HA|ContPlugMinutes:Integer;ContWorkMinutes:Integer;ContWorkCycles:Integer;ContSuctionCycles:Integer]
+
+[CToolStartMode_HA|m_ToolButton:OnOff;m_StandOut:OnOff;m_Pedal:PedalAction]
+
+[CTempLevelsData_HA|LevelsOnOff:OnOff;LevelsTemp:CTemperature();LevelsFlow:Integer();LevelsExtTemp:CTemperature();LevelsTempOnOff:OnOff();LevelsTempSelect:ToolTemperatureLevels]
+
+[CToolSettingsData_HA|m_AdjustTemp:CTemperature;m_Tool:GenericStationTools;m_Levels:CTempLevelsData_HA;m_TimeToStop:Integer;m_StartMode:CToolStartMode_HA;m_ExternalTCMode:ToolExternalTCMode_HA]
+[CToolSettingsData_HA]->[CTempLevelsData_HA]
+[CToolSettingsData_HA]->[CToolStartMode_HA]
+
+[CToolStatusData_HA|ActualTemp:CTemperature;ActualExtTemp:CTemperature;ProtectionTC_Temp:CTemperature;Power_x_Mil:Integer;Flow_x_Mil:Integer;ConnectedTool:GenericStationTools;Stand_OnOff:OnOff;PedalStatus_OnOff:OnOff;PedalConnected_OnOff:OnOff;SuctionRequestedStatus_OnOff:OnOff;SuctionStatus_OnOff:OnOff;HeaterRequestedStatus_OnOff:OnOff;HeaterStatus_OnOff:OnOff;CoolingStatus_OnOff:OnOff;TimeToStop:Integer;ToolError:ToolError]
+
+[CPortData_HA|SelectedTemp:CTemperature;SelectedExtTemp:CTemperature;SelectedFlow_x_Mil:Integer;ProfileMode:OnOff;ToolStatus:CToolStatusData_HA;ToolSettings:CToolSettingsData_HA;Counters:CCountersData_HA;PartialCounters:CCountersData_HA]
+[CPortData_HA]->[CToolSettingsData_HA]
+[CPortData_HA]->[CToolStatusData_HA]
+[CPortData_HA]->[CCountersData_HA]

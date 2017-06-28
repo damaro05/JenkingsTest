@@ -1,0 +1,7 @@
+[CStationFrames{bg:lavender}]-(1) read_method(data) >[CCommunicationChannel]
+
+[CCommunicationChannel{bg:honeydew}]-(2) NumMessage >[CStationFrames]
+
+[CMessagesSentManager|List Messages (NumMessage ~ data)]
+
+[CStationFrames]-(3) save_message(NumMessage | data) >[CMessagesSentManager{bg:lavender}]

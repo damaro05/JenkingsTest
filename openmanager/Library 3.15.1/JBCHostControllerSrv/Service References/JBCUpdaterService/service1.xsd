@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://JBCUpdaterSrv" elementFormDefault="qualified" targetNamespace="http://JBCUpdaterSrv" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://cad-51:8000/JBCUpdaterSrv/service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JBCUpdaterSrv" />
+  <xs:element name="ReceiveFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nSequence" type="xs:int" />
+        <xs:element minOccurs="0" name="bytes" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceiveFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReceiveFileResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitUpdate">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateUpdate">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JBCUpdaterSrv" minOccurs="0" name="StateUpdateResult" type="q1:dc_EnumConstJBC.dc_UpdateState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

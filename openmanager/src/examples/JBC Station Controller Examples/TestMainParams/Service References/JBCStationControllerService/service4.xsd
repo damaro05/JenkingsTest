@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBCStationControllerSrv" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBCStationControllerSrv" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JBC_Connect" />
+  <xs:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://cad-51:8000/JBCStationControllerSrv/service?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+  <xs:complexType name="dc_StationController_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SwVersion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_StationController_Info" nillable="true" type="tns:dc_StationController_Info" />
+  <xs:complexType name="dc_Station_Sold_Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConnectionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Features" nillable="true" type="tns:dc_Features" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="InfoUpdateFirmware" nillable="true" type="tns:ArrayOfdc_FirmwareStation" />
+      <xs:element minOccurs="0" name="InternalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentID" type="xs:long" />
+      <xs:element minOccurs="0" name="PortCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Protocol" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StationType" type="q1:dc_EnumConstJBC.dc_StationType" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="SupportedTools" nillable="true" type="q2:ArrayOfdc_EnumConstJBC.dc_GenericStationTools" />
+      <xs:element minOccurs="0" name="TempLevelsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Version_Hardware" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version_Software" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Station_Sold_Info" nillable="true" type="tns:dc_Station_Sold_Info" />
+  <xs:complexType name="dc_Features">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alarms" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllToolsSamePortSettings" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Cartridges" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DelayWithStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplaySettings" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ethernet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirmwareUpdate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="MinTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="PartialCounters" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Peripherals" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Robot" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TempLevels" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TempLevelsWithStatus" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Features" nillable="true" type="tns:dc_Features" />
+  <xs:complexType name="dc_getTemperature">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Celsius" type="xs:int" />
+      <xs:element minOccurs="0" name="Fahrenheit" type="xs:int" />
+      <xs:element minOccurs="0" name="UTI" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_getTemperature" nillable="true" type="tns:dc_getTemperature" />
+  <xs:complexType name="ArrayOfdc_FirmwareStation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_FirmwareStation" nillable="true" type="tns:dc_FirmwareStation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_FirmwareStation" nillable="true" type="tns:ArrayOfdc_FirmwareStation" />
+  <xs:complexType name="dc_FirmwareStation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hardwareVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="modelVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="protocolVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="softwareVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="stationID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_FirmwareStation" nillable="true" type="tns:dc_FirmwareStation" />
+  <xs:complexType name="dc_Station_Sold_Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContinuousModeStatus" nillable="true" type="tns:dc_ContinuousModeStatus" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ControlMode" type="q3:dc_EnumConstJBC.dc_ControlModeConnection" />
+      <xs:element minOccurs="0" name="ControlModeUserName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="RemoteMode" type="q4:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StationError" type="q5:dc_EnumConstJBC.dc_StationError" />
+      <xs:element minOccurs="0" name="TRAFOTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="TempErrorMOS" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="TempErrorTRAFO" nillable="true" type="tns:dc_getTemperature" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Station_Sold_Status" nillable="true" type="tns:dc_Station_Sold_Status" />
+  <xs:complexType name="dc_ContinuousModeStatus">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Speed" type="q6:dc_EnumConstJBC.dc_SpeedContinuousMode" />
+      <xs:element minOccurs="0" name="port1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="port2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="port3" type="xs:boolean" />
+      <xs:element minOccurs="0" name="port4" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_ContinuousModeStatus" nillable="true" type="tns:dc_ContinuousModeStatus" />
+  <xs:complexType name="dc_Station_HA_Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContinuousModeStatus" nillable="true" type="tns:dc_ContinuousModeStatus" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ControlMode" type="q7:dc_EnumConstJBC.dc_ControlModeConnection" />
+      <xs:element minOccurs="0" name="ControlModeUserName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="RemoteMode" type="q8:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StationError" type="q9:dc_EnumConstJBC.dc_StationError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Station_HA_Status" nillable="true" type="tns:dc_Station_HA_Status" />
+  <xs:complexType name="dc_StatusTool">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ConnectedTool" type="q10:dc_EnumConstJBC.dc_GenericStationTools" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Desold_OnOff" type="q11:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Extractor_OnOff" type="q12:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="FutureMode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Hiber_OnOff" type="q13:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="Peripheral" nillable="true" type="tns:ArrayOfdc_PeripheralInfo" />
+      <xs:element minOccurs="0" name="PortSelectedTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="Power_x_Mil" type="xs:int" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Sleep_OnOff" type="q14:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Stand_OnOff" type="q15:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StatusRemoteMode_Desold_OnOff" type="q16:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StatusRemoteMode_Extractor_OnOff" type="q17:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StatusRemoteMode_Sleep_OnOff" type="q18:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="Temp_MOS" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="This_PortToolSettings" nillable="true" type="tns:dc_PortToolSettings" />
+      <xs:element minOccurs="0" name="TimeToSleepHibern" type="xs:int" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ToolError" type="q19:dc_EnumConstJBC.dc_ToolError" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="portNbr" type="q20:dc_EnumConstJBC.dc_Port" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_StatusTool" nillable="true" type="tns:dc_StatusTool" />
+  <xs:complexType name="ArrayOfdc_PeripheralInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_PeripheralInfo" nillable="true" type="tns:dc_PeripheralInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_PeripheralInfo" nillable="true" type="tns:ArrayOfdc_PeripheralInfo" />
+  <xs:complexType name="dc_PeripheralInfo">
+    <xs:sequence>
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ActivationMode" type="q21:dc_EnumConstJBC.dc_PeripheralActivation" />
+      <xs:element minOccurs="0" name="DateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DelayTime" type="xs:short" />
+      <xs:element minOccurs="0" name="Hash_MCU_UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="PortAttached" type="q22:dc_EnumConstJBC.dc_Port" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StatusActive" type="q23:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StatusPD" type="q24:dc_EnumConstJBC.dc_PeripheralStatusPD" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Type" type="q25:dc_EnumConstJBC.dc_PeripheralType" />
+      <xs:element minOccurs="0" name="Version" type="xs:short" />
+      <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="WorkFunction" type="q26:dc_EnumConstJBC.dc_PeripheralFunction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_PeripheralInfo" nillable="true" type="tns:dc_PeripheralInfo" />
+  <xs:complexType name="dc_PortToolSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="Cartridge" nillable="true" type="tns:dc_Cartridge" />
+      <xs:element minOccurs="0" name="FixedTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="FixedTemp_OnOff" type="q27:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="HiberTime" type="q28:dc_EnumConstJBC.dc_TimeHibernation" />
+      <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="HiberTimeOnOff" type="q29:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="Levels" nillable="true" type="tns:dc_Levels" />
+      <xs:element minOccurs="0" name="SleepTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="SleepTime" type="q30:dc_EnumConstJBC.dc_TimeSleep" />
+      <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="SleepTimeOnOff" type="q31:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Tool" type="q32:dc_EnumConstJBC.dc_GenericStationTools" />
+      <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="portNbr" type="q33:dc_EnumConstJBC.dc_Port" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_PortToolSettings" nillable="true" type="tns:dc_PortToolSettings" />
+  <xs:complexType name="dc_Cartridge">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CartridgeNbr" type="xs:unsignedShort" />
+      <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="CartridgeOnOff" type="q34:dc_EnumConstJBC.dc_OnOff" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Cartridge" nillable="true" type="tns:dc_Cartridge" />
+  <xs:complexType name="dc_Levels">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LevelsCount" type="xs:int" />
+      <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="LevelsOnOff" type="q35:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="LevelsTemp" nillable="true" type="tns:ArrayOfdc_getTemperature" />
+      <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="LevelsTempOnOff" nillable="true" type="q36:ArrayOfdc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="LevelsTempSelect" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Levels" nillable="true" type="tns:dc_Levels" />
+  <xs:complexType name="ArrayOfdc_getTemperature">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_getTemperature" nillable="true" type="tns:dc_getTemperature" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_getTemperature" nillable="true" type="tns:ArrayOfdc_getTemperature" />
+  <xs:complexType name="dc_StatusTool_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualExtTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="ActualTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ConnectedTool" type="q37:dc_EnumConstJBC.dc_GenericStationTools" />
+      <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="CoolingStatus_OnOff" type="q38:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="Flow_x_Mil" type="xs:int" />
+      <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="HeaterRequestedStatus_OnOff" type="q39:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="HeaterStatus_OnOff" type="q40:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="PedalConnected_OnOff" type="q41:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="PedalStatus_OnOff" type="q42:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="PortSelectedExtTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="PortSelectedFlow_x_mil" type="xs:int" />
+      <xs:element minOccurs="0" name="PortSelectedTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="Power_x_Mil" type="xs:int" />
+      <xs:element minOccurs="0" name="ProtectionTC_Temp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Stand_OnOff" type="q43:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="SuctionRequestedStatus_OnOff" type="q44:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="SuctionStatus_OnOff" type="q45:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="This_PortToolSettings" nillable="true" type="tns:dc_PortToolSettings_HA" />
+      <xs:element minOccurs="0" name="TimeToStop" type="xs:int" />
+      <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ToolError" type="q46:dc_EnumConstJBC.dc_ToolError" />
+      <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="portNbr" type="q47:dc_EnumConstJBC.dc_Port" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_StatusTool_HA" nillable="true" type="tns:dc_StatusTool_HA" />
+  <xs:complexType name="dc_PortToolSettings_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="ExternalTCMode" type="q48:dc_EnumConstJBC.dc_ExternalTCMode_HA" />
+      <xs:element minOccurs="0" name="Levels" nillable="true" type="tns:dc_Levels_HA" />
+      <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="PortProfileMode" type="q49:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StartMode_Pedal" type="q50:dc_EnumConstJBC.dc_PedalAction" />
+      <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StartMode_StandOut" type="q51:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StartMode_ToolButton" type="q52:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="TimeToStop" type="xs:int" />
+      <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Tool" type="q53:dc_EnumConstJBC.dc_GenericStationTools" />
+      <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="portNbr" type="q54:dc_EnumConstJBC.dc_Port" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_PortToolSettings_HA" nillable="true" type="tns:dc_PortToolSettings_HA" />
+  <xs:complexType name="dc_Levels_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LevelsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="LevelsExtTemp" nillable="true" type="tns:ArrayOfdc_getTemperature" />
+      <xs:element xmlns:q55="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LevelsFlow" nillable="true" type="q55:ArrayOfint" />
+      <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="LevelsOnOff" type="q56:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="LevelsTemp" nillable="true" type="tns:ArrayOfdc_getTemperature" />
+      <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="LevelsTempOnOff" nillable="true" type="q57:ArrayOfdc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="LevelsTempSelect" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Levels_HA" nillable="true" type="tns:dc_Levels_HA" />
+  <xs:complexType name="dc_Station_Sold_Settings">
+    <xs:sequence>
+      <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Beep" type="q58:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="HelpText" type="q59:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Idioma" type="q60:dc_EnumConstJBC.dc_Idioma" />
+      <xs:element minOccurs="0" name="MaxTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="MinTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="N2Mode" type="q61:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PowerLimit" type="xs:int" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Station_Sold_Settings" nillable="true" type="tns:dc_Station_Sold_Settings" />
+  <xs:complexType name="dc_Station_HA_Settings">
+    <xs:sequence>
+      <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Beep" type="q62:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Idioma" type="q63:dc_EnumConstJBC.dc_Idioma" />
+      <xs:element minOccurs="0" name="MaxExtTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="MaxFlow" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="MinExtTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="MinFlow" type="xs:int" />
+      <xs:element minOccurs="0" name="MinTemp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PIN" nillable="true" type="xs:string" />
+      <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="PINEnabled" type="q64:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StationLocked" type="q65:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Station_HA_Settings" nillable="true" type="tns:dc_Station_HA_Settings" />
+  <xs:complexType name="dc_Port_Counters">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GlobalCounters" nillable="true" type="tns:dc_Counters" />
+      <xs:element minOccurs="0" name="PartialCounters" nillable="true" type="tns:dc_Counters" />
+      <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="portNbr" type="q66:dc_EnumConstJBC.dc_Port" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Port_Counters" nillable="true" type="tns:dc_Port_Counters" />
+  <xs:complexType name="dc_Counters">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContDesoldCycles" type="xs:int" />
+      <xs:element minOccurs="0" name="ContHiberMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="ContIdleMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="ContPlugMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="ContSleepCycles" type="xs:int" />
+      <xs:element minOccurs="0" name="ContSleepMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="ContSuctionCycles" type="xs:int" />
+      <xs:element minOccurs="0" name="ContWorkCycles" type="xs:int" />
+      <xs:element minOccurs="0" name="ContWorkMinutes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Counters" nillable="true" type="tns:dc_Counters" />
+  <xs:complexType name="dc_ContinuousModeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:ArrayOfdc_ContinuousModePort" />
+      <xs:element minOccurs="0" name="sequence" type="xs:unsignedLong" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_ContinuousModeData" nillable="true" type="tns:dc_ContinuousModeData" />
+  <xs:complexType name="ArrayOfdc_ContinuousModePort">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_ContinuousModePort" nillable="true" type="tns:dc_ContinuousModePort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_ContinuousModePort" nillable="true" type="tns:ArrayOfdc_ContinuousModePort" />
+  <xs:complexType name="dc_ContinuousModePort">
+    <xs:sequence>
+      <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="desoldering" type="q67:OnOff" />
+      <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="port" type="q68:dc_EnumConstJBC.dc_Port" />
+      <xs:element minOccurs="0" name="power" type="xs:int" />
+      <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="status" type="q69:dc_EnumConstJBC.dc_ToolStatus" />
+      <xs:element minOccurs="0" name="temperature" nillable="true" type="tns:dc_getTemperature" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_ContinuousModePort" nillable="true" type="tns:dc_ContinuousModePort" />
+  <xs:complexType name="dc_ContinuousModeData_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="tns:ArrayOfdc_ContinuousModePort_HA" />
+      <xs:element minOccurs="0" name="sequence" type="xs:unsignedLong" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_ContinuousModeData_HA" nillable="true" type="tns:dc_ContinuousModeData_HA" />
+  <xs:complexType name="ArrayOfdc_ContinuousModePort_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_ContinuousModePort_HA" nillable="true" type="tns:dc_ContinuousModePort_HA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_ContinuousModePort_HA" nillable="true" type="tns:ArrayOfdc_ContinuousModePort_HA" />
+  <xs:complexType name="dc_ContinuousModePort_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ext1Temp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="ext2Temp" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="flow" type="xs:int" />
+      <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="port" type="q70:dc_EnumConstJBC.dc_Port" />
+      <xs:element minOccurs="0" name="power" type="xs:int" />
+      <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="status" type="q71:dc_EnumConstJBC.dc_ToolStatus_HA" />
+      <xs:element minOccurs="0" name="temperature" nillable="true" type="tns:dc_getTemperature" />
+      <xs:element minOccurs="0" name="timeToStop" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_ContinuousModePort_HA" nillable="true" type="tns:dc_ContinuousModePort_HA" />
+  <xs:complexType name="ArrayOfdc_ContinuousModeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_ContinuousModeData" nillable="true" type="tns:dc_ContinuousModeData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_ContinuousModeData" nillable="true" type="tns:ArrayOfdc_ContinuousModeData" />
+  <xs:complexType name="ArrayOfdc_ContinuousModeData_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_ContinuousModeData_HA" nillable="true" type="tns:dc_ContinuousModeData_HA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_ContinuousModeData_HA" nillable="true" type="tns:ArrayOfdc_ContinuousModeData_HA" />
+  <xs:complexType name="dc_EthernetConfiguration">
+    <xs:sequence>
+      <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="DHCP" type="q72:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="DNS1" nillable="true" type="q73:IPAddress" />
+      <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="DNS2" nillable="true" type="q74:IPAddress" />
+      <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="Gateway" nillable="true" type="q75:IPAddress" />
+      <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="IP" nillable="true" type="q76:IPAddress" />
+      <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="Mask" nillable="true" type="q77:IPAddress" />
+      <xs:element minOccurs="0" name="Port" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_EthernetConfiguration" nillable="true" type="tns:dc_EthernetConfiguration" />
+  <xs:complexType name="dc_RobotConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="DataBits" type="xs:unsignedShort" />
+      <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Parity" type="q78:dc_EnumConstJBC.dc_RobotParity" />
+      <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Protocol" type="q79:dc_EnumConstJBC.dc_RobotProtocol" />
+      <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Speed" type="q80:dc_EnumConstJBC.dc_RobotSpeed" />
+      <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Status" type="q81:dc_EnumConstJBC.dc_OnOff" />
+      <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="StopBits" type="q82:dc_EnumConstJBC.dc_RobotStop" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_RobotConfiguration" nillable="true" type="tns:dc_RobotConfiguration" />
+  <xs:complexType name="ArrayOfdc_Profile_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dc_Profile_HA" nillable="true" type="tns:dc_Profile_HA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdc_Profile_HA" nillable="true" type="tns:ArrayOfdc_Profile_HA" />
+  <xs:complexType name="dc_Profile_HA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_Profile_HA" nillable="true" type="tns:dc_Profile_HA" />
+  <xs:complexType name="dc_ConfigurationPortStation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustTemp" type="xs:int" />
+      <xs:element minOccurs="0" name="PortSelectedTemp" type="xs:int" />
+      <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/JBC_Connect" minOccurs="0" name="Tool" type="q83:dc_EnumConstJBC.dc_GenericStationTools" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_ConfigurationPortStation" nillable="true" type="tns:dc_ConfigurationPortStation" />
+  <xs:complexType name="dc_TraceDataSequence">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bytes" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="final" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sequence" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dc_TraceDataSequence" nillable="true" type="tns:dc_TraceDataSequence" />
+</xs:schema>

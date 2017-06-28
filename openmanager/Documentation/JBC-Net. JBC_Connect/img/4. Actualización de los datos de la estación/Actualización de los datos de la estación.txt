@@ -1,0 +1,9 @@
+[CStation{bg:lavender}]->[CStationFrames{bg:lavender}]
+
+[CStation]-[note: (1) Timer update_data{bg:cornsilk}]
+
+[CStationFrames]-(2) read_method(data) >[CCommunicationChannel{bg:honeydew}]
+
+[CCommunicationChannel]-(3) response_read(data) >[CStationFrames]
+
+[CStationFrames]-(4) write_method(data) >[CStationData{bg:lavender}]

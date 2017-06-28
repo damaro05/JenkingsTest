@@ -1,0 +1,40 @@
+// ***JBC_API***
+[JBC_API{bg:bisque}]->[CStationAvailableCom]
+[CStationAvailableCom{bg:bisque}]uses-.->[CCommunicationChannel]
+
+
+// ***Search***
+[JBC_API]->[CSearchManager]
+
+//USB
+[CSearchManager{bg:lightcyan}]->[SearchDevicesUSB]
+[SearchDevicesUSB{bg:lightcyan}]->[SearchConnectUSB_Base]
+[SearchDevicesUSB]->[SearchConnectUSB]
+[SearchConnectUSB_Base{bg:lightcyan}]->[SearchConnectUSB{bg:lightcyan}]
+
+//TCP
+[CSearchManager{bg:lightcyan}]->[CSearchDevicesTCP]
+[CSearchDevicesTCP{bg:lightcyan}]->[CSearchConnectTCP_Base]
+[CSearchDevicesTCP]->[CSearchConnectTCP]
+[CSearchConnectTCP_Base{bg:lightcyan}]->[CSearchConnectTCP]
+[CSearchConnectTCP{bg:lightcyan}]->[WinSockClient{bg:lightcyan}]
+
+//UDP
+[CSearchConnectTCP]->[CSearchUDP{bg:lightcyan}]
+[CSearchUDP]->[ClassWinSockUDP{bg:lightcyan}]
+
+
+// ***Station***
+[JBC_API]-*>[CStationWrapper]
+[CStationWrapper{bg:lavender}]->[CStation]
+[CStation{bg:lavender}]->[CStationFrames]
+[CStationFrames{bg:lavender}]->[CStationData{bg:lavender}]
+[CStationFrames]->[CPortData{bg:lavender}]
+[CStationFrames]->[CPeripherlData{bg:lavender}]
+[CStationFrames]->[CCommunicationChannel]
+
+
+// ***Communication***
+[CCommunicationChannel{bg:honeydew}]->[CStackMessages{bg:honeydew}]
+[CCommunicationChannel]->[Stack_dll]
+[Stack_dll{bg:honeydew}]->[Stack_phl{bg:honeydew}]

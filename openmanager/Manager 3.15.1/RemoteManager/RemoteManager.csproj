@@ -1,0 +1,1872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D926FBE-FE46-4A93-A59D-FDD31A83DC60}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>RemoteManager</RootNamespace>
+    <AssemblyName>RemoteManager</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>db47c98a</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\Release\</OutputPath>
+    <DocumentationFile>RemoteManager.xml</DocumentationFile>
+    <NOWARN>1591,660,661</NOWARN>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Release\</OutputPath>
+    <DocumentationFile>RemoteManager.xml</DocumentationFile>
+    <NOWARN>1591,660,661</NOWARN>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RemoteManager.xml</DocumentationFile>
+    <NOWARN>1591,660,661</NOWARN>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>ConnectRemote</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RemoteManager.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NOWARN>1591,660,661</NOWARN>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Manager32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Telerik.WinControls, Version=2016.2.608.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2016.2.608.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.2.608.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2016.2.608.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Library 3.15.1\JBC_ConnectRemote\JBC_ConnectRemote.csproj">
+      <Project>{6279846c-8a59-4e8e-b2d6-da76dc508258}</Project>
+      <Name>JBC_ConnectRemote</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ManRegister 3.15.1\RemoteManRegister\RemoteManRegister.csproj">
+      <Project>{945defde-e325-42d4-8b24-074d86ea05b3}</Project>
+      <Name>RemoteManRegister</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\RoutinesJBC\Exceptions\modException.cs">
+      <Link>RoutinesJBC\Exceptions\modException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesJBC\SearcherServices\CSearcherHostControllerServices.cs">
+      <Link>RoutinesJBC\SearcherServices\CSearcherHostControllerServices.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesJBC\SearcherServices\SearcherServicesData.cs">
+      <Link>RoutinesJBC\SearcherServices\SearcherServicesData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Data\DataType\IntegerUtils.cs">
+      <Link>RoutinesLibrary\Data\DataType\IntegerUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Data\DataType\StringUtils.cs">
+      <Link>RoutinesLibrary\Data\DataType\StringUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Data\Structures\BidirHashtable.cs">
+      <Link>RoutinesLibrary\Data\Structures\BidirHashtable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Net\InformationNetworkInterface.cs">
+      <Link>RoutinesLibrary\Net\InformationNetworkInterface.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Net\Protocols\FTP\FTP.cs">
+      <Link>RoutinesLibrary\Net\Protocols\FTP\FTP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Net\Protocols\TCP\TCP.cs">
+      <Link>RoutinesLibrary\Net\Protocols\TCP\TCP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Net\Protocols\UDP\UDP.cs">
+      <Link>RoutinesLibrary\Net\Protocols\UDP\UDP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\Shell\ShellExecute.cs">
+      <Link>RoutinesLibrary\Shell\ShellExecute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\UI\RL_Button.cs">
+      <Link>RoutinesLibrary\UI\RL_Button.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\UI\TableLayoutPanelUtils.cs">
+      <Link>RoutinesLibrary\UI\TableLayoutPanelUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RoutinesLibrary\UI\TreeViewUtils.cs">
+      <Link>RoutinesLibrary\UI\TreeViewUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedAssemblyInfo.cs">
+      <Link>SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApplicationEvents.cs" />
+    <Compile Include="Com\CComHostController.cs" />
+    <Compile Include="ConfigurationXML.cs" />
+    <Compile Include="Diagnostics\LoggerModule.cs" />
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrowser.Designer.cs">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCartridges.Designer.cs">
+      <DependentUpon>frmCartridges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCartridges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfManager.Designer.cs">
+      <DependentUpon>frmConfManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEvents.Designer.cs">
+      <DependentUpon>frmEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStation_HA.Designer.cs">
+      <DependentUpon>frmStation_HA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStation_HA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Station\Profile\ProfileNewDialog.Designer.cs">
+      <DependentUpon>ProfileNewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Station\Profile\ProfileNewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Station\Work\PlotRecorderProfile_HA\Data\DataSerie.cs" />
+    <Compile Include="Modules\Station\Work\PlotRecorderProfile_HA\LiveDataModel.cs" />
+    <Compile Include="Modules\Station\Work\PlotRecorderProfile_HA\PlotRecorderProfile_HA.cs" />
+    <Compile Include="Modules\Station\Work\PlotRecorderProfile_HA\Styles\LabelTimeFormat.cs" />
+    <Compile Include="Modules\Station\Profile\ProfileOptions.Designer.cs">
+      <DependentUpon>ProfileOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Station\Profile\ProfileOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Station\Profile\ProfileParameters.Designer.cs">
+      <DependentUpon>ProfileParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Station\Profile\ProfileParameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResourceCartridge.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceCartridge.resx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessagePopup.Designer.cs">
+      <DependentUpon>frmMessagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Notifications\frmNotifications.Designer.cs">
+      <DependentUpon>frmNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Notifications\frmNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Notifications\uControlNotification.Designer.cs">
+      <DependentUpon>uControlNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Notifications\uControlNotification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\CUpdatesManager.cs" />
+    <Compile Include="Modules\Updates\frmUpdates.Designer.cs">
+      <DependentUpon>frmUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\frmUpdates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\frmUpdatesReInstall.Designer.cs">
+      <DependentUpon>frmUpdatesReInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\frmUpdatesReInstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="L10n\modL10n.cs" />
+    <Compile Include="modCommon.cs" />
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_InitUpdateProcess.Designer.cs">
+      <DependentUpon>uControlNotificationState_InitUpdateProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_InitUpdateProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_Ok.Designer.cs">
+      <DependentUpon>uControlNotificationState_Ok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_Ok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_Warning.Designer.cs">
+      <DependentUpon>uControlNotificationState_Warning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_Warning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_NoConnection.Designer.cs">
+      <DependentUpon>uControlNotificationState_NoConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\NotificationState\uControlNotificationState_NoConnection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\StationUpdates\uControlStationUpdate.Designer.cs">
+      <DependentUpon>uControlStationUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\StationUpdates\uControlStationUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\uControlMessage_Error.Designer.cs">
+      <DependentUpon>uControlMessage_Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\uControlMessage_Error.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Updates\StationUpdates\uControlStationControllerUpdate.Designer.cs">
+      <DependentUpon>uControlStationControllerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Updates\StationUpdates\uControlStationControllerUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.ja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ja.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HostControllerServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Style\CPanelStyle.cs" />
+    <Compile Include="TabPanels.Designer.cs">
+      <DependentUpon>TabPanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPanels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParamTree.Designer.cs">
+      <DependentUpon>ParamTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParamTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmDockPanel.Designer.cs">
+      <DependentUpon>frmDockPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDockPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPorts.Designer.cs">
+      <DependentUpon>frmPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStation.Designer.cs">
+      <DependentUpon>frmStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ParamTable.Designer.cs">
+      <DependentUpon>ParamTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParamTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Station\Work\TempPanels_HA.Designer.cs">
+      <DependentUpon>TempPanels_HA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Station\Work\TempPanels_HA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Station\Work\TempPanels.Designer.cs">
+      <DependentUpon>TempPanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Station\Work\TempPanels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrowser.resx">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCartridges.resx">
+      <DependentUpon>frmCartridges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfManager.resx">
+      <DependentUpon>frmConfManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEvents.resx">
+      <DependentUpon>frmEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStation_HA.resx">
+      <DependentUpon>frmStation_HA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Station\Profile\ProfileNewDialog.resx">
+      <DependentUpon>ProfileNewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Station\Profile\ProfileParameters.resx">
+      <DependentUpon>ProfileParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Modules\Station\Profile\ProfileOptions.resx">
+      <DependentUpon>ProfileOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceCartridge.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceCartridge.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessagePopup.resx">
+      <DependentUpon>frmMessagePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Notifications\frmNotifications.resx">
+      <DependentUpon>frmNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Notifications\uControlNotification.resx">
+      <DependentUpon>uControlNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\frmUpdates.resx">
+      <DependentUpon>frmUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\frmUpdatesReInstall.resx">
+      <DependentUpon>frmUpdatesReInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\NotificationState\uControlNotificationState_InitUpdateProcess.resx">
+      <DependentUpon>uControlNotificationState_InitUpdateProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\NotificationState\uControlNotificationState_Ok.resx">
+      <DependentUpon>uControlNotificationState_Ok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\NotificationState\uControlNotificationState_Warning.resx">
+      <DependentUpon>uControlNotificationState_Warning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\NotificationState\uControlNotificationState_NoConnection.resx">
+      <DependentUpon>uControlNotificationState_NoConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\StationUpdates\uControlStationControllerUpdate.resx">
+      <DependentUpon>uControlStationControllerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\StationUpdates\uControlStationUpdate.resx">
+      <DependentUpon>uControlStationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Updates\uControlMessage_Error.resx">
+      <DependentUpon>uControlMessage_Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.ja.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ja.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPanels.resx">
+      <DependentUpon>TabPanels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParamTree.resx">
+      <DependentUpon>ParamTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDockPanel.resx">
+      <DependentUpon>frmDockPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPorts.resx">
+      <DependentUpon>frmPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStation.resx">
+      <DependentUpon>frmStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParamTable.resx">
+      <DependentUpon>ParamTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Station\Work\TempPanels_HA.resx">
+      <DependentUpon>TempPanels_HA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Station\Work\TempPanels.resx">
+      <DependentUpon>TempPanels.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\HostControllerServiceReference\JBCHostControllerService.wsdl" />
+    <None Include="Service References\HostControllerServiceReference\RemoteManager.HostControllerServiceReference.dc_InfoUpdatePeriodicTime.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HostControllerServiceReference\service.wsdl" />
+    <None Include="Service References\HostControllerServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HostControllerServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HostControllerServiceReference\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HostControllerServiceReference\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhiteClip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhiteClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhiteDwnArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcons\iconProfile.png" />
+    <None Include="Resources\menuIcons\iconProfile_s.png" />
+    <None Include="Resources\Folder_16x16.png" />
+    <None Include="Resources\tools\PHS_miniSelected.png" />
+    <None Include="Resources\tools\PHS_miniMouseOver.png" />
+    <None Include="Resources\tools\PHS_mini.png" />
+    <None Include="Resources\tools\PHS_big.png" />
+    <None Include="Resources\tools\PHB_miniSelected.png" />
+    <None Include="Resources\tools\PHB_miniMouseOver.png" />
+    <None Include="Resources\tools\PHB_mini.png" />
+    <None Include="Resources\tools\PHB_big.png" />
+    <None Include="Resources\tools\TE_miniSelected.png" />
+    <None Include="Resources\tools\TE_miniMouseOver.png" />
+    <None Include="Resources\tools\TE_mini.png" />
+    <None Include="Resources\tools\TE_big.png" />
+    <None Include="Resources\tools\JT_miniSelected.png" />
+    <None Include="Resources\tools\JT_miniMouseOver.png" />
+    <None Include="Resources\tools\JT_mini.png" />
+    <None Include="Resources\tools\JT_big.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Service References\HostControllerServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\HostControllerServiceReference\configuration.svcinfo" />
+    <None Include="Service References\HostControllerServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\HostControllerServiceReference\service.disco" />
+    <None Include="Resources\HandEnable.cur" />
+    <!-- Menu icons -->
+    <None Include="Resources\menuIcons\graphs.png" />
+    <None Include="Resources\menuIcons\graphs_s.png" />
+    <None Include="Resources\menuIcons\counters_s.png" />
+    <None Include="Resources\menuIcons\counters.png" />
+    <None Include="Resources\menuIcons\iconPeripheral.png" />
+    <None Include="Resources\menuIcons\iconPeripheral_s.png" />
+    <None Include="Resources\menuIcons\info_s.png" />
+    <None Include="Resources\menuIcons\info.png" />
+    <None Include="Resources\menuIcons\inicio_s.png" />
+    <None Include="Resources\menuIcons\inicio.png" />
+    <None Include="Resources\menuIcons\reset_s.png" />
+    <None Include="Resources\menuIcons\reset.png" />
+    <None Include="Resources\menuIcons\station.png" />
+    <None Include="Resources\menuIcons\station_s.png" />
+    <None Include="Resources\menuIcons\settings.png" />
+    <None Include="Resources\menuIcons\settings_s.png" />
+    <None Include="Resources\menuIcons\tool.png" />
+    <None Include="Resources\menuIcons\tool_s.png" />
+    <None Include="Resources\menuIcons\work.png" />
+    <None Include="Resources\menuIcons\work_s.png" />
+    <!-- Notifications -->
+    <None Include="Resources\notifications\ok.png" />
+    <None Include="Resources\notifications\error.png" />
+    <None Include="Resources\notifications\warning.png" />
+    <None Include="Resources\notifications\information.png" />
+    <None Include="Resources\notifications\hostControllerServer.png" />
+    <None Include="Resources\notifications\update.png" />
+    <!-- Port -->
+    <None Include="Resources\port\Port1mini.png" />
+    <None Include="Resources\port\Port1miniMouseOver.png" />
+    <None Include="Resources\port\Port1miniSelected.png" />
+    <None Include="Resources\port\Port2mini.png" />
+    <None Include="Resources\port\Port2miniMouseOver.png" />
+    <None Include="Resources\port\Port2miniSelected.png" />
+    <None Include="Resources\port\Port3mini.png" />
+    <None Include="Resources\port\Port3miniMouseOver.png" />
+    <None Include="Resources\port\Port3miniSelected.png" />
+    <None Include="Resources\port\Port4mini.png" />
+    <None Include="Resources\port\Port4miniMouseOver.png" />
+    <None Include="Resources\port\Port4miniSelected.png" />
+    <!-- Power bar -->
+    <None Include="Resources\powerBar\power_0.png" />
+    <None Include="Resources\powerBar\power_5.png" />
+    <None Include="Resources\powerBar\power_10.png" />
+    <None Include="Resources\powerBar\power_15.png" />
+    <None Include="Resources\powerBar\power_20.png" />
+    <None Include="Resources\powerBar\power_25.png" />
+    <None Include="Resources\powerBar\power_30.png" />
+    <None Include="Resources\powerBar\power_35.png" />
+    <None Include="Resources\powerBar\power_40.png" />
+    <None Include="Resources\powerBar\power_45.png" />
+    <None Include="Resources\powerBar\power_50.png" />
+    <None Include="Resources\powerBar\power_55.png" />
+    <None Include="Resources\powerBar\power_60.png" />
+    <None Include="Resources\powerBar\power_65.png" />
+    <None Include="Resources\powerBar\power_70.png" />
+    <None Include="Resources\powerBar\power_75.png" />
+    <None Include="Resources\powerBar\power_80.png" />
+    <None Include="Resources\powerBar\power_85.png" />
+    <None Include="Resources\powerBar\power_90.png" />
+    <None Include="Resources\powerBar\power_95.png" />
+    <None Include="Resources\powerBar\power_99.png" />
+    <!-- Station -->
+    <!-- Tools -->
+    <None Include="Resources\tools\DR_big.png" />
+    <None Include="Resources\tools\DR_miniSelected.png" />
+    <None Include="Resources\tools\DR_miniMouseOver.png" />
+    <None Include="Resources\tools\DR_mini.png" />
+    <None Include="Resources\tools\DS_miniSelected.png" />
+    <None Include="Resources\tools\DS_miniMouseOver.png" />
+    <None Include="Resources\tools\DS_mini.png" />
+    <None Include="Resources\tools\DS_big.png" />
+    <None Include="Resources\tools\HT_miniSelected.png" />
+    <None Include="Resources\tools\HT_miniMouseOver.png" />
+    <None Include="Resources\tools\HT_mini.png" />
+    <None Include="Resources\tools\HT_big.png" />
+    <None Include="Resources\tools\NP105_big.png" />
+    <None Include="Resources\tools\NP105_miniSelected.png" />
+    <None Include="Resources\tools\NP105_miniMouseOver.png" />
+    <None Include="Resources\tools\NP105_mini.png" />
+    <None Include="Resources\tools\NT105_big.png" />
+    <None Include="Resources\tools\NT105_miniMouseOver.png" />
+    <None Include="Resources\tools\NT105_mini.png" />
+    <None Include="Resources\tools\NT105_miniSelected.png" />
+    <None Include="Resources\tools\PA_miniSelected.png" />
+    <None Include="Resources\tools\PA_miniMouseOver.png" />
+    <None Include="Resources\tools\PA_mini.png" />
+    <None Include="Resources\tools\PA_big.png" />
+    <None Include="Resources\tools\T245_miniSelected.png" />
+    <None Include="Resources\tools\T245_miniMouseOver.png" />
+    <None Include="Resources\tools\T245_mini.png" />
+    <None Include="Resources\tools\T245_big.png" />
+    <None Include="Resources\tools\T210_miniSelected.png" />
+    <None Include="Resources\tools\T210_miniMouseOver.png" />
+    <None Include="Resources\tools\T210_mini.png" />
+    <None Include="Resources\tools\T210_big.png" />
+    <None Include="Resources\tools\NO_TOOL_miniMouseOver.png" />
+    <None Include="Resources\tools\NO_TOOL_mini.png" />
+    <None Include="Resources\tools\NO_TOOL_miniSelected.png" />
+    <None Include="Resources\tools\NO_TOOL_big.png" />
+    <None Include="Resources\tools\ToolSelected_mini.png" />
+    <None Include="Resources\tools\ToolSelected_big.png" />
+    <None Include="Resources\logo JBC.jpg" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\BlackMinimize.png" />
+    <None Include="Resources\options_selected.png" />
+    <None Include="Resources\radiobutton_off.png" />
+    <None Include="Resources\radiobutton_on.png" />
+    <None Include="Resources\BlackRightArrow.png" />
+    <None Include="Resources\_no.png" />
+    <None Include="Resources\_on.png" />
+    <None Include="Resources\_off.png" />
+    <None Include="Resources\ConfigSettingsLog.xsl" />
+    <None Include="Resources\HandPlus.cur" />
+    <None Include="Resources\HandMinus.cur" />
+    <None Include="Resources\Hand.cur" />
+    <None Include="Resources\IconSelected.png" />
+    <None Include="Resources\butplus10.png" />
+    <None Include="Resources\butminus10.png" />
+    <Content Include="Resources\butminus1.png" />
+    <Content Include="Resources\butplus1.png" />
+    <Content Include="Resources\cartridges\C105-101_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-103_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-105_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-106_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-107_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-108_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-109_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-110_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-111_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-112_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-113_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-114_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-115_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-116_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-117_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-118_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-120_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-124_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-125_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-126_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-211_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-212_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-213_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-214_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-221_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-222_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C105-223_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-001_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-002_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-003_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-004_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-005_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-006_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-007_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-008_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-009_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-010_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-011_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-012_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C120-902_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-401_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-402_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-403_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-404_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-405_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-406_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-409_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-410_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-416_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-417_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-418_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C130-419_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-001_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-002_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-003_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-004_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-005_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-006_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-007_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-008_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-009_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-010_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-012_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-013_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-014_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-015_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-016_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-017_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-018_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-019_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-020_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-021_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-022_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-023_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-024_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C210-025_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-001_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-009_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-010_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-016_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-017_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-018_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-019_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-029_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-030_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-032_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-034_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-036_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-041_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-052_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-053_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-054_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-056_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-061_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-064_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-067_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-069_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-102_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-107_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-109_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-116_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-117_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-118_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-119_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-121_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-122_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-123_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-124_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-126_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-136_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-138_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-150_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-201_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-215_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-220_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-221_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-222_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-223_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-224_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-226_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-227_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-228_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-234_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-247_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-248_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-250_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-256_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-259_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-260_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-261_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-268_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-301_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-303_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-304_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-305_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-306_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-311_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-312_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-313_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-315_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-403_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-405_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-406_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-407_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-627_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-628_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-651_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-654_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-667_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-669_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-673_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-708_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-710_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-729_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-730_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-731_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-732_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-741_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-742_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-747_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-748_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-749_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-751_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-752_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-754_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-755_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-756_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-757_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-758_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-759_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-760_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-761_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-762_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-763_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-764_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-765_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-766_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-768_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-770_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-771_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-772_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-773_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-774_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-775_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-776_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-784_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-785_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-786_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-803_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-804_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-806_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-807_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-808_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-811_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-812_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-844_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-845_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-846_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-862_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-863_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-866_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-903_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-904_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-905_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-906_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-907_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-908_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-911_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-912_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-913_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-914_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-929_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-930_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-931_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-933_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-935_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-937_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-938_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-939_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-943_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-944_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-945_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-946_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-949_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-951_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-955_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-957_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-962_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-963_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-965_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C245-966_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-401_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-402_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-403_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-404_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-405_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-406_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-407_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-408_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-409_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-410_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-411_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-412_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-413_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-414_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-415_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-418_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-420_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C250-421_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-001_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-002_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-003_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-004_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-006_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-007_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-011_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-012_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-013_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C360-014_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-271_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-272_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-273_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-274_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-275_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-276_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-277_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-278_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-279_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-280_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-281_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-282_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-283_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-285_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-286_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C420-287_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-001_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-002_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-003_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-004_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-005_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-006_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-007_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-008_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-009_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-010_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-011_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-012_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-013_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-014_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-015_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-016_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-017_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-018_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-019_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-020_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-021_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-022_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-023_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-025_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-026_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-027_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-028_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-029_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-030_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-031_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-032_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-033_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-034_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-035_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-036_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-037_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-038_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-039_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-040_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-041_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-042_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-043_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-044_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-045_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-046_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-047_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-048_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-049_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-050_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-051_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-052_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-053_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-054_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-055_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-056_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-057_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-058_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C470-059_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-001_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-002_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-003_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-004_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-005_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-006_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-007_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-009_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-011_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-012_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-013_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-014_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-015_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\C560-017_datasheet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cartridges\cartridgeNotFound.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ConfigSettings.xsl" />
+    <Content Include="Manager32x32.ico" />
+    <Content Include="Resources\BlackClip.png" />
+    <Content Include="Resources\BlackClose.png" />
+    <Content Include="Resources\BlackDwnArrow.png" />
+    <None Include="Resources\FixedSelectedBorder.png" />
+    <None Include="Resources\FixedBorder.png" />
+    <None Include="Resources\butplus5.png" />
+    <None Include="Resources\butminus5.png" />
+    <None Include="Resources\_lock.png" />
+    <None Include="Resources\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="mscorlib" />
+    <Reference Include="C:\Code\OpenManager\Library 3.15.1\JBC_ConnectRemote\bin\Debug\JBC_ConnectRemote.dll" />
+    <Reference Include="C:\Code\OpenManager\ManRegister 3.15.1\RemoteManRegister\bin\Debug\RemoteManRegister.dll" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\HostControllerServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildBinPath)/Microsoft.CSharp.targets" />
+</Project>

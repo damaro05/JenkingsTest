@@ -1,0 +1,9 @@
+[CStationFrames{bg:lavender}]<(1) error_communication()-[CCommunicationChannel{bg:honeydew}]
+
+[CStation{bg:lavender}]<-[CStationFrames]
+
+[CStationWrapper{bg:lavender}]<-[CStation]
+
+[JBC_API]<(2) station_disconnected(ID)-[CStationWrapper]
+
+[JBC_API{bg:bisque}]-(3) remove_station(ID)>[CStationAvailableCom{bg:bisque}]

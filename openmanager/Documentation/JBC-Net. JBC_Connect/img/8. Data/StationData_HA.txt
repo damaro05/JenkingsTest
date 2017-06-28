@@ -1,0 +1,22 @@
+[CPeripheralData|m_ID:Integer;m_version:Short;m_Hash_MCU_UID:String;m_dateTime:String;m_type:PeripheralType;m_portAttached:Port;m_workFunction:PeripheralFunction;m_activationMode:PeripheralActivation;m_delayTime:Short;m_statusActive:OnOff;m_statusPD:PeripheralStatusPD]
+
+[CFirmwareStation|m_stationID:Long;m_Model:String;m_ModelVersion:String;m_ProtocolVersion:String;m_HardwareVersion:String;m_SoftwareVersion:String;m_FileName:String;m_TimeMarkToDisconnectMicro:Date]
+
+[CFeaturesData|Alarms:Boolean;AllToolsSamePortSettings:Boolean;Cartridges:Boolean;DelayWithStatus:Boolean;DisplaySettings:Boolean;Ethernet:Boolean;FirmwareUpdate:Boolean;MaxTemp:CTemperature;MinTemp:CTemperature;MaxPowerLimit:Integer;PartialCounters:Boolean;Peripherals:Boolean;Robot:Boolean;SubStations:Boolean;TempLevelsWithStatus:Boolean;TempLevels:Boolean]
+
+[CStationInfoData|ID:Long;InternalID:String;ParentID:Long;Protocol:String;COM:String;ConnectionType:String(U=USB E=Ethernet);StationType:eStationType;Features:CFeaturesData;StationMicros():CFirmwareStation;Model:String;ModelType:String;ModelVersion:Integer;Version_Hardware:String;Version_Software:String;PortCount:Integer;SupportedTools():GenericStationTools;TempLevelsCount:Integer]
+[CStationInfoData]->[CFirmwareStation]
+[CStationInfoData]->[CFeaturesData]
+
+[CStationStatusData_HA|ControlMode:ControlModeConnection;ControlModeUserName:String;RemoteMode:OnOff;ErrorStation:StationError]
+
+[CRobotData|m_Status:OnOff;m_Protocol:RobotProtocol;m_Address:UShort;m_Speed:RobotSpeed;m_DataBits:UShort;m_StopBits:RobotStop;m_Parity:RobotParity]
+
+[CStationSettingsData_HA|Name:String;Beep:OnOff;Language:Idioma;PINEnabled:OnOff;PIN:String;Unit:TemperatureUnits;StationLocked:OnOff;MaxTemp:CTemperature;MinTemp:CTemperature;MaxFlow:Integer;MinFlow:Integer;MaxExtTemp:CTemperature;MinExtTemp:CTemperature;Robot:CRobotData]
+[CStationSettingsData_HA]->[CRobotData]
+
+[CStationData|ParametersLocked:OnOff;ContinuousModeStatus:CContinuousModeStatus;Info:CStationInfoData;Settings:CStationSettingsData_HA;Status:CStationStatusData_HA;Peripherals():CPeripheralData]
+[CStationData]->[CStationInfoData]
+[CStationData]->[CStationSettingsData_HA]
+[CStationData]->[CStationStatusData_HA]
+[CStationData]->[CPeripheralData]

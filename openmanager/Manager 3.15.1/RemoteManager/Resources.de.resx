@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="gralEnabled" xml:space="preserve">
+    <value>Aktiviert</value>
+  </data>
+  <data name="aboutLineHostController" xml:space="preserve">
+    <value>Version Host Controller</value>
+  </data>
+  <data name="graphNewPlot" xml:space="preserve">
+    <value>Neue Grafik</value>
+  </data>
+  <data name="ueINVALID_STATION_NAME" xml:space="preserve">
+    <value>Ungültiger Stationsname</value>
+  </data>
+  <data name="dockTop" xml:space="preserve">
+    <value>Oben</value>
+  </data>
+  <data name="ceOUT_OF_RANGE" xml:space="preserve">
+    <value>Außerhalb des Wertebereichs</value>
+  </data>
+  <data name="mnuSupervisor" xml:space="preserve">
+    <value>Aufsichtsperson</value>
+  </data>
+  <data name="portsStand" xml:space="preserve">
+    <value>Werkzeug im Ständer</value>
+  </data>
+  <data name="portsDelay" xml:space="preserve">
+    <value>Verzögerung {0}</value>
+  </data>
+  <data name="confMsgApplying" xml:space="preserve">
+    <value>Wird angewendet...</value>
+  </data>
+  <data name="dockViewDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="aboutLineRemoteManager" xml:space="preserve">
+    <value>Version RemoteManager</value>
+  </data>
+  <data name="toolNoSelectedTempLvl" xml:space="preserve">
+    <value>Keine Stufen</value>
+  </data>
+  <data name="portsSleep" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="logErrNotChanged" xml:space="preserve">
+    <value>'{0}' nicht geändert</value>
+  </data>
+  <data name="toolAllSameSettings" xml:space="preserve">
+    <value>Die selben Einstellungen für alle Werkzeuge</value>
+  </data>
+  <data name="dockViewList" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="uePORT_NOT_IN_RANGE" xml:space="preserve">
+    <value>Port nicht innerhalb des Wertebereichs</value>
+  </data>
+  <data name="mnuLanguages" xml:space="preserve">
+    <value>Sprachen</value>
+  </data>
+  <data name="portsHiber" xml:space="preserve">
+    <value>Ruhezustand</value>
+  </data>
+  <data name="mnuToolsSettingsManager" xml:space="preserve">
+    <value>Einstellungs-Manager</value>
+  </data>
+  <data name="toolSleepTemp" xml:space="preserve">
+    <value>Sleep-Temperatur</value>
+  </data>
+  <data name="mnuHelp" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="toolTempLvl1" xml:space="preserve">
+    <value>Temperaturstufe 1</value>
+  </data>
+  <data name="mnuLangES" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="ueError" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="workToolNeeded" xml:space="preserve">
+    <value>Werkzeug und Kartusche erforderlich</value>
+  </data>
+  <data name="updatesReInstallInformation" xml:space="preserve">
+    <value>This version of RemoteManager needs to be updated. This process will close the current application and open the installer. Do you want to install the update on your computer?</value>
+  </data>
+  <data name="confTargetStationsList" xml:space="preserve">
+    <value>Liste der Zielstationen</value>
+  </data>
+  <data name="stnPwrLimit" xml:space="preserve">
+    <value>Leistungsgrenze</value>
+  </data>
+  <data name="evStationControllerConnected" xml:space="preserve">
+    <value>Mit dem Stations-Controller verbunden</value>
+  </data>
+  <data name="confHintTool2AllPorts" xml:space="preserve">
+    <value>Kopieren Sie die Daten aus den Werkzeug-{0}-Einstellungen für Port {1} auf das Tool {2} an allen anderen Ports.</value>
+  </data>
+  <data name="confHintTool2Port" xml:space="preserve">
+    <value>Kopieren Sie die Daten aus den Werkzeug-{0}-Einstellungen für Port {1} auf das Tool {2} an Port {3}.</value>
+  </data>
+  <data name="ueINVALID_STATION_PIN" xml:space="preserve">
+    <value>Ungültige Stations-PIN</value>
+  </data>
+  <data name="portsWork" xml:space="preserve">
+    <value>Arbeit</value>
+  </data>
+  <data name="confMnuViewExpandAll" xml:space="preserve">
+    <value>Alles erweitern</value>
+  </data>
+  <data name="updatesNotificationState_WarningHostControllerVersion" xml:space="preserve">
+    <value>Versionsnummer Host Controller:</value>
+  </data>
+  <data name="confMnuPaste" xml:space="preserve">
+    <value>Kopierte Einstellungen einfügen</value>
+  </data>
+  <data name="confMnuViewExpandNode" xml:space="preserve">
+    <value>Ausgewählten Knoten erweitern</value>
+  </data>
+  <data name="mnuViewStationList" xml:space="preserve">
+    <value>Panel mit Liste der Stationen</value>
+  </data>
+  <data name="dockPanelPos" xml:space="preserve">
+    <value>Panelposition</value>
+  </data>
+  <data name="confApply" xml:space="preserve">
+    <value>Anwenden</value>
+  </data>
+  <data name="mnuWindows" xml:space="preserve">
+    <value>Fenster</value>
+  </data>
+  <data name="browPrint" xml:space="preserve">
+    <value>Drucken</value>
+    <comment>see IE</comment>
+  </data>
+  <data name="logTarget" xml:space="preserve">
+    <value>Zielstationen und Ports</value>
+  </data>
+  <data name="confWarnStationsNotUpdated" xml:space="preserve">
+    <value>Es ist möglich, dass bestimmte Stationen nicht aktualisiert werden konnten. Siehe Bericht.</value>
+  </data>
+  <data name="confWarnNoConfTree" xml:space="preserve">
+    <value>Es wurden keine Einstellungen geladen</value>
+  </data>
+  <data name="dockStationList" xml:space="preserve">
+    <value>Liste der Stationen</value>
+  </data>
+  <data name="toolNoSleepDelay" xml:space="preserve">
+    <value>Kein Sleep-Modus</value>
+  </data>
+  <data name="browPreview" xml:space="preserve">
+    <value>Vorschau</value>
+    <comment>see IE</comment>
+  </data>
+  <data name="confInfo" xml:space="preserve">
+    <value>Laden Sie eine Konfigurationsdatei für die Station oder speichern Sie die aktuelle Stationskonfiguration.</value>
+  </data>
+  <data name="toolSelectedTempLvlFirst" xml:space="preserve">
+    <value>Erste(r)</value>
+    <comment>First level</comment>
+  </data>
+  <data name="gralOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="paramsLimitsError" xml:space="preserve">
+    <value>Der Wert sollte zwischen {0} und {1} liegen.</value>
+  </data>
+  <data name="modeMonitorMode" xml:space="preserve">
+    <value>Monitor-Modus</value>
+  </data>
+  <data name="stnTrafoErr" xml:space="preserve">
+    <value>Transformator Temperatur-Fehler</value>
+  </data>
+  <data name="ctrlEnterPINCode" xml:space="preserve">
+    <value>PIN-Code eingeben</value>
+  </data>
+  <data name="stnTmax" xml:space="preserve">
+    <value>Höchsttemperatur</value>
+  </data>
+  <data name="mnuNewStationGroup" xml:space="preserve">
+    <value>Neue Stationsgruppe</value>
+  </data>
+  <data name="supervInvalidPassword" xml:space="preserve">
+    <value>Ungültiges Passwort</value>
+  </data>
+  <data name="logLogs" xml:space="preserve">
+    <value>Warnungen</value>
+  </data>
+  <data name="confRefreshStations" xml:space="preserve">
+    <value>Stationsliste aktualisieren</value>
+  </data>
+  <data name="graphTabHint" xml:space="preserve">
+    <value>Grafiken</value>
+  </data>
+  <data name="confHintPort2AllPorts" xml:space="preserve">
+    <value>Kopieren Sie die Daten aus den Werkzeugen und Einstellungen für Port {0} auf alle anderen Ports.</value>
+  </data>
+  <data name="aboutLineRights" xml:space="preserve">
+    <value>Alle Rechte vorbehalten.</value>
+  </data>
+  <data name="stnPIN" xml:space="preserve">
+    <value>PIN-Code</value>
+  </data>
+  <data name="confMnuPasteChecked" xml:space="preserve">
+    <value>Kopierte Einstellungen einfügen (nur markierte)</value>
+  </data>
+  <data name="toolTabHint" xml:space="preserve">
+    <value>Werkzeug-Einstellungen</value>
+  </data>
+  <data name="mnuCascadeAll" xml:space="preserve">
+    <value>Alle Stationen in Kaskaden abarbeiten</value>
+  </data>
+  <data name="gralMinute" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="updatesNotificationState_WarningRemoteManagerVersion" xml:space="preserve">
+    <value>Versionsnummer Remote Manager:</value>
+  </data>
+  <data name="evEvents" xml:space="preserve">
+    <value>Ereignisse</value>
+  </data>
+  <data name="confFilters" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="graphSeriesAddSeries" xml:space="preserve">
+    <value>Serien hinzufügen</value>
+  </data>
+  <data name="ceCOMMAND_REJECTED" xml:space="preserve">
+    <value>Befehl zurückgewiesen</value>
+  </data>
+  <data name="ueTEMPERATURE_OUT_OF_RANGE" xml:space="preserve">
+    <value>Temperatur außerhalb des Wertebereichs</value>
+  </data>
+  <data name="gralHour" xml:space="preserve">
+    <value>Stunde</value>
+  </data>
+  <data name="graphAddToPlot" xml:space="preserve">
+    <value>Serien zu dieser Grafik hinzufügen. . . . . . . . . . . . . . .</value>
+  </data>
+  <data name="confHintPort2Port" xml:space="preserve">
+    <value>Kopieren Sie die Daten aus den Werkzeugen und Einstellungen für Port {0} auf Port {1}</value>
+  </data>
+  <data name="dockClose" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="toolSelectedTempLvlThird" xml:space="preserve">
+    <value>Dritte(r)</value>
+    <comment>Third level</comment>
+  </data>
+  <data name="mnuLogoutSupervisor" xml:space="preserve">
+    <value>Abmelden</value>
+  </data>
+  <data name="gralUnderConstruction" xml:space="preserve">
+    <value>In der Entwicklung</value>
+  </data>
+  <data name="updatesPanelRButDisable" xml:space="preserve">
+    <value>Nie nach Aktualisierungen suchen (nicht empfohlen)</value>
+  </data>
+  <data name="mnuTools" xml:space="preserve">
+    <value>Werkzeuge</value>
+  </data>
+  <data name="mnuPrintCurrentSettings" xml:space="preserve">
+    <value>Aktuelle Einstellungen ausdrucken</value>
+  </data>
+  <data name="stnTunitsCelsius" xml:space="preserve">
+    <value>Celsius</value>
+  </data>
+  <data name="stnN2" xml:space="preserve">
+    <value>N2-Modus</value>
+  </data>
+  <data name="stnBeep" xml:space="preserve">
+    <value>Signalton</value>
+  </data>
+  <data name="xslLogTitle" xml:space="preserve">
+    <value>Konfigurations-Bericht</value>
+  </data>
+  <data name="paramsMaxLimitError" xml:space="preserve">
+    <value>Dieser Wert sollte kleiner oder gleich {0} sein</value>
+  </data>
+  <data name="confWarnStationsInMonitorMode" xml:space="preserve">
+    <value>Bestimmte ausgewählte Stationen befinden sich im Monitor-Modus. Diese Stationen werden nicht aktualisiert. Möchten Sie trotzdem fortfahren?</value>
+  </data>
+  <data name="gralWarning" xml:space="preserve">
+    <value>Warnung!</value>
+  </data>
+  <data name="toolSleepDelay" xml:space="preserve">
+    <value>Sleep-Verzögerung</value>
+  </data>
+  <data name="mnuDeleteTreeItem" xml:space="preserve">
+    <value>Artikel löschen</value>
+  </data>
+  <data name="logErrPortNotExist" xml:space="preserve">
+    <value>Port '{0}' existiert im Ziel nicht</value>
+  </data>
+  <data name="logErrPortToolNotExist" xml:space="preserve">
+    <value>'{0}' existiert im Ziel an Port {1} Werkzeug {2} nicht</value>
+  </data>
+  <data name="resetTabHint" xml:space="preserve">
+    <value>Einstellungen zurücksetzen</value>
+  </data>
+  <data name="confMustControlMode" xml:space="preserve">
+    <value>Schalten Sie in den Steuer-Modus um, um diese Aktion auszuführen</value>
+  </data>
+  <data name="ceFRAME_FORMAT" xml:space="preserve">
+    <value>Rahmenformat</value>
+  </data>
+  <data name="confTabHint" xml:space="preserve">
+    <value>Einstellungen laden/speichern</value>
+  </data>
+  <data name="workTempFixed" xml:space="preserve">
+    <value>Festgesetzte Temperatur</value>
+  </data>
+  <data name="toolSelectedTool" xml:space="preserve">
+    <value>Ausgewähltes Werkzeug</value>
+  </data>
+  <data name="mnuChangePassword" xml:space="preserve">
+    <value>Passwort ändern</value>
+  </data>
+  <data name="mnuViewWarning" xml:space="preserve">
+    <value>Benachrichtigungen</value>
+  </data>
+  <data name="portsPortTitle" xml:space="preserve">
+    <value>PORT</value>
+  </data>
+  <data name="mnuUpdateSoftware" xml:space="preserve">
+    <value>Software aktualisieren</value>
+  </data>
+  <data name="mnuShowErrorNotifications" xml:space="preserve">
+    <value>Fehler anzeigen</value>
+  </data>
+  <data name="stnHelp" xml:space="preserve">
+    <value>Hilfetext</value>
+  </data>
+  <data name="confComment" xml:space="preserve">
+    <value>Bemerkung</value>
+  </data>
+  <data name="toolHibernationDelay" xml:space="preserve">
+    <value>Ruhezustandsverzögerung</value>
+  </data>
+  <data name="confLoad" xml:space="preserve">
+    <value>Aus Datei laden</value>
+  </data>
+  <data name="gralWeekly" xml:space="preserve">
+    <value>Wöchentlich</value>
+  </data>
+  <data name="browPageSetup" xml:space="preserve">
+    <value>Seitenlayout</value>
+    <comment>see IE</comment>
+  </data>
+  <data name="portsNoTool" xml:space="preserve">
+    <value>Kein Werkzeug</value>
+  </data>
+  <data name="gralDone" xml:space="preserve">
+    <value>Fertig</value>
+  </data>
+  <data name="confWarnNoStationSelected" xml:space="preserve">
+    <value>Es wurde keine Zielstation ausgewählt</value>
+  </data>
+  <data name="counterNoToolMinutes" xml:space="preserve">
+    <value>Minuten ohne Werkzeug</value>
+  </data>
+  <data name="toolPortsAndTools" xml:space="preserve">
+    <value>Ports und Werkzeuge</value>
+  </data>
+  <data name="mnuLangEN" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="updatesPanelRButUpdate" xml:space="preserve">
+    <value>Erlauben, dass RemoteManager Aktualisierungen installiert (empfohlen)</value>
+  </data>
+  <data name="resetInfo" xml:space="preserve">
+    <value>Möchten Sie alle Stationseinstellungen auf die Defaultwerte zurücksetzen?</value>
+  </data>
+  <data name="portsDelayToSleep" xml:space="preserve">
+    <value>Sleep-Verzögerung {0}</value>
+    <comment>Delay to enter in sleep (minutes:seconds)</comment>
+  </data>
+  <data name="uePOWER_LIMIT_OUT_OF_RANGE" xml:space="preserve">
+    <value>Leistungsgrenze außerhalb des Wertebereichs</value>
+  </data>
+  <data name="xslParameter" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="counterDesolderCycles" xml:space="preserve">
+    <value>Entlöt-Zyklen</value>
+  </data>
+  <data name="confMnuViewCollapseAll" xml:space="preserve">
+    <value>Alles minimisieren</value>
+  </data>
+  <data name="supervEnterPassword" xml:space="preserve">
+    <value>Passwort der Aufsichtsperson eingeben</value>
+  </data>
+  <data name="toolAdjustTemp" xml:space="preserve">
+    <value>Temperatur einstellen</value>
+  </data>
+  <data name="logErrNotTarget" xml:space="preserve">
+    <value>'{0}' existiert im Ziel nicht</value>
+  </data>
+  <data name="evConnections" xml:space="preserve">
+    <value>Verbindungs-Ereignisse</value>
+  </data>
+  <data name="toolNoHibernationDelay" xml:space="preserve">
+    <value>Kein Ruhezust.</value>
+    <comment>No hibernation</comment>
+  </data>
+  <data name="confMnuView" xml:space="preserve">
+    <value>Baumansicht</value>
+  </data>
+  <data name="logWantToSeeReport" xml:space="preserve">
+    <value>Möchten Sie den Bericht ansehen?</value>
+  </data>
+  <data name="cartNotFound" xml:space="preserve">
+    <value>Kartusche {0} nicht gefunden</value>
+    <comment>{0} will be a number</comment>
+  </data>
+  <data name="ueFUNCTION_NOT_SUPPORTED" xml:space="preserve">
+    <value>Funktion wird nicht unterstützt</value>
+  </data>
+  <data name="xslStationConfiguration" xml:space="preserve">
+    <value>Stationskonfiguration</value>
+  </data>
+  <data name="counterGlobal" xml:space="preserve">
+    <value>Allgemeine Zähler</value>
+  </data>
+  <data name="paramsMinLimitError" xml:space="preserve">
+    <value>Dieser Wert sollte größer oder gleich {0} sein</value>
+  </data>
+  <data name="stnTmin" xml:space="preserve">
+    <value>Mindesttemperatur</value>
+  </data>
+  <data name="dockViewTile" xml:space="preserve">
+    <value>Symbole</value>
+  </data>
+  <data name="toolSelectedTemp" xml:space="preserve">
+    <value>Ausgewählte Temperatur</value>
+  </data>
+  <data name="gralCancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="gralThursday" xml:space="preserve">
+    <value>Donnerstag</value>
+  </data>
+  <data name="gralNoName" xml:space="preserve">
+    <value>Kein Name!</value>
+  </data>
+  <data name="dockRight" xml:space="preserve">
+    <value>Rechts</value>
+  </data>
+  <data name="ceCONTROL_MODE_REQUIRED" xml:space="preserve">
+    <value>Steuer-Modus erforderlich</value>
+  </data>
+  <data name="portsNoPort" xml:space="preserve">
+    <value>Kein Port</value>
+  </data>
+  <data name="ueSTATION_ID_OVERFLOW" xml:space="preserve">
+    <value>Stations-ID-Overflow</value>
+  </data>
+  <data name="logErrToolNotExist" xml:space="preserve">
+    <value>Werkzeug '{0}' existiert im Ziel nicht</value>
+  </data>
+  <data name="ueCONTINUOUS_MODE_ON_WITHOUT_PORTS" xml:space="preserve">
+    <value>Kontinuierlicher Modus ohne Ports</value>
+  </data>
+  <data name="ceError" xml:space="preserve">
+    <value>Datenübertragungs-Fehler</value>
+  </data>
+  <data name="evStationDisconnected" xml:space="preserve">
+    <value>Verbindung zur Station unterbrochen</value>
+  </data>
+  <data name="confFiltersName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="workTempLevels" xml:space="preserve">
+    <value>Temperaturstufen</value>
+  </data>
+  <data name="mnuChangeTreeItem" xml:space="preserve">
+    <value>Namen ändern</value>
+  </data>
+  <data name="confNo" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="toolSelectedTempLvlSecond" xml:space="preserve">
+    <value>Zweite(r)</value>
+    <comment>Second level</comment>
+  </data>
+  <data name="mnuCascade" xml:space="preserve">
+    <value>Kaskade</value>
+  </data>
+  <data name="ceINCORRECT_SEQUENCY" xml:space="preserve">
+    <value>Falsche Sequenz</value>
+  </data>
+  <data name="confMnuCopy" xml:space="preserve">
+    <value>Knoten-Einstellungen kopieren</value>
+  </data>
+  <data name="toolTempLvl3" xml:space="preserve">
+    <value>Temperaturstufe 3</value>
+  </data>
+  <data name="stnTabHint" xml:space="preserve">
+    <value>Stations-Einstellungen</value>
+  </data>
+  <data name="infoTabHint" xml:space="preserve">
+    <value>Stations-Daten</value>
+  </data>
+  <data name="stnTunits" xml:space="preserve">
+    <value>Temperatureinheiten</value>
+  </data>
+  <data name="confSourceSettings" xml:space="preserve">
+    <value>Quellen-Einstellung</value>
+  </data>
+  <data name="ueTOOL_NOT_SUPPORTED" xml:space="preserve">
+    <value>Werkzeug wird nicht unterstützt</value>
+  </data>
+  <data name="workTempSelection" xml:space="preserve">
+    <value>Ausgewählt</value>
+  </data>
+  <data name="stnTunitsFahrenheit" xml:space="preserve">
+    <value>Fahrenheit</value>
+  </data>
+  <data name="gralHoursMinutes" xml:space="preserve">
+    <value>{0} Std. {1} Min.</value>
+  </data>
+  <data name="confMsgApplied" xml:space="preserve">
+    <value>Angewendet</value>
+  </data>
+  <data name="ceNOT_VALID_HARDWARE" xml:space="preserve">
+    <value>Ungültige Hardware</value>
+  </data>
+  <data name="gralTuesday" xml:space="preserve">
+    <value>Dienstag</value>
+  </data>
+  <data name="toolFixTemp" xml:space="preserve">
+    <value>Temperatur fixieren</value>
+    <comment>Fixed Temperature</comment>
+  </data>
+  <data name="portsDelayToHiber" xml:space="preserve">
+    <value>Ruhezustandsverzög. {0}</value>
+    <comment>Delay to enter in hibernation (minutes:seconds)</comment>
+  </data>
+  <data name="mnuUnits" xml:space="preserve">
+    <value>Einheiten</value>
+  </data>
+  <data name="gralMinutes" xml:space="preserve">
+    <value>{0} Min.</value>
+  </data>
+  <data name="evErrors" xml:space="preserve">
+    <value>Fehler-Ereignisse</value>
+  </data>
+  <data name="xslValue" xml:space="preserve">
+    <value>Wert</value>
+  </data>
+  <data name="resetProceed" xml:space="preserve">
+    <value>Ausführen</value>
+  </data>
+  <data name="confTargetPort" xml:space="preserve">
+    <value>Ziel-Port {0}</value>
+    <comment>{0} = port number, ex: Target Port 1</comment>
+  </data>
+  <data name="counterResetPartialCounters" xml:space="preserve">
+    <value>Teilzähler des Ports zurücksetzen</value>
+  </data>
+  <data name="stnStationSettings" xml:space="preserve">
+    <value>Stations-Einstellungen</value>
+  </data>
+  <data name="mnuViewParameters" xml:space="preserve">
+    <value>Parameter anzeigen</value>
+  </data>
+  <data name="mnuEnvironment" xml:space="preserve">
+    <value>Umgebung</value>
+  </data>
+  <data name="mnuFile" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="ueSTATION_ID_NOT_FOUND" xml:space="preserve">
+    <value>Station nicht gefunden</value>
+  </data>
+  <data name="counterHiberMinutes" xml:space="preserve">
+    <value>Minuten im Ruhezustand</value>
+  </data>
+  <data name="stnName" xml:space="preserve">
+    <value>Name</value>
+    <comment>Station Name</comment>
+  </data>
+  <data name="gralNewGroup" xml:space="preserve">
+    <value>Neue Gruppe</value>
+  </data>
+  <data name="ceBCC" xml:space="preserve">
+    <value>BCC (Prüfzeichen)</value>
+  </data>
+  <data name="logTargetPortFromSourcePort" xml:space="preserve">
+    <value>Ziel-Port {0} von Quell-Port {1}</value>
+  </data>
+  <data name="confHintPort2Tool" xml:space="preserve">
+    <value>Kopieren Sie die Daten aus den Werkzeug-{0}-Einstellungen für Port {1} auf das Tool {2} an Port {3}.</value>
+  </data>
+  <data name="mnuUpdates" xml:space="preserve">
+    <value>Aktualisierungen</value>
+  </data>
+  <data name="ceCONTROL_MODE_ALREADY_ACTIVATED" xml:space="preserve">
+    <value>Steuer-Modus ist bereits aktiviert</value>
+  </data>
+  <data name="ueCOMMUNICATION_ERROR" xml:space="preserve">
+    <value>Datenübertragungs-Fehler</value>
+  </data>
+  <data name="evStationControllerDisconnected" xml:space="preserve">
+    <value>Verbindung zum Stations-Controller unterbrochen</value>
+  </data>
+  <data name="txtMinutes" xml:space="preserve">
+    <value>{0} Min</value>
+    <comment>{0} = number, ej: 10 min</comment>
+  </data>
+  <data name="notifNoNotif" xml:space="preserve">
+    <value>Es gibt keine Benachrichtigung</value>
+  </data>
+  <data name="OFF_STR" xml:space="preserve">
+    <value>Aus</value>
+    <comment>Inactive</comment>
+  </data>
+  <data name="dockBottom" xml:space="preserve">
+    <value>Unten</value>
+  </data>
+  <data name="gralSaturday" xml:space="preserve">
+    <value>Samstag</value>
+  </data>
+  <data name="dockAutoHide" xml:space="preserve">
+    <value>Autom. Verbergen Ein/Aus</value>
+  </data>
+  <data name="logPorts" xml:space="preserve">
+    <value>Ports</value>
+  </data>
+  <data name="mnuView" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="stnMOSErr" xml:space="preserve">
+    <value>MOSFET Temperatur-Fehler</value>
+  </data>
+  <data name="gralWednesday" xml:space="preserve">
+    <value>Mittwoch</value>
+  </data>
+  <data name="mnuAddPlotSerie" xml:space="preserve">
+    <value>Grafikserie hinzufügen</value>
+  </data>
+  <data name="dockFloating" xml:space="preserve">
+    <value>Frei positionierbar</value>
+  </data>
+  <data name="counterPartial" xml:space="preserve">
+    <value>Teilzähler</value>
+  </data>
+  <data name="confMnuPasteAndCheck" xml:space="preserve">
+    <value>Einstellungen und Markierungen kopieren und einfügen</value>
+  </data>
+  <data name="resetSuccessMessage" xml:space="preserve">
+    <value>Erfolg!</value>
+  </data>
+  <data name="mnuLoginSupervisor" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="counterWorkMinutes" xml:space="preserve">
+    <value>Gearbeitete Minuten</value>
+  </data>
+  <data name="updatesNotificationState_WarningStationControllerVersion" xml:space="preserve">
+    <value>Versionsnummer Station Controller:</value>
+  </data>
+  <data name="logErrPortToolNotChanged" xml:space="preserve">
+    <value>'{0}' nicht geändert in Port {1} Werkzeug {2}</value>
+  </data>
+  <data name="counterTabHint" xml:space="preserve">
+    <value>Zähler</value>
+  </data>
+  <data name="portsExtractor" xml:space="preserve">
+    <value>Werkzeug im Extraktor</value>
+  </data>
+  <data name="dockViewTreeList" xml:space="preserve">
+    <value>Baumansicht</value>
+  </data>
+  <data name="gralMonday" xml:space="preserve">
+    <value>Montag</value>
+  </data>
+  <data name="mnuFileOpenConfFile" xml:space="preserve">
+    <value>Laden Sie eine Konfigurationsdatei</value>
+  </data>
+  <data name="mnuLangDE" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="confWarnStationNotConnected" xml:space="preserve">
+    <value>Station {0} ist nicht verbunden. Fortfahren.</value>
+  </data>
+  <data name="gralFriday" xml:space="preserve">
+    <value>Freitag</value>
+  </data>
+  <data name="mnuInternationalSettings" xml:space="preserve">
+    <value>Internationale Einstellungen</value>
+  </data>
+  <data name="toolTool" xml:space="preserve">
+    <value>Werkzeug</value>
+  </data>
+  <data name="gralValueSeparator" xml:space="preserve">
+    <value>: </value>
+  </data>
+  <data name="mnuHelpFailed" xml:space="preserve">
+    <value>Hilfe konnte nicht geöffnet werden. </value>
+  </data>
+  <data name="portsNoSleep" xml:space="preserve">
+    <value>Kein Sleep-Modus</value>
+  </data>
+  <data name="stnSW" xml:space="preserve">
+    <value>Software-Version</value>
+  </data>
+  <data name="confSave" xml:space="preserve">
+    <value>In Datei speichern</value>
+  </data>
+  <data name="portsDesolder" xml:space="preserve">
+    <value>Entlöter</value>
+  </data>
+  <data name="toolTempLvl2" xml:space="preserve">
+    <value>Temperaturstufe 2</value>
+  </data>
+  <data name="stnProtocol" xml:space="preserve">
+    <value>Protokoll-Version</value>
+  </data>
+  <data name="toolPort" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="counterSleepMinutes" xml:space="preserve">
+    <value>Minuten im Sleep-Modus</value>
+  </data>
+  <data name="mnuShowStationControllerNotifications" xml:space="preserve">
+    <value>Stations-Controller anzeigen</value>
+  </data>
+  <data name="gralSunday" xml:space="preserve">
+    <value>Sonntag</value>
+  </data>
+  <data name="PortsActualTemp" xml:space="preserve">
+    <value>Tatsächliche Temp.: {0}</value>
+  </data>
+  <data name="workPower" xml:space="preserve">
+    <value>Leistung</value>
+  </data>
+  <data name="workTabHint" xml:space="preserve">
+    <value>Arbeit</value>
+  </data>
+  <data name="mnuReopenStation" xml:space="preserve">
+    <value>Station neu verbinden</value>
+  </data>
+  <data name="confStation" xml:space="preserve">
+    <value>Station</value>
+  </data>
+  <data name="updateUpdate" xml:space="preserve">
+    <value>Aktualisierung</value>
+  </data>
+  <data name="aboutLineStationController" xml:space="preserve">
+    <value>Version Stations-Controller</value>
+  </data>
+  <data name="gralDaily" xml:space="preserve">
+    <value>Täglich</value>
+  </data>
+  <data name="confHintToolNotChecked" xml:space="preserve">
+    <value>Quellwerkzeug {0} an Port {1} ist nicht markiert</value>
+  </data>
+  <data name="ON_STR" xml:space="preserve">
+    <value>Ein</value>
+    <comment>Active</comment>
+  </data>
+  <data name="supervPassword" xml:space="preserve">
+    <value>Passwort der Aufsichtsperson</value>
+  </data>
+  <data name="workNoTool" xml:space="preserve">
+    <value>Kein Werkzeugset</value>
+  </data>
+  <data name="modeControlMode" xml:space="preserve">
+    <value>Steuer-Modus</value>
+  </data>
+  <data name="evStationConnected" xml:space="preserve">
+    <value>Station verbunden</value>
+  </data>
+  <data name="workPort" xml:space="preserve">
+    <value>Port {0}</value>
+  </data>
+  <data name="confFiltersModel" xml:space="preserve">
+    <value>Modell:</value>
+  </data>
+  <data name="mnuShowStationNotifications" xml:space="preserve">
+    <value>Stationen anzeigen</value>
+  </data>
+  <data name="updatesPanelRButCheck" xml:space="preserve">
+    <value>Für Installation von Aktualisierungen benachrichtigen</value>
+  </data>
+  <data name="mnuViewEventsWindow" xml:space="preserve">
+    <value>Ereignis-Fenster</value>
+  </data>
+  <data name="mnuToolsRegisterManager" xml:space="preserve">
+    <value>Register-Manager</value>
+  </data>
+  <data name="graphInfo" xml:space="preserve">
+    <value>Wählen Sie eine Grafik aus, um für diese Station Serien hinzuzufügen</value>
+  </data>
+  <data name="supervMustLogin" xml:space="preserve">
+    <value>Um diese Aktion ausführen zu können, sollten Sie angemeldet sein</value>
+  </data>
+  <data name="confHintTool2Tool" xml:space="preserve">
+    <value>Kopieren Sie die Daten aus den Werkzeug-{0}-Einstellungen für Port {1} auf das Tool {2} an Port {3}.</value>
+  </data>
+  <data name="counterSleepCycles" xml:space="preserve">
+    <value>Sleep-Zyklen</value>
+  </data>
+  <data name="mnuOptions" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="ceNO_COMM_ERROR" xml:space="preserve">
+    <value>Kein Datenübertragungs-Fehler</value>
+  </data>
+  <data name="confMsgAppliedTimeout" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="confViewStations" xml:space="preserve">
+    <value>Stationen anzeigen</value>
+  </data>
+  <data name="ceFLASH_WRITE_ERROR" xml:space="preserve">
+    <value>Flash-Schreibfehler</value>
+  </data>
+  <data name="confVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="dockLeft" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="mnuAbout" xml:space="preserve">
+    <value>Über RemoteManager</value>
+  </data>
+  <data name="toolSelectedTempLvl" xml:space="preserve">
+    <value>Ausgewählte Temperaturstufe</value>
+  </data>
+  <data name="ctrlPINCode" xml:space="preserve">
+    <value>PIN-Code</value>
+  </data>
+  <data name="mnuEdit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="counterPluggedMinutes" xml:space="preserve">
+    <value>Netzbetriebsminuten</value>
+  </data>
+  <data name="confViewReport" xml:space="preserve">
+    <value>Bericht anzeigen</value>
+  </data>
+  <data name="mnuTempUnit" xml:space="preserve">
+    <value>Temperatureinheit</value>
+  </data>
+  <data name="paramsAllowedValues" xml:space="preserve">
+    <value>Zulässige Werte: {0}</value>
+  </data>
+  <data name="confMnuPasteAndCheckChecked" xml:space="preserve">
+    <value>Kopierte Einstellungen und Markierungen einfügen (nur markierte)</value>
+  </data>
+  <data name="confMnuViewCollapseNode" xml:space="preserve">
+    <value>Ausgewählten Knoten minimieren</value>
+  </data>
+  <data name="logSource" xml:space="preserve">
+    <value>Quellparameter</value>
+  </data>
+  <data name="toolCartridge" xml:space="preserve">
+    <value>Kartusche</value>
+  </data>
+  <data name="stnModel" xml:space="preserve">
+    <value>Modell</value>
+  </data>
+  <data name="stnEthDHCP" xml:space="preserve">
+    <value>Automatische IP</value>
+  </data>
+  <data name="stnEthDNS" xml:space="preserve">
+    <value>DNS</value>
+  </data>
+  <data name="stnEthGateway" xml:space="preserve">
+    <value>Gateway</value>
+  </data>
+  <data name="stnEthIP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="stnEthMask" xml:space="preserve">
+    <value>Subnetzmaske</value>
+  </data>
+  <data name="stnEthPort" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="stnRbtAddress" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="stnRbtDataBits" xml:space="preserve">
+    <value>Datenbits</value>
+  </data>
+  <data name="stnRbtParity" xml:space="preserve">
+    <value>Parität</value>
+  </data>
+  <data name="stnRbtProtocol" xml:space="preserve">
+    <value>Protokoll</value>
+  </data>
+  <data name="stnRbtSpeed" xml:space="preserve">
+    <value>Geschwindigkeit</value>
+  </data>
+  <data name="stnRbtStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="stnRbtStopBits" xml:space="preserve">
+    <value>Stoppbits</value>
+  </data>
+  <data name="peripheralTabHint" xml:space="preserve">
+    <value>Einstellungen der Peripherie-Geräte </value>
+  </data>
+  <data name="stnEthConf" xml:space="preserve">
+    <value>Ethernet</value>
+  </data>
+  <data name="stnGenSettings" xml:space="preserve">
+    <value>Allgemeine Einstellungen</value>
+  </data>
+  <data name="stnRbtConf" xml:space="preserve">
+    <value>Roboter</value>
+  </data>
+  <data name="stnRbtParityEven" xml:space="preserve">
+    <value>Paar</value>
+  </data>
+  <data name="stnRbtParityNone" xml:space="preserve">
+    <value>Keine</value>
+  </data>
+  <data name="stnRbtParityOdd" xml:space="preserve">
+    <value>Nicht Paar</value>
+  </data>
+  <data name="modeControlWarning" xml:space="preserve">
+    <value>Diese Station wird gesteuert von:</value>
+  </data>
+  <data name="modeRobotGetControlWarning" xml:space="preserve">
+    <value>Bei Aktivierung des Roboter-Modus wird der Steuer-Modus deaktiviert.</value>
+  </data>
+  <data name="modeRobotLooseControlWarning" xml:space="preserve">
+    <value>Diese Station wird im Roboter-Modus gesteuert. Wenn Sie bestätigen, wird die Roboterverbindung abgebrochen.</value>
+  </data>
+  <data name="peripheralActivation" xml:space="preserve">
+    <value>Aktivierung</value>
+  </data>
+  <data name="peripheralElectricDes" xml:space="preserve">
+    <value>Elektrisches Entlöten</value>
+  </data>
+  <data name="peripheralErrorTime" xml:space="preserve">
+    <value>Zulässiger Wertebereich [0.0 .. 9.9]</value>
+  </data>
+  <data name="peripheralExtractor" xml:space="preserve">
+    <value>Extraktor</value>
+  </data>
+  <data name="peripheralFumeExt" xml:space="preserve">
+    <value>Lötrauchabsaugung</value>
+  </data>
+  <data name="peripheralFunction" xml:space="preserve">
+    <value>Funktion</value>
+  </data>
+  <data name="peripheralModule" xml:space="preserve">
+    <value>Modul</value>
+  </data>
+  <data name="peripheralNitrogen" xml:space="preserve">
+    <value>Stickstoffregler</value>
+  </data>
+  <data name="peripheralNoPeripheral" xml:space="preserve">
+    <value>Keine Peripherie-Geräte gefunden</value>
+  </data>
+  <data name="peripheralNoSupported" xml:space="preserve">
+    <value>Keine Unterstützung von Peripherie-Geräten</value>
+  </data>
+  <data name="peripheralPedal" xml:space="preserve">
+    <value>Pedal</value>
+  </data>
+  <data name="peripheralPressed" xml:space="preserve">
+    <value>Gedrückt</value>
+  </data>
+  <data name="peripheralReleased" xml:space="preserve">
+    <value>Gezogen</value>
+  </data>
+  <data name="peripheralSleep" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="peripheralTime" xml:space="preserve">
+    <value>Mindestzeit (Sekunden)</value>
+  </data>
+  <data name="updateErrorDownloadingFile" xml:space="preserve">
+    <value>Bei der Übernahme der Aktualisierung ist ein Fehler aufgetreten</value>
+  </data>
+  <data name="peripheralPneumaticDes" xml:space="preserve">
+    <value>Pneumatisches Entlöten</value>
+  </data>
+  <data name="updatesMessageError" xml:space="preserve">
+    <value>An error has occurred during the installation process</value>
+  </data>
+  <data name="updatesNotificationState_InitUpdateProcessExplanation" xml:space="preserve">
+    <value>Updates are being made. This process can take several minutes. You can continue working although some services may stop working during this process.</value>
+  </data>
+  <data name="updatesNotificationState_InitUpdateProcessTitle" xml:space="preserve">
+    <value>Applying updates</value>
+  </data>
+  <data name="updatesNotificationState_NoConnectionExplanation" xml:space="preserve">
+    <value>Review the connection</value>
+  </data>
+  <data name="updatesNotificationState_NoConnectionReconnect" xml:space="preserve">
+    <value>Reconnect</value>
+  </data>
+  <data name="updatesNotificationState_NoConnectionTitle" xml:space="preserve">
+    <value>There is no connection to the Host Controller</value>
+  </data>
+  <data name="updatesNotificationState_OkExplanation" xml:space="preserve">
+    <value>There are no updates available</value>
+  </data>
+  <data name="updatesNotificationState_OkTitle" xml:space="preserve">
+    <value>Open Manager is up to date</value>
+  </data>
+  <data name="updatesNotificationState_WarningInstallUpdates" xml:space="preserve">
+    <value>Install updates</value>
+  </data>
+  <data name="updatesNotificationState_WarningTitle" xml:space="preserve">
+    <value>There are updates availables</value>
+  </data>
+  <data name="updatesNotificationState_WarningWebManagerVersion" xml:space="preserve">
+    <value>Versionsnummer Web Manager:</value>
+  </data>
+  <data name="updatesPanelAt" xml:space="preserve">
+    <value>at</value>
+  </data>
+  <data name="updatesPanelAutomaticUpdates" xml:space="preserve">
+    <value>Automatic updates</value>
+  </data>
+  <data name="updatesPanelAutomaticUpdateSchedule" xml:space="preserve">
+    <value>Schedule automatic updates</value>
+  </data>
+  <data name="updatesPanelConfigurationUpdates" xml:space="preserve">
+    <value>Change configuration</value>
+  </data>
+  <data name="updatesPanelConfigurationUpdatesTitle" xml:space="preserve">
+    <value>Choose the way Open Manager can install updates</value>
+  </data>
+  <data name="updatesPanelEveryDay" xml:space="preserve">
+    <value>Everyday</value>
+  </data>
+  <data name="updatesPanelEveryFriday" xml:space="preserve">
+    <value>Every Friday</value>
+  </data>
+  <data name="updatesPanelEveryMonday" xml:space="preserve">
+    <value>Every Monday</value>
+  </data>
+  <data name="updatesPanelEverySaturday" xml:space="preserve">
+    <value>Every Saturday</value>
+  </data>
+  <data name="updatesPanelEverySunday" xml:space="preserve">
+    <value>Every Sunday</value>
+  </data>
+  <data name="updatesPanelEveryThursday" xml:space="preserve">
+    <value>Every Thursday</value>
+  </data>
+  <data name="updatesPanelEveryTuesday" xml:space="preserve">
+    <value>Every Tuesday</value>
+  </data>
+  <data name="updatesPanelEveryWednesday" xml:space="preserve">
+    <value>Every Wednesday</value>
+  </data>
+  <data name="updatesPanelInstallNewUpdates" xml:space="preserve">
+    <value>Install new updates:</value>
+  </data>
+  <data name="updatesPanelNever" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="updatesPanelScheduleUpdates" xml:space="preserve">
+    <value>Schedule updates</value>
+  </data>
+  <data name="updatesPanelSearchTitle" xml:space="preserve">
+    <value>Open Manager updates</value>
+  </data>
+  <data name="updatesPanelSearchUpdates" xml:space="preserve">
+    <value>Search updates</value>
+  </data>
+  <data name="updatesReInstallCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="updatesReInstallTitle" xml:space="preserve">
+    <value>A software update is required</value>
+  </data>
+  <data name="updatesReInstallTryAgain" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="updatesReInstallUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="updatesReInstallUpdateStatus" xml:space="preserve">
+    <value>Installer progress</value>
+  </data>
+  <data name="updateLastUpdate" xml:space="preserve">
+    <value>Last update:</value>
+  </data>
+  <data name="mnuLangJA" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="updatesPanelStationInProgress" xml:space="preserve">
+    <value>Update in progress...</value>
+  </data>
+  <data name="updatesPanelStationModel" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="updatesPanelStationName" xml:space="preserve">
+    <value>Station name</value>
+  </data>
+  <data name="updatesPanelStationNewSoftware" xml:space="preserve">
+    <value>New software available</value>
+  </data>
+  <data name="updatesPanelStationNotUpdatable" xml:space="preserve">
+    <value>Not updatable</value>
+  </data>
+  <data name="updatesPanelStationSoftwareVersion" xml:space="preserve">
+    <value>Software version</value>
+  </data>
+  <data name="updatesPanelStationUpdateAvailable" xml:space="preserve">
+    <value>Update available</value>
+  </data>
+  <data name="updatesPanelStationUpToDate" xml:space="preserve">
+    <value>Up to date</value>
+  </data>
+  <data name="updatesPanelUpdatesStationTitle" xml:space="preserve">
+    <value>Update stations</value>
+  </data>
+  <data name="hostControllerConnected" xml:space="preserve">
+    <value>Host Controller connected</value>
+  </data>
+  <data name="hostControllerMultipleConnected" xml:space="preserve">
+    <value>Multiple Host Controller connected</value>
+  </data>
+  <data name="hostControllerNoConnected" xml:space="preserve">
+    <value>No Host Controller connected</value>
+  </data>
+  <data name="toolProfiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="toolTimeToStop" xml:space="preserve">
+    <value>Time to stop</value>
+  </data>
+  <data name="toolExtTCMode" xml:space="preserve">
+    <value>External TC mode</value>
+  </data>
+  <data name="toolExtTCModeProtection" xml:space="preserve">
+    <value>Protection</value>
+  </data>
+  <data name="toolExtTCModeRegulation" xml:space="preserve">
+    <value>Regulation</value>
+  </data>
+  <data name="toolStartModePedalAction" xml:space="preserve">
+    <value>Start mode - Pedal</value>
+  </data>
+  <data name="toolStartModeStandOut" xml:space="preserve">
+    <value>Start mode - Auto start</value>
+  </data>
+  <data name="toolStartModeToolButton" xml:space="preserve">
+    <value>Start mode - Tool button</value>
+  </data>
+  <data name="toolStartModePedalPressCont" xml:space="preserve">
+    <value>Press continuously</value>
+  </data>
+  <data name="toolStartModePedalPressOnce" xml:space="preserve">
+    <value>Press once</value>
+  </data>
+  <data name="toolExtTCTemp" xml:space="preserve">
+    <value>External TC temperature</value>
+  </data>
+  <data name="toolSelectedAirFlow" xml:space="preserve">
+    <value>Selected Air flow</value>
+  </data>
+</root>

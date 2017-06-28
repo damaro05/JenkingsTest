@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://JBCHostSrv" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" targetNamespace="http://JBCHostSrv" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://JBCHostSrv/Imports">
+      <xsd:import namespace="http://JBCHostSrv" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/JBCHostSrv" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJBCService_GetStationCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationCount" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetStationCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetStationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationList" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetStationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetInitialControlMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInitialControlMode" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetInitialControlMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInitialControlModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetStationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationData" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetStationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetPortStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortStatus" />
+  </wsdl:message>
+  <wsdl:message name="IJBCService_GetPortStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJBCService">
+    <wsdl:operation name="GetStationCount">
+      <wsdl:input wsaw:Action="http://JBCHostSrv/IJBCService/GetStationCount" message="tns:IJBCService_GetStationCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostSrv/IJBCService/GetStationCountResponse" message="tns:IJBCService_GetStationCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationList">
+      <wsdl:input wsaw:Action="http://JBCHostSrv/IJBCService/GetStationList" message="tns:IJBCService_GetStationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostSrv/IJBCService/GetStationListResponse" message="tns:IJBCService_GetStationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialControlMode">
+      <wsdl:input wsaw:Action="http://JBCHostSrv/IJBCService/GetInitialControlMode" message="tns:IJBCService_GetInitialControlMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostSrv/IJBCService/GetInitialControlModeResponse" message="tns:IJBCService_GetInitialControlMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationData">
+      <wsdl:input wsaw:Action="http://JBCHostSrv/IJBCService/GetStationData" message="tns:IJBCService_GetStationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostSrv/IJBCService/GetStationDataResponse" message="tns:IJBCService_GetStationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortStatus">
+      <wsdl:input wsaw:Action="http://JBCHostSrv/IJBCService/GetPortStatus" message="tns:IJBCService_GetPortStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostSrv/IJBCService/GetPortStatusResponse" message="tns:IJBCService_GetPortStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DefaultBinding_IJBCService" type="tns:IJBCService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStationCount">
+      <soap:operation soapAction="http://JBCHostSrv/IJBCService/GetStationCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationList">
+      <soap:operation soapAction="http://JBCHostSrv/IJBCService/GetStationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialControlMode">
+      <soap:operation soapAction="http://JBCHostSrv/IJBCService/GetInitialControlMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationData">
+      <soap:operation soapAction="http://JBCHostSrv/IJBCService/GetStationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortStatus">
+      <soap:operation soapAction="http://JBCHostSrv/IJBCService/GetPortStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

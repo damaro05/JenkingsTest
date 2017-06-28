@@ -1,0 +1,3 @@
+[ ]-(1) GetStationStatus(ID)>[CImplIJBCStationControllerService]
+[CImplIJBCStationControllerService]-(2) GetControlMode(ID)>[JBC_Connect.JBC_API{bg:lavender}]
+[CImplIJBCStationControllerService{bg:bisque}]-(3) IsRemoteControl(ID | IP)>[CStationRemoteControl{bg:lightcyan}]

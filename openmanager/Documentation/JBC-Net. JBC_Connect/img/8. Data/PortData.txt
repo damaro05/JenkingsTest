@@ -1,0 +1,16 @@
+[CCountersData|ContPlugMinutes:Integer;ContWorkMinutes:Integer;ContSleepMinutes:Integer;ContHiberMinutes:Integer;ContIdleMinutes:Integer;ContSleepCycles:Integer;ContDesoldCycles:Integer]
+
+[CCartridgeData|CartridgeNbr:UShort;CartridgeOnOff:OnOff;CartridgeAdj300:UShort;CartridgeAdj400:UShort;CartridgeGroup:Byte;CartridgeFamily:Byte)]
+
+[CTempLevelsData|LevelsOnOff:OnOff;LevelsTemp:CTemperature();LevelsTempOnOff:OnOff();LevelsTempSelect:ToolTemperatureLevels]
+
+[CToolSettingsData|m_AdjustTemp:CTemperature;m_FixedTemp:CTemperature;m_FixedTemp_OnOff:OnOff;m_Cartridge:CCartridgeData;m_Tool:GenericStationTools;m_Levels:CTempLevelsData;m_SleepTemp:CTemperature;m_SleepTime:ToolTimeSleep;m_SleepTimeOnOff:OnOff;m_HiberTime:ToolTimeHibernation;m_HiberTimeOnOff:OnOff]
+[CToolSettingsData]->[CCartridgeData]
+[CToolSettingsData]->[CTempLevelsData]
+
+[CToolStatusData|ActualTemp:CTemperature();Temp_MOS:CTemperature;Power_x_Mil:Integer();Current_mA:Integer();ConnectedTool:GenericStationTools;Desold_OnOff:OnOff;Extractor_OnOff:OnOff;Hiber_OnOff:OnOff;Sleep_OnOff:OnOff;Stand_OnOff:OnOff;StatusRemoteMode:stc_StatusRemoteMode;TimeToSleepHibern:Integer;FutureMode_Tool:ToolFutureMode;ToolError:ToolError]
+
+[CPortData|SelectedTemp:CTemperature;ToolStatus:CToolStatusData;ToolSettings:CToolSettingsData();Counters:CCountersData;PartialCounters:CCountersData]
+[CPortData]->[CToolSettingsData]
+[CPortData]->[CToolStatusData]
+[CPortData]->[CCountersData]

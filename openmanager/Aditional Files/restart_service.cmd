@@ -1,0 +1,3 @@
+NET STOP JBCStationControllerService
+NET START JBCStationControllerService
+echo off

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://JBCHostControllerSrv" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://JBCHostControllerSrv" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://JBCHostControllerSrv/Imports">
+      <xsd:import schemaLocation="http://cad-51:8000/JBCHostControllerSrv/service?xsd=xsd0" namespace="http://JBCHostControllerSrv" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCHostControllerSrv/service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCHostControllerSrv/service?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCHostControllerSrv/service?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JBCStationControllerSrv" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJBCHostControllerService_IsAvailableRemoteServerDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAvailableRemoteServerDownload" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_IsAvailableRemoteServerDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAvailableRemoteServerDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_IsAvailableRemoteServerDownload_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q1:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetAvailableRemoteServerDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAvailableRemoteServerDownload" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetAvailableRemoteServerDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAvailableRemoteServerDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetAvailableRemoteServerDownload_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q2:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUserFilesLocalFolderLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFilesLocalFolderLocation" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUserFilesLocalFolderLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFilesLocalFolderLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUserFilesLocalFolderLocation_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q3:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUserFilesLocalFolderLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserFilesLocalFolderLocation" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUserFilesLocalFolderLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserFilesLocalFolderLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUserFilesLocalFolderLocation_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q4:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdate_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q5:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_UpdateSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSystem" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdateSpecificTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateSpecificTime" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdateSpecificTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateSpecificTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdateSpecificTime_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q6:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdateSpecificTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpdateSpecificTime" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdateSpecificTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpdateSpecificTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdateSpecificTime_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q7:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdatePeriodicTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatePeriodicTime" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdatePeriodicTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatePeriodicTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdatePeriodicTime_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q8:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdatePeriodicTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpdatePeriodicTime" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdatePeriodicTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpdatePeriodicTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdatePeriodicTime_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q9:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetCheckPeriodicTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckPeriodicTime" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetCheckPeriodicTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckPeriodicTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetCheckPeriodicTime_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q10:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetCheckPeriodicTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCheckPeriodicTime" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetCheckPeriodicTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCheckPeriodicTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetCheckPeriodicTime_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q11:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdateNotifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateNotifications" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdateNotifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetUpdateNotifications_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q12:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdateNotifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpdateNotifications" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdateNotifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpdateNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetUpdateNotifications_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q13:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdateConnectedStationController_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUpdateConnectedStationController" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdateConnectedRemoteManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUpdateConnectedRemoteManager" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdateConnectedRemoteManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUpdateConnectedRemoteManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdateConnectedRemoteManager_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q14:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateRemoteManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUpdateRemoteManager" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateRemoteManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUpdateRemoteManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateRemoteManager_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q15:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdateConnectedWebManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUpdateConnectedWebManager" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdateConnectedWebManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUpdateConnectedWebManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_CheckUpdateConnectedWebManager_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q16:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateWebManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUpdateWebManager" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateWebManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUpdateWebManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateWebManager_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q17:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetInfoUpdateFirmware_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoUpdateFirmware" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetInfoUpdateFirmware_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoUpdateFirmwareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetInfoUpdateFirmware_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q18:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateFirmware_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUpdateFirmware" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateFirmware_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUpdateFirmwareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetFileUpdateFirmware_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q19:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetStationControllerSwVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationControllerSwVersion" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetStationControllerSwVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationControllerSwVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetStationControllerSwVersion_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q20:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetHostControllerSwVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostControllerSwVersion" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetHostControllerSwVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHostControllerSwVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetHostControllerSwVersion_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q21:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetWebManagerSwVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebManagerSwVersion" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetWebManagerSwVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebManagerSwVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_GetWebManagerSwVersion_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q22:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetWebManagerUri_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetWebManagerUri" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetWebManagerUri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetWebManagerUriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_SetWebManagerUri_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q23:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_RegisterEventLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEventLog" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_RegisterEventLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEventLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCHostControllerService_RegisterEventLog_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/JBCHostControllerSrv" name="detail" element="q24:faultError" />
+  </wsdl:message>
+  <wsdl:portType name="IJBCHostControllerService">
+    <wsdl:operation name="IsAvailableRemoteServerDownload">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/IsAvailableRemoteServerDownload" message="tns:IJBCHostControllerService_IsAvailableRemoteServerDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/IsAvailableRemoteServerDownloadResponse" message="tns:IJBCHostControllerService_IsAvailableRemoteServerDownload_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/IsAvailableRemoteServerDownloadfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_IsAvailableRemoteServerDownload_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAvailableRemoteServerDownload">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetAvailableRemoteServerDownload" message="tns:IJBCHostControllerService_SetAvailableRemoteServerDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetAvailableRemoteServerDownloadResponse" message="tns:IJBCHostControllerService_SetAvailableRemoteServerDownload_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetAvailableRemoteServerDownloadfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_SetAvailableRemoteServerDownload_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFilesLocalFolderLocation">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUserFilesLocalFolderLocation" message="tns:IJBCHostControllerService_GetUserFilesLocalFolderLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUserFilesLocalFolderLocationResponse" message="tns:IJBCHostControllerService_GetUserFilesLocalFolderLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUserFilesLocalFolderLocationfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetUserFilesLocalFolderLocation_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserFilesLocalFolderLocation">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUserFilesLocalFolderLocation" message="tns:IJBCHostControllerService_SetUserFilesLocalFolderLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUserFilesLocalFolderLocationResponse" message="tns:IJBCHostControllerService_SetUserFilesLocalFolderLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUserFilesLocalFolderLocationfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_SetUserFilesLocalFolderLocation_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUpdate">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdate" message="tns:IJBCHostControllerService_CheckUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateResponse" message="tns:IJBCHostControllerService_CheckUpdate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdatefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_CheckUpdate_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSystem">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/UpdateSystem" message="tns:IJBCHostControllerService_UpdateSystem_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateSpecificTime">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdateSpecificTime" message="tns:IJBCHostControllerService_GetUpdateSpecificTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdateSpecificTimeResponse" message="tns:IJBCHostControllerService_GetUpdateSpecificTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdateSpecificTimefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetUpdateSpecificTime_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpdateSpecificTime">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdateSpecificTime" message="tns:IJBCHostControllerService_SetUpdateSpecificTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdateSpecificTimeResponse" message="tns:IJBCHostControllerService_SetUpdateSpecificTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdateSpecificTimefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_SetUpdateSpecificTime_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatePeriodicTime">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdatePeriodicTime" message="tns:IJBCHostControllerService_GetUpdatePeriodicTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdatePeriodicTimeResponse" message="tns:IJBCHostControllerService_GetUpdatePeriodicTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdatePeriodicTimefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetUpdatePeriodicTime_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpdatePeriodicTime">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdatePeriodicTime" message="tns:IJBCHostControllerService_SetUpdatePeriodicTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdatePeriodicTimeResponse" message="tns:IJBCHostControllerService_SetUpdatePeriodicTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdatePeriodicTimefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_SetUpdatePeriodicTime_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckPeriodicTime">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetCheckPeriodicTime" message="tns:IJBCHostControllerService_GetCheckPeriodicTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetCheckPeriodicTimeResponse" message="tns:IJBCHostControllerService_GetCheckPeriodicTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetCheckPeriodicTimefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetCheckPeriodicTime_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCheckPeriodicTime">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetCheckPeriodicTime" message="tns:IJBCHostControllerService_SetCheckPeriodicTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetCheckPeriodicTimeResponse" message="tns:IJBCHostControllerService_SetCheckPeriodicTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetCheckPeriodicTimefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_SetCheckPeriodicTime_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateNotifications">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdateNotifications" message="tns:IJBCHostControllerService_GetUpdateNotifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdateNotificationsResponse" message="tns:IJBCHostControllerService_GetUpdateNotifications_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetUpdateNotificationsfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetUpdateNotifications_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpdateNotifications">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdateNotifications" message="tns:IJBCHostControllerService_SetUpdateNotifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdateNotificationsResponse" message="tns:IJBCHostControllerService_SetUpdateNotifications_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetUpdateNotificationsfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_SetUpdateNotifications_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUpdateConnectedStationController">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateConnectedStationController" message="tns:IJBCHostControllerService_CheckUpdateConnectedStationController_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUpdateConnectedRemoteManager">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateConnectedRemoteManager" message="tns:IJBCHostControllerService_CheckUpdateConnectedRemoteManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateConnectedRemoteManagerResponse" message="tns:IJBCHostControllerService_CheckUpdateConnectedRemoteManager_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateConnectedRemoteManagerfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_CheckUpdateConnectedRemoteManager_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileUpdateRemoteManager">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateRemoteManager" message="tns:IJBCHostControllerService_GetFileUpdateRemoteManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateRemoteManagerResponse" message="tns:IJBCHostControllerService_GetFileUpdateRemoteManager_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateRemoteManagerfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetFileUpdateRemoteManager_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUpdateConnectedWebManager">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateConnectedWebManager" message="tns:IJBCHostControllerService_CheckUpdateConnectedWebManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateConnectedWebManagerResponse" message="tns:IJBCHostControllerService_CheckUpdateConnectedWebManager_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/CheckUpdateConnectedWebManagerfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_CheckUpdateConnectedWebManager_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileUpdateWebManager">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateWebManager" message="tns:IJBCHostControllerService_GetFileUpdateWebManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateWebManagerResponse" message="tns:IJBCHostControllerService_GetFileUpdateWebManager_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateWebManagerfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetFileUpdateWebManager_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoUpdateFirmware">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetInfoUpdateFirmware" message="tns:IJBCHostControllerService_GetInfoUpdateFirmware_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetInfoUpdateFirmwareResponse" message="tns:IJBCHostControllerService_GetInfoUpdateFirmware_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetInfoUpdateFirmwarefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetInfoUpdateFirmware_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileUpdateFirmware">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateFirmware" message="tns:IJBCHostControllerService_GetFileUpdateFirmware_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateFirmwareResponse" message="tns:IJBCHostControllerService_GetFileUpdateFirmware_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetFileUpdateFirmwarefaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetFileUpdateFirmware_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationControllerSwVersion">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetStationControllerSwVersion" message="tns:IJBCHostControllerService_GetStationControllerSwVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetStationControllerSwVersionResponse" message="tns:IJBCHostControllerService_GetStationControllerSwVersion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetStationControllerSwVersionfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetStationControllerSwVersion_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHostControllerSwVersion">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetHostControllerSwVersion" message="tns:IJBCHostControllerService_GetHostControllerSwVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetHostControllerSwVersionResponse" message="tns:IJBCHostControllerService_GetHostControllerSwVersion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetHostControllerSwVersionfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetHostControllerSwVersion_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebManagerSwVersion">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetWebManagerSwVersion" message="tns:IJBCHostControllerService_GetWebManagerSwVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetWebManagerSwVersionResponse" message="tns:IJBCHostControllerService_GetWebManagerSwVersion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/GetWebManagerSwVersionfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_GetWebManagerSwVersion_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWebManagerUri">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetWebManagerUri" message="tns:IJBCHostControllerService_SetWebManagerUri_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetWebManagerUriResponse" message="tns:IJBCHostControllerService_SetWebManagerUri_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/SetWebManagerUrifaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_SetWebManagerUri_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterEventLog">
+      <wsdl:input wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/RegisterEventLog" message="tns:IJBCHostControllerService_RegisterEventLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/RegisterEventLogResponse" message="tns:IJBCHostControllerService_RegisterEventLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCHostControllerSrv/IJBCHostControllerService/RegisterEventLogfaultErrorFault" name="faultErrorFault" message="tns:IJBCHostControllerService_RegisterEventLog_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

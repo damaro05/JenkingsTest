@@ -1,0 +1,3 @@
+[submodule "syn-manager"]
+	path = syn-manager
+	url = git@bitbucket.org:adigiovanni_modpow/syn-manager.git

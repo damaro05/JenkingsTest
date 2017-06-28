@@ -1,0 +1,12 @@
+[CStationFrames{bg:lavender}]<(1) handshake(address)-[CCommunicationChannel{bg:honeydew}]
+
+[CStationFrames]-(2) firmware_version(address)>[CCommunicationChannel]
+
+[CStation{bg:lavender}]<(3) response_firmware_version(address)-[CStationFrames]
+
+[CStationWrapper{bg:lavender}]<(4) detected_substation(ID | address)-[CStation]
+
+[JBC_API]<-[CStationWrapper]
+
+[CStationAvailableCom|List (ID ~ comm_channel);List (ID ~ address)]
+[JBC_API{bg:bisque}]-(5) check_address_comchannel(ID | address)>[CStationAvailableCom{bg:bisque}]

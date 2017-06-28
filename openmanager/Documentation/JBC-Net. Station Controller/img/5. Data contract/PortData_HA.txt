@@ -1,0 +1,12 @@
+[dc_Counters|ContPlugMinutes:Integer;ContWorkMinutes:Integer;ContSleepMinutes:Integer;ContHiberMinutes:Integer;ContIdleMinutes:Integer;ContSleepCycles:Integer;ContDesoldCycles:Integer;ContWorkCycles:Integer;ContSuctionCycles:Integer]
+
+[dc_Levels_HA|LevelsCount:Integer;LevelsOnOff:dc_OnOff;LevelsTempSelect:Byte;LevelsTemp():dc_getTemperature;LevelsFlow:Integer();LevelsExtTemp():dc_getTemperature;LevelsTempOnOff:dc_OnOff()]
+
+[dc_Port_Counters|portNbr:dc_Port;GlobalCounters:dc_Counters;PartialCounters:dc_Counters]
+[dc_Port_Counters]->[dc_Counters]
+
+[dc_PortToolSettings_HA|portNbr:dc_Port;Tool:dc_GenericStationTools;AdjustTemp:dc_getTemperature;Levels:dc_Levels_HA;TimeToStop:Integer;ExternalTCMode:dc_ExternalTCMode_HA;StartMode_ToolButton:dc_OnOff;StartMode_StandOut:dc_OnOff;StartMode_Pedal:dc_PedalAction]
+[dc_PortToolSettings_HA]->[dc_Levels_HA]
+
+[dc_StatusTool_HA|portNbr:dc_Port;ActualTemp:dc_getTemperature;ActualExtTemp:dc_getTemperature;ProtectionTC_Temp:dc_getTemperature;Power_x_Mil:Integer;Flow_x_Mil:Integer;ConnectedTool:dc_GenericStationTools;TimeToStop:Integer;Stand_OnOff:dc_OnOff;PedalStatus_OnOff:dc_OnOff;PedalConnected_OnOff:dc_OnOff;SuctionRequestedStatus_OnOff:dc_OnOff;SuctionStatus_OnOff:dc_OnOff;HeaterRequestedStatus_OnOff:dc_OnOff;HeaterStatus_OnOff:dc_OnOff;CoolingStatus_OnOff:dc_OnOff;This_PortToolSettings:dc_PortToolSettings_HA;TimeToSleepHibern:Integer;ToolError:dc_ToolError]
+[dc_StatusTool_HA]->[dc_PortToolSettings_HA]

@@ -1,0 +1,63 @@
+---------------------------------------------------------------------------
+-------------------------- Versions firmware file -------------------------
+---------------------------------------------------------------------------
+Formato:
+MODEL: name
+HW: hardware_version
+SW: software_version : model_version : protocol_version : file_ftp_location : date [: language]
+---------------------------------------------------------------------------
+
+
+MODEL: PSE
+HW: 0012408C
+SW: 8886030 : PSE_LED_01 		: 02 : PSE_8886030.jbc : 2016/09/15
+SW: 8886073 : PSE_LED_01 		: 02 : PSE_8886073.jbc : 2016/10/03
+
+HW: 0012408T
+SW: 8886043 : TL4 			    : 02 : TL4_8886043.jbc : 2016/10/03
+
+HW: 0011995
+SW: 8886060 : PD 		 		: 02 : PD_8886060.jbc : 2016/10/03
+
+MODEL: DM
+HW: ALL
+SW: 9996923 : JBC_DM_Station    : 01 : DM_9996923.jbc : 2014/10/29
+
+MODEL: DD
+HW: ALL
+SW: 9996924 : JBC_DD_Station    : 01 : DD_9996924.jbc : 2014/10/29
+
+MODEL: DDR
+HW: ALL
+SW: 9996925 : JBC_DDR_Station   : 01 : DDR_9996925.jbc : 2014/10/29
+
+MODEL: DI
+HW: ALL
+SW: 9996926 : JBC_DI_Station    : 01 : DI_9996926.jbc : 2014/10/29
+
+MODEL: HD
+HW: ALL
+SW: 9996927 : JBC_HD_Station    : 01 : HD_9996927.jbc : 2014/10/29
+
+MODEL: HDR
+HW: ALL
+SW: 9996928 : JBC_HDR_Station   : 01 : HDR_9996928.jbc : 2014/10/29
+
+MODEL: CD/CF
+HW: ALL
+SW: 8886001 : JBC_CD/CF_Station : 01 : CD_CF_8886001.jbc : 2016/01/26 : English
+SW: 8886005 : JBC_CD/CF_Station : 01 : CD_CF_8886005.jbc : 2016/01/26 : Chinese
+
+MODEL: CS/CV
+HW: ALL
+SW: 8886002 : JBC_CS/CV_Station : 01 : CS_CV_8886002.jbc : 2016/01/13 : English
+SW: 8886008 : JBC_CS/CV_Station : 01 : CS_CV_8886008.jbc : 2016/01/13 : Chinese
+
+MODEL: CP
+HW: ALL
+SW: 8886003 : JBC_CP_Station 	: 01 : CP_8886003.jbc : 2016/01/13 : English
+SW: 8886009 : JBC_CP_Station 	: 01 : CP_8886009.jbc : 2016/01/13 : Chinese
+
+MODEL: NA
+HW: ALL
+SW: 9996932 : JBC_NA_Station 	: 01 : NA_9996932.jbc : 2014/10/29

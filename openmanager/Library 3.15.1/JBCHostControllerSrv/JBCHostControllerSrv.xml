@@ -1,0 +1,1716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JBCHostControllerSrv</name>
+    </assembly>
+    <members>
+        <member name="F:DataJBC.Constants.CONTINUOUS_MODE_QUEUE_MAX_LENGTH">
+            <summary>
+            The maximum length for the continuous mode data queue
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModeData_HA">
+            <summary>
+            Defines the data returned by the continuous mode transmisions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModePort_HA">
+            <summary>
+            Defines the recieved data of the continuous mode for a port.
+            NOTE: Power and flow units are per thousand.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModeData_SOLD">
+            <summary>
+            Defines the data returned by the continuous mode transmisions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModePort_SOLD">
+            <summary>
+            Defines the recieved data of the continuous mode for a port.
+            NOTE: Power units are per thousand.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.CTemperature">
+            <summary>
+            This class represents a temperature value. It stores the temperature in UTI units that
+            can easily be converted into CELSIUS and FAHRENHEIT degrees using the ToCelsius() and
+            ToFahrenheit() methods. The temperature value can also be set in CELSIUS or FAHRENHEIT by
+            using the InCelsius() or InFahrenheit() methods.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.#ctor(System.Int32)">
+            <summary>
+            Creates the object.
+            </summary>
+            <param name="UTItemp">The initial value in UTI units.</param>
+            <remarks></remarks>
+        </member>
+        <member name="P:DataJBC.CTemperature.UTI">
+            <summary>
+            The current temperature stored in UTI units.
+            </summary>
+            <value>The desired temperature</value>
+            <returns>The current temperature</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.isValid">
+            <summary>
+            Indicates if the temperature is a valid value, it is, in range.
+            </summary>
+            <returns>A boolean indicating if the temperature is a valid value</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InCelsius(System.Int32)">
+            <summary>
+            Sets the temperature in CELSIUS units
+            </summary>
+            <param name="value" >The desired temperature in CELSIUS</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToCelsius">
+            <summary>
+            Gets the temperature in CELSIUS units
+            </summary>
+            <returns>The temperature in CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToRoundCelsius">
+            <summary>
+            Gets the temperature in steps of five degrees CELSIUS.
+            </summary>
+            <returns>The temperature in steps of five degrees CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InCelsiusToAdjust(System.Int32)">
+            <summary>
+            Sets the temperature in CELSIUS units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <param name="value" >The desired temperature in CELSIUS</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToCelsiusToAdjust">
+            <summary>
+            Gets the temperature in CELSIUS units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <returns>The temperature in CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InFahrenheit(System.Int32)">
+            <summary>
+            Sets the temperature in FAHRENHEIT units
+            </summary>
+            <param name="value" >The desired temperature in FAHRENHEIT</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToFahrenheit">
+            <summary>
+            Gets the temperature in FAHRENHEIT units
+            </summary>
+            <returns>The temperature in FAHRENHEIT.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToRoundFahrenheit">
+            <summary>
+            Gets the temperature in steps of ten degrees FAHRENHEIT
+            </summary>
+            <returns>The temperature in steps of ten degrees FAHRENHEIT</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InFahrenheitToAdjust(System.Int32)">
+            <summary>
+            Sets the temperature in FAHRENHEIT units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <param name="value" >The desired temperature in FAHRENHEIT</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToFahrenheitToAdjust">
+            <summary>
+            Gets the temperature in FAHRENHEIT units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <returns>The temperature in FAHRENHEIT.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CCartridgeData.CalculateParametersFromNumber(DataJBC.GenericStationTools,System.String)">
+            <summary>
+            Calculate the parameters of a cartridge given a tool and a station model
+            </summary>
+            <param name="tool"></param>
+            <param name="stationModel"></param>
+            <returns>True if the operation was succesfull</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.CPortData_HA">
+            <summary>
+            Provides status information and configuration of the port
+            </summary>
+            <remarks>The port is a hot air station</remarks>
+        </member>
+        <member name="T:DataJBC.CToolSettingsData_HA">
+            <summary>
+            Provides configuration of the tool
+            </summary>
+            <remarks>The tool is for a hot air station</remarks>
+        </member>
+        <member name="T:DataJBC.CPortData_SF">
+            <summary>
+            Provides status information and configuration of the port
+            </summary>
+            <remarks>The port is a soldering feeder station</remarks>
+        </member>
+        <member name="T:DataJBC.CPortData_SOLD">
+            <summary>
+            Provides status information and configuration of the port
+            </summary>
+            <remarks>The port is soldering station</remarks>
+        </member>
+        <member name="T:DataJBC.CToolSettingsData_SOLD">
+            <summary>
+            Provides configuration of the tool
+            </summary>
+            <remarks>The tool is for a soldering station</remarks>
+        </member>
+        <member name="T:DataJBC.OnOff">
+            <summary>
+            Values for some ON/OFF station parameters.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PedalAction">
+            <summary>
+            List of tool start mode configuration
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.CounterTypes">
+            <summary>
+            Counter types
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.DispenserMode_SF">
+            <summary>
+            Dispenser mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.FeedingDirection_SF">
+            <summary>
+            Feeding direction
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.Port">
+            <summary>
+            List of ports
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortWorkMode_HA">
+            <summary>
+            List of work mode in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortHeaterStatus_HA">
+            <summary>
+            List of heater status in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortSuctionStatus_HA">
+            <summary>
+            List of suction status in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolError">
+            <summary>
+            List of possible tool errors
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolExternalTCMode_HA">
+            <summary>
+            Tool external TC mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolFutureMode">
+            <summary>
+            List of station modes.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStartMode_HA">
+            <summary>
+            Tool start modes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStatus">
+            <summary>
+            List of posible tool status
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStatus_HA">
+            <summary>
+            List of posible tool status for desolder station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolTemperatureLevels">
+            <summary>
+            List of possible tool temperature levels
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolTimeHibernation">
+            <summary>
+            List of possible times before entering the Hibernation mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolTimeSleep">
+            <summary>
+            List of possible times before enter Sleep mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.SearchMode">
+            <summary>
+            Searching stations modes.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.SpeedContinuousMode">
+            <summary>
+            List of continuous mode data speed.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ControlModeConnection">
+            <summary>
+            Control Mode type connection
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.GenericStationTools">
+            <summary>
+            List of the diferent tools available by a generic station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PowerLimits">
+            <summary>
+            List of maximum and minimum station power limits. Depending on the
+            station model the maximum is different. A value of 0 in the maximum
+            means that there's no maximum value for the model.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ProfileRegulationMode">
+            <summary>
+            Profile regulation mode for hot air stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.StationError">
+            <summary>
+            List of possible station errors.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.eStationType">
+            <summary>
+            Station types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.TemperatureLimits">
+            <summary>
+            List of temperature limits. In UTI units
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror">
+            <summary>
+            The general error object used in this library. It is used for storing and showing errors.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cErrorCodes">
+            <summary>
+            The list of all posible user error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cCommErrorCodes">
+            <summary>
+            The list of station/PC protocol error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String)">
+            <summary>
+            Creates an error object
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String,System.Byte[])">
+            <summary>
+            Creates an error object with communication error code
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetMsg">
+            <summary>
+            Gets the error message.
+            </summary>
+            <returns>The error message</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCommErrorCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(System.Exception,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de una Exception no controlada
+            </summary>
+            <param name="_ex">Exception capturada</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(JBC_Connect.dc_EnumConstJBC.dc_FaultError,System.String,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de un error controlado
+            </summary>
+            <param name="_code">CÃ³digo del error</param>
+            <param name="_message">Texto del error</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesLibrary.Data.DataBase.SQLDataProvider">
+            <summary>
+            Provides methods to construct sql queries and get data from queries
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataBase.SQLDataProvider.GetTableExistsQuery(System.String)">
+            <summary>
+            Get query to consult if a table exists
+            </summary>
+            <param name="table">Table name to consult</param>
+            <returns>Query</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataBase.SQLDataProvider.GetSelectQuery(System.String,System.String)">
+            <summary>
+            Get a select query with a single key
+            </summary>
+            <param name="key">Field key</param>
+            <param name="table">Table name to consult</param>
+            <returns>Query</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataBase.SQLDataProvider.GetSelectQuery(System.String[],System.String)">
+            <summary>
+            Get a select query with multiple keys
+            </summary>
+            <param name="keyList">List of keys to get values</param>
+            <param name="table">Table name to consult</param>
+            <returns>Query</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataBase.SQLDataProvider.GetUpdateQuery(System.String,System.String,System.String)">
+            <summary>
+            Get a update query with a single key
+            </summary>
+            <param name="key">Field key</param>
+            <param name="table">Table name to consult</param>
+            <param name="value">Value to update</param>
+            <returns>Query</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataBase.SQLDataProvider.GetUpdateQuery(System.String[],System.String,System.String[])">
+            <summary>
+            Get a update query with multiple keys
+            </summary>
+            <param name="keyList">List of keys to update values</param>
+            <param name="table">Table name to consult</param>
+            <param name="valueList">Value list to update</param>
+            <returns>Query</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataBase.SQLDataProvider.GetDataReader(System.Data.IDataReader,System.String@)">
+            <summary>
+             Get data of a query
+            </summary>
+            <param name="sqlReader">Data reader</param>
+            <param name="value">Data result</param>
+            <returns>True if the operation was succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataBase.SQLDataProvider.GetDataReader(System.Data.IDataReader,System.String[]@)">
+            <summary>
+             Get data list of a query
+            </summary>
+            <param name="sqlReader">Data reader</param>
+            <param name="valueList">List of data result</param>
+            <returns>True if the operation was succesful</returns>
+        </member>
+        <member name="T:RoutinesLibrary.Data.DataType.IntegerUtils">
+             <summary>
+            
+             </summary>
+             <remarks>
+             More information for rounding procedures: https://support.microsoft.com/en-us/kb/196652
+             </remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataType.IntegerUtils.BytesToInt(System.Byte[],System.Boolean)">
+            <summary>
+            Convert a byte array to integer
+            </summary>
+            <param name="address">Byte array to convert</param>
+            <param name="dataInBigEndian">True if the byte array is in Big Endian</param>
+            <returns>Converted byte array</returns>
+        </member>
+        <member name="M:RoutinesLibrary.IO.Dir.CopyDirectory(System.String,System.String)">
+            <summary>
+            Copy files from the source folder to destination folder overwriting the content
+            </summary>
+            <param name="source">Source folder</param>
+            <param name="destination">Destination folder</param>
+            <remarks>
+            This method check if is posible to override a file and retry it
+            </remarks>
+        </member>
+        <member name="T:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient">
+            <summary>
+            Provides a mechanism for searching by UDP. This class performs searches periodically
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.#ctor(System.String,System.String,System.UInt16,System.Int32)">
+            <summary>
+            Class constructor. Starts searches automatically
+            </summary>
+            <param name="messageRequest">Request message</param>
+            <param name="messageResponse">Response message</param>
+            <param name="port">Port to perform searches</param>
+            <param name="discoverInterval">Time interval to perform searches</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.StartSearch">
+            <summary>
+            Starts searches process
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.StopSearch">
+            <summary>
+            Stop searches process
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.GetDiscoveredServices">
+            <summary>
+            Get the list of discovered services
+            </summary>
+            <returns>Discovered services</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.Process_Discover">
+            <summary>
+            Process to perform searches periodically
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.SockUDP_DataReceived(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Listen response messages and save the EndPoint
+            </summary>
+            <param name="Data"></param>
+            <param name="IP"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost">
+            <summary>
+            Provides a mechanism for searching by UDP. This class waits to receive requests to respond to searches
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.#ctor(System.String,System.String,System.UInt16,System.String)">
+            <summary>
+            Class constructor. Wait to receive requests to respond to searches
+            </summary>
+            <param name="messageRequest">Request message</param>
+            <param name="messageResponse">Response message</param>
+            <param name="port">Port to wait searches</param>
+            <param name="localIPAdress">Local IP address to response</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.SockUDP_DataReceived(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Listen incomming messages and responses to it
+            </summary>
+            <param name="Data">Request message</param>
+            <param name="IP">Remote request IP address</param>
+        </member>
+        <member name="T:RoutinesLibrary.Net.InformationNetworkInterface">
+            <summary>
+            This class provides informartion for network interface
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.GetNetworkInterfaceAddress">
+            <summary>
+            Get all the network interface addresses
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.GetPortAvailable(System.UInt16,System.UInt16)">
+            <summary>
+            Get a port available
+            </summary>
+            <param name="minPort">Minimum port</param>
+            <param name="maxPort">Maximum port</param>
+            <returns>Port available</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.IsValidIPv4(System.Net.IPAddress)">
+            <summary>
+            Check if a IP address is v4
+            </summary>
+            <param name="addr">IP address</param>
+            <returns>True if the IP address is v4</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.ConvertIP2Bytes(System.Net.IPAddress)">
+            <summary>
+            Convert IP address to byte array
+            </summary>
+            <param name="AddressConver"></param>
+            <returns>Byte array IP address</returns>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.FTP.FTP">
+            <summary>
+            This class provides FTP communication
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.FTP.FTP.DownloadFileFTP(System.String,System.String,System.String,System.String)">
+            <summary>
+            Download file
+            </summary>
+            <param name="sFTPFileUrl">File to download</param>
+            <param name="sFTPUser">FTP user access credentials</param>
+            <param name="sFTPPwd">FTP password access credentials</param>
+            <param name="sLocalFileUrl">Path to store the downloaded file</param>
+            <returns>True if the download operation was succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.FTP.FTP.UploadFileFTP(System.String,System.String,System.String,System.String)">
+            <summary>
+            Updaload file
+            </summary>
+            <param name="sFTPFileUrl">File name to store in the remote server</param>
+            <param name="sFTPUser">FTP user access credentials</param>
+            <param name="sFTPPwd">FTP password access credentials</param>
+            <param name="sLocalFileUrl">File path to upload</param>
+            <returns>True if the upload operation was succesful</returns>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.TCP.TCP">
+            <summary>
+            Provides TCP communication
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.TCP.TCP.ClosedConnectionTCPEventHandler">
+            <summary>
+            Communicates closed connections
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.TCP.TCP.DataReceivedEventHandler">
+            <summary>
+            Raises an event with the data received
+            </summary>
+            <param name="Data">Data received</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.#ctor(System.Net.IPEndPoint)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="_hostEndPoint">Remote EndPoint to connect</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Dispose">
+            <summary>
+            Stop communications and release resources
+            </summary>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.HostEndPoint">
+            <summary>
+            Get the remote EndPoint, both IP and port
+            </summary>
+            <value>Remote EndPoint</value>
+            <returns>Remote EndPoint</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.HostIP">
+            <summary>
+            Get the remote IP
+            </summary>
+            <value>Remote IP</value>
+            <returns>Remote IP</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.HostPort">
+            <summary>
+            Get the remote port
+            </summary>
+            <value>Remote port</value>
+            <returns>Remote port</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.BufferSize">
+            <summary>
+            Get or set the buffer size to receive messages
+            </summary>
+            <value>Buffer size</value>
+            <returns>Buffer size</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Connect(System.String@)">
+            <summary>
+            Connect to remote EndPoint
+            </summary>
+            <param name="sError">Error messages if the operation was failed</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.SendData(System.String)">
+            <summary>
+            Send data to remote computer
+            </summary>
+            <param name="Data">Message data</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.SendData(System.Byte[])">
+            <summary>
+            Send data to remote computer
+            </summary>
+            <param name="Data">Message data</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Process_DataReceive">
+            <summary>
+            Listen incomming messages
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Close">
+            <summary>
+            Close TCP connection
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.UDP.UDP">
+            <summary>
+            Provides UDP communication
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.UDP.UDP.DataReceivedEventHandler">
+            <summary>
+            Raises an event with the data received
+            </summary>
+            <param name="Data">Data received</param>
+            <param name="RemoteEndPoint">Ip address of the remote computer that sent the message</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.#ctor(System.UInt16,System.Net.IPEndPoint)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="_Port">UDP port</param>
+            <param name="_remoteEndPoint">Remote EndPoint to connect</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Dispose">
+            <summary>
+            Stop communications and release resources
+            </summary>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.UDP.UDP.Port">
+            <summary>
+            Get or set the UDP port
+            </summary>
+            <value>UDP port</value>
+            <returns>UDP port</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.UDP.UDP.RemoteEndPoint">
+            <summary>
+            Get or set the remote EndPoint to send messages
+            </summary>
+            <value>Remote EndPoint</value>
+            <returns>Remote EndPoint</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Activate">
+            <summary>
+            Activate communication
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Deactivate">
+            <summary>
+            Deactivated communications
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Send(System.Byte[])">
+            <summary>
+            Send message to remote computer
+            </summary>
+            <param name="data">Message to send</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.SendBroadcast(System.Byte[],System.UInt16)">
+            <summary>
+            Send message to broadcast
+            </summary>
+            <param name="data">Message to send</param>
+            <param name="portSend">Destination port</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Process_DataReceive">
+            <summary>
+            Listen incomming messages
+            </summary>
+        </member>
+        <member name="T:JBCHostControllerSrv.JBCHostControllerService">
+            <summary>
+            Creates a Host Controller windows service on the local machine
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.JBCHostControllerService.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.JBCHostControllerService.Main">
+            <summary>
+            Install or initialize the service
+            </summary>
+            <returns>Return 0 is operation is succesfull, 1 otherwise</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.JBCHostControllerService.OnStart(System.String[])">
+            <summary>
+            Start the Windows service
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JBCHostControllerSrv.JBCHostControllerService.OnStop">
+            <summary>
+            Stop the Windows service
+            </summary>
+        </member>
+        <member name="T:JBCHostControllerSrv.CSystemFilesManager">
+            <summary>
+            Manage files used by the application downloading them of JBC's server or specifying a user folder
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CSystemFilesManager.#ctor(JBCHostControllerSrv.CLocalData)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="localData">Local data reference</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CSystemFilesManager.Dispose">
+            <summary>
+            Deletes all resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CSystemFilesManager.DownloadFile(System.String)">
+            <summary>
+            Download a file from JBC's server or from a user folder
+            </summary>
+            <param name="fileName">File name to download</param>
+            <returns>Full path of the downloaded file</returns>
+        </member>
+        <member name="T:JBCHostControllerSrv.CUpdatesFirmwareManager">
+             <summary>
+             Parse a file with the station firmware version information
+             </summary>
+             <remarks>
+            
+             ---------------------------------------------------------------------------
+             -------------------------- Versions firmware file -------------------------
+             ---------------------------------------------------------------------------
+             Formato:
+             MODEL: name
+             HW: hardware_version
+             SW: software_version : model_version : protocol_version : file_ftp_location : date [: language]
+             ---------------------------------------------------------------------------
+            
+            
+             MODEL: PSE
+             HW: 0012408C
+             SW: 8886030 : PSE_LED_02 : 02 : 8886030.S19 : 2016/09/15
+            
+             </remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesFirmwareManager.#ctor(JBCHostControllerSrv.CLocalData@)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="localData">Local data reference</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesFirmwareManager.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesFirmwareManager.GetInfoUpdateFirmware(JBCHostControllerSrv.JBCStationControllerService.dc_FirmwareStation)">
+            <summary>
+            Returns the station latest firmware version given a station model and a hardware version
+            </summary>
+            <param name="requestInfoUpdateFirmware">Station model and hardware version information</param>
+            <returns>Station firmware information</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesFirmwareManager.GetFileUpdateFirmware(System.Int32,System.String)">
+            <summary>
+            Gets a part of the update's package
+            </summary>
+            <param name="nSequence">Part number of the update package</param>
+            <param name="urlFirmwareSw">Update update file path</param>
+            <returns>Update package data</returns>
+        </member>
+        <member name="T:JBCHostControllerSrv.CComWebManager">
+            <summary>
+            Manage Web Manager communication
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComWebManager.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComWebManager.GetFileUpdateWebManager(System.Int32,System.String,System.String)">
+            <summary>
+            Gets a part of the update's package
+            </summary>
+            <param name="nSequence">Part number of the update package</param>
+            <param name="urlWebManagerSw">Update package to send</param>
+            <param name="ip">Web Manager IP to send the update</param>
+            <returns>Update package data</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComWebManager.StartUpdate(System.String)">
+            <summary>
+            Start the Web Manager update process in a thread
+            </summary>
+            <param name="ip">Web Manager IP</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComWebManager.RequestStartUpdate(System.Object)">
+            <summary>
+            Start the Web Manager update process
+            </summary>
+            <param name="parameters">Web Manager IP</param>
+        </member>
+        <member name="T:JBCHostControllerSrv.CComUpdaterService">
+            <summary>
+            Manage the update process of a service
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComUpdaterService.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComUpdaterService.Dispose">
+            <summary>
+            Release class resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComUpdaterService.SendUpdateSw(System.String,System.String)">
+            <summary>
+            Install an update on a windows service
+            </summary>
+            <param name="pathSw">Update file path</param>
+            <param name="ip">Widnows service's IP</param>
+            <returns>True if the update operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComUpdaterService.WaitReadyUpdater(System.ServiceModel.EndpointAddress)">
+            <summary>
+            Wait until the windows service is ready to accept updates
+            </summary>
+            <param name="ep">Windows service endpoint</param>
+            <returns>True if the windows service is ready to accept updates</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComUpdaterService.SendFile(System.ServiceModel.EndpointAddress,System.String)">
+            <summary>
+            Send update file to windows service
+            </summary>
+            <param name="endpoint">Windows service's endpoint</param>
+            <param name="pathSw">Update file path</param>
+            <returns>True if the file is sent successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComUpdaterService.SendInitUpdateCommand(System.ServiceModel.EndpointAddress)">
+            <summary>
+            Send updater command to windows service
+            </summary>
+            <param name="ep">Windows service's endpoint</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComUpdaterService.PendingUpdates">
+            <summary>
+            Periodically check the status of update processes and resend the update file if necessary
+            </summary>
+        </member>
+        <member name="T:JBCHostControllerSrv.CComRemoteServer">
+            <summary>
+            This class provides connection to the JBC's FTP server
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComRemoteServer.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComRemoteServer.Dispose">
+            <summary>
+            Deletes all resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComRemoteServer.DownloadFileFromRemoteServer(System.String,System.String)">
+            <summary>
+            Download a file from JBC's server
+            </summary>
+            <param name="fileName">File name to download</param>
+            <param name="downloadFolder">Folder path to download the file</param>
+            <returns>Full path of the downloaded file</returns>
+        </member>
+        <member name="T:JBCHostControllerSrv.CComRemoteManager">
+            <summary>
+            Manage the Remote Manager communication
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComRemoteManager.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CComRemoteManager.GetFileUpdateRemoteManager(System.Int32,System.String)">
+            <summary>
+            Gets a part of the update's package
+            </summary>
+            <param name="nSequence">Part number of the update package</param>
+            <param name="urlRemoteManagerSw">Update package to send</param>
+            <returns>Update package data</returns>
+        </member>
+        <member name="T:JBCHostControllerSrv.CDBScripts">
+            <summary>
+            Created the DB if not exists and update it making use of the SQL scripts
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CDBScripts.#ctor(RoutinesLibrary.Data.DataBase.SQLCompact.SQLCompactConnection)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="DBConnection">Reference to SQL connection</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CDBScripts.CreateDataBase">
+            <summary>
+            Create the DB and execute the SQL scripts depending of the actual software version
+            </summary>
+            <returns>True if the DB is created and the scripts executed</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CDBScripts.UpdateDataBase(System.String)">
+            <summary>
+            Update the DB executing all the SQL scripts from the software version stored in the DB to the application software version
+            </summary>
+            <param name="DBActVersion"></param>
+            <returns>True if all the SQL scripts are executed correctly</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:JBCHostControllerSrv.CUpdaterServicePending">
+            <summary>
+            Stores information of the service that is being updating
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdaterServicePending.#ctor(System.ServiceModel.EndpointAddress,System.String)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="ep">Endpoint's service to update</param>
+            <param name="url">Update package to send to service</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdaterServicePending.DecrementRemainingUpdate">
+            <summary>
+            Decrement attempts to update
+            </summary>
+        </member>
+        <member name="T:JBCHostControllerSrv.CVersionFileParser">
+             <summary>
+             Parse a file with the services version information
+             </summary>
+             <remarks>
+            
+             -------------------------------------------------------
+             -------------------- Versions file --------------------
+             -------------------------------------------------------
+             Formato:
+             version(X.Y.Z.W) : date(yyyy/MM/dd) : url
+             -------------------------------------------------------
+            
+            
+             #stationcontroller
+             3.15.1.5 : 2014/01/01 : 444005.jbc
+             3.15.1.4 : 2015/01/01 : 444004.jbc
+            
+             #remotemanager
+             3.15.1.5 : 2014/01/01 : 333005.jbc
+             3.15.1.4 : 2015/01/01 : 333004.jbc
+            
+             #hostcontroller
+             3.15.1.5 : 2014/01/01 : 222005.jbc
+             3.15.1.4 : 2015/01/01 : 222004.jbc
+            
+             </remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CVersionFileParser.#ctor(JBCHostControllerSrv.CLocalData)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="localData">Local data reference</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CVersionFileParser.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CVersionFileParser.GetInfoLastSwVersion">
+            <summary>
+            Get the last software version from info file
+            </summary>
+            <returns>StationController, RemoteManager, HostController and WebManager update information</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CVersionFileParser.GetStationControllerSwUrl(System.String)">
+            <summary>
+            Get the StationController url given a version
+            </summary>
+            <param name="swVersion">StationController version</param>
+            <returns>StationController sw url</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CVersionFileParser.GetRemoteManagerSwUrl(System.String)">
+            <summary>
+            Get the RemoteManager url given a version
+            </summary>
+            <param name="swVersion">RemoteManager version</param>
+            <returns>RemoteManager sw url</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CVersionFileParser.GetHostControllerSwUrl(System.String)">
+            <summary>
+            Get the HostController url given a version
+            </summary>
+            <param name="swVersion">HostController version</param>
+            <returns>HostController sw url</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CVersionFileParser.GetWebManagerSwUrl(System.String)">
+            <summary>
+            Get the WebManager url given a version
+            </summary>
+            <param name="swVersion">WebManager version</param>
+            <returns>WebManager sw url</returns>
+        </member>
+        <member name="T:JBCHostControllerSrv.CLocalData">
+            <summary>
+            Provide access to the local data
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.#ctor">
+            <summary>
+            Class constructor. Created the DB if not exists or update it
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.Dispose">
+            <summary>
+            Releases resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.IsAvailableRemoteServerDownload">
+            <summary>
+            Get the availability of the connection to the Remote Server
+            </summary>
+            <returns>True if the Host Controller is configure to connect to the Remote Server</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetAvailableRemoteServerDownload(System.Boolean)">
+            <summary>
+            Configure the availability of the connection to the Remote Server
+            </summary>
+            <param name="active">Indicates if the connection to the Remote Server will be active</param>
+            <returns>True if the configuration was succesul</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetUserFilesLocalFolderLocation">
+            <summary>
+            Gets the path for manual updates instalations
+            </summary>
+            <returns>Path for manual updates instalations</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetUserFilesLocalFolderLocation(System.String)">
+            <summary>
+            Sets the path for manual updates instalations
+            </summary>
+            <returns>True if the operation was succeful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetSystemFilesFolderLocation">
+            <summary>
+            Gets the path of the downloaded updates packages
+            </summary>
+            <returns>Path for manual updates instalations</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetPeriodicTimeInfo">
+            <summary>
+            Get the periodic updates information
+            </summary>
+            <returns>Configuration of the periodic updates</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetPeriodicTimeInfo(JBCHostControllerSrv.dc_InfoUpdatePeriodicTime)">
+            <summary>
+            Set the periodic updates information
+            </summary>
+            <param name="infoUpdatePeriodicTime">Periodic updates information</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetCheckPeriodicTimeInfo">
+            <summary>
+            Get the periodic updates check information
+            </summary>
+            <returns>Configuration of the periodic updates check</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetCheckPeriodicTimeInfo(JBCHostControllerSrv.dc_InfoCheckPeriodicTime)">
+            <summary>
+            Set the periodic updates check information
+            </summary>
+            <param name="infoCheckPeriodicTime">Periodic updates check information</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetSpecificTimeInfo">
+            <summary>
+            Get the specific updates information
+            </summary>
+            <returns>Configuration of the specific update</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetSpecificTimeInfo(JBCHostControllerSrv.dc_InfoUpdateSpecificTime)">
+            <summary>
+            Set the specific updates information
+            </summary>
+            <param name="infoUpdateSpecificTime">Specific updates information</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetUpdateSpecificAvailable(System.Boolean)">
+            <summary>
+            Set on/off the specific updates
+            </summary>
+            <param name="available">True if the specific updates in turn on</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetUpdateNotifications">
+            <summary>
+            Get the configuration information update notifications
+            </summary>
+            <returns>Configuration information update notifications</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetUpdateNotifications(JBCHostControllerSrv.dc_UpdateNotifications)">
+            <summary>
+            Set the configuration information update notifications
+            </summary>
+            <param name="updateNotifications">Configuration information update notifications</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetSwInfo">
+            <summary>
+            Get software information installed in the local network
+            </summary>
+            <returns>Software information installed in the local network</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetLastUpdateDate">
+            <summary>
+            Get date of last update
+            </summary>
+            <returns>Date of the last update</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetLastUpdateDate">
+            <summary>
+            Set date of last update
+            </summary>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetStationControllerSwInfo(System.String,System.DateTime,System.String)">
+            <summary>
+            Set the Station Controller software information
+            </summary>
+            <param name="version">Software version</param>
+            <param name="dtDate">Software date release</param>
+            <param name="url">Software path in the local machine</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetStationControllerSwVersion">
+            <summary>
+            Get the Station Controller software version
+            </summary>
+            <returns>Software version</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetStationControllerSwUrl">
+            <summary>
+            Get the Station Controller software path in the local machine
+            </summary>
+            <returns>Software path in the local machine</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetStationControllerSwUrl(System.String)">
+            <summary>
+            Set the Station Controller software path in the local machine
+            </summary>
+            <param name="url">Software path in the local machine</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetHostControllerSwVersion">
+            <summary>
+            Get the Host Controller software version
+            </summary>
+            <returns>Software version</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetHostControllerSwUrl(System.String)">
+            <summary>
+            Set the Host Controller software path in the local machine
+            </summary>
+            <param name="url">Software path in the local machine</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetRemoteManagerSwInfo(System.String,System.DateTime,System.String)">
+            <summary>
+            Set the Remote Manager software information
+            </summary>
+            <param name="version">Software version</param>
+            <param name="dtDate">Software date release</param>
+            <param name="url">Software path in the local machine</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetRemoteManagerSwVersion">
+            <summary>
+            Get the Remote Manager software version
+            </summary>
+            <returns>Software version</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetRemoteManagerSwUrl">
+            <summary>
+            Get the Remote Manager software path in the local machine
+            </summary>
+            <returns>Software path in the local machine</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetRemoteManagerSwUrl(System.String)">
+            <summary>
+            Set the Remote Manager software path in the local machine
+            </summary>
+            <param name="url">Software path in the local machine</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetWebManagerSwInfo(System.String,System.DateTime,System.String)">
+            <summary>
+            Set Web Manager software information
+            </summary>
+            <param name="version">Software version</param>
+            <param name="dtDate">Software date release</param>
+            <param name="url">Software path in the local machine</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetWebManagerSwVersion">
+            <summary>
+            Get Web Manager software version
+            </summary>
+            <returns>Software version</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetWebManagerSwUrl">
+            <summary>
+            Get Web Manager software path in the local machine
+            </summary>
+            <returns>Software path in the local machine</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetWebManagerSwUrl(System.String)">
+            <summary>
+            Set Web Manager software path in the local machine
+            </summary>
+            <param name="url">Software path in the local machine</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.GetWebManagerUri">
+            <summary>
+            Get the Web Manager URI installed
+            </summary>
+            <returns>Web Manager URI installed</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CLocalData.SetWebManagerUri(System.Uri)">
+            <summary>
+            Set the Web Manager URI installed
+            </summary>
+            <param name="webManagerUri">Web Manager URI installed</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="T:JBCHostControllerSrv.CScheduleUpdates">
+            <summary>
+            Manage updates schedule events
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.#ctor(JBCHostControllerSrv.CLocalData)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="localData">Local data reference</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.GetUpdateSpecificTime">
+            <summary>
+            Get the scheduled time to start an update in a concrete date
+            </summary>
+            <returns>Scheduled time</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.SetUpdateSpecificTime(JBCHostControllerSrv.dc_InfoUpdateSpecificTime)">
+            <summary>
+            Set the scheduled time to start a update in a concrete date
+            </summary>
+            <param name="infoUpdateSpecificTime">Scheduled time</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.GetUpdatePeriodicTime">
+            <summary>
+            Get the scheduled time of periodic updates
+            </summary>
+            <returns>Scheduled periodic updates</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.SetScheduleUpdatePeriodic(JBCHostControllerSrv.dc_InfoUpdatePeriodicTime)">
+            <summary>
+            Set the scheduled time of periodic updates
+            </summary>
+            <param name="infoUpdatePeriodicTime">Scheduled time</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.GetCheckPeriodicTime">
+            <summary>
+            Get the information of periodic updates check
+            </summary>
+            <returns>Information of periodic updates check</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.SetCheckPeriodicTime(JBCHostControllerSrv.dc_InfoCheckPeriodicTime)">
+            <summary>
+            Set periodic updates check
+            </summary>
+            <param name="infoCheckPeriodicTime">Periodic updates check configuration</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.TimerEvent_PeriodicUpdate(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Timer event to start a periodic update
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.TimerEvent_SpecificUpdate(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Timer event to start a update in a concrete date
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.TimerEvent_ReScheduleTimers(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Timer event to re-schedule the timers
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>The scheduled time can exceed the maximum timer interval (Int32 ~ 24.8 days)</remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CScheduleUpdates.ReScheduleTimers">
+            <summary>
+            Re-schedule the timers
+            </summary>
+            <remarks>The scheduled time can exceed the maximum timer interval (Int32 ~ 24.8 days)</remarks>
+        </member>
+        <member name="T:JBCHostControllerSrv.CUpdatesManager">
+            <summary>
+            Manage the update operations
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.#ctor(JBCHostControllerSrv.CLocalData)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="localData">Local data reference</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.GetInfoNewUpdate">
+            <summary>
+            Checks if exists an update form JBC's server
+            </summary>
+            <returns>Update information</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.UpdateSystem">
+            <summary>
+            Updates the system with the latest software version from the JBC's server
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.DownloadSwUpdate">
+            <summary>
+            Check if the latest update software version is downloaded and downloaded it otherwise
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.CheckUpdateStationController(System.String,System.String)">
+            <summary>
+            Check the Station Controller software version and update it if necessary
+            </summary>
+            <param name="swVersion">Station Controller software version</param>
+            <param name="ipStationController">Station Controller IP</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.GetUpdateRemoteManager(System.Int32)">
+            <summary>
+            Gets a part of the update's package for a Remote Manager
+            </summary>
+            <param name="nSequence">Part number of the update package</param>
+            <returns>Update package to send</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.GetUpdateWebManager(System.Int32,System.String)">
+            <summary>
+            Gets a portion of the update to be sent to the WebManager
+            </summary>
+            <param name="nSequence">Sequence number</param>
+            <param name="ip">Address web manager</param>
+            <returns>Update data</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.SendStartUpdateWebManager">
+            <summary>
+            Start the Web Manager update process
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.GetUpdateSpecificTime">
+            <summary>
+            Get the scheduled time to start an update in a concrete date
+            </summary>
+            <returns>Scheduled time</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.SetUpdateSpecificTime(JBCHostControllerSrv.dc_InfoUpdateSpecificTime)">
+            <summary>
+            Set the scheduled time to start a update in a concrete date
+            </summary>
+            <param name="infoUpdateSpecificTime">Scheduled time</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.GetUpdatePeriodicTime">
+            <summary>
+            Get the scheduled time of periodic updates
+            </summary>
+            <returns>Scheduled periodic updates</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.SetUpdatePeriodicTime(JBCHostControllerSrv.dc_InfoUpdatePeriodicTime)">
+            <summary>
+            Set the scheduled time of periodic updates
+            </summary>
+            <param name="infoUpdatePeriodicTime">Scheduled time</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.GetCheckPeriodicTime">
+            <summary>
+            Get the information of periodic updates check
+            </summary>
+            <returns>Information of periodic updates check</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.SetCheckPeriodicTime(JBCHostControllerSrv.dc_InfoCheckPeriodicTime)">
+            <summary>
+            Set periodic updates check
+            </summary>
+            <param name="infoCheckPeriodicTime">Periodic updates check configuration</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.GetUpdateNotifications">
+            <summary>
+            Get the configuration information update notifications
+            </summary>
+            <returns>Configuration information update notifications</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CUpdatesManager.SetUpdateNotifications(JBCHostControllerSrv.dc_UpdateNotifications)">
+            <summary>
+            Set the configuration information update notifications
+            </summary>
+            <param name="updateNotifications">Configuration information update notifications</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.CheckUpdate">
+            <summary>
+            Check if an update is available on the remote server
+            </summary>
+            <returns>Update information</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.UpdateSystem">
+            <summary>
+            Update the system with the update available on the remote server
+            </summary>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetUpdateSpecificTime">
+            <summary>
+            Returns information about the specific scheduled update
+            </summary>
+            <returns>Specific scheduled update configuration</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.SetUpdateSpecificTime(JBCHostControllerSrv.dc_InfoUpdateSpecificTime)">
+            <summary>
+            Schedule a specific scheduled update
+            </summary>
+            <param name="infoUpdateSpecificTime">Specific scheduled update configuration</param>
+            <returns>True if the update schedule was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetUpdatePeriodicTime">
+            <summary>
+            Returns information about the periodic schedule update
+            </summary>
+            <returns>Periodic schedule update configuration</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.SetUpdatePeriodicTime(JBCHostControllerSrv.dc_InfoUpdatePeriodicTime)">
+            <summary>
+            Schedule a periodic schedule update
+            </summary>
+            <param name="infoUpdatePeriodicTime">Periodic scheduled update configuration</param>
+            <returns>True if the update schedule was succesful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetCheckPeriodicTime">
+            <summary>
+            Returns the data of the periodic update verification
+            </summary>
+            <returns>Periodic update verification configuration</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.SetCheckPeriodicTime(JBCHostControllerSrv.dc_InfoCheckPeriodicTime)">
+            <summary>
+            Schedule a periodic update verification
+            </summary>
+            <param name="infoCheckPeriodicTime">Periodic update verification configuration</param>
+            <returns>True if the update verification schedule was succesful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetUpdateNotifications">
+            <summary>
+            Returns ths data of the update notifications
+            </summary>
+            <returns>Configuration information update notifications</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.SetUpdateNotifications(JBCHostControllerSrv.dc_UpdateNotifications)">
+            <summary>
+            Set the information update notifications
+            </summary>
+            <param name="updateNotifications">Information update notifications</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.CheckUpdateConnectedStationController(System.String)">
+            <summary>
+            Check if a Station Controller needs updating. And update it if necessary
+            </summary>
+            <param name="swVersion">Station Controller software version</param>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.CheckUpdateConnectedRemoteManager(System.String)">
+            <summary>
+            Check if a Remote Manager needs updating
+            </summary>
+            <param name="swVersion">Remote Manager software version</param>
+            <returns>True if needs updating</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetFileUpdateRemoteManager(System.Int32)">
+            <summary>
+            Return an update portion to Remote Manager
+            </summary>
+            <param name="nSequence">Sequence number</param>
+            <returns>Update portion data</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.CheckUpdateConnectedWebManager(System.String)">
+            <summary>
+            Check if a Web Manager needs updating
+            </summary>
+            <param name="swVersion">Web Manager software version</param>
+            <returns>True if needs updating</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetFileUpdateWebManager(System.Int32)">
+            <summary>
+            Return an update portion to Web Manager
+            </summary>
+            <param name="nSequence">Sequence number</param>
+            <returns>Update portion data</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetInfoUpdateFirmware(JBCHostControllerSrv.JBCStationControllerService.dc_FirmwareStation)">
+            <summary>
+            Returns information of all available software version for a station model
+            </summary>
+            <param name="infoUpdateFirmware"></param>
+            <returns>Software versions for a station model</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetFileUpdateFirmware(System.Int32,System.String)">
+            <summary>
+            Return an update portion of station software
+            </summary>
+            <param name="nSequence">Sequence number</param>
+            <param name="urlFirmwareSw">Firmware file</param>
+            <returns>Update portion data</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetStationControllerSwVersion">
+            <summary>
+            Return the local Station Controller version
+            </summary>
+            <returns>Station Controller version</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetHostControllerSwVersion">
+            <summary>
+            Return the local Host Controller version
+            </summary>
+            <returns>Host Controller version</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.GetWebManagerSwVersion">
+            <summary>
+            Return the local Web Manager version
+            </summary>
+            <returns>Web Manager version</returns>
+        </member>
+        <member name="M:JBCHostControllerSrv.CImplIJBCHostControllerService.SetWebManagerUri(System.Uri)">
+            <summary>
+            Set Web Manager uri
+            </summary>
+            <param name="webManagerUri">Web Manager uri</param>
+        </member>
+        <member name="T:JBCHostControllerSrv.My.Resources.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:JBCHostControllerSrv.My.Resources.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:JBCHostControllerSrv.My.Resources.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+    </members>
+</doc>

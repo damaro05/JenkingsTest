@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JBCUpdaterSrv</name>
+    </assembly>
+    <members>
+        <member name="T:RoutinesJBC.Cerror">
+            <summary>
+            The general error object used in this library. It is used for storing and showing errors.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cErrorCodes">
+            <summary>
+            The list of all posible user error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cCommErrorCodes">
+            <summary>
+            The list of station/PC protocol error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String)">
+            <summary>
+            Creates an error object
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String,System.Byte[])">
+            <summary>
+            Creates an error object with communication error code
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetMsg">
+            <summary>
+            Gets the error message.
+            </summary>
+            <returns>The error message</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCommErrorCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(System.Exception,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de una Exception no controlada
+            </summary>
+            <param name="_ex">Exception capturada</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(JBC_Connect.dc_EnumConstJBC.dc_FaultError,System.String,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de un error controlado
+            </summary>
+            <param name="_code">CÃ³digo del error</param>
+            <param name="_message">Texto del error</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.IO.Dir.CopyDirectory(System.String,System.String)">
+            <summary>
+            Copy files from the source folder to destination folder overwriting the content
+            </summary>
+            <param name="source">Source folder</param>
+            <param name="destination">Destination folder</param>
+            <remarks>
+            This method check if is posible to override a file and retry it
+            </remarks>
+        </member>
+        <member name="T:RoutinesLibrary.Services.WindowsServiceManager">
+            <summary>
+            Manages the services installed on the local machine
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.InstallService(System.String,System.String,System.String)">
+            <summary>
+            Install a service
+            </summary>
+            <param name="Volume">Hard disk volume where is the service file</param>
+            <param name="path">Service file path</param>
+            <param name="File">Service file name</param>
+            <returns>True if the installation was succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.UninstallService(System.String,System.String,System.String)">
+            <summary>
+            Uninstall a service
+            </summary>
+            <param name="Volume">Hard disk volume where is the service file</param>
+            <param name="path">Service file path</param>
+            <param name="File">Service file name</param>
+            <returns>True if the uninstallation was succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.TimeoutInstall_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Installation time expiration
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.TimeoutUninstall_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Uninstall time expiration
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.StartService(System.String,System.String)">
+            <summary>
+            Start a service
+            </summary>
+            <param name="serviceName">Service name</param>
+            <param name="equipo">Machine name where the service is installed</param>
+            <returns>True if the service was started succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.StartService(System.ServiceProcess.ServiceController,System.String)">
+            <summary>
+            Start a service
+            </summary>
+            <param name="service">Service controller</param>
+            <param name="equipo">Machine name where the service is installed</param>
+            <returns>True if the service was started succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.StopService(System.String,System.String)">
+            <summary>
+            Stop a service
+            </summary>
+            <param name="serviceName">Service name</param>
+            <param name="equipo">Machine name where the service is installed</param>
+            <returns>True if the service was stopped succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.StopService(System.ServiceProcess.ServiceController)">
+            <summary>
+            Stop a service
+            </summary>
+            <param name="service">Service controller</param>
+            <returns>True if the service was stopped succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.CvtServiceName2Service(System.String,System.String)">
+            <summary>
+            Finds a service by name
+            </summary>
+            <param name="service">Service name</param>
+            <param name="equipo">Machine name where the service is installed</param>
+            <returns>Service controller</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.ServiceExists(System.String,System.String)">
+            <summary>
+            Check if a service is installed
+            </summary>
+            <param name="service">Service name</param>
+            <param name="equipo">Machine name where the service is installed</param>
+            <returns>True if the service exists</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.StatusCheck(System.String,System.ServiceProcess.ServiceControllerStatus,System.String)">
+            <summary>
+            Wait to status of a service
+            </summary>
+            <param name="serviceName">Service name</param>
+            <param name="nextServStatus">Desired service status</param>
+            <param name="equipo">Machine name where the service is installed</param>
+            <returns>True if the service status is the desired</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Services.WindowsServiceManager.StatusCheck(System.ServiceProcess.ServiceController,System.ServiceProcess.ServiceControllerStatus)">
+            <summary>
+            Wait to status of a service
+            </summary>
+            <param name="service">Service controller</param>
+            <param name="nextServStatus">Desired service status</param>
+            <returns>True if the service status is the desired</returns>
+        </member>
+        <member name="T:JBCUpdaterSrv.JBCUpdaterService">
+            <summary>
+            This class is responsible for receiving the update packages and reinstall a windows service
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.ReceiveFile(System.Int32,System.Byte[])">
+            <summary>
+            Receives a packet of bytes and writes it into the update file
+            </summary>
+            <param name="nSequence">Packet sequence number</param>
+            <param name="bytes">Data bytes</param>
+            <returns>Number of stored sequence, -1 if an error occurred</returns>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.InitUpdate">
+            <summary>
+            Run a system update
+            </summary>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.GetUpdateInfo(System.String@,System.String@,System.String@)">
+            <summary>
+            Obtains information of the update file
+            </summary>
+            <param name="sServiceName">Service name</param>
+            <param name="sAppPath">Application folder path</param>
+            <param name="sAppFileName">Name of the application executable</param>
+            <returns>True if there is a folder of the application to update</returns>
+            <remarks>
+            Example info file:
+                JBCStationControllerService
+                JBC Station Controller Service
+                JBCStationControllerSrv.exe
+            </remarks>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.UncompressUpdateFile">
+            <summary>
+            Decompress the update file
+            </summary>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.StateUpdate">
+            <summary>
+            Reports the status of the update
+            </summary>
+            <returns>Update status</returns>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.SetUpdateState(JBC_Connect.dc_EnumConstJBC.dc_UpdateState)">
+            <summary>
+            Save the update status
+            </summary>
+            <param name="state">New update status</param>
+        </member>
+        <member name="M:JBCUpdaterSrv.JBCUpdaterService.GetUpdateState">
+            <summary>
+            Gets the status of the update
+            </summary>
+            <returns>Status Update</returns>
+        </member>
+        <member name="T:JBCUpdaterSrv.My.Resources.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:JBCUpdaterSrv.My.Resources.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:JBCUpdaterSrv.My.Resources.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+    </members>
+</doc>

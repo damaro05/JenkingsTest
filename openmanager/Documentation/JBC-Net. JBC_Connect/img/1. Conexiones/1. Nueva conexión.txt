@@ -1,0 +1,8 @@
+[JBC_API]<-(1) new_connection(serial_port | address)[CSearchManager{bg:lightcyan}]
+
+[JBC_API|List Station (ID ~ Station)|(2) create_station();(3) create_communication()]
+
+[CStationAvailableCom|List (ID ~ comm_channel);List (ID ~ address)]
+[JBC_API{bg:bisque}](4) add_communication(ID | address | comm_channel)->[CStationAvailableCom{bg:bisque}]
+
+[JBC_API]-(5) new_station(ID | comm_channel)>[CStationWrapper{bg:lavender}]

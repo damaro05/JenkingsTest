@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://JBCStationControllerSrv" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CImplIJBCStationControllerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://JBCStationControllerSrv" location="http://cad-51:8000/JBCStationControllerSrv/service?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IJBCStationControllerService" type="i0:IJBCStationControllerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContinuousModeDataCount">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeDataCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StartContinuousMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StartContinuousMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StopContinuousMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StopContinuousMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextData">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextData_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextData_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextDataChunk">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousModeNextDataChunk_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousModeNextDataChunk_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetContinuousMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetContinuousMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEthernetConfiguration">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetEthernetConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRobotConfiguration">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetRobotConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetEthernetConfiguration">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetEthernetConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetRobotConfiguration">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetRobotConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPeripheralInfo">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllPeripheralInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPeripheralInfo">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPeripheralInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProfiles_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetAllProfiles_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedProfile_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetSelectedProfile_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetProfile_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetProfile_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteProfile_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SyncProfiles_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SyncProfiles_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetTransaction">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="QueryEndedTransaction">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/QueryEndedTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDefaultStationParams">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetDefaultStationParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetStation">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/ResetStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationListUpdating">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationListUpdating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStations">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/UpdateStations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LockStation">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/LockStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivatePortStation">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/DeactivatePortStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ShowMessage">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/ShowMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StartTraceability">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StartTraceability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StopTraceability">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StopTraceability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NewUserSession">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/NewUserSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseUserSession">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/CloseUserSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticatedUser">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetAuthenticatedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDate">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkOptionDetails">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/AddWorkOptionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkOptionDetails">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteWorkOptionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ShowWorkOptionDetails">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/ShowWorkOptionDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ShowHelpResource">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/ShowHelpResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadConfigurationPortStation">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/LoadConfigurationPortStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTraceFolder">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetTraceFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetTraceSpeed">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetTraceSpeed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StartTrace">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StartTrace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StartTracePort">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StartTracePort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StopTrace">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StopTrace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StopTracePort">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StopTracePort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetListRecordedDataFiles">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetListRecordedDataFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecordedData">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetRecordedData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecordedDataFile">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/DeleteRecordedDataFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationControllerInfo">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationControllerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StationControllerSearch">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StationControllerIsSearching">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/StationControllerIsSearching" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationCount">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationList">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationInfo">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationStatus">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationStatus_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationStatus_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetControlMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetControlMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetControlMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetControlMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetRemoteMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetRemoteMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="KeepControlMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/KeepControlMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortStatus">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortStatus_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortStatus_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortStatusTool">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusTool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortStatusTool_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortStatusTool_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationSettings">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationSettings_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationSettings_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationPIN">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetStationPIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationName">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationPIN">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationTempUnit">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationTempUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMinTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMaxTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationN2Mode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationN2Mode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationHelpText">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationHelpText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationBeep">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationBeep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationPowerLimit">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPowerLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMinExtTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinExtTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMaxExtTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxExtTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMinFlow">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMinFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationMaxFlow">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationMaxFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationPINEnabled">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationPINEnabled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetStationLocked">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetStationLocked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortToolSettings">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortToolSettings_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortToolSettings_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedTempStep">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedTempStep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedFlow">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedExtTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedExtTempStep">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedExtTempStep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolFixTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFixTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolLevels">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolLevels_HA">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolLevels_HA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedLevelEnabled">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevelEnabled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSelectedLevel">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSelectedLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolTempLevelEnabled">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevelEnabled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolTempLevel">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTempLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolExtTempLevel">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExtTempLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolFlowLevel">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolFlowLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolProfileMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolProfileMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSleepDelay">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSleepDelayEnabled">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepDelayEnabled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolHibernationDelay">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolHibernationDelayEnabled">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolHibernationDelayEnabled" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolSleepTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolSleepTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolAdjustTemp">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolAdjustTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolCartridge">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolCartridge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolTimeToStop">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolTimeToStop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolExternalTCMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolExternalTCMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPortToolStartMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/SetPortToolStartMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortCounters">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetPortCounters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPortPartialCounters">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/ResetPortPartialCounters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContinuousMode">
+      <soap:operation soapAction="http://JBCStationControllerSrv/IJBCStationControllerService/GetContinuousMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="faultErrorFault">
+        <soap:fault use="literal" name="faultErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CImplIJBCStationControllerService">
+    <wsdl:port name="BasicHttpBinding_IJBCStationControllerService" binding="tns:BasicHttpBinding_IJBCStationControllerService">
+      <soap:address location="http://cad-51:8000/JBCStationControllerSrv/service" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

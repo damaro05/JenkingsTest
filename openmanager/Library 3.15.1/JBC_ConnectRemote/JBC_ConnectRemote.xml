@@ -1,0 +1,3453 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JBC_ConnectRemote</name>
+    </assembly>
+    <members>
+        <member name="T:RoutinesJBC.Cerror">
+            <summary>
+            The general error object used in this library. It is used for storing and showing errors.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cErrorCodes">
+            <summary>
+            The list of all posible user error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.Cerror.cCommErrorCodes">
+            <summary>
+            The list of station/PC protocol error codes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String)">
+            <summary>
+            Creates an error object
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.#ctor(RoutinesJBC.Cerror.cErrorCodes,System.String,System.Byte[])">
+            <summary>
+            Creates an error object with communication error code
+            </summary>
+            <param name="code">The code for the error</param>
+            <param name="msg">The message for the error</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetMsg">
+            <summary>
+            Gets the error message.
+            </summary>
+            <returns>The error message</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.Cerror.GetCommErrorCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <returns>The error code</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(System.Exception,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de una Exception no controlada
+            </summary>
+            <param name="_ex">Exception capturada</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.ExceptionsRoutines.getFaultEx(JBC_Connect.dc_EnumConstJBC.dc_FaultError,System.String,System.String)">
+            <summary>
+            Genera el objeto FaultException(Of faultError) a partir de un error controlado
+            </summary>
+            <param name="_code">CÃ³digo del error</param>
+            <param name="_message">Texto del error</param>
+            <param name="_operation">Nombre de la funciÃ³n en la cual se producjo el error</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.Load(System.String,System.String@)">
+            <summary>
+            Load a Hex or S19 program file and convert it to S19 type
+            </summary>
+            <param name="sFilename">Path to program file</param>
+            <param name="sError">Error description if exists</param>
+            <returns>True if the operation was succesfull</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.Save(System.String,System.String@)">
+            <summary>
+            Save the S19 program into a file
+            </summary>
+            <param name="sFilename">Path to program file</param>
+            <param name="sError">Error description if exists</param>
+            <returns>True if the operation was succesfull</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.GetAllData">
+            <summary>
+            Get the S19 program
+            </summary>
+            <returns>S19 program</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.initUpdaterData">
+            <summary>
+            Prepare to a update process
+            </summary>
+            <returns>Data record count</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.dataRecordCount">
+            <summary>
+            Get the data type record count
+            </summary>
+            <returns>Data type record count</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.recordCount">
+            <summary>
+            Get the total record count
+            </summary>
+            <returns>Total record count</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.getNextUpdaterData(RoutinesJBC.CMicroPrograms02.s19rec@)">
+            <summary>
+            Get the next record data
+            </summary>
+            <param name="rec">Record data</param>
+            <returns>True if the operation was succesfull</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.checkDataType(System.Char)">
+            <summary>
+            Check if a type is a data type
+            </summary>
+            <param name="type">Type to be checked</param>
+            <returns>True if is a data type</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.getS19RecType(System.Int32)">
+            <summary>
+            Get record type at a specific line
+            </summary>
+            <param name="idx">Record line index</param>
+            <returns>Record type</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.getS19Rec(System.Int32)">
+            <summary>
+            Get record at a specific line
+            </summary>
+            <param name="idx">Record line index</param>
+            <returns>Record</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.convHexToByteArray(System.String)">
+            <summary>
+            Convert hexadecimal string to a byte array
+            </summary>
+            <param name="sHexPairs">Hexadecimal string</param>
+            <returns>List of byte</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.convBytesToHexa(System.Byte[])">
+            <summary>
+            Convert byte array to hexadecimal string
+            </summary>
+            <param name="_array">List of byte</param>
+            <returns>Hexadecimal string</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.convBytesToHexaEdited(System.Byte[])">
+             <summary>
+            
+             </summary>
+             <param name="_array"></param>
+             <returns></returns>
+             <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.SortS19(System.String[])">
+            <summary>
+            Sort a S19 program
+            </summary>
+            <param name="sSource">S19 program to be sort</param>
+            <returns>Sorted program</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.intToBytesAddress(System.Int32,System.Boolean)">
+            <summary>
+            Convert an integer to byte array
+            </summary>
+            <param name="address">Integer to convert</param>
+            <param name="dataInBigEndian">True if the final byte array must be in Big Endian</param>
+            <returns>Converted integer</returns>
+        </member>
+        <member name="M:RoutinesJBC.CMicroPrograms02.getAddressBytesOrder(System.Byte[],System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="address"></param>
+             <param name="bytesAreBigEndian"></param>
+             <returns></returns>
+             <remarks></remarks>
+        </member>
+        <member name="T:RoutinesJBC.clsStationUID">
+            <summary>
+            Clase para generar identificadores únicos para las estaciones
+            Existen 4 métodos:
+            1) Basado en la MAC de la tarjeta del Station Controller (12 caracteres) más un número adicional de 8 caracteres, con un total de 20 caracteres ASCII (32-127),
+            que puede pasarse en la generación o si se pasa cero, se genera un número aleatorio formado por
+            month (1byte), day (1byte), hour (1byte), minutes (1byte), seconds (1byte) and miliseconds (string 3), todos en el rango ascii de 32-127
+            2) Basado en un GUID con formato xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx y formato para la estación de 16 bytes en rango 0-255
+            (soportado a partir de la estación PS)
+            3) Basado en un GUID con formato xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx y mismo formato para la estación sin los guiones, de 32 bytes ASCII (en rango 32-127)
+            4) Personalizado de 20 bytes, donde se añaden 2 bytes en la primera posición que indica que es personalizado
+            quedando 18 para el código personalizado
+            En el caso de GUID (16 o 32 bytes)
+            Se mantiene con formato string: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx - total 8+4+4+4+12+4hyphen = 36 characters
+            En la estación se graban bytes: 16 Bytes in 00-FF range o 32 bytes en rango 32-127
+            En el caso de MAC (20 bytes)
+            Se mantiene con formato string: 0080C78F6C96+XXXXXXXX (XXXXXXXX is sequence number) - total 12+8=20
+            En la estación se graban bytes: 0080C78F6C96+XXXXXXXX - total: 12+8=20 (Bytes in 32-127 ascii range)
+            Resumen:
+            16 bytes es GUID en rango 0-255
+            32 bytes es GUID en rango 32-127
+            20 bytes puede ser MAC+secuencia en rango 32-127 o personalizado si comienza con el prefijo "##"
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.#ctor">
+            <summary>
+            Creates object with an empty station UID
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.#ctor(RoutinesJBC.clsStationUID.enumType,System.Int32)">
+            <summary>
+            Creates object and builds a new MAC (NIC MAC Address) or GUID station UID
+            </summary>
+            <param name="type">MAC or GUID type</param>
+            <param name="iSequence">Optional, for MAC type. If zero, sequence will be based on
+            month (1byte), day (1byte), hour (1byte), minutes (1byte), seconds (1byte) and miliseconds (string)</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates object and builds a new custom station UID
+            </summary>
+            <param name="sCustomUID">Custom UID data</param>
+            <param name="iSequence">Optional, it will be appended to UID if greater than zero</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.#ctor(System.String)">
+            <summary>
+            Creates object with already created UID from memory
+            </summary>
+            <param name="sUid">UID from memory</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.#ctor(System.Byte[])">
+            <summary>
+            Creates object with UID data from station bytes
+            </summary>
+            <param name="aUid">UID from station as bytes</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.NewGUIDB">
+            <summary>
+            Creates a UID based on a GUID
+            Memory format: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx (8+4+4+4+12+4hyphen = 36 characters)
+            Station format: GUID converted to 16 bytes on range 0-255
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.NewGUIDS">
+            <summary>
+            Creates a UID based on a GUID
+            Memory format: xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx (8+4+4+4+12+4hyphen = 32 characters)
+            Station format: 32 ASCII bytes on range 32-127 (36 memory format without hyphens)
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.NewMAC(System.Int32)">
+            <summary>
+            Creates a UID based on NIC MAC address (format: 0080C78F6C96) plus a sequence number of length 7
+            Format with sequence number: prefix+0080C78F6C96+0000000 (0000000 is sequence number) - total: 1+12+7=20
+            If sequence number = 0, then sequence number is built based on month+day (1byte), hour (1byte), minutes (1byte), seconds (1byte) and miliseconds (string)
+            Format with generated number: prefix+0080C78F6C96+BBBB000 - total: 1+12+7=20 (where B is Byte in 32-127 range)
+             byte of month+day(12-1+31-1=41) + 32 = ascii range 32-73
+             byte of hour(23) + 32 = ascii range 32-55
+             byte of min(59) + 32 = ascii range 32-91
+             byte of sec(59) + 32 = ascii range 32-91
+             string of milisec(999) = 000-999
+            </summary>
+            <param name="iSequence"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.NewCustomUID(System.String,System.Int32)">
+            <summary>
+            Custom UID
+            </summary>
+            <param name="sUid"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.toStationBytes">
+            <summary>
+            Used to write the UID to the station
+            For GUIDB returns GUID.ToByteArray in format 16bytes values: 00-FF
+            For GUIDS returns GUID.ToString in 32 bytes, without hyphens, values: 32-127
+            For MAC returns bytes of MAC+Seq, as format 0080C78F6C96+XXXXXXXX (total 20 bytes) values: 32-127 ASCII
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.fromStationBytes(System.Byte[])">
+            <summary>
+            Used to build the UID based on bytes read from station
+            </summary>
+            <param name="stationUID"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesJBC.clsStationUID.GetMacAddress(System.String@)">
+            <summary>
+            Finds the MAC address of the NIC with maximum speed.
+            </summary>
+            <return>The MAC address.</return>
+        </member>
+        <member name="T:RoutinesLibrary.Data.DataType.IntegerUtils">
+             <summary>
+            
+             </summary>
+             <remarks>
+             More information for rounding procedures: https://support.microsoft.com/en-us/kb/196652
+             </remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Data.DataType.IntegerUtils.BytesToInt(System.Byte[],System.Boolean)">
+            <summary>
+            Convert a byte array to integer
+            </summary>
+            <param name="address">Byte array to convert</param>
+            <param name="dataInBigEndian">True if the byte array is in Big Endian</param>
+            <returns>Converted byte array</returns>
+        </member>
+        <member name="M:RoutinesLibrary.IO.Dir.CopyDirectory(System.String,System.String)">
+            <summary>
+            Copy files from the source folder to destination folder overwriting the content
+            </summary>
+            <param name="source">Source folder</param>
+            <param name="destination">Destination folder</param>
+            <remarks>
+            This method check if is posible to override a file and retry it
+            </remarks>
+        </member>
+        <member name="M:RoutinesLibrary.IO.SerialPort.#ctor(System.IO.Ports.SerialPort)">
+            <summary>
+            Class constructor. Start listen on port
+            </summary>
+            <param name="_serialPort"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.IO.SerialPort.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="releaseSerialPort">Indicates if the serial port will be close</param>
+        </member>
+        <member name="T:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient">
+            <summary>
+            Provides a mechanism for searching by UDP. This class performs searches periodically
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.#ctor(System.String,System.String,System.UInt16,System.Int32)">
+            <summary>
+            Class constructor. Starts searches automatically
+            </summary>
+            <param name="messageRequest">Request message</param>
+            <param name="messageResponse">Response message</param>
+            <param name="port">Port to perform searches</param>
+            <param name="discoverInterval">Time interval to perform searches</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.StartSearch">
+            <summary>
+            Starts searches process
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.StopSearch">
+            <summary>
+            Stop searches process
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.GetDiscoveredServices">
+            <summary>
+            Get the list of discovered services
+            </summary>
+            <returns>Discovered services</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.Process_Discover">
+            <summary>
+            Process to perform searches periodically
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPClient.SockUDP_DataReceived(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Listen response messages and save the EndPoint
+            </summary>
+            <param name="Data"></param>
+            <param name="IP"></param>
+            <remarks></remarks>
+        </member>
+        <member name="T:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost">
+            <summary>
+            Provides a mechanism for searching by UDP. This class waits to receive requests to respond to searches
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.#ctor(System.String,System.String,System.UInt16,System.String)">
+            <summary>
+            Class constructor. Wait to receive requests to respond to searches
+            </summary>
+            <param name="messageRequest">Request message</param>
+            <param name="messageResponse">Response message</param>
+            <param name="port">Port to wait searches</param>
+            <param name="localIPAdress">Local IP address to response</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.Dispose">
+            <summary>
+            Release resources
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.DiscoveryUDP.DiscoveryUDPHost.SockUDP_DataReceived(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Listen incomming messages and responses to it
+            </summary>
+            <param name="Data">Request message</param>
+            <param name="IP">Remote request IP address</param>
+        </member>
+        <member name="T:RoutinesLibrary.Net.InformationNetworkInterface">
+            <summary>
+            This class provides informartion for network interface
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.GetNetworkInterfaceAddress">
+            <summary>
+            Get all the network interface addresses
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.GetPortAvailable(System.UInt16,System.UInt16)">
+            <summary>
+            Get a port available
+            </summary>
+            <param name="minPort">Minimum port</param>
+            <param name="maxPort">Maximum port</param>
+            <returns>Port available</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.IsValidIPv4(System.Net.IPAddress)">
+            <summary>
+            Check if a IP address is v4
+            </summary>
+            <param name="addr">IP address</param>
+            <returns>True if the IP address is v4</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.InformationNetworkInterface.ConvertIP2Bytes(System.Net.IPAddress)">
+            <summary>
+            Convert IP address to byte array
+            </summary>
+            <param name="AddressConver"></param>
+            <returns>Byte array IP address</returns>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.FTP.FTP">
+            <summary>
+            This class provides FTP communication
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.FTP.FTP.DownloadFileFTP(System.String,System.String,System.String,System.String)">
+            <summary>
+            Download file
+            </summary>
+            <param name="sFTPFileUrl">File to download</param>
+            <param name="sFTPUser">FTP user access credentials</param>
+            <param name="sFTPPwd">FTP password access credentials</param>
+            <param name="sLocalFileUrl">Path to store the downloaded file</param>
+            <returns>True if the download operation was succesful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.FTP.FTP.UploadFileFTP(System.String,System.String,System.String,System.String)">
+            <summary>
+            Updaload file
+            </summary>
+            <param name="sFTPFileUrl">File name to store in the remote server</param>
+            <param name="sFTPUser">FTP user access credentials</param>
+            <param name="sFTPPwd">FTP password access credentials</param>
+            <param name="sLocalFileUrl">File path to upload</param>
+            <returns>True if the upload operation was succesful</returns>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.TCP.TCP">
+            <summary>
+            Provides TCP communication
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.TCP.TCP.ClosedConnectionTCPEventHandler">
+            <summary>
+            Communicates closed connections
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.TCP.TCP.DataReceivedEventHandler">
+            <summary>
+            Raises an event with the data received
+            </summary>
+            <param name="Data">Data received</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.#ctor(System.Net.IPEndPoint)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="_hostEndPoint">Remote EndPoint to connect</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Dispose">
+            <summary>
+            Stop communications and release resources
+            </summary>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.HostEndPoint">
+            <summary>
+            Get the remote EndPoint, both IP and port
+            </summary>
+            <value>Remote EndPoint</value>
+            <returns>Remote EndPoint</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.HostIP">
+            <summary>
+            Get the remote IP
+            </summary>
+            <value>Remote IP</value>
+            <returns>Remote IP</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.HostPort">
+            <summary>
+            Get the remote port
+            </summary>
+            <value>Remote port</value>
+            <returns>Remote port</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.TCP.TCP.BufferSize">
+            <summary>
+            Get or set the buffer size to receive messages
+            </summary>
+            <value>Buffer size</value>
+            <returns>Buffer size</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Connect(System.String@)">
+            <summary>
+            Connect to remote EndPoint
+            </summary>
+            <param name="sError">Error messages if the operation was failed</param>
+            <returns>True if the operation was successful</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.SendData(System.String)">
+            <summary>
+            Send data to remote computer
+            </summary>
+            <param name="Data">Message data</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.SendData(System.Byte[])">
+            <summary>
+            Send data to remote computer
+            </summary>
+            <param name="Data">Message data</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Process_DataReceive">
+            <summary>
+            Listen incomming messages
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.TCP.TCP.Close">
+            <summary>
+            Close TCP connection
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.UDP.UDP">
+            <summary>
+            Provides UDP communication
+            </summary>
+        </member>
+        <member name="T:RoutinesLibrary.Net.Protocols.UDP.UDP.DataReceivedEventHandler">
+            <summary>
+            Raises an event with the data received
+            </summary>
+            <param name="Data">Data received</param>
+            <param name="RemoteEndPoint">Ip address of the remote computer that sent the message</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.#ctor(System.UInt16,System.Net.IPEndPoint)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="_Port">UDP port</param>
+            <param name="_remoteEndPoint">Remote EndPoint to connect</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Dispose">
+            <summary>
+            Stop communications and release resources
+            </summary>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.UDP.UDP.Port">
+            <summary>
+            Get or set the UDP port
+            </summary>
+            <value>UDP port</value>
+            <returns>UDP port</returns>
+        </member>
+        <member name="P:RoutinesLibrary.Net.Protocols.UDP.UDP.RemoteEndPoint">
+            <summary>
+            Get or set the remote EndPoint to send messages
+            </summary>
+            <value>Remote EndPoint</value>
+            <returns>Remote EndPoint</returns>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Activate">
+            <summary>
+            Activate communication
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Deactivate">
+            <summary>
+            Deactivated communications
+            </summary>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Send(System.Byte[])">
+            <summary>
+            Send message to remote computer
+            </summary>
+            <param name="data">Message to send</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.SendBroadcast(System.Byte[],System.UInt16)">
+            <summary>
+            Send message to broadcast
+            </summary>
+            <param name="data">Message to send</param>
+            <param name="portSend">Destination port</param>
+        </member>
+        <member name="M:RoutinesLibrary.Net.Protocols.UDP.UDP.Process_DataReceive">
+            <summary>
+            Listen incomming messages
+            </summary>
+        </member>
+        <member name="F:DataJBC.Constants.CONTINUOUS_MODE_QUEUE_MAX_LENGTH">
+            <summary>
+            The maximum length for the continuous mode data queue
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModeData_HA">
+            <summary>
+            Defines the data returned by the continuous mode transmisions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModePort_HA">
+            <summary>
+            Defines the recieved data of the continuous mode for a port.
+            NOTE: Power and flow units are per thousand.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModeData_SOLD">
+            <summary>
+            Defines the data returned by the continuous mode transmisions
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.stContinuousModePort_SOLD">
+            <summary>
+            Defines the recieved data of the continuous mode for a port.
+            NOTE: Power units are per thousand.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.CTemperature">
+            <summary>
+            This class represents a temperature value. It stores the temperature in UTI units that
+            can easily be converted into CELSIUS and FAHRENHEIT degrees using the ToCelsius() and
+            ToFahrenheit() methods. The temperature value can also be set in CELSIUS or FAHRENHEIT by
+            using the InCelsius() or InFahrenheit() methods.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.#ctor(System.Int32)">
+            <summary>
+            Creates the object.
+            </summary>
+            <param name="UTItemp">The initial value in UTI units.</param>
+            <remarks></remarks>
+        </member>
+        <member name="P:DataJBC.CTemperature.UTI">
+            <summary>
+            The current temperature stored in UTI units.
+            </summary>
+            <value>The desired temperature</value>
+            <returns>The current temperature</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.isValid">
+            <summary>
+            Indicates if the temperature is a valid value, it is, in range.
+            </summary>
+            <returns>A boolean indicating if the temperature is a valid value</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InCelsius(System.Int32)">
+            <summary>
+            Sets the temperature in CELSIUS units
+            </summary>
+            <param name="value" >The desired temperature in CELSIUS</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToCelsius">
+            <summary>
+            Gets the temperature in CELSIUS units
+            </summary>
+            <returns>The temperature in CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToRoundCelsius">
+            <summary>
+            Gets the temperature in steps of five degrees CELSIUS.
+            </summary>
+            <returns>The temperature in steps of five degrees CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InCelsiusToAdjust(System.Int32)">
+            <summary>
+            Sets the temperature in CELSIUS units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <param name="value" >The desired temperature in CELSIUS</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToCelsiusToAdjust">
+            <summary>
+            Gets the temperature in CELSIUS units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <returns>The temperature in CELSIUS</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InFahrenheit(System.Int32)">
+            <summary>
+            Sets the temperature in FAHRENHEIT units
+            </summary>
+            <param name="value" >The desired temperature in FAHRENHEIT</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToFahrenheit">
+            <summary>
+            Gets the temperature in FAHRENHEIT units
+            </summary>
+            <returns>The temperature in FAHRENHEIT.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToRoundFahrenheit">
+            <summary>
+            Gets the temperature in steps of ten degrees FAHRENHEIT
+            </summary>
+            <returns>The temperature in steps of ten degrees FAHRENHEIT</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.InFahrenheitToAdjust(System.Int32)">
+            <summary>
+            Sets the temperature in FAHRENHEIT units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <param name="value" >The desired temperature in FAHRENHEIT</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CTemperature.ToFahrenheitToAdjust">
+            <summary>
+            Gets the temperature in FAHRENHEIT units
+            This temperature will be used to adjust another temperature
+            </summary>
+            <returns>The temperature in FAHRENHEIT.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:DataJBC.CCartridgeData.CalculateParametersFromNumber(DataJBC.GenericStationTools,System.String)">
+            <summary>
+            Calculate the parameters of a cartridge given a tool and a station model
+            </summary>
+            <param name="tool"></param>
+            <param name="stationModel"></param>
+            <returns>True if the operation was succesfull</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.CPortData_HA">
+            <summary>
+            Provides status information and configuration of the port
+            </summary>
+            <remarks>The port is a hot air station</remarks>
+        </member>
+        <member name="T:DataJBC.CToolSettingsData_HA">
+            <summary>
+            Provides configuration of the tool
+            </summary>
+            <remarks>The tool is for a hot air station</remarks>
+        </member>
+        <member name="T:DataJBC.CPortData_SF">
+            <summary>
+            Provides status information and configuration of the port
+            </summary>
+            <remarks>The port is a soldering feeder station</remarks>
+        </member>
+        <member name="T:DataJBC.CPortData_SOLD">
+            <summary>
+            Provides status information and configuration of the port
+            </summary>
+            <remarks>The port is soldering station</remarks>
+        </member>
+        <member name="T:DataJBC.CToolSettingsData_SOLD">
+            <summary>
+            Provides configuration of the tool
+            </summary>
+            <remarks>The tool is for a soldering station</remarks>
+        </member>
+        <member name="T:DataJBC.OnOff">
+            <summary>
+            Values for some ON/OFF station parameters.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PedalAction">
+            <summary>
+            List of tool start mode configuration
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.CounterTypes">
+            <summary>
+            Counter types
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.DispenserMode_SF">
+            <summary>
+            Dispenser mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.FeedingDirection_SF">
+            <summary>
+            Feeding direction
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.Port">
+            <summary>
+            List of ports
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortWorkMode_HA">
+            <summary>
+            List of work mode in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortHeaterStatus_HA">
+            <summary>
+            List of heater status in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PortSuctionStatus_HA">
+            <summary>
+            List of suction status in Desolder stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolError">
+            <summary>
+            List of possible tool errors
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolExternalTCMode_HA">
+            <summary>
+            Tool external TC mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolFutureMode">
+            <summary>
+            List of station modes.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStartMode_HA">
+            <summary>
+            Tool start modes
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStatus">
+            <summary>
+            List of posible tool status
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolStatus_HA">
+            <summary>
+            List of posible tool status for desolder station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolTemperatureLevels">
+            <summary>
+            List of possible tool temperature levels
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolTimeHibernation">
+            <summary>
+            List of possible times before entering the Hibernation mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ToolTimeSleep">
+            <summary>
+            List of possible times before enter Sleep mode
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.SearchMode">
+            <summary>
+            Searching stations modes.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.SpeedContinuousMode">
+            <summary>
+            List of continuous mode data speed.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ControlModeConnection">
+            <summary>
+            Control Mode type connection
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.GenericStationTools">
+            <summary>
+            List of the diferent tools available by a generic station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.PowerLimits">
+            <summary>
+            List of maximum and minimum station power limits. Depending on the
+            station model the maximum is different. A value of 0 in the maximum
+            means that there's no maximum value for the model.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.ProfileRegulationMode">
+            <summary>
+            Profile regulation mode for hot air stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.StationError">
+            <summary>
+            List of possible station errors.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.eStationType">
+            <summary>
+            Station types.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:DataJBC.TemperatureLimits">
+            <summary>
+            List of temperature limits. In UTI units
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.SaveHostService(JBC_ConnectRemote.JBCService.JBCStationControllerServiceClient,System.Int64)">
+            <summary>
+            Guarda el servicio y el ID de la estación del host
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdateStationInfoAsync">
+            <summary>
+            Lee del host la información estática (modelo, puertos, vesión del hard y del soft, etc) de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdateStationInfo">
+            <summary>
+            Lee del host la información estática (modelo, puertos, vesión del hard y del soft, etc) de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdateStationStatusAsync">
+            <summary>
+            Lee del host la información de estado de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.ReadConnectStatusAsync">
+            <summary>
+            Lee del equipo el estado de la conexión USB o ETH:
+              * Monitor Mode: sólo se puede monitorizar la estación no cambiar ningún valor (por defecto es Monitor Mode)
+              * Control Mode: en este estado la estación sólo es configurable desde el PC
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteConnectStatusAsync(DataJBC.ControlModeConnection,System.String)">
+            <summary>
+            Guarda en el equipo el estado de la conexión USB o ETH:
+              * Monitor Mode: sólo se puede monitorizar la estación no cambiar ningún valor (por defecto es Monitor Mode)
+              * Control Mode: en este estado la estación sólo es configurable desde el PC
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteRemoteModeAsync(DataJBC.OnOff)">
+            <summary>
+            Le pide al Equipo que pase o salga del modo remoto
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdateStationSettingsAsync">
+            <summary>
+            Lee del host la información de configuración de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdateStationSettings">
+            <summary>
+            Lee del host la información de configuración de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteDeviceNameAsync(System.String)">
+            <summary>
+            Permite configurar el nombre del equipo conectado
+            </summary>
+            <param name="Value">Tamaño máximo del string 16</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteDevicePINAsync(System.String)">
+            <summary>
+            Permite configurar el PIN del equipo conectado
+            </summary>
+            <param name="Value"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteMaxTempAsync(DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura máxima seleccionable por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteMinTempAsync(DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura mínima seleccionable por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteMaxFlowAsync(System.Int32)">
+            <summary>
+            Guarda en el Equipo el caudal máximo seleccionable por el equipo en por 1000
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteMinFlowAsync(System.Int32)">
+            <summary>
+            Guarda en el Equipo el caudal mínimo seleccionable por el equipo en por mil
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteMaxExtTempAsync(DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura máxima seleccionable por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteMinExtTempAsync(DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura mínima seleccionable por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteTempUnitAsync(DataJBC.CTemperature.TemperatureUnit)">
+            <summary>
+            Guarda en el Equipo las unidades de representación de temperaturas
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteBeepAsync(DataJBC.OnOff)">
+            <summary>
+            Guarda en el Equipo el Límite de potencia
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WritePINEnabledAsync(DataJBC.OnOff)">
+            <summary>
+            Guarda en el Equipo la activación del PIN
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteStationLockedAsync(DataJBC.OnOff)">
+            <summary>
+            Guarda en el Equipo la activación del PIN
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdatePortStatusAsync(DataJBC.Port)">
+            <summary>
+            Lee del host la información de estado del puerto indicado
+            Además obtiene la configuración de puerto/herramienta si hay una conectada, y actualiza los datos
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteStatusToolAsync(DataJBC.Port,DataJBC.OnOff,DataJBC.OnOff)">
+            <summary>
+            Le pide al Equipo que configure el estado de la herramienta en modo remoto
+            puerto, heater, suction
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdatePortToolSettingsAsync(DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Lee del host la información de configuración del puerto y herramienta indicados
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteSelectTempAsync(DataJBC.Port,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura Seleccionada en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteSelectExtTempAsync(DataJBC.Port,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura externa fijada por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteSelectFlowAsync(DataJBC.Port,System.Int32)">
+            <summary>
+            Guarda en el Equipo el caudal fijado por el equipo en por mil
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteProfileModeAsync(DataJBC.Port,DataJBC.OnOff)">
+            <summary>
+            Guarda en el Equipo el modo de perfil fijado por el equipo
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteLevelsTempsAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff,DataJBC.ToolTemperatureLevels,DataJBC.OnOff,DataJBC.CTemperature,System.Int32,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature,System.Int32,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature,System.Int32,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo los niveles de temperatura
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteTimeToStopAsync(DataJBC.Port,DataJBC.GenericStationTools,System.Int32)">
+            <summary>
+            Guarda en el Equipo retardo para parar
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteExternalTCModeAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolExternalTCMode_HA)">
+            <summary>
+            Guarda en el Equipo el modo del TC externo
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteStartModeAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff,DataJBC.OnOff,DataJBC.PedalAction)">
+            <summary>
+            Guarda en el equipo el modo de activación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteAjustTempAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura de Ajuste en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.StartContiModeAsync">
+            <summary>
+            Crea una nueva cola de modo continuo en el Host y devuelve el ID de la cola.
+            Si el modo continuo de la estación está detenido, comienza el modo continuo.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.StopContiModeAsync(System.UInt32)">
+            <summary>
+            Cierra una cola de modo continuo en el Host. Si no hay más colas, se detiene el modo continuo de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdateContiModeNextData(System.UInt32,System.Int32)">
+            <summary>
+            Carga desde el Host los datos de modo continuo de una cola de modo continuo
+            Solicita la cantidad de datos a leer (iChunk).
+            Devuelve la cantidad de datos leídos.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.ReadContiModeAsync">
+            <summary>
+            Le pide al Equipo información de la velocidad y los puertos configurados para el modo continuo en la estación
+            Si la estación no está en modo continuo, devolverá 0 en la velocidad (speed)
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteContiModeAsync(DataJBC.SpeedContinuousMode,DataJBC.Port,DataJBC.Port,DataJBC.Port,DataJBC.Port)">
+            <summary>
+            Define los puertos y la velocidad del modo continuo que se utilizarán en el próximo arranque del modo continuo.
+            El arranque del modo continuo de la estación se produce al crear la primera cola con StartContMode y
+            finaliza cuando no existan más colas al borrar la última con StopContMode
+            Si la estación ya está en modo continuo, estos valores no tendrán ningún efecto inmediato, sólo se guardarán para el próximo arranque
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdatePortCountersAsync(DataJBC.Port)">
+            <summary>
+            Lee del host la información de contadores del puerto indicado
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.ResetPortToolMinutesPartialAsync(DataJBC.Port)">
+            <summary>
+            Pone a cero los contadores parciales del puerto
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.UpdateRobotConfigurationAsync">
+            <summary>
+            Lee del host la información de robot de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.WriteRobotConfigurationAsync(DataJBC.CRobotData)">
+            <summary>
+            Permite configurar el robot de la estación
+            </summary>
+            <param name="Value">Configuración del robot</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.SetTransactionAsync">
+            <summary>
+            Se inicia una transacción
+            SetTransaction, en la JBC Connect DLL, envía un mensaje M_ACK para que la estación devuelva un M_ACK. Se devuelve el número de mensaje.
+            Cuando la estación recibe un M_ACK, genera un Evento de confirmación con el número de mensaje.
+            Se utiliza para confirmar que se han ejecutado las operaciones anteriores
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.QueryEndedTransactionAsync(System.UInt32)">
+            <summary>
+            Se consulta si ha finalizado la transacción.
+            SetTransaction, en la JBC Connect DLL, envía un mensaje M_ACK para que la estación devuelva un M_ACK. Se devuelve el número de mensaje.
+            Cuando la estación recibe un M_ACK, genera un Evento de confirmación con el número de mensaje.
+            Se utiliza para confirmar que se han ejecutado las operaciones anteriores
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.DeviceResetAsync">
+            <summary>
+            Close and reinitialize station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackHA.SetDefaultStationParamsAsync">
+            <summary>
+            Le pide que resetee todos los parámetros de estación y que deje el equipo con la configuración de fábrica
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.SaveHostService(JBC_ConnectRemote.JBCService.JBCStationControllerServiceClient,System.Int64)">
+            <summary>
+            Guarda el servicio y el ID de la estación del host
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateStationInfoAsync">
+            <summary>
+            Lee del host la información estática (modelo, puertos, vesión del hard y del soft, etc) de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateStationInfo">
+            <summary>
+            Lee del host la información estática (modelo, puertos, vesión del hard y del soft, etc) de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateStationStatusAsync">
+            <summary>
+            Lee del host la información de estado de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.ReadConnectStatusAsync">
+            <summary>
+            Lee del equipo el estado de la conexión USB o ETH:
+              * Monitor Mode: sólo se puede monitorizar la estación no cambiar ningún valor (por defecto es Monitor Mode)
+              * Control Mode: en este estado la estación sólo es configurable desde el PC
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteConnectStatusAsync(DataJBC.ControlModeConnection,System.String)">
+            <summary>
+            Guarda en el equipo el estado de la conexión USB o ETH:
+              * Monitor Mode: sólo se puede monitorizar la estación no cambiar ningún valor (por defecto es Monitor Mode)
+              * Control Mode: en este estado la estación sólo es configurable desde el PC
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteRemoteModeAsync(DataJBC.OnOff)">
+            <summary>
+            Le pide al Equipo que pase o salga del modo remoto
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateStationSettingsAsync">
+            <summary>
+            Lee del host la información de configuración de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateStationSettings">
+            <summary>
+            Lee del host la información de configuración de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteDeviceNameAsync(System.String)">
+            <summary>
+            Permite configurar el nombre del equipo conectado
+            </summary>
+            <param name="Value">Tamaño máximo del string 16</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteDevicePINAsync(System.String)">
+            <summary>
+            Permite configurar el PIN del equipo conectado
+            </summary>
+            <param name="Value"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteMaxTempAsync(DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura máxima seleccionable por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteMinTempAsync(DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura mínima seleccionable por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteTempUnitAsync(DataJBC.CTemperature.TemperatureUnit)">
+            <summary>
+            Guarda en el Equipo las unidades de representación de temperaturas
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteN2ModeAsync(DataJBC.OnOff)">
+            <summary>
+            Guarda en el Equipo el modo Nitrógeno
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteHelpTextAsync(DataJBC.OnOff)">
+            <summary>
+            Guarda en el Equipo el modo Nitrógeno
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WritePowerLimitAsync(System.Int32)">
+            <summary>
+            Guarda en el Equipo el Límite de potencia
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteBeepAsync(DataJBC.OnOff)">
+            <summary>
+            Guarda en el Equipo el Límite de potencia
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdatePortStatusAsync(DataJBC.Port)">
+            <summary>
+            Lee del host la información de estado del puerto indicado
+            Además obtiene la configuración de puerto/herramienta si hay una conectada, y actualiza los datos
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteStatusToolAsync(DataJBC.Port,DataJBC.OnOff,DataJBC.OnOff,DataJBC.OnOff)">
+            <summary>
+            Le pide al Equipo que configure el estado de la herramienta en modo remoto
+            puerto, sleep, extractor, desoldador
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdatePortToolSettingsAsync(DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Lee del host la información de configuración del puerto y herramienta indicados
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteSelectTempAsync(DataJBC.Port,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura Seleccionada en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteFixTempAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura fijada por el equipo en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteLevelsTempsAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff,DataJBC.ToolTemperatureLevels,DataJBC.OnOff,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo los niveles de temperatura
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteSleepDelayAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTimeSleep)">
+            <summary>
+            Guarda en el Equipo retardo en la entrada del sleep
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteSleepDelayEnabledAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff)">
+            <summary>
+            habilita o deshabilita el retardo en la entrada del sleep
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteSleepTempAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura de Sleep en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteHiberDelayEnabledAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff)">
+            <summary>
+            habilita o deshabilita el retardo en la entrada de hibernación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteAjustTempAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CTemperature)">
+            <summary>
+            Guarda en el Equipo la temperatura de Ajuste en UTI
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteCartridgeAsync(DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CCartridgeData)">
+            <summary>
+            Guarda en el Equipo el cartucho para el puerto + herramienta
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.StartContiModeAsync">
+            <summary>
+            Crea una nueva cola de modo continuo en el Host y devuelve el ID de la cola.
+            Si el modo continuo de la estación está detenido, comienza el modo continuo.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.StopContiModeAsync(System.UInt32)">
+            <summary>
+            Cierra una cola de modo continuo en el Host. Si no hay más colas, se detiene el modo continuo de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateContiModeNextData(System.UInt32,System.Int32)">
+            <summary>
+            Carga desde el Host los datos de modo continuo de una cola de modo continuo
+            Solicita la cantidad de datos a leer (iChunk).
+            Devuelve la cantidad de datos leídos.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.ReadContiModeAsync">
+            <summary>
+            Le pide al Equipo información de la velocidad y los puertos configurados para el modo continuo en la estación
+            Si la estación no está en modo continuo, devolverá 0 en la velocidad (speed)
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteContiModeAsync(DataJBC.SpeedContinuousMode,DataJBC.Port,DataJBC.Port,DataJBC.Port,DataJBC.Port)">
+            <summary>
+            Define los puertos y la velocidad del modo continuo que se utilizarán en el próximo arranque del modo continuo.
+            El arranque del modo continuo de la estación se produce al crear la primera cola con StartContMode y
+            finaliza cuando no existan más colas al borrar la última con StopContMode
+            Si la estación ya está en modo continuo, estos valores no tendrán ningún efecto inmediato, sólo se guardarán para el próximo arranque
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdatePortCountersAsync(DataJBC.Port)">
+            <summary>
+            Lee del host la información de contadores del puerto indicado
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.ResetPortToolMinutesPartialAsync(DataJBC.Port)">
+            <summary>
+            Pone a cero los contadores parciales del puerto
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateEthernetConfigurationAsync">
+            <summary>
+            Lee del host la información de ethernet de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteEthernetConfigurationAsync(DataJBC.CEthernetData)">
+            <summary>
+            Permite configurar el ethernet de la estación
+            </summary>
+            <param name="Value">Configuración del ethernet</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateRobotConfigurationAsync">
+            <summary>
+            Lee del host la información de robot de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WriteRobotConfigurationAsync(DataJBC.CRobotData)">
+            <summary>
+            Permite configurar el robot de la estación
+            </summary>
+            <param name="Value">Configuración del robot</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.UpdateAllPeripheralAsync">
+            <summary>
+            Lee del host la información de los periféricos de la estación
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.WritePeripheralAsync(DataJBC.CPeripheralData)">
+            <summary>
+            Permite configurar un periférico de la estación
+            </summary>
+            <param name="Value">Configuración del periférico</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.SetTransactionAsync">
+            <summary>
+            Se inicia una transacción
+            SetTransaction, en la JBC Connect DLL, envía un mensaje M_ACK para que la estación devuelva un M_ACK. Se devuelve el número de mensaje.
+            Cuando la estación recibe un M_ACK, genera un Evento de confirmación con el número de mensaje.
+            Se utiliza para confirmar que se han ejecutado las operaciones anteriores
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.QueryEndedTransactionAsync(System.UInt32)">
+            <summary>
+            Se consulta si ha finalizado la transacción.
+            SetTransaction, en la JBC Connect DLL, envía un mensaje M_ACK para que la estación devuelva un M_ACK. Se devuelve el número de mensaje.
+            Cuando la estación recibe un M_ACK, genera un Evento de confirmación con el número de mensaje.
+            Se utiliza para confirmar que se han ejecutado las operaciones anteriores
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.DeviceResetAsync">
+            <summary>
+            Close and reinitialize station
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.Remote_StackSold.SetDefaultStationParamsAsync">
+            <summary>
+            Le pide que resetee todos los parámetros de estación y que deje el equipo con la configuración de fábrica
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:JBC_ConnectRemote.CStation">
+            <summary>
+            This class is the station comunications and data container.
+            Is designed to allow the creation of multiple ControlStack
+            classes with events.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:JBC_ConnectRemote.JBC_API_Remote">
+            <summary>
+            JBC stations comunications class. A general API with the necessary methods to manage
+            JBC stations thru the network.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:JBC_ConnectRemote.JBC_API_Remote.NewStationConnectedEventHandler">
+            <summary>
+            This event is launched when a new station has been detected
+            and correctly linked. Gives the identifier required in order to
+            call the class methods.
+            </summary>
+            <param name="stationID" >The identifier of the new station connected</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:JBC_ConnectRemote.JBC_API_Remote.StationDisconnectedEventHandler">
+            <summary>
+            This event is launched when a identified station is disconnected or
+            undetected. Gives the identifier of the disconnected station in order to
+            manage the disconection in user application.
+            </summary>
+            <param name="stationID">An identifier to the disconnected station</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:JBC_ConnectRemote.JBC_API_Remote.UserErrorEventHandler">
+            <summary>
+            When an error occurs this event is launched. Gives a Cerror object with
+            the error information.
+            </summary>
+            <param name="stationID">An identifier to the station with error</param>
+            <param name="err">The Cerror object with the error information</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.#ctor">
+            <summary>
+            Creates the memory (use "StartSearch" to initiate searching connected stations).
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.StartSearch">
+            <summary>
+            Starts searching JBC Station Controllers with connected stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.StopSearch">
+            <summary>
+            Stops searching JBC Station Controllers with connected stations
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.Dispose">
+            <summary>
+            Close and release resources and threads
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationCount">
+            <summary>
+            Returns quantity of stations connected to all discovered JBC Station Controllers
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationList">
+            <summary>
+            Returns a list of stations IDs connected to all discovered JBC Station Controllers
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.ResetStation(System.Int64)">
+            <summary>
+            Close and reconnect station object.
+            </summary>
+            <param name="stationID">Station identifier</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationFeatures(System.Int64)">
+            <summary>
+            Gets station features by Id.
+            </summary>
+            <param name="stationID">Station identifier</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetContinuousModeAsync(System.Int64,DataJBC.SpeedContinuousMode,DataJBC.Port,DataJBC.Port,DataJBC.Port,DataJBC.Port)">
+            <summary>
+            This method activates or deactivates the continuous data transmision mode of the indicated station.
+            The desired transmision speed ( period ) and at least one port must be indicated when activating.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="speed">The desired speed ( period ) for the transmisions</param>
+            <param name="portA">First desired port to be monitorized</param>
+            <param name="portB">Second desired port to be monitorized</param>
+            <param name="portC">Third desired port to be monitorized</param>
+            <param name="portD">Fourth desired port to be monitorized</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetContinuousModeAsync(System.Int64)">
+            <summary>
+            Gets the current continuous data transmision mode status of the indicated station.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A tContinuousModeStatus object with the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.StartContinuousModeAsync(System.Int64)">
+            <summary>
+            This method starts a new continuous data queue instance on the indicated station and returns an ID.
+            The desired transmision speed ( period ) and ports will be the ones defined in SetContinuousMode Method.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A new queue id of the continuous mode to be used when retrieving the data</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetContinuousModeDataCount(System.Int64,System.UInt32)">
+            <summary>
+            Gets the current continuous mode data transmisions pending to be got from the internal FIFO queue of the indicated station.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>An integer that is the queue length</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetContinuousModeNextData(System.Int64,System.UInt32)">
+            <summary>
+            Gets the next continuous mode data transmison in the internal FIFO queue. It is the oldest transmision.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A tContinuousModeData object that is the oldest transmision in the queue</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetContinuousModeNextData_HA(System.Int64,System.UInt32)">
+            <summary>
+            Gets the next continuous mode data transmison in the internal FIFO queue. It is the oldest transmision.
+            HA desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A tContinuousModeData object that is the oldest transmision in the queue</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdateContinuousModeNextDataChunk(System.Int64,System.UInt32,System.Int32)">
+            <summary>
+            Gets the next chunk of continuous mode data from the queue of the JBC Station Controller and add them to the local internal FIFO queue.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="iChunk">Quantity of data to be read</param>
+            <returns>Actual quantity read</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.DefaultStationParametersAsync(System.Int64)">
+            <summary>
+            This method restores the default values for all the station parameters.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetTransactionAsync(System.Int64)">
+            <summary>
+            Indicates the station to raise a TransactionFinished event
+            to know that all previous operations where done
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Transaction ID, to identify the transaction when receiving TransactionFinished event</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.QueryEndedTransactionAsync(System.Int64,System.UInt32)">
+            <summary>
+            Query the station if the transaction has finished
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Transaction ID, to identify the transaction when receiving TransactionFinished event</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdateStationInfoAsync(System.Int64)">
+            <summary>
+            Retrieves from JBC Station Controller information data about the indicated station.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationHostName(System.Int64)">
+            <summary>
+            Gets the name of the station controller machine that controls the station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the Host name."</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationType(System.Int64)">
+            <summary>
+            Gets the station type of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A value indication the station type</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationCOM(System.Int64)">
+            <summary>
+            Gets the COM port name or Ethernet address of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the COM port name or Ethernet address. Ex: "COM6" or "192.168.1.132"</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationConnectionType(System.Int64)">
+            <summary>
+            Gets the type of connection: U = USB or E = Ethernet. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing U or E</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationProtocol(System.Int64)">
+            <summary>
+            Gets the protocol version of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the protocol version.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationModel(System.Int64)">
+            <summary>
+            Gets the Model name of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the Model name.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationModelType(System.Int64)">
+            <summary>
+            Gets the Model type of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the Model type.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationModelVersion(System.Int64)">
+            <summary>
+            Gets the version of the Model type of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the Model type.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationHWversion(System.Int64)">
+            <summary>
+            Gets the Hardware version of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the Hardware version.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationSWversion(System.Int64)">
+            <summary>
+            Gets the Software version of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the Software version.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationTools(System.Int64)">
+            <summary>
+            Gets the list of supported tools of the indicated station. If the station identifier
+            is not correct an error event is thrown. Uses the GenericStationTools constants
+            defined in this class.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A GenericStationTools vector with the supported tools.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortCount(System.Int64)">
+            <summary>
+            Gets the number of ports of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>An integer which is the number of ports</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdateStationStatusAsync(System.Int64)">
+            <summary>
+            Retrieves from host status data about the indicated station.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetControlMode(System.Int64)">
+            <summary>
+            Gets the current control mode status of the indicated station.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A OnOff object that indicates the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetControlMode(System.Int64,DataJBC.ControlModeConnection,System.String)">
+            <summary>
+            This method sets to ON or OFF the indicated station control mode.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="mode">The desired state for the control mode</param>
+            <param name="userName">The user name for the control mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetRemoteMode(System.Int64)">
+            <summary>
+            Gets the current remote mode status of the indicated station.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A OnOff object that indicates the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetRemoteModeAsync(System.Int64,DataJBC.OnOff)">
+            <summary>
+            This method sets to ON or OFF the indicated station remote mode.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="OnOff">The desired state for the remote mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationError(System.Int64)">
+            <summary>
+            Gets the current error code of the indicated station. If the station identifier
+            is not correct an error event is thrown. Uses the cStationError constants defined in this
+            class.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A cStationError object which is the error code.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationTransformerTemp(System.Int64)">
+            <summary>
+            Gets the current transformer temperature of the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            Uses the Ctemperature class defined in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Ctemperature object with the current transformer temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationTransformerErrorTemp(System.Int64)">
+            <summary>
+            Gets the current transformer error temperature of the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            Uses the Ctemperature class defined in this
+            library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Ctemperature object with the current transformer temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationMOSerrorTemp(System.Int64)">
+            <summary>
+            Gets the current MOSFET error temperature of the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            Uses the Ctemperature class defined in this
+            library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Ctemperature object with the current transformer temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdateStationSettingsAsync(System.Int64)">
+            <summary>
+            Retrieves from JBC Station Controller the station settings about the indicated station.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationName(System.Int64)">
+            <summary>
+            Gets the name of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the station name.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationNameAsync(System.Int64,System.String)">
+            <summary>
+            Sets the indicated name to the indicated station. If the station identifier is incorrect or
+            the indicated name is an empty string an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newName">The desired station name</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationPIN(System.Int64)">
+            <summary>
+            Gets the PIN of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A string containing the station PIN.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationPINAsync(System.Int64,System.String)">
+            <summary>
+            Sets the indicated PIN to the indicated station. If the station identifier is incorrect or
+            the indicated PIN is an empty string an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newPIN">The desired new PIN</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationMaxTemp(System.Int64)">
+            <summary>
+            Gets the maximum temperature of the indicated station. If the station identifier
+            is not correct an error event is thrown. Uses the Ctemperature class defined in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Ctemperature object with the maximum temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationMaxTempAsync(System.Int64,DataJBC.CTemperature)">
+            <summary>
+            Sets the indicated maximum temperature to the indicated station. If the station identifier is incorrect or
+            the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newtemp">The desired new temperature</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationMinTemp(System.Int64)">
+            <summary>
+            Gets the minimum temperature of the indicated station. If the station identifier
+            is not correct an error event is thrown. Uses the Ctemperature class defined in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Ctemperature object with the minimum temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationMinTempAsync(System.Int64,DataJBC.CTemperature)">
+            <summary>
+            Sets the indicated minimum temperature to the indicated station. If the station identifier is incorrect or
+            the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newtemp">The desired new temperature</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationMaxExtTemp(System.Int64)">
+            <summary>
+            Gets the maximum external temperature of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            Uses the Ctemperature class defined in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Ctemperature object with the maximum temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationMaxExtTempAsync(System.Int64,DataJBC.CTemperature)">
+            <summary>
+            Sets the indicated maximum external temperature to the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is incorrect or
+            the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newtemp">The desired new temperature</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationMinExtTemp(System.Int64)">
+            <summary>
+            Gets the minimum external temperature of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            Uses the Ctemperature class defined in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A Ctemperature object with the minimum temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationMinExtTempAsync(System.Int64,DataJBC.CTemperature)">
+            <summary>
+            Sets the indicated minimum external temperature to the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is incorrect or
+            the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newtemp">The desired new temperature</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationMaxFlow(System.Int64)">
+            <summary>
+            Gets the maximum flow of the indicated station, in per thousand.
+            Hot Air desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A value in per thousand.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationMaxFlowAsync(System.Int64,System.Int32)">
+            <summary>
+            Sets the indicated maximum flow to the indicated station, in per thousand.
+            Hot Air desoldering stations only
+            If the station identifier is incorrect an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newFlow">The desired new flow</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationMinFlow(System.Int64)">
+            <summary>
+            Gets the minimum flow of the indicated station, in per thousand.
+            Hot Air desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A value in per thousand.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationMinFlowAsync(System.Int64,System.Int32)">
+            <summary>
+            Sets the indicated minimum flow to the indicated station, in per thousand.
+            Hot Air desoldering stations only
+            If the station identifier is incorrect an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newFlow">The desired new flow</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationTempUnits(System.Int64)">
+            <summary>
+            Gets the temperature units of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A TemperatureUnits object with the temperature units.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationTempUnitsAsync(System.Int64,DataJBC.CTemperature.TemperatureUnit)">
+            <summary>
+            Sets the indicated temperature units to the indicated station. If the station identifier is incorrect or
+            the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newUnits">The desired temperature units.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationN2Mode(System.Int64)">
+            <summary>
+            Gets the N2 mode status of the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A OnOff object with the current N2 mode status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationN2ModeAsync(System.Int64,DataJBC.OnOff)">
+            <summary>
+            Sets the indicated N2 mode status to the indicated station.
+            Soldering stations only
+            If the station identifier is incorrect or the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newMode">The desired status for the N2 mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationHelpText(System.Int64)">
+            <summary>
+            Gets the Help Text status of the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A OnOff object with the current Help Text status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationHelpTextAsync(System.Int64,DataJBC.OnOff)">
+            <summary>
+            Sets the indicated Help Text status to the indicated station.
+            Soldering stations only
+            If the station identifier is incorrect or
+            the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="newHelp ">The desired status for the Help Text</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationPowerLimit(System.Int64)">
+            <summary>
+            Gets the power limit of the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>An integer object with the power linit in Watts units</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationPowerLimitAsync(System.Int64,System.Int32)">
+            <summary>
+            Sets the power limit to the indicated station.
+            Soldering stations only
+            If the station identifier is incorrect an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="powerLimit">The desired power limit in Watts units.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationBeep(System.Int64)">
+            <summary>
+            Gets the Beep status of the indicated station. If the station identifier
+            is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A OnOff object with the current Beep status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationBeepAsync(System.Int64,DataJBC.OnOff)">
+            <summary>
+            Sets the indicated Beep status to the indicated station. If the station identifier is incorrect or
+            the indicated temperature is out of range an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="beep ">The desired status for the Beep mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationPINEnabled(System.Int64)">
+            <summary>
+            Gets the PIN Enabled status of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A OnOff object with the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationPINEnabledAsync(System.Int64,DataJBC.OnOff)">
+            <summary>
+            Sets the indicated PIN Enabled status to the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is incorrect an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="value">The desired status</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationLocked(System.Int64)">
+            <summary>
+            Gets the Station Locked status of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A OnOff object with the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetStationLockedAsync(System.Int64,DataJBC.OnOff)">
+            <summary>
+            Sets the Station Locked status to the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier is incorrect an error is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="value">The desired status</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdatePortStatusAsync(System.Int64,DataJBC.Port)">
+            <summary>
+            Retrieves from JBC Station Controller the port status for the indicated station and port.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolID(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool connected to the indicated port of the indicated station. If the station or port
+            identifiers are not correct an error event is thrown. Uses the GenericStationTools constants defined
+            in this class.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A GenericStationTools object which is the tool identifier.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolActualTemp(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool actual temperature of the indicated port of the indicated station. If the station or port
+            identifiers are not correct an error event is thrown. Uses the Ctemperature class defined
+            in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A Ctemperature object with the tool actual temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolActualExtTemp(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool actual external temperature of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown. Uses the Ctemperature class defined
+            in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A Ctemperature object with the tool actual external temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolProtectionTCTemp(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool protection TC temperature of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown. Uses the Ctemperature class defined
+            in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A Ctemperature object with the temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolActualPower(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool actual power of the indicated port of the indicated station. If the station or port
+            identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer object with the tool actual power in per thousand units.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolActualFlow(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool actual flow of the indicated port of the indicated station, in per thousand.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer with the tool actual flow in per thousand units.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolTimeToStopStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the time to stop of the indicated port of the indicated station, in seconds.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer with the time to stop in seconds.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolError(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool current error code of the indicated port of the indicated station. If the station or port
+            identifiers are not correct an error event is thrown. Uses the ToolError constants defined
+            in this class.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A ToolError object which is the current error code of the tool.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolCartridgeCurrent(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool actual cartridge current of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer object with the tool actual cartridge current in mA.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolMOStemp(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool actual MOSFET temperature of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown. Uses the Ctemperature class defined
+            in this library.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A Ctemperature object with the tool actual MOSFET temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolFutureMode(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool future mode of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A ToolFutureMode object with the tool future mode.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolTimeToFutureMode(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the tool remaining time for the future mode of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer which is the remaining time in seconds.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolStandStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the current stand mode status of the indicated port of the indicated station.
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status for the stand mode</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSleepStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the current sleep mode status of the indicated port of the indicated station.
+            Soldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status for the sleep mode</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolHibernationStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the current hibernation mode status of the indicated port of the indicated station.
+            Soldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status for the hibernation mode</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolExtractorStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the current extractor mode status of the indicated port of the indicated station.
+            Soldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status for the extractor mode</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolDesolderStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the current desolder mode status of the indicated port of the indicated station.
+            Soldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status for the desolder mode</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolPedalStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the current pedal status of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolPedalConnected(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the current pedal connected status of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSuctionRequestedStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the suction requested status of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSuctionStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the suction status of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolHeaterRequestedStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the heater requested status of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolHeaterStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the heater status of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolCoolingStatus(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the cooling status of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A OnOff object which is the current status</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolStandStatusAsync(System.Int64,DataJBC.Port,DataJBC.OnOff)">
+            <summary>
+            This method sets to ON or OFF the indicated port of the indicated station stand status.
+            Soldering stations only
+            Depending on the sleep and hibernation delays will be one of those status.
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="OnOff">The desired state for the stand mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolExtractorStatusAsync(System.Int64,DataJBC.Port,DataJBC.OnOff)">
+            <summary>
+            This method sets to ON or OFF the indicated port of the indicated station extractor mode.
+            Soldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="OnOff">The desired state for the extractor mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolDesolderStatusAsync(System.Int64,DataJBC.Port,DataJBC.OnOff)">
+            <summary>
+            This method sets to ON or OFF the indicated port of the indicated station desolder mode.
+            Soldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="OnOff">The desired state for the desolder mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolHeaterStatusAsync(System.Int64,DataJBC.Port,DataJBC.OnOff)">
+            <summary>
+            This method sets to ON or OFF the indicated port of the indicated station heater mode.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="OnOff">The desired state for the heater mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSuctionStatusAsync(System.Int64,DataJBC.Port,DataJBC.OnOff)">
+            <summary>
+            This method sets to ON or OFF the indicated port of the indicated station heater mode.
+            Hot Air desoldering stations only
+            If the station identifier or the port identifier are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="OnOff">The desired state for the heater mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdatePortToolSettingsAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Retrieves from JBC Station Controller the port and tool settings for the indicated station.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSelectedTemp(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the selected tool temperature of the indicated port of the indicated station. If the station or port
+            identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A Ctemperature object with the current selected temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSelectedTempAsync(System.Int64,DataJBC.Port,DataJBC.CTemperature)">
+            <summary>
+            Sets the selected tool temperature of the indicated port of the indicated station. If the station or port
+            identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="newTemp">The desired new selected temperature.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSelectedExtTemp(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the selected tool external temperature of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A Ctemperature object with the current selected external temperature.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSelectedExtTempAsync(System.Int64,DataJBC.Port,DataJBC.CTemperature)">
+            <summary>
+            Sets the selected tool external temperature of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="newTemp">The desired new selected externaltemperature.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSelectedFlow(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the selected tool flow of the indicated port of the indicated station, in per thousand.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A integer with the current flow in per thousand.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSelectedFlowAsync(System.Int64,DataJBC.Port,System.Int32)">
+            <summary>
+            Sets the selected tool flow of the indicated port of the indicated station, in per thousand.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="newFlow">The desired new selected flow, in per thousand.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolProfileMode(System.Int64,DataJBC.Port)">
+            <summary>
+            Gets the selected tool profile mode of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>The state of the profile mode</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolProfileModeAsync(System.Int64,DataJBC.Port,DataJBC.OnOff)">
+            <summary>
+            Sets the selected tool profile mode of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="onoff">The desired state for the profile mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolFixTemp(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the tool fix temperature of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A Ctemperature object with the current fix temperature</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolFixTempAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CTemperature)">
+            <summary>
+            Sets the tool fix temperature of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="newTemp">The desired new fix temperature</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolFixTempAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff)">
+            <summary>
+            Activates or deactivates the tool fix temperature of the indicated port of the indicated station.
+             Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="newOnOff">To deactivate fix temperature (Off). If set to On, temperature will be set to MAX temp. + MIN temp. / 2</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSelectedTempLevels(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the tool selected temperature level of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A ToolTemperatureLevels object with the current selected temperature level</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSelectedTempLevelsEnabled(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets status of the selected temperature levels of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A OnOff object which is the current status for the selected temperature levels</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSelectedTempLevelsAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTemperatureLevels)">
+            <summary>
+            Sets the tool temperature level of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="level">The desired new selected temperature level</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSelectedTempLevelsEnabledAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff)">
+            <summary>
+            Activates or deactivates the tool temperature levels of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="onoff">On or Off value</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolTempLevel(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTemperatureLevels)">
+            <summary>
+            Gets the tool temperature level of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="level">The identifier of the desired level</param>
+            <returns>A Ctemperature object with the temperature of the level</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolTempLevelEnabled(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTemperatureLevels)">
+            <summary>
+            Gets the status of the temperature level of the indicated port of the indicated station. If the station or port
+            identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="level">The identifier of the desired level</param>
+            <returns>A OnOff object with status of the temperature level</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolTempLevelAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTemperatureLevels,DataJBC.CTemperature)">
+            <summary>
+            Sets the tool temperature level of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="level ">The identifier of the level</param>
+            <param name="newTemp">The desired new temp for the level</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolTempLevelEnabledAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTemperatureLevels,DataJBC.OnOff)">
+            <summary>
+            Activates or deactivates the tool temperature level of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="level ">The identifier of the level</param>
+            <param name="onoff">The desired status for the level</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolLevelsAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff,DataJBC.ToolTemperatureLevels,DataJBC.OnOff,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature)">
+            <summary>
+            Sets the selected level and temperature levels of the indicated port of the indicated station, at once.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="selectedLevelEnabled">Activates or deactivates levels</param>
+            <param name="selectedLevel">Selected temperature level</param>
+            <param name="level1Enabled">Activates or deactivates level 1</param>
+            <param name="tempLevel1">Temperature for level 1</param>
+            <param name="level2Enabled">Activates or deactivates level 2</param>
+            <param name="tempLevel2">Temperature for level 2</param>
+            <param name="level3Enabled">Activates or deactivates level 3</param>
+            <param name="tempLevel3">Temperature for level 3</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolLevelsAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff,DataJBC.ToolTemperatureLevels,DataJBC.OnOff,DataJBC.CTemperature,System.Int32,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature,System.Int32,DataJBC.CTemperature,DataJBC.OnOff,DataJBC.CTemperature,System.Int32,DataJBC.CTemperature)">
+            <summary>
+            Sets the selected level and temperatures/flow levels of the indicated port of the indicated station, at once.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="selectedLevelEnabled">Activates or deactivates levels</param>
+            <param name="selectedLevel">Selected temperature level</param>
+            <param name="level1Enabled">Activates or deactivates level 1</param>
+            <param name="tempLevel1">Temperature for level 1</param>
+            <param name="flowLevel1">Flow for level 1</param>
+            <param name="tempExtLevel1">External Temperature for level 1</param>
+            <param name="level2Enabled">Activates or deactivates level 2</param>
+            <param name="tempLevel2">Temperature for level 2</param>
+            <param name="flowLevel2">Flow for level 2</param>
+            <param name="tempExtLevel2">External Temperature for level 2</param>
+            <param name="level3Enabled">Activates or deactivates level 3</param>
+            <param name="tempLevel3">Temperature for level 3</param>
+            <param name="flowLevel3">Flow for level 3</param>
+            <param name="tempExtLevel3">External Temperature for level 3</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSleepDelay(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the tool sleep delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A ToolTimeSleep with the current sleep delay</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSleepDelayEnabled(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the status of the tool sleep delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A OnOff with the current status of the sleep delay</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSleepDelayAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTimeSleep)">
+            <summary>
+            Sets the tool sleep delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="delay">The desired delay for the tool</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSleepDelayEnabledAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff)">
+            <summary>
+            Activates or deactivates the tool sleep delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="onoff">Activates or deactivates the sleep delay for the tool</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSleepTemp(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the tool sleep temperature of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A Ctemperature object with the sleep temperature</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolSleepTempAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CTemperature)">
+            <summary>
+            Sets the tool sleep temperature of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="newTemp">The desired temperature for the sleep status</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolHibernationDelay(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the tool hibernation delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A ToolTimeHibernation with the current hibernation delay</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolHibernationDelayEnabled(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets status of the tool hibernation delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A OnOff with the current stauts of the hibernation delay</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolHibernationDelayAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolTimeHibernation)">
+            <summary>
+            Sets the tool hibernation delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="delay">The desired delay for the tool</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolHibernationDelayEnabledAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff)">
+            <summary>
+            Activates or deactivates the tool hibernation delay of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="onoff">Activates or deactivates the hibernation delay for the tool</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolAdjustTemp(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the tool adjust temperature of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A Ctemperature object with the adjust temperature</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolAdjustTempAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CTemperature)">
+            <summary>
+            Sets the tool adjust temperature of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="newTemp">The desired temperature for the sleep status</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolCartridge(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the cartridge used in the tool for the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A cartridge number</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolCartridgeEnabled(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Returns if cartridge selection is active for the tool for the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>A OnOff object with status of the cartridge number for the tool</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolCartridgeAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.CCartridgeData)">
+            <summary>
+            Sets the cartridge used in the tool for the indicated port of the indicated station and activates or deactivates cartridge selection.
+            Soldering sations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="cartridge">Cartridge data</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolTimeToStop(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the time to stop, in seconds, defined for tool for the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>Time to stop value in seconds</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolTimeToStopAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,System.Int32)">
+            <summary>
+            Sets the time to stop for the tool for the indicated port of the indicated station, in seconds.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="value">Time to stop value, in seconds</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolExternalTCMode(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the external TC mode defined for tool for the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>External TC mode</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolExternalTCModeAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.ToolExternalTCMode_HA)">
+            <summary>
+            Sets the external TC mode for the tool for the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="mode">External TC mode</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolStartMode_ToolButton(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the button start mode status, defined for tool for the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>On or off</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolStartMode_StandOut(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the manual (stand out) start mode status, defined for tool for the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>On or off</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolStartMode_PedalAction(System.Int64,DataJBC.Port,DataJBC.GenericStationTools)">
+            <summary>
+            Gets the pedal action for the start mode status, defined for tool for the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <returns>Pedal action</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPortToolStartModeAsync(System.Int64,DataJBC.Port,DataJBC.GenericStationTools,DataJBC.OnOff,DataJBC.OnOff,DataJBC.PedalAction)">
+            <summary>
+            Sets the time to stop for the tool for the indicated port of the indicated station, in seconds.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <param name="tool">The identifier of the desired tool</param>
+            <param name="ToolButton">Tool starts when button is pressed</param>
+            <param name="StandOut">Tool starts when tool goes out of the stand</param>
+            <param name="PedalAction">Tool starts when pedal action take effect</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdatePortCountersAsync(System.Int64,DataJBC.Port)">
+            <summary>
+            Retrieves from JBC Station Controller the counters for the indicated station and port.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetStationPluggedMinutes(System.Int64,DataJBC.CounterTypes)">
+            <summary>
+            Gets the number of minutes connected of the indicated station.
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>An integer object with the number of minutes the station is connected</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolPluggedMinutes(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the number of minutes connected of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer object with the number of minutes the station is connected</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolWorkMinutes(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool working time in minutes of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the working time in minutes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSleepMinutes(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool sleep time in minutes of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the sleep time in minutes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolHibernationMinutes(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool hibernation time in minutes of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the hibernation time in minutes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolIdleMinutes(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool idle (no tool) time in minutes of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the idle (no tool) time in minutes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSleepCycles(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool number of sleep cycles of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the number of cycles</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolDesolderCycles(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool number of desolder cycles of the indicated port of the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the number of cycles</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolWorkCycles(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool number of work cycles of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the number of cycles</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortToolSuctionCycles(System.Int64,DataJBC.Port,DataJBC.CounterTypes)">
+            <summary>
+            Gets the tool number of suction cycles of the indicated port of the indicated station.
+            Hot Air desoldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>An integer that is the number of cycles</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.ResetPortToolStationPartialCounters(System.Int64,DataJBC.Port)">
+            <summary>
+            Resets all partial counters of the indicated port of the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdateEthernetConfigurationAsync(System.Int64)">
+            <summary>
+            Retrieves from JBC Station Controller the ethernet configuration about the indicated station.
+            Soldering statins only
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetEthernetConfiguration(System.Int64)">
+            <summary>
+            Returns ethernet configuration about the indicated station.
+            Soldering statins only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A CEthernetData object with ethernet configuration</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetEthernetConfigurationAsync(System.Int64,DataJBC.CEthernetData)">
+            <summary>
+            Sets the ethernet configuration of the indicated port of the indicated station. If the station
+            Soldering statins only
+            identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="ethernetData">The desired new ethernet configuration</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdateRobotConfigurationAsync(System.Int64)">
+            <summary>
+            Retrieves from JBC Station Controller the robot configuration about the indicated station.
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetRobotConfiguration(System.Int64)">
+            <summary>
+            Returns robot configuration about the indicated station.
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A CRobotData object with robot configuration</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetRobotConfigurationAsync(System.Int64,DataJBC.CRobotData)">
+            <summary>
+            Sets the robot configuration of the indicated port of the indicated station. If the station
+            identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="robotData">The desired new robot configuration</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.UpdatePeripheralsAsync(System.Int64)">
+            <summary>
+            Retrieves from JBC Station Controller the peripheral information about the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPeripherals(System.Int64)">
+            <summary>
+            Returns peripheral information about the indicated station.
+            Soldering stations only
+            If the station or port identifiers are not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <returns>A CPeripheralData object with peripherals information</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.GetPortPeripheral(System.Int64,DataJBC.Port)">
+            <summary>
+            Retrieves from JBC Station Controller the peripheral information about the indicated station and the indicated port.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="port">The identifier of the desired port</param>
+            <returns>A CPeripheralData object with peripherals information</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.SetPeripheralAsync(System.Int64,DataJBC.CPeripheralData)">
+            <summary>
+            Sets the peripheral configuration of the indicated port of the indicated station.
+            Soldering stations only
+            If the station identifier is not correct an error event is thrown.
+            </summary>
+            <param name="stationID">The identifier of the desired station</param>
+            <param name="peripheralData">The desired new peripheral configuration</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.Event_DiscoveredStation(JBC_ConnectRemote.JBCService.JBCStationControllerServiceClient@,System.Int64,DataJBC.eStationType)">
+            <summary>
+            This function handles the SearchServicesWCF class DiscoveredStation event.
+            </summary>
+            <param name="hostService">The host service detected</param>
+            <param name="hostStnID">The station ID discovered</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.launchStationDisconnected(System.Int64)">
+            <summary>
+            Function used by Cstation class to launch the station disconnected
+            event.
+            </summary>
+            <param name="stationID">The station disconnected ID</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.JBC_API_Remote.launchUserError(System.Int64,RoutinesJBC.Cerror)">
+            <summary>
+            Function used by Cstation to launch user errors as Cerror.
+            </summary>
+            <param name="err">The Cerror class instance of the launched error</param>
+            <remarks></remarks>
+        </member>
+        <member name="T:JBC_ConnectRemote.My.Resources.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:JBC_ConnectRemote.My.Resources.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:JBC_ConnectRemote.My.Resources.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="M:JBC_ConnectRemote.CSearchStations.#ctor">
+            <summary>
+            Class constructor
+            </summary>
+            <remarks>Initialize search service</remarks>
+        </member>
+        <member name="M:JBC_ConnectRemote.CSearchStations.Dispose">
+            <summary>
+            Stop the search and release the resouces
+            </summary>
+        </member>
+        <member name="M:JBC_ConnectRemote.CSearchStations.StartSearch">
+            <summary>
+            Start the services search
+            </summary>
+        </member>
+        <member name="M:JBC_ConnectRemote.CSearchStations.StopSearch">
+            <summary>
+            Stop the services search
+            </summary>
+        </member>
+        <member name="M:JBC_ConnectRemote.CSearchStations.ReStartSearch">
+            <summary>
+            Restart the services search
+            </summary>
+        </member>
+        <member name="M:JBC_ConnectRemote.CSearchStations.Timer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Search timer handler. Discover stations
+            </summary>
+            <param name="sender">Objeto que lanza el evento</param>
+            <param name="e">Parámetros asociados al evento</param>
+        </member>
+    </members>
+</doc>

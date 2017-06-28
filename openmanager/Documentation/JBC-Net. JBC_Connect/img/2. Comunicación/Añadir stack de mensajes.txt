@@ -1,0 +1,5 @@
+[CStationFrames{bg:lavender}]-(1)AddStack(address)>[CCommunicationChannel{bg:honeydew}]
+
+[CCommunicationChannel]-.->[CStackMessages address n{bg:honeydew}]
+[CCommunicationChannel]->[CStackMessages address 2{bg:honeydew}]
+[CCommunicationChannel]->[CStackMessages address 1{bg:honeydew}]

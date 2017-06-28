@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0FE554BC-2C4E-43F0-A378-A377F784D232}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>LibraryTest</RootNamespace>
+    <AssemblyName>LibraryTest</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LibraryTest.xml</DocumentationFile>
+    <NOWARN>1591,660,661</NOWARN>
+    <DefineConstants>LibraryTest</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LibraryTest.xml</DocumentationFile>
+    <NOWARN>1591,660,661</NOWARN>
+    <DefineConstants>LibraryTest</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LibraryTest.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LibraryTest.xml</DocumentationFile>
+    <NOWARN>1591,660,661</NOWARN>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <DefineConstants>LibraryTest</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LibraryTest.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NOWARN>1591,660,661</NOWARN>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>LibraryTest</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\DataJBC\Constants.cs">
+      <Link>DataJBC\Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\CLength.cs">
+      <Link>DataJBC\Data\CLength.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData\CContinuousModeStatus.cs">
+      <Link>DataJBC\Data\ContinuousModeData\CContinuousModeStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_HA\CContinuousModeQueueList_HA.cs">
+      <Link>DataJBC\Data\ContinuousModeData_HA\CContinuousModeQueueList_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_HA\CContinuousModeQueue_HA.cs">
+      <Link>DataJBC\Data\ContinuousModeData_HA\CContinuousModeQueue_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_HA\stContinuousModeData_HA.cs">
+      <Link>DataJBC\Data\ContinuousModeData_HA\stContinuousModeData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_HA\stContinuousModePort_HA.cs">
+      <Link>DataJBC\Data\ContinuousModeData_HA\stContinuousModePort_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_SOLD\CContinuousModeQueueList_SOLD.cs">
+      <Link>DataJBC\Data\ContinuousModeData_SOLD\CContinuousModeQueueList_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_SOLD\CContinuousModeQueue_SOLD.cs">
+      <Link>DataJBC\Data\ContinuousModeData_SOLD\CContinuousModeQueue_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_SOLD\stContinuousModeData_SOLD.cs">
+      <Link>DataJBC\Data\ContinuousModeData_SOLD\stContinuousModeData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\ContinuousModeData_SOLD\stContinuousModePortData_SOLD.cs">
+      <Link>DataJBC\Data\ContinuousModeData_SOLD\stContinuousModePortData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\CSpeedContMode.cs">
+      <Link>DataJBC\Data\CSpeedContMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\CStationPortsToolsConfiguration.cs">
+      <Link>DataJBC\Data\CStationPortsToolsConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\CTemperature.cs">
+      <Link>DataJBC\Data\CTemperature.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData\CCartridgeData.cs">
+      <Link>DataJBC\Data\PortData\CCartridgeData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_HA\CCountersData_HA.cs">
+      <Link>DataJBC\Data\PortData_HA\CCountersData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_HA\CPortData_HA.cs">
+      <Link>DataJBC\Data\PortData_HA\CPortData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_HA\CTempLevelsData_HA.cs">
+      <Link>DataJBC\Data\PortData_HA\CTempLevelsData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_HA\CToolSettingsData_HA.cs">
+      <Link>DataJBC\Data\PortData_HA\CToolSettingsData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_HA\CToolStartMode_HA.cs">
+      <Link>DataJBC\Data\PortData_HA\CToolStartMode_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_HA\CToolStatusData_HA.cs">
+      <Link>DataJBC\Data\PortData_HA\CToolStatusData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_SF\CCountersData_SF.cs">
+      <Link>DataJBC\Data\PortData_SF\CCountersData_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_SF\CPortData_SF.cs">
+      <Link>DataJBC\Data\PortData_SF\CPortData_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_SOLD\CCountersData_SOLD.cs">
+      <Link>DataJBC\Data\PortData_SOLD\CCountersData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_SOLD\CPortData_SOLD.cs">
+      <Link>DataJBC\Data\PortData_SOLD\CPortData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_SOLD\CTempLevelsData_SOLD.cs">
+      <Link>DataJBC\Data\PortData_SOLD\CTempLevelsData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_SOLD\CToolSettingsData_SOLD.cs">
+      <Link>DataJBC\Data\PortData_SOLD\CToolSettingsData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\PortData_SOLD\CToolStatusData_SOLD.cs">
+      <Link>DataJBC\Data\PortData_SOLD\CToolStatusData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData\CEthernetData.cs">
+      <Link>DataJBC\Data\StationData\CEthernetData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData\CFeaturesData.cs">
+      <Link>DataJBC\Data\StationData\CFeaturesData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData\CFirmwareStation.cs">
+      <Link>DataJBC\Data\StationData\CFirmwareStation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData\CModelData.cs">
+      <Link>DataJBC\Data\StationData\CModelData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData\CPeripheralData.cs">
+      <Link>DataJBC\Data\StationData\CPeripheralData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData\CRobotData.cs">
+      <Link>DataJBC\Data\StationData\CRobotData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData\CStationInfoData.cs">
+      <Link>DataJBC\Data\StationData\CStationInfoData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_HA\CProfileData_HA.cs">
+      <Link>DataJBC\Data\StationData_HA\CProfileData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_HA\CStationData_HA.cs">
+      <Link>DataJBC\Data\StationData_HA\CStationData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_HA\CStationSettingsData_HA.cs">
+      <Link>DataJBC\Data\StationData_HA\CStationSettingsData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_HA\CStationStatusData_HA.cs">
+      <Link>DataJBC\Data\StationData_HA\CStationStatusData_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_SF\CProgramDispenserData_SF.cs">
+      <Link>DataJBC\Data\StationData_SF\CProgramDispenserData_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_SF\CStationData_SF.cs">
+      <Link>DataJBC\Data\StationData_SF\CStationData_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_SF\CStationSettingsData_SF.cs">
+      <Link>DataJBC\Data\StationData_SF\CStationSettingsData_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_SF\CStationStatusData_SF.cs">
+      <Link>DataJBC\Data\StationData_SF\CStationStatusData_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_SOLD\CStationData_SOLD.cs">
+      <Link>DataJBC\Data\StationData_SOLD\CStationData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_SOLD\CStationSettingsData_SOLD.cs">
+      <Link>DataJBC\Data\StationData_SOLD\CStationSettingsData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Data\StationData_SOLD\CStationStatusData_SOLD.cs">
+      <Link>DataJBC\Data\StationData_SOLD\CStationStatusData_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Encriptation\JBC_encryption.cs">
+      <Link>DataJBC\Encriptation\JBC_encryption.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\General\Idioma.cs">
+      <Link>DataJBC\Enums\General\Idioma.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\General\OnOff.cs">
+      <Link>DataJBC\Enums\General\OnOff.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\General\PedalAction.cs">
+      <Link>DataJBC\Enums\General\PedalAction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\CounterTypes.cs">
+      <Link>DataJBC\Enums\Port\CounterTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\DispenserMode_SF.cs">
+      <Link>DataJBC\Enums\Port\DispenserMode_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\FeedingDirection_SF.cs">
+      <Link>DataJBC\Enums\Port\FeedingDirection_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\Port.cs">
+      <Link>DataJBC\Enums\Port\Port.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\PortStatus_HA.cs">
+      <Link>DataJBC\Enums\Port\PortStatus_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolError.cs">
+      <Link>DataJBC\Enums\Port\ToolError.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolExternalTCMode_HA.cs">
+      <Link>DataJBC\Enums\Port\ToolExternalTCMode_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolFutureMode.cs">
+      <Link>DataJBC\Enums\Port\ToolFutureMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolStartMode_HA.cs">
+      <Link>DataJBC\Enums\Port\ToolStartMode_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolStatus.cs">
+      <Link>DataJBC\Enums\Port\ToolStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolTemperatureLevels.cs">
+      <Link>DataJBC\Enums\Port\ToolTemperatureLevels.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolTimeHibernation.cs">
+      <Link>DataJBC\Enums\Port\ToolTimeHibernation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Port\ToolTimeSleep.cs">
+      <Link>DataJBC\Enums\Port\ToolTimeSleep.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\SearchMode.cs">
+      <Link>DataJBC\Enums\SearchMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\SpeedContinuousMode.cs">
+      <Link>DataJBC\Enums\SpeedContinuousMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\ControlModeConnection.cs">
+      <Link>DataJBC\Enums\Station\ControlModeConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\GenericStationTools.cs">
+      <Link>DataJBC\Enums\Station\GenericStationTools.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\PowerLimits.cs">
+      <Link>DataJBC\Enums\Station\PowerLimits.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\ProfileRegulationMode.cs">
+      <Link>DataJBC\Enums\Station\ProfileRegulationMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\StationError.cs">
+      <Link>DataJBC\Enums\Station\StationError.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\StationType.cs">
+      <Link>DataJBC\Enums\Station\StationType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\TemperatureLimits.cs">
+      <Link>DataJBC\Enums\Station\TemperatureLimits.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\DataJBC\Enums\Station\Tools_NanoStation.cs">
+      <Link>DataJBC\Enums\Station\Tools_NanoStation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\CCommunicationChannel.cs">
+      <Link>Communications\CCommunicationChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\DataLinkLayer\CDLLFifoMessages.cs">
+      <Link>Communications\DataLinkLayer\CDLLFifoMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\DataLinkLayer\CFrameData.cs">
+      <Link>Communications\DataLinkLayer\CFrameData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\DataLinkLayer\DataCollection.cs">
+      <Link>Communications\DataLinkLayer\DataCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\DataLinkLayer\Stack_dll.cs">
+      <Link>Communications\DataLinkLayer\Stack_dll.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\Data\EnumAddress.cs">
+      <Link>Communications\Data\EnumAddress.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\Data\EnumConnectError.cs">
+      <Link>Communications\Data\EnumConnectError.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\Data\EnumErrorFrame.cs">
+      <Link>Communications\Data\EnumErrorFrame.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\Data\EnumFrameFlowControl.cs">
+      <Link>Communications\Data\EnumFrameFlowControl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\Physical\Stack_phl.cs">
+      <Link>Communications\Physical\Stack_phl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\StackMessages\CMessageCom.cs">
+      <Link>Communications\StackMessages\CMessageCom.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Communications\StackMessages\CStackMessages.cs">
+      <Link>Communications\StackMessages\CStackMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\JBC_API\Communication\CStationAvailableCom.cs">
+      <Link>JBC_API\Communication\CStationAvailableCom.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\JBC_API\JBC_API.cs">
+      <Link>JBC_API\JBC_API.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\JBC_API\Station\CStationElement.cs">
+      <Link>JBC_API\Station\CStationElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\JBC_API\Station\StationState.cs">
+      <Link>JBC_API\Station\StationState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\CSearchConnect.cs">
+      <Link>Search\CSearchConnect.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\CSearchManager.cs">
+      <Link>Search\CSearchManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\Data\CConnectionData.cs">
+      <Link>Search\Data\CConnectionData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchPort\SearchConnectUSB.cs">
+      <Link>Search\SearchPort\SearchConnectUSB.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchPort\SearchConnectUSB_Base.cs">
+      <Link>Search\SearchPort\SearchConnectUSB_Base.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchPort\SearchDevicesUSB.cs">
+      <Link>Search\SearchPort\SearchDevicesUSB.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\TCP\CSearchConnectTCP.cs">
+      <Link>Search\SearchTCP\TCP\CSearchConnectTCP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\TCP\CSearchConnectTCP_Base.cs">
+      <Link>Search\SearchTCP\TCP\CSearchConnectTCP_Base.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\TCP\CSearchDevicesTCP.cs">
+      <Link>Search\SearchTCP\TCP\CSearchDevicesTCP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\TCP\CStationInfoTCP.cs">
+      <Link>Search\SearchTCP\TCP\CStationInfoTCP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\TCP\CStationtableTCP.cs">
+      <Link>Search\SearchTCP\TCP\CStationtableTCP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\UDP\CConnectionInfo.cs">
+      <Link>Search\SearchTCP\UDP\CConnectionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\UDP\CSearchUDP.cs">
+      <Link>Search\SearchTCP\UDP\CSearchUDP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\UDP\CStationConnectionData.cs">
+      <Link>Search\SearchTCP\UDP\CStationConnectionData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\UDP\CStationHashtableUDP.cs">
+      <Link>Search\SearchTCP\UDP\CStationHashtableUDP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Search\SearchTCP\UDP\CStationInfoUDP.cs">
+      <Link>Search\SearchTCP\UDP\CStationInfoUDP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\CStationBase.cs">
+      <Link>Stations\CStationBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\CStation_HA.cs">
+      <Link>Stations\CStation_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\CStation_SF.cs">
+      <Link>Stations\CStation_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\CStation_SOLD.cs">
+      <Link>Stations\CStation_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\CStationFrames.cs">
+      <Link>Stations\Frames\CStationFrames.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\CStationFrames01_SOLD.cs">
+      <Link>Stations\Frames\CStationFrames01_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\CStationFrames02_HA.cs">
+      <Link>Stations\Frames\CStationFrames02_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\CStationFrames02_SF.cs">
+      <Link>Stations\Frames\CStationFrames02_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\CStationFrames02_SOLD.cs">
+      <Link>Stations\Frames\CStationFrames02_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\EnumCommandFrame\EnumCommandFrame.cs">
+      <Link>Stations\Frames\EnumCommandFrame\EnumCommandFrame.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\EnumCommandFrame\EnumCommandFrameDSPIC33.cs">
+      <Link>Stations\Frames\EnumCommandFrame\EnumCommandFrameDSPIC33.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\EnumCommandFrame\EnumCommandFrame_01_SOLD.cs">
+      <Link>Stations\Frames\EnumCommandFrame\EnumCommandFrame_01_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\EnumCommandFrame\EnumCommandFrame_02_HA.cs">
+      <Link>Stations\Frames\EnumCommandFrame\EnumCommandFrame_02_HA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\EnumCommandFrame\EnumCommandFrame_02_SF.cs">
+      <Link>Stations\Frames\EnumCommandFrame\EnumCommandFrame_02_SF.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\Frames\EnumCommandFrame\EnumCommandFrame_02_SOLD.cs">
+      <Link>Stations\Frames\EnumCommandFrame\EnumCommandFrame_02_SOLD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\MessagesSent\CMessagesSentManager.cs">
+      <Link>Stations\MessagesSent\CMessagesSentManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\MessagesSent\Data\MessageHashtable.cs">
+      <Link>Stations\MessagesSent\Data\MessageHashtable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\UpdaterFirmware\CUpdateFirmware01.cs">
+      <Link>Stations\UpdaterFirmware\CUpdateFirmware01.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Library 3.15.1\JBC_Connect\Stations\UpdaterFirmware\CUpdateFirmware02.cs">
+      <Link>Stations\UpdaterFirmware\CUpdateFirmware02.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesJBC\Errors\Cerror.cs">
+      <Link>RoutinesJBC\Errors\Cerror.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesJBC\Packer\CMicroPrograms01.cs">
+      <Link>RoutinesJBC\Packer\CMicroPrograms01.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesJBC\Packer\CMicroPrograms02.cs">
+      <Link>RoutinesJBC\Packer\CMicroPrograms02.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesJBC\SearcherServices\SearcherServicesData.cs">
+      <Link>RoutinesJBC\SearcherServices\SearcherServicesData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesJBC\UID\clsStationUID.cs">
+      <Link>RoutinesJBC\UID\clsStationUID.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Data\DataType\IntegerUtils.cs">
+      <Link>RoutinesLibrary\Data\DataType\IntegerUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Data\DataType\StringUtils.cs">
+      <Link>RoutinesLibrary\Data\DataType\StringUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Data\Structures\BidirHashtable.cs">
+      <Link>RoutinesLibrary\Data\Structures\BidirHashtable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Data\Xml\XMLUtils.cs">
+      <Link>RoutinesLibrary\Data\Xml\XMLUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\IO\Dir.cs">
+      <Link>RoutinesLibrary\IO\Dir.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\IO\File.cs">
+      <Link>RoutinesLibrary\IO\File.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\IO\SerialPort.cs">
+      <Link>RoutinesLibrary\IO\SerialPort.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Net\InformationNetworkInterface.cs">
+      <Link>RoutinesLibrary\Net\InformationNetworkInterface.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Net\Protocols\FTP\FTP.cs">
+      <Link>RoutinesLibrary\Net\Protocols\FTP\FTP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Net\Protocols\TCP\TCP.cs">
+      <Link>RoutinesLibrary\Net\Protocols\TCP\TCP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Net\Protocols\UDP\UDP.cs">
+      <Link>RoutinesLibrary\Net\Protocols\UDP\UDP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\RoutinesLibrary\Security\AES.cs">
+      <Link>RoutinesLibrary\Security\AES.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\SharedAssemblyInfo.cs">
+      <Link>SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <CustomToolNamespace>LibraryTest</CustomToolNamespace>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+      <CustomToolNamespace>LibraryTest</CustomToolNamespace>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LibraryTest.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildBinPath)/Microsoft.CSharp.targets" />
+</Project>

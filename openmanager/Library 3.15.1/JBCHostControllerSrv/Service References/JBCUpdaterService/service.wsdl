@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://JBCUpdaterSrv" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://JBCUpdaterSrv" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://JBCUpdaterSrv/Imports">
+      <xsd:import schemaLocation="http://cad-51:8000/JBCUpdaterSrv/service?xsd=xsd0" namespace="http://JBCUpdaterSrv" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCUpdaterSrv/service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JBCUpdaterSrv" />
+      <xsd:import schemaLocation="http://cad-51:8000/JBCUpdaterSrv/service?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJBCUpdaterService_ReceiveFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveFile" />
+  </wsdl:message>
+  <wsdl:message name="IJBCUpdaterService_ReceiveFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCUpdaterService_ReceiveFile_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/JBCUpdaterSrv" name="detail" element="q1:faultError" />
+  </wsdl:message>
+  <wsdl:message name="IJBCUpdaterService_InitUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IJBCUpdaterService_StateUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:StateUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IJBCUpdaterService_StateUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StateUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJBCUpdaterService_StateUpdate_faultErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/JBCUpdaterSrv" name="detail" element="q2:faultError" />
+  </wsdl:message>
+  <wsdl:portType name="IJBCUpdaterService">
+    <wsdl:operation name="ReceiveFile">
+      <wsdl:input wsaw:Action="http://JBCUpdaterSrv/IJBCUpdaterService/ReceiveFile" message="tns:IJBCUpdaterService_ReceiveFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCUpdaterSrv/IJBCUpdaterService/ReceiveFileResponse" message="tns:IJBCUpdaterService_ReceiveFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCUpdaterSrv/IJBCUpdaterService/ReceiveFilefaultErrorFault" name="faultErrorFault" message="tns:IJBCUpdaterService_ReceiveFile_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitUpdate">
+      <wsdl:input wsaw:Action="http://JBCUpdaterSrv/IJBCUpdaterService/InitUpdate" message="tns:IJBCUpdaterService_InitUpdate_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StateUpdate">
+      <wsdl:input wsaw:Action="http://JBCUpdaterSrv/IJBCUpdaterService/StateUpdate" message="tns:IJBCUpdaterService_StateUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://JBCUpdaterSrv/IJBCUpdaterService/StateUpdateResponse" message="tns:IJBCUpdaterService_StateUpdate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://JBCUpdaterSrv/IJBCUpdaterService/StateUpdatefaultErrorFault" name="faultErrorFault" message="tns:IJBCUpdaterService_StateUpdate_faultErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

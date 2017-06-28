@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppCompressFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JBCUpdate.jbc</Value>
+    </Setting>
+    <Setting Name="UpdateStateFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">updateState.txt</Value>
+    </Setting>
+    <Setting Name="TempDirName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JBCUpdate</Value>
+    </Setting>
+    <Setting Name="UpdateInfoFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">updateInfo.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
